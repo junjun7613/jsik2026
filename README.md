@@ -17,13 +17,13 @@ This repository contains the code for a pipeline that:
 
 | Path | Description |
 |------|-------------|
-| `Lat-Epig-main/` | Core pipeline scripts and ontology |
-| `Lat-Epig-main/batch_extract_career_graphs.py` | LLM-based structured extraction |
-| `Lat-Epig-main/batch_scrape_new_edcs.py` | EDCS scraper via Lat-Epig |
-| `Lat-Epig-main/validation/validate_career_graphs.py` | JSON schema validation |
-| `Lat-Epig-main/validation/fix_and_export.py` | Schema normalization and export |
-| `Lat-Epig-main/create_rdf.py` | RDF/Turtle conversion |
-| `Lat-Epig-main/epig_ontology.ttl` | Custom ontology definition |
+| `pipeline/` | Core pipeline scripts and ontology |
+| `pipeline/batch_extract_career_graphs.py` | LLM-based structured extraction |
+| `pipeline/batch_scrape_new_edcs.py` | EDCS scraper via Lat-Epig |
+| `pipeline/validation/validate_career_graphs.py` | JSON schema validation |
+| `pipeline/validation/fix_and_export.py` | Schema normalization and export |
+| `pipeline/create_rdf.py` | RDF/Turtle conversion |
+| `pipeline/epig_ontology.ttl` | Custom ontology definition |
 | `extract_career_graph.py` | Single-inscription extraction utility |
 | `place_pleiades_mapping.json` | Place → Pleiades ID mapping |
 | `prompt_sample.json` | Example LLM prompt |
@@ -64,7 +64,7 @@ beautifulsoup4
 Install with:
 
 ```bash
-pip install -r Lat-Epig-main/requirements.txt
+pip install -r pipeline/requirements.txt
 ```
 
 ## Quick Start
@@ -74,16 +74,16 @@ pip install -r Lat-Epig-main/requirements.txt
 export ANTHROPIC_API_KEY='your-api-key'
 
 # Extract career graphs for a place
-python Lat-Epig-main/batch_extract_career_graphs.py --places "Dougga_Thugga"
+python pipeline/batch_extract_career_graphs.py --places "Dougga_Thugga"
 
 # Validate
-python Lat-Epig-main/validation/validate_career_graphs.py --target modified
+python pipeline/validation/validate_career_graphs.py --target modified
 
 # Fix and export
-python Lat-Epig-main/validation/fix_and_export.py
+python pipeline/validation/fix_and_export.py
 
 # Convert to RDF
-python Lat-Epig-main/create_rdf.py
+python pipeline/create_rdf.py
 ```
 
 ## Data Availability

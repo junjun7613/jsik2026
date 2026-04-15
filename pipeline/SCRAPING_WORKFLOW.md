@@ -28,7 +28,7 @@ place_list/[日付]-places_[属州名].csv (地名一覧)
     ↓
 batch_scrape_new_edcs.py --province-csv
     ↓
-Lat-Epig-main/scraped_data/[地名]/
+pipeline/scraped_data/[地名]/
     ├── [日付]-EDCS_via_Lat_Epig-place_[地名]-[件数].tsv
     └── [日付]-EDCS_via_Lat_Epig-place_[地名]-[件数].json
 ```
@@ -40,7 +40,7 @@ Lat-Epig-main/scraped_data/[地名]/
     ↓
 batch_scrape_new_edcs.py
     ↓
-Lat-Epig-main/scraped_data/[地名]/
+pipeline/scraped_data/[地名]/
     ├── [日付]-EDCS_via_Lat_Epig-place_[地名]-[件数].tsv
     └── [日付]-EDCS_via_Lat_Epig-place_[地名]-[件数].json
 ```
@@ -54,7 +54,7 @@ Lat-Epig-main/scraped_data/[地名]/
 #### ステップ1-1: 属州から地名一覧を抽出
 
 ```bash
-cd Lat-Epig-main
+cd pipeline
 
 # 例: Numidiaの全地名を抽出（最大1000件の碑文から抽出）
 python extract_places_from_province.py --province "Numidia" --max-records 1000
@@ -139,14 +139,14 @@ PlaceName,Region,Province
 
 ## ステップ2: バッチスクレイピングの実行
 
-**注意:** スクリプトは常に `Lat-Epig-main/scraped_data/` に出力します（実行場所に関わらず）
+**注意:** スクリプトは常に `pipeline/scraped_data/` に出力します（実行場所に関わらず）
 
 ### 属州CSVファイルを使用（推奨・新機能）
 
 `extract_places_from_province.py`で生成されたCSVファイルを使用:
 
 ```bash
-cd Lat-Epig-main
+cd pipeline
 
 # place_listディレクトリ内のCSVファイルを指定（ファイル名のみ）
 python batch_scrape_new_edcs.py --province-csv 2026-02-05-places_Numidia.csv
@@ -186,16 +186,16 @@ Querying API for place: Oudna, Hr. / Udhnah / Uthina
   Fetched 100/228 inscriptions
   Fetched 200/228 inscriptions
   Fetched 228/228 inscriptions
-  ✓ Saved TSV to: /Users/.../Lat-Epig-main/scraped_data/Uthina/2026-02-02-EDCS_via_Lat_Epig-place_Uthina-228.tsv
-  ✓ Saved JSON to: /Users/.../Lat-Epig-main/scraped_data/Uthina/2026-02-02-EDCS_via_Lat_Epig-place_Uthina-228.json
+  ✓ Saved TSV to: /Users/.../pipeline/scraped_data/Uthina/2026-02-02-EDCS_via_Lat_Epig-place_Uthina-228.tsv
+  ✓ Saved JSON to: /Users/.../pipeline/scraped_data/Uthina/2026-02-02-EDCS_via_Lat_Epig-place_Uthina-228.json
 
 [2/2] Processing: Djemila / Cuicul
 ================================================================================
 Querying API for place: Djemila / Cuicul
   Found 731 inscriptions
   ...
-  ✓ Saved TSV to: /Users/.../Lat-Epig-main/scraped_data/Cuicul/2026-02-02-EDCS_via_Lat_Epig-place_Cuicul-731.tsv
-  ✓ Saved JSON to: /Users/.../Lat-Epig-main/scraped_data/Cuicul/2026-02-02-EDCS_via_Lat_Epig-place_Cuicul-731.json
+  ✓ Saved TSV to: /Users/.../pipeline/scraped_data/Cuicul/2026-02-02-EDCS_via_Lat_Epig-place_Cuicul-731.tsv
+  ✓ Saved JSON to: /Users/.../pipeline/scraped_data/Cuicul/2026-02-02-EDCS_via_Lat_Epig-place_Cuicul-731.json
 
 ================================================================================
 Batch scraping complete
@@ -211,10 +211,10 @@ Errors: 0
 
 ### ディレクトリ構造
 
-**重要:** 出力ファイルは常に `Lat-Epig-main/scraped_data/` 内に保存されます（実行場所に関わらず）
+**重要:** 出力ファイルは常に `pipeline/scraped_data/` 内に保存されます（実行場所に関わらず）
 
 ```
-Lat-Epig-main/
+pipeline/
 └── scraped_data/
     ├── Uthina/
     │   ├── 2026-02-02-EDCS_via_Lat_Epig-place_Uthina-228.tsv
@@ -354,14 +354,14 @@ python batch_scrape_new_edcs.py --pleiades-mapping ../place_pleiades_mapping.jso
 1. **初回クエリ**: 総件数を取得
 2. **バッチ取得**: 100件ずつ取得（ページネーション）
 3. **TSV変換**: APIデータをTSV形式に変換
-4. **TSV保存**: `Lat-Epig-main/scraped_data/[地名]/[ファイル名].tsv` に保存
+4. **TSV保存**: `pipeline/scraped_data/[地名]/[ファイル名].tsv` に保存
 5. **JSON変換**: Pandasでload → `status` フィールドを配列化
-6. **JSON保存**: `Lat-Epig-main/scraped_data/[地名]/[ファイル名].json` に保存
+6. **JSON保存**: `pipeline/scraped_data/[地名]/[ファイル名].json` に保存
 
 **出力場所の仕組み:**
 - スクリプトは `Path(__file__).parent` を使用してスクリプト自身の場所を特定
-- 常に `Lat-Epig-main/scraped_data/` に出力（実行場所に関わらず）
-- プロジェクトルートから実行しても、`Lat-Epig-main/` 内から実行しても同じ場所に保存
+- 常に `pipeline/scraped_data/` に出力（実行場所に関わらず）
+- プロジェクトルートから実行しても、`pipeline/` 内から実行しても同じ場所に保存
 
 ### convert_tsv_to_json.py との互換性
 
@@ -381,7 +381,7 @@ else:
 ### 例1: 属州から地名を自動抽出してスクレイピング（推奨）
 
 ```bash
-cd Lat-Epig-main
+cd pipeline
 
 # ステップ1: Numidiaの地名を抽出
 python extract_places_from_province.py --province "Numidia" --max-records 1000
@@ -462,7 +462,7 @@ python batch_scrape_new_edcs.py --places-csv places.csv --csv-column PlaceName
 **解決策:**
 ```bash
 # place_listディレクトリの内容を確認
-ls -lh Lat-Epig-main/place_list/
+ls -lh pipeline/place_list/
 
 # ファイル名を正確に指定
 python batch_scrape_new_edcs.py --province-csv 2026-02-05-places_Numidia.csv
@@ -530,7 +530,7 @@ python batch_scrape_new_edcs.py --places places.txt --resume
 import pandas as pd
 
 # TSVを読み込み
-df = pd.read_csv('Lat-Epig-main/scraped_data/Uthina/2026-02-02-EDCS_via_Lat_Epig-place_Uthina-228.tsv',
+df = pd.read_csv('pipeline/scraped_data/Uthina/2026-02-02-EDCS_via_Lat_Epig-place_Uthina-228.tsv',
                  sep='\t')
 
 # 基本統計
@@ -544,7 +544,7 @@ print(f"Date range: {df['dating_from'].min()} - {df['dating_to'].max()}")
 import json
 
 # JSONを読み込み
-with open('Lat-Epig-main/scraped_data/Uthina/2026-02-02-EDCS_via_Lat_Epig-place_Uthina-228.json') as f:
+with open('pipeline/scraped_data/Uthina/2026-02-02-EDCS_via_Lat_Epig-place_Uthina-228.json') as f:
     inscriptions = json.load(f)
 
 # 件数
@@ -580,7 +580,7 @@ for insc in inscriptions:
 スクレイピング完了後、全地名のデータを一括処理してキャリアグラフを抽出できます。
 
 ```bash
-cd Lat-Epig-main
+cd pipeline
 
 # Claude（デフォルト）を使用
 python batch_extract_career_graphs.py --model claude
@@ -627,7 +627,7 @@ python batch_extract_career_graphs.py --model gpt
 ### 出力ファイル構造
 
 ```
-Lat-Epig-main/
+pipeline/
 └── career_graphs/
     └── claude/                        # モデル名（claude/gemini/gpt）
         ├── Uthina/
@@ -717,8 +717,8 @@ python batch_extract_career_graphs.py --model claude
 Batch Career Graph Extraction
 ================================================================================
 Model: claude
-Scraped data directory: /Users/.../Lat-Epig-main/scraped_data
-Output directory: /Users/.../Lat-Epig-main/career_graphs
+Scraped data directory: /Users/.../pipeline/scraped_data
+Output directory: /Users/.../pipeline/career_graphs
 Existing career data: /Users/.../career_graphs/claude
 Places to process: 2
 
@@ -806,7 +806,7 @@ python batch_extract_career_graphs.py --model claude
 キャリアグラフ抽出完了後、以下のコマンドでデータを拡張できます。
 
 ```bash
-cd Lat-Epig-main
+cd pipeline
 
 # 全地名のデータを拡張（既処理碑文は自動スキップ）
 python enrich_career_graphs.py --model claude
@@ -839,7 +839,7 @@ python enrich_career_graphs.py --model claude --force-reprocess
 ### 出力ファイル構造
 
 ```
-Lat-Epig-main/
+pipeline/
 └── modified_career_graphs/
     └── claude/                                    # モデル名
         ├── Uthina/
@@ -1047,7 +1047,7 @@ echo 'ANTHROPIC_API_KEY=your-api-key-here' >> .env
 ### RDF変換の実行
 
 ```bash
-cd Lat-Epig-main
+cd pipeline
 
 # 特定の地名を変換
 python create_rdf.py --model claude --place "Uthina"
@@ -1229,7 +1229,7 @@ Output directory: rdf_output/claude
 ### RDFファイル統合の実行
 
 ```bash
-cd Lat-Epig-main
+cd pipeline
 
 # 指定モデルの全RDFファイルを統合
 python merge_rdf_files.py --model claude
@@ -1299,7 +1299,7 @@ File size: 1.2 MB
 統合後のディレクトリ構造：
 
 ```
-Lat-Epig-main/
+pipeline/
 └── rdf_output/
     └── claude/
         ├── all.ttl                          # 統合ファイル
@@ -1410,32 +1410,32 @@ Pleiades Gazetterとのリンクにより：
 1. **属州から地名抽出** → `extract_places_from_province.py`
 2. **地名リストCSV生成** → `place_list/[日付]-places_[属州名].csv`（座標・Pleiades ID含む）
 3. **スクレイピング実行** → `batch_scrape_new_edcs.py --province-csv`
-4. **自動生成** → TSVとJSON（`Lat-Epig-main/scraped_data/[地名]/`）
+4. **自動生成** → TSVとJSON（`pipeline/scraped_data/[地名]/`）
 5. **キャリアグラフ抽出**（オプション）→ `batch_extract_career_graphs.py --model claude`
-6. **経歴データ生成** → JSON（`Lat-Epig-main/career_graphs/[model]/[地名]/`）
+6. **経歴データ生成** → JSON（`pipeline/career_graphs/[model]/[地名]/`）
 7. **データ拡張**（オプション）→ `enrich_career_graphs.py --model claude`
-8. **拡張済みデータ生成** → JSON（`Lat-Epig-main/modified_career_graphs/[model]/[地名]/`）
+8. **拡張済みデータ生成** → JSON（`pipeline/modified_career_graphs/[model]/[地名]/`）
 9. **スキーマ修正・エクスポート**（オプション）→ `validation/fix_and_export.py --model claude`
-10. **バリデーション済みデータ生成** → JSON（`Lat-Epig-main/validated_career_graphs/[model]/[地名]/`）
+10. **バリデーション済みデータ生成** → JSON（`pipeline/validated_career_graphs/[model]/[地名]/`）
 11. **最終バリデーション**（オプション）→ `validation/validate_career_graphs.py --target validated --model claude`
 12. **RDF変換**（オプション）→ `create_rdf.py --model claude`
-13. **RDFファイル生成** → TTL（`Lat-Epig-main/rdf_output/[model]/[地名]/`）
+13. **RDFファイル生成** → TTL（`pipeline/rdf_output/[model]/[地名]/`）
 14. **データ活用** → SPARQL検索・グラフDB・GIS可視化等
 
 #### 従来のワークフロー（手動リスト）
 
 1. **地名リスト作成** → `place_pleiades_mapping.json` または `places.txt`
 2. **スクレイピング実行** → `batch_scrape_new_edcs.py`
-3. **自動生成** → TSVとJSON（`Lat-Epig-main/scraped_data/[地名]/`）
+3. **自動生成** → TSVとJSON（`pipeline/scraped_data/[地名]/`）
 4. **キャリアグラフ抽出**（オプション）→ `batch_extract_career_graphs.py --model claude`
-5. **経歴データ生成** → JSON（`Lat-Epig-main/career_graphs/[model]/[地名]/`）
+5. **経歴データ生成** → JSON（`pipeline/career_graphs/[model]/[地名]/`）
 6. **データ拡張**（オプション）→ `enrich_career_graphs.py --model claude`
-7. **拡張済みデータ生成** → JSON（`Lat-Epig-main/modified_career_graphs/[model]/[地名]/`）
+7. **拡張済みデータ生成** → JSON（`pipeline/modified_career_graphs/[model]/[地名]/`）
 8. **スキーマ修正・エクスポート**（オプション）→ `validation/fix_and_export.py --model claude`
-9. **バリデーション済みデータ生成** → JSON（`Lat-Epig-main/validated_career_graphs/[model]/[地名]/`）
+9. **バリデーション済みデータ生成** → JSON（`pipeline/validated_career_graphs/[model]/[地名]/`）
 10. **最終バリデーション**（オプション）→ `validation/validate_career_graphs.py --target validated --model claude`
 11. **RDF変換**（オプション）→ `create_rdf.py --model claude`
-12. **RDFファイル生成** → TTL（`Lat-Epig-main/rdf_output/[model]/[地名]/`）
+12. **RDFファイル生成** → TTL（`pipeline/rdf_output/[model]/[地名]/`）
 13. **データ活用** → SPARQL検索・グラフDB・GIS可視化等
 
 ### 主要コマンド
@@ -1537,22 +1537,22 @@ python create_rdf.py --model claude --place "Uthina" --format json-ld
 ### 出力ファイル
 
 **スクレイピング出力:**
-- **TSV**: `Lat-Epig-main/scraped_data/[地名]/[日付]-EDCS_via_Lat_Epig-place_[地名]-[件数].tsv`
-- **JSON**: `Lat-Epig-main/scraped_data/[地名]/[日付]-EDCS_via_Lat_Epig-place_[地名]-[件数].json`
+- **TSV**: `pipeline/scraped_data/[地名]/[日付]-EDCS_via_Lat_Epig-place_[地名]-[件数].tsv`
+- **JSON**: `pipeline/scraped_data/[地名]/[日付]-EDCS_via_Lat_Epig-place_[地名]-[件数].json`
 
 **キャリアグラフ出力（オプション）:**
-- **JSON**: `Lat-Epig-main/career_graphs/[model]/[地名]/[地名]_career.json`
+- **JSON**: `pipeline/career_graphs/[model]/[地名]/[地名]_career.json`
 
 **拡張済みデータ出力（オプション）:**
-- **JSON**: `Lat-Epig-main/modified_career_graphs/[model]/[地名]/[地名]_career.json`
+- **JSON**: `pipeline/modified_career_graphs/[model]/[地名]/[地名]_career.json`
 
 **バリデーション済みデータ出力（オプション）:**
-- **JSON**: `Lat-Epig-main/validated_career_graphs/[model]/[地名]/[地名]_career.json`
-- **ログ**: `Lat-Epig-main/validation/logs/fix_export_[model]_[timestamp].log`
-- **バリデーションログ**: `Lat-Epig-main/validation/logs/final_validation_[model]_[timestamp].log`
+- **JSON**: `pipeline/validated_career_graphs/[model]/[地名]/[地名]_career.json`
+- **ログ**: `pipeline/validation/logs/fix_export_[model]_[timestamp].log`
+- **バリデーションログ**: `pipeline/validation/logs/final_validation_[model]_[timestamp].log`
 
 **RDF出力（オプション）:**
-- **TTL**: `Lat-Epig-main/rdf_output/[model]/[地名]/[地名]_career.ttl`
+- **TTL**: `pipeline/rdf_output/[model]/[地名]/[地名]_career.ttl`
 
 ### 入力形式の選択
 
