@@ -1,0 +1,139 @@
+[
+  {
+    "edcs_id": "",
+    "persons": [
+      {
+        "person_id": 0,
+        "person_name": "C(aius) Iulius Caesar",
+        "person_name_readable": "Gaius Iulius Caesar",
+        "praenomen": "Gaius",
+        "nomen": "Iulius",
+        "cognomen": "Caesar",
+        "person_name_normalized": "",
+        "person_name_link": "",
+        "social_status": "senator",
+        "social_status_evidence": "text evidence for social status",
+        "gender": "male",
+        "gender_evidence": "text evidence for gender",
+        "ethnicity": "Roman",
+        "ethnicity_evidence": "text evidence for ethnicity",
+        "age_at_death": 56,
+        "age_at_death_evidence": "vixit annis LVI",
+        "has_career": true,
+        "career_path": [
+          {
+            "position": "quaestor",
+            "position_normalized": "quaestor",
+            "position_abstract": "quaestor",
+            "position_type": "local administration",
+            "position_description": "Financial magistrate responsible for public treasury",
+            "order": 1
+          },
+          {
+            "position": "aedilis curulis",
+            "position_normalized": "aedilis curulis",
+            "position_abstract": "aedilis",
+            "position_type": "local administration",
+            "position_description": "Magistrate responsible for public buildings and games",
+            "order": 2
+          }
+        ],
+        "benefactions": [
+          {
+            "benefaction_type": "construction",
+            "object": "templum Iovis",
+            "object_type": "temple",
+            "object_description": "Temple of Jupiter",
+            "benefaction_text": "templum Iovis sua impensa restituit",
+            "cost": "HS L milia",
+            "notes": "sua impensa",
+            "cost_numeric": 50000,
+            "cost_unit": "sesterces",
+            "cost_original": "HS L milia",
+            "cost_conversion_reasoning": "L milia = 50 × 1000 = 50,000 sesterces"
+          }
+        ],
+        "divinity": false,
+        "divinity_type": null,
+        "divinity_classification_reasoning": "Roman senator, human"
+      },
+      {
+        "person_id": 1,
+        "person_name": "Iuppiter Optimus Maximus",
+        "person_name_readable": "Iuppiter Optimus Maximus",
+        "praenomen": "",
+        "nomen": "",
+        "cognomen": "",
+        "person_name_normalized": "",
+        "person_name_link": "",
+        "social_status": "",
+        "social_status_evidence": "",
+        "gender": "male",
+        "gender_evidence": "Iuppiter is a male deity",
+        "ethnicity": "",
+        "ethnicity_evidence": "",
+        "age_at_death": null,
+        "age_at_death_evidence": "",
+        "has_career": false,
+        "career_path": [],
+        "benefactions": [],
+        "divinity": true,
+        "divinity_type": "Iuppiter",
+        "divinity_classification_reasoning": "Roman supreme god Jupiter with epithets Optimus Maximus"
+      }
+    ],
+    "communities": [
+      {
+        "community_id": 0,
+        "community_name": "legio III Augusta",
+        "community_name_normalized": "Legio III Augusta",
+        "community_type": "legion",
+        "community_description": "The Third Augustan Legion, stationed in North Africa",
+        "evidence": "mil(es) leg(ionis) III Aug(ustae)"
+      },
+      {
+        "community_id": 1,
+        "community_name": "colonia Iulia Karthago",
+        "community_name_normalized": "Colonia Iulia Karthago",
+        "community_type": "colonia",
+        "community_description": "Roman colony of Carthage",
+        "evidence": "col(oniae) Iul(iae) Karthag(inis)"
+      }
+    ],
+    "person_relationships": [
+      {
+        "source_person_id": 0,
+        "target_person_id": null,
+        "target_community_id": 0,
+        "type": "affiliation",
+        "property": "soldier",
+        "property_text": "mil(es) leg(ionis) III Aug(ustae)",
+        "notes": ""
+      },
+      {
+        "source_person_id": 0,
+        "target_person_id": 1,
+        "target_community_id": null,
+        "type": "dedication",
+        "property": "dedicator",
+        "property_text": "Iovi Optimo Maximo sacrum",
+        "notes": ""
+      }
+    ],
+    "notes": "Funerary inscription with career and benefaction details",
+    "original_data": {
+      "EDCS-ID": "EDCS-00000001",
+      "publication": "CIL VIII, 00001",
+      "province": "Africa proconsularis",
+      "place": "Carthago",
+      "dating_from": "100",
+      "dating_to": "200",
+      "status": "tituli honorarii",
+      "inscription": "I(ovi) O(ptimo) M(aximo) / C(aius) Iulius Caesar / quaestor aedilis curulis / templum Iovis sua impensa / restituit HS L mil(ia) / vixit annis LVI",
+      "material": "marmor",
+      "latitude": "36.858",
+      "longitude": "10.323",
+      "language": "Latin"
+    }
+  }
+]

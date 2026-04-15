@@ -1,0 +1,120 @@
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+.env
+*.egg-info/
+dist/
+build/
+
+# ============================================================
+# Data (large / derived / not for redistribution)
+# ============================================================
+# Raw scraped data
+Lat-Epig-main/scraped_data/
+data/
+filtered_data/
+
+# Intermediate extraction outputs
+career_graphs/
+Lat-Epig-main/career_graphs/
+modified_career_graphs/
+Lat-Epig-main/modified_career_graphs/
+
+# RDF outputs (published separately via Zenodo)
+rdf_graphs/
+Lat-Epig-main/rdf_output/
+Lat-Epig-main/rdf_output_modified/
+roman_atlas/output/
+roman_atlas/rdf/
+3d_inscription/rdf/
+ontology/
+
+# Validated data (published separately via Zenodo)
+Lat-Epig-main/validated_career_graphs/
+
+# Progress / checkpoint files
+*_progress.json
+upsert_to_pinecone_progress.json
+
+# ============================================================
+# Logs and reports
+# ============================================================
+Lat-Epig-main/validation/logs/
+Lat-Epig-main/validation/report.json
+Lat-Epig-main/validation/validated_report.json
+Lat-Epig-main/validation/modified_report.json
+
+# ============================================================
+# Notebooks and legacy files
+# ============================================================
+Lat-Epig-main/EpigraphyScraper.ipynb
+Lat-Epig-main/Map.ipynb
+Lat-Epig-main/MarkerCluster.ipynb
+Lat-Epig-main/awmc.unc.edu/
+Lat-Epig-main/Roman-Road-Network/
+Lat-Epig-main/images/
+Lat-Epig-main/cities/
+Lat-Epig-main/case_study/
+Lat-Epig-main/latepig/
+Lat-Epig-main/src/
+Lat-Epig-main/tests/
+Lat-Epig-main/fix-permissions
+Lat-Epig-main/jupyter_config.json
+Lat-Epig-main/jupyter_notebook_config.py
+Lat-Epig-main/jupyter_server_config.py
+Lat-Epig-main/ne_110m_land.geojson
+Lat-Epig-main/leaflet_template.html
+Lat-Epig-main/Dockerfile
+Lat-Epig-main/*.sh
+Lat-Epig-main/setup.cfg
+Lat-Epig-main/setup.py
+Lat-Epig-main/pyproject.toml
+Lat-Epig-main/MIGRATION_SUMMARY.md
+Lat-Epig-main/CITATION.cff
+
+# ============================================================
+# Other subprojects (not part of this paper)
+# ============================================================
+3d_inscription/
+roman_atlas/
+llm-epigraphy-simple/
+viz/
+editor/
+editor_script.js
+
+# ============================================================
+# Debug / utility scripts
+# ============================================================
+debug_cost_conversion.py
+add_divinity_classification.py
+convert_tsv_to_json.py
+convert_cost_to_numeric.py
+filter_inscriptions_status.py
+extract_ontology.py
+extract_places_from_province.py
+extract_emperors_list.py
+
+# ============================================================
+# Office / temp files
+# ============================================================
+~$*
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# ============================================================
+# API keys / credentials
+# ============================================================
+.env
+*.env
+.envrc
+secrets.py
+config_local.py

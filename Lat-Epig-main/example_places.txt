@@ -1,0 +1,6 @@
+# Example place list for batch scraping
+# One place name per line
+# Lines starting with # are comments and will be ignored
+
+Oudna, Hr. / Udhnah / Uthina
+Djemila / Cuicul

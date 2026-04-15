@@ -1,0 +1,1408 @@
+@prefix commtype: <http://example.org/community-type/> .
+@prefix divinity: <http://example.org/divinity/> .
+@prefix epig: <http://example.org/epigraphy/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reltype: <http://example.org/relationship-type/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix status: <http://example.org/status/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+commtype:ala a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "ala"@en .
+
+commtype:centuria a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "centuria"@en .
+
+commtype:city a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "city"@en .
+
+commtype:classis a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "classis"@en .
+
+commtype:cohort a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "cohort"@en .
+
+commtype:collegium a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "collegium"@en .
+
+commtype:colonia a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "colonia"@en .
+
+commtype:corpus a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "corpus"@en .
+
+commtype:familia a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "familia"@en .
+
+commtype:imperial-administration a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "imperial-administration"@en .
+
+commtype:legion a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "legion"@en .
+
+commtype:military a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "military"@en .
+
+commtype:municipium a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "municipium"@en .
+
+commtype:ordo a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "ordo"@en .
+
+commtype:other a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "other"@en .
+
+commtype:pagus a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "pagus"@en .
+
+commtype:populus a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "populus"@en .
+
+commtype:provincia a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "provincia"@en .
+
+commtype:regio a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "regio"@en .
+
+commtype:sodalitas a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "sodalitas"@en .
+
+commtype:templum a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "templum"@en .
+
+commtype:tribus a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "tribus"@en .
+
+commtype:turma a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "turma"@en .
+
+commtype:vexillatio a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "vexillatio"@en .
+
+commtype:vicus a epig:CommunityType,
+        owl:NamedIndividual ;
+    rdfs:label "vicus"@en .
+
+divinity:Aesculapius a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Aesculapius"@en .
+
+divinity:Agathe_Tyche a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Agathe Tyche"@en .
+
+divinity:Agathos_Daimon a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Agathos Daimon"@en .
+
+divinity:Alexander a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Alexander"@en .
+
+divinity:Ammon a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Ammon"@en .
+
+divinity:Amor a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Amor"@en .
+
+divinity:Antinous a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Antinous"@en .
+
+divinity:Antoninus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Antoninus"@en .
+
+divinity:Antoninus_Magnus_Pius a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Antoninus Magnus Pius"@en .
+
+divinity:Antoninus_Pius a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Antoninus Pius"@en .
+
+divinity:Apeona a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Apeona"@en .
+
+divinity:Apollo a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Apollo"@en .
+
+<http://example.org/divinity/Argentus/Argentum> a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Argentum"@en .
+
+divinity:Asclepius a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Asclepius"@en .
+
+divinity:Augusta a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Augusta"@en .
+
+divinity:Augustus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Augustus"@en .
+
+divinity:Aurelius_Antoninus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Aurelius Antoninus"@en .
+
+divinity:Bona_Dea a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Bona Dea"@en .
+
+divinity:Bonus_Deus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Bonus Deus"@en .
+
+divinity:Caelestis a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Caelestis"@en .
+
+divinity:Caelus_Mater a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Caelus Mater"@en .
+
+divinity:Christos a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Christos"@en .
+
+divinity:Christus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Christus"@en .
+
+divinity:Claudius a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Claudius"@en .
+
+divinity:Commodus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Commodus"@en .
+
+divinity:Concordia a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Concordia"@en .
+
+divinity:Conservatores a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Conservatores"@en .
+
+divinity:Dea a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Dea"@en .
+
+divinity:Deus_Sanctus_Aeternus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Deus Sanctus Aeternus"@en .
+
+divinity:Deusonius a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Deusonius"@en .
+
+divinity:Di a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Di"@en .
+
+divinity:Di_Parentes a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Di Parentes"@en .
+
+divinity:Diana a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Diana"@en .
+
+divinity:Dii_Augusti a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Dii Augusti"@en .
+
+divinity:Eros a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Eros"@en .
+
+divinity:Fanum a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Fanum"@en .
+
+divinity:Faustina a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Faustina"@en .
+
+divinity:Felicitas a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Felicitas"@en .
+
+divinity:Fortuna a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Fortuna"@en .
+
+divinity:Gabiedio a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Gabiedio"@en .
+
+divinity:Genius a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Genius"@en .
+
+divinity:Gloria a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Gloria"@en .
+
+divinity:Hadrianus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Hadrianus"@en .
+
+divinity:Hedone a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Hedone"@en .
+
+divinity:Heracles a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Heracles"@en .
+
+divinity:Hercules a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Hercules"@en .
+
+divinity:Honor a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Honor"@en .
+
+divinity:Iao a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Iao"@en .
+
+divinity:Isis a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Isis"@en .
+
+divinity:Israel a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Israel"@en .
+
+divinity:Iulia a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Iulia"@en .
+
+divinity:Iulius a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Iulius"@en .
+
+divinity:Iulius_Caesar a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Iulius Caesar"@en .
+
+divinity:Iuniores a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Iuniores"@en .
+
+divinity:Iuno a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Iuno"@en .
+
+divinity:Iuppiter a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Iuppiter"@en .
+
+divinity:Julius_Caesar a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Julius Caesar"@en .
+
+divinity:Kyrios a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Kyrios"@en .
+
+divinity:Latona a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Latona"@en .
+
+divinity:Liber a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Liber"@en .
+
+divinity:Liber_Pater a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Liber Pater"@en .
+
+divinity:Libera a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Libera"@en .
+
+divinity:Luna a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Luna"@en .
+
+divinity:Magnus_Antoninus_Pius a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Magnus Antoninus Pius"@en .
+
+divinity:Manes a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Manes"@en .
+
+divinity:Marcus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Marcus"@en .
+
+divinity:Marcus_Antoninus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Marcus Antoninus"@en .
+
+divinity:Marcus_Antoninus_Pius a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Marcus Antoninus Pius"@en .
+
+divinity:Marcus_Antoninus_Sarmaticus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Marcus Antoninus Sarmaticus"@en .
+
+divinity:Marcus_Aurelius a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Marcus Aurelius"@en .
+
+divinity:Mars a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Mars"@en .
+
+divinity:Mater a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Mater"@en .
+
+<http://example.org/divinity/Mater/Magna_Mater> a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Magna Mater"@en .
+
+divinity:Men a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Men"@en .
+
+divinity:Mercurius a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Mercurius"@en .
+
+divinity:Minerva a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Minerva"@en .
+
+divinity:Molo a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Molo"@en .
+
+divinity:Nemesis a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Nemesis"@en .
+
+divinity:Neptunus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Neptunus"@en .
+
+divinity:Nerva a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Nerva"@en .
+
+divinity:Nodius a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Nodius"@en .
+
+divinity:Numen a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Numen"@en .
+
+<http://example.org/divinity/Olympus/Olympian_deity> a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Olympian deity"@en .
+
+divinity:Patria a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Patria"@en .
+
+divinity:Pax a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Pax"@en .
+
+divinity:Pertinax a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Pertinax"@en .
+
+divinity:Petrus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Petrus"@en .
+
+divinity:Phoebus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Phoebus"@en .
+
+divinity:Pietas a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Pietas"@en .
+
+divinity:Pius a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Pius"@en .
+
+divinity:Pluto a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Pluto"@en .
+
+divinity:Pollux a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Pollux"@en .
+
+divinity:Providentia a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Providentia"@en .
+
+divinity:Pudicitia a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Pudicitia"@en .
+
+divinity:Salus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Salus"@en .
+
+divinity:Saturnus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Saturnus"@en .
+
+divinity:Septimius_Severus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Septimius Severus"@en .
+
+divinity:Severus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Severus"@en .
+
+divinity:Sol a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Sol"@en .
+
+divinity:Sol_Invictus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Sol Invictus"@en .
+
+divinity:Soter a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Soter"@en .
+
+divinity:Spes a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Spes"@en .
+
+divinity:Tellus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Tellus"@en .
+
+divinity:Thalia a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Thalia"@en .
+
+divinity:Theos a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Theos"@en .
+
+divinity:Tid\(d\)itanus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Tid(d)itanus"@en .
+
+divinity:Titus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Titus"@en .
+
+divinity:Traianus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Traianus"@en .
+
+divinity:Unknown a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Unknown"@en .
+
+divinity:Unknown_deified_imperial_figure a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Unknown deified imperial figure"@en .
+
+divinity:Unknown_deity a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Unknown deity"@en .
+
+divinity:Ursula a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Ursula"@en .
+
+divinity:Venus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Venus"@en .
+
+divinity:Verus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Verus"@en .
+
+divinity:Vespasianus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Vespasianus"@en .
+
+divinity:Vesta a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Vesta"@en .
+
+divinity:Viator a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Viator"@en .
+
+divinity:Victoria a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Victoria"@en .
+
+divinity:Virtus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Virtus"@en .
+
+divinity:Vita a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Vita"@en .
+
+divinity:Zeus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "Zeus"@en .
+
+divinity:deus a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "deus"@en .
+
+divinity:divus_emperor a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "divus emperor"@en .
+
+divinity:unknown_deified_emperor a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "unknown deified emperor"@en .
+
+divinity:unknown_deity a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "unknown deity"@en .
+
+divinity:θεος a epig:DivinityType,
+        owl:NamedIndividual ;
+    rdfs:label "θεος"@en .
+
+epig:affiliatedWith a owl:ObjectProperty ;
+    rdfs:label "affiliated with"@en ;
+    rdfs:comment "Affiliation relationship between a person and a community."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range epig:Community .
+
+epig:ageAtDeath a owl:DatatypeProperty ;
+    rdfs:label "age at death"@en ;
+    rdfs:comment "The age of the person at time of death, as recorded in the inscription."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:integer .
+
+epig:ageAtDeathEvidence a owl:DatatypeProperty ;
+    rdfs:label "age at death evidence"@en ;
+    rdfs:comment "Textual evidence for the recorded age at death."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:benefactionText a owl:DatatypeProperty ;
+    rdfs:label "benefaction text"@en ;
+    rdfs:comment "The relevant passage from the inscription describing the benefaction."@en ;
+    rdfs:domain epig:Benefaction ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:benefactionType a owl:DatatypeProperty ;
+    rdfs:label "benefaction type"@en ;
+    rdfs:comment "The category of benefaction (construction, donation, games, etc.)."@en ;
+    rdfs:domain epig:Benefaction ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:cognomen a owl:ObjectProperty ;
+    rdfs:label "cognomen"@en ;
+    rdfs:comment "The Roman cognomen of the person."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range epig:Cognomen .
+
+epig:communityType a owl:ObjectProperty ;
+    rdfs:label "community type"@en ;
+    rdfs:comment "The type or category of the community."@en ;
+    rdfs:domain epig:Community ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range epig:CommunityType .
+
+epig:cost a owl:DatatypeProperty ;
+    rdfs:label "cost"@en ;
+    rdfs:comment "The cost of the benefaction as stated in the inscription."@en ;
+    rdfs:domain epig:Benefaction ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:costConversionReasoning a owl:DatatypeProperty ;
+    rdfs:label "cost conversion reasoning"@en ;
+    rdfs:comment "Explanation of how the cost was converted to the numeric value."@en ;
+    rdfs:domain epig:Benefaction ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:costNumeric a owl:DatatypeProperty ;
+    rdfs:label "cost numeric"@en ;
+    rdfs:comment "The cost converted to a numeric value in sesterces."@en ;
+    rdfs:domain epig:Benefaction ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:decimal .
+
+epig:costUnit a owl:DatatypeProperty ;
+    rdfs:label "cost unit"@en ;
+    rdfs:comment "The monetary unit used for the cost (sestertius, denarius, etc.)."@en ;
+    rdfs:domain epig:Benefaction ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:datingFrom a owl:DatatypeProperty ;
+    rdfs:label "dating from"@en ;
+    rdfs:comment "Earliest possible date of the inscription (year CE, negative = BCE)."@en ;
+    rdfs:domain epig:Inscription ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:integer .
+
+epig:datingTo a owl:DatatypeProperty ;
+    rdfs:label "dating to"@en ;
+    rdfs:comment "Latest possible date of the inscription (year CE, negative = BCE)."@en ;
+    rdfs:domain epig:Inscription ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:integer .
+
+epig:divinityClassificationReasoning a owl:DatatypeProperty ;
+    rdfs:label "divinity classification reasoning"@en ;
+    rdfs:comment "Explanation for why this person was classified as a divinity."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:divinityType a owl:ObjectProperty ;
+    rdfs:label "divinity type"@en ;
+    rdfs:comment "The specific deity or deified figure this person represents."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range epig:DivinityType .
+
+epig:ethnicity a owl:DatatypeProperty ;
+    rdfs:label "ethnicity"@en ;
+    rdfs:comment "Ethnic or cultural origin inferred for the person."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:ethnicityEvidence a owl:DatatypeProperty ;
+    rdfs:label "ethnicity evidence"@en ;
+    rdfs:comment "Textual evidence used to infer the person's ethnic origin."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:evidence a owl:DatatypeProperty ;
+    rdfs:label "evidence"@en ;
+    rdfs:comment "The Latin text passage that provides evidence for this assertion."@en ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:genderEvidence a owl:DatatypeProperty ;
+    rdfs:label "gender evidence"@en ;
+    rdfs:comment "Textual evidence used to determine the person's gender."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:hasBenefaction a owl:ObjectProperty ;
+    rdfs:label "has benefaction"@en ;
+    rdfs:comment "Links a person to a benefaction they performed."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range epig:Benefaction .
+
+epig:hasBrother a owl:ObjectProperty ;
+    rdfs:label "has brother"@en ;
+    rdfs:comment "Sibling relationship (brother)."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range foaf:Person .
+
+epig:hasCareerPosition a owl:ObjectProperty ;
+    rdfs:label "has career position"@en ;
+    rdfs:comment "Links a person to one of their career positions."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range epig:CareerPosition .
+
+epig:hasDaughter a owl:ObjectProperty ;
+    rdfs:label "has daughter"@en ;
+    rdfs:comment "Direct parent–daughter relationship."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range foaf:Person .
+
+epig:hasFather a owl:ObjectProperty ;
+    rdfs:label "has father"@en ;
+    rdfs:comment "Direct father–child relationship."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range foaf:Person .
+
+epig:hasMother a owl:ObjectProperty ;
+    rdfs:label "has mother"@en ;
+    rdfs:comment "Direct mother–child relationship."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range foaf:Person .
+
+epig:hasSister a owl:ObjectProperty ;
+    rdfs:label "has sister"@en ;
+    rdfs:comment "Sibling relationship (sister)."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range foaf:Person .
+
+epig:hasSon a owl:ObjectProperty ;
+    rdfs:label "has son"@en ;
+    rdfs:comment "Direct parent–son relationship."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range foaf:Person .
+
+epig:isDivinity a owl:DatatypeProperty ;
+    rdfs:label "is divinity"@en ;
+    rdfs:comment "True if the person is a deity or deified figure rather than a historical human."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:boolean .
+
+epig:mainSubject a owl:ObjectProperty ;
+    rdfs:label "main subject"@en ;
+    rdfs:comment "The principal person(s) commemorated or named in the inscription."@en ;
+    rdfs:domain epig:Inscription ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range foaf:Person .
+
+epig:mentions a owl:ObjectProperty ;
+    rdfs:label "mentions"@en ;
+    rdfs:comment "Any entity (person, community, relationship) directly referenced in the inscription."@en ;
+    rdfs:domain epig:Inscription ;
+    rdfs:isDefinedBy epig:ontology .
+
+epig:nextPosition a owl:ObjectProperty ;
+    rdfs:label "next position"@en ;
+    rdfs:comment "The career position held after this one."@en ;
+    rdfs:domain epig:CareerPosition ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range epig:CareerPosition .
+
+epig:nomen a owl:ObjectProperty ;
+    rdfs:label "nomen"@en ;
+    rdfs:comment "The Roman nomen gentilicium of the person."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range epig:Nomen .
+
+epig:normalizedName a owl:DatatypeProperty ;
+    rdfs:label "normalized name"@en ;
+    rdfs:comment "A standardised form of the person's name for disambiguation."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:notes a owl:DatatypeProperty ;
+    rdfs:label "notes"@en ;
+    rdfs:comment "Free-text notes or remarks about this entity."@en ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:object a owl:DatatypeProperty ;
+    rdfs:label "object"@en ;
+    rdfs:comment "The physical object or service provided in the benefaction."@en ;
+    rdfs:domain epig:Benefaction ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:objectDescription a owl:DatatypeProperty ;
+    rdfs:label "object description"@en ;
+    rdfs:comment "A description of the benefaction object."@en ;
+    rdfs:domain epig:Benefaction ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:objectType a owl:DatatypeProperty ;
+    rdfs:label "object type"@en ;
+    rdfs:comment "The category of the benefaction object (building, statue, etc.)."@en ;
+    rdfs:domain epig:Benefaction ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:order a owl:DatatypeProperty ;
+    rdfs:label "order"@en ;
+    rdfs:comment "The sequence number of this position within the person's career."@en ;
+    rdfs:domain epig:CareerPosition ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:integer .
+
+epig:place a owl:ObjectProperty ;
+    rdfs:label "place"@en ;
+    rdfs:comment "The place where the inscription was found."@en ;
+    rdfs:domain epig:Inscription ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range epig:Place .
+
+epig:pleiadesId a owl:DatatypeProperty ;
+    rdfs:label "Pleiades ID"@en ;
+    rdfs:comment "Pleiades gazetteer identifier for the find-spot."@en ;
+    rdfs:domain epig:Inscription ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:position a owl:DatatypeProperty ;
+    rdfs:label "position"@en ;
+    rdfs:comment "The position title as it appears in the inscription."@en ;
+    rdfs:domain epig:CareerPosition ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:positionAbstract a owl:DatatypeProperty ;
+    rdfs:label "position abstract"@en ;
+    rdfs:comment "A high-level, abstract label for this type of office (e.g. 'consul', 'flamen')."@en ;
+    rdfs:domain epig:CareerPosition ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:positionNormalized a owl:DatatypeProperty ;
+    rdfs:label "position normalized"@en ;
+    rdfs:comment "A normalised form of the position title."@en ;
+    rdfs:domain epig:CareerPosition ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:positionType a owl:DatatypeProperty ;
+    rdfs:label "position type"@en ;
+    rdfs:comment "Broad category of the office (military, imperial-administration, priesthood, etc.)."@en ;
+    rdfs:domain epig:CareerPosition ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:praenomen a owl:ObjectProperty ;
+    rdfs:label "praenomen"@en ;
+    rdfs:comment "The Roman praenomen of the person."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range epig:Praenomen .
+
+epig:previousPosition a owl:ObjectProperty ;
+    rdfs:label "previous position"@en ;
+    rdfs:comment "The career position held before this one."@en ;
+    rdfs:domain epig:CareerPosition ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range epig:CareerPosition .
+
+epig:province a owl:ObjectProperty ;
+    rdfs:label "province"@en ;
+    rdfs:comment "The Roman province in which the inscription was found."@en ;
+    rdfs:domain epig:Inscription ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range epig:Province .
+
+epig:recipientName a owl:DatatypeProperty ;
+    rdfs:label "recipient name"@en ;
+    rdfs:comment "The name of the specific recipient of the benefaction."@en ;
+    rdfs:domain epig:Benefaction ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:recipientType a owl:DatatypeProperty ;
+    rdfs:label "recipient type"@en ;
+    rdfs:comment "The type of recipient of the benefaction (community, deity, individual, etc.)."@en ;
+    rdfs:domain epig:Benefaction ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:relationshipProperty a owl:DatatypeProperty ;
+    rdfs:label "relationship property"@en ;
+    rdfs:comment "The specific relationship role (e.g. 'father', 'patron', 'soldier')."@en ;
+    rdfs:domain epig:Relationship ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:relationshipType a owl:ObjectProperty ;
+    rdfs:label "relationship type"@en ;
+    rdfs:comment "The high-level category of the relationship."@en ;
+    rdfs:domain epig:Relationship ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range epig:RelationshipType .
+
+epig:socialStatus a owl:ObjectProperty ;
+    rdfs:label "social status"@en ;
+    rdfs:comment "The social rank or civic role of the person."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range epig:SocialStatus .
+
+epig:source a owl:ObjectProperty ;
+    rdfs:label "source"@en ;
+    rdfs:comment "The entity from which the relationship originates."@en ;
+    rdfs:domain epig:Relationship ;
+    rdfs:isDefinedBy epig:ontology .
+
+epig:target a owl:ObjectProperty ;
+    rdfs:label "target"@en ;
+    rdfs:comment "The entity to which the relationship points."@en ;
+    rdfs:domain epig:Relationship ;
+    rdfs:isDefinedBy epig:ontology .
+
+epig:text a owl:DatatypeProperty ;
+    rdfs:label "inscription text"@en ;
+    rdfs:comment "The transcribed Latin text of the inscription."@en ;
+    rdfs:domain epig:Inscription ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:string .
+
+epig:wikidataEntity a owl:DatatypeProperty ;
+    rdfs:label "Wikidata entity"@en ;
+    rdfs:comment "Wikidata QID for this person."@en ;
+    rdfs:domain foaf:Person ;
+    rdfs:isDefinedBy epig:ontology ;
+    rdfs:range xsd:anyURI .
+
+<http://example.org/place/Al-Khums___Khoms___Homs___Lebdah___Lebida___Labdah___Wadi_Zennad___Wadi_az_Zannad___Leptis_Magna___Lepcis_Magna___Neapolis> a epig:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Al-Khums / Khoms / Homs / Lebdah / Lebida / Labdah / Wadi Zennad / Wadi az Zannad / Leptis Magna / Lepcis Magna / Neapolis" ;
+    skos:exactMatch <https://pleiades.stoa.org/places/344448> .
+
+<http://example.org/place/Bizerte___Bisert___Banzart___Hippo_Diarrhytus> a epig:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Bizerte / Bisert / Banzart / Hippo Diarrhytus" ;
+    skos:exactMatch <https://pleiades.stoa.org/places/315038> .
+
+<http://example.org/place/Chemtou___Chimtou___Shimtu___Simitthus> a epig:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Chemtou / Chimtou / Shimtu / Simitthus" ;
+    skos:exactMatch <https://pleiades.stoa.org/places/315174> .
+
+<http://example.org/place/Constantine___Bordj_Saguiet_er_Roum___Cirta> a epig:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Constantine / Bordj Saguiet er Roum / Cirta" ;
+    skos:exactMatch <https://pleiades.stoa.org/places/305064> .
+
+<http://example.org/place/Dougga___Thugga> a epig:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Dougga / Thugga" ;
+    skos:exactMatch <https://pleiades.stoa.org/places/315223> .
+
+<http://example.org/place/El_Kef___Le_Kef___Sicca_Veneria> a epig:Place,
+        owl:NamedIndividual ;
+    rdfs:label "El Kef / Le Kef / Sicca Veneria" ;
+    skos:exactMatch <https://pleiades.stoa.org/places/315152> .
+
+<http://example.org/place/Hammam_Darradji___Hammam_Derradji___Bulla_Regia> a epig:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Hammam Darradji / Hammam Derradji / Bulla Regia" ;
+    skos:exactMatch <https://pleiades.stoa.org/places/314912> .
+
+<http://example.org/place/Khasbat,_Hr.___el-Kasba,_Hr.___al-Kasbat,_Hr.___Thuburbo_Maius> a epig:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Khasbat, Hr. / el-Kasba, Hr. / al-Kasbat, Hr. / Thuburbo Maius" ;
+    skos:exactMatch <https://pleiades.stoa.org/places/315220> .
+
+<http://example.org/place/Maktar___Makthar___Mactar___Makthars___Mactaris> a epig:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Maktar / Makthar / Mactar / Makthars / Mactaris" ;
+    skos:exactMatch <https://pleiades.stoa.org/places/324774> .
+
+<http://example.org/place/Oudna,_Hr.___Udhnah___Uthina> a epig:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Oudna, Hr. / Udhnah / Uthina" ;
+    skos:exactMatch <https://pleiades.stoa.org/places/315247> .
+
+<http://example.org/place/Rades___Maxula> a epig:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Rades / Maxula" ;
+    skos:exactMatch <https://pleiades.stoa.org/places/315072> .
+
+<http://example.org/place/Utique___Utica> a epig:Place,
+        owl:NamedIndividual ;
+    rdfs:label "Utique / Utica" ;
+    skos:exactMatch <https://pleiades.stoa.org/places/315248> .
+
+<http://example.org/province/Africa_proconsularis> a epig:Province,
+        owl:NamedIndividual ;
+    rdfs:label "Africa proconsularis"@en .
+
+<http://example.org/province/Numidia> a epig:Province,
+        owl:NamedIndividual ;
+    rdfs:label "Numidia"@en .
+
+reltype:affiliation a epig:RelationshipType,
+        owl:NamedIndividual ;
+    rdfs:label "affiliation"@en .
+
+reltype:colleague a epig:RelationshipType,
+        owl:NamedIndividual ;
+    rdfs:label "colleague"@en .
+
+reltype:dedication a epig:RelationshipType,
+        owl:NamedIndividual ;
+    rdfs:label "dedication"@en .
+
+reltype:economic a epig:RelationshipType,
+        owl:NamedIndividual ;
+    rdfs:label "economic"@en .
+
+reltype:family a epig:RelationshipType,
+        owl:NamedIndividual ;
+    rdfs:label "family"@en .
+
+reltype:other a epig:RelationshipType,
+        owl:NamedIndividual ;
+    rdfs:label "other"@en .
+
+reltype:patronage a epig:RelationshipType,
+        owl:NamedIndividual ;
+    rdfs:label "patronage"@en .
+
+status:actor a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "actor"@en .
+
+status:aedilis a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "aedilis"@en .
+
+status:artisan a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "artisan"@en .
+
+status:augur a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "augur"@en .
+
+status:castimonialis a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "castimonialis"@en .
+
+status:centurio a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "centurio"@en .
+
+status:citizen a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "citizen"@en .
+
+status:cleric a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "cleric"@en .
+
+status:consul a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "consul"@en .
+
+status:curator a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "curator"@en .
+
+status:deacon a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "deacon"@en .
+
+status:decurio a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "decurio"@en .
+
+status:deity a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "deity"@en .
+
+status:duovir a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "duovir"@en .
+
+status:emperor a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "emperor"@en .
+
+status:empress a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "empress"@en .
+
+status:equestrian a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "equestrian"@en .
+
+status:equestrian-egregius a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "equestrian-egregius"@en .
+
+status:equestrian-eminentissimus a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "equestrian-eminentissimus"@en .
+
+status:equestrian-perfectissimus a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "equestrian-perfectissimus"@en .
+
+status:equestrian-splendidus a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "equestrian-splendidus"@en .
+
+status:flamen a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "flamen"@en .
+
+status:flamen-decurio a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "flamen-decurio"@en .
+
+status:freeborn a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "freeborn"@en .
+
+status:freedman a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "freedman"@en .
+
+status:freedwoman a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "freedwoman"@en .
+
+status:gladiator a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "gladiator"@en .
+
+status:imperial-administration a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "imperial-administration"@en .
+
+status:imperial-family a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "imperial-family"@en .
+
+status:imperial-freedman-or-slave a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "imperial-freedman-or-slave"@en .
+
+status:imperial-slave a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "imperial-slave"@en .
+
+status:imperial-slave-or-freedman a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "imperial-slave-or-freedman"@en .
+
+status:legatus a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "legatus"@en .
+
+status:local a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "local"@en .
+
+status:local-administration a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "local-administration"@en .
+
+status:local-priesthood a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "local-priesthood"@en .
+
+status:medicus a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "medicus"@en .
+
+status:merchant a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "merchant"@en .
+
+status:military a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "military"@en .
+
+status:municipal-elite a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "municipal-elite"@en .
+
+status:municipal-magistrate a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "municipal-magistrate"@en .
+
+status:pontifex a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "pontifex"@en .
+
+status:provincial-administration a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "provincial-administration"@en .
+
+status:provincial-governor a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "provincial-governor"@en .
+
+status:quaestor a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "quaestor"@en .
+
+status:sacerdos a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "sacerdos"@en .
+
+status:santimoniale a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "santimoniale"@en .
+
+status:senator a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "senator"@en .
+
+status:senator-clarissimus a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "senator-clarissimus"@en .
+
+status:senator-consularis a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "senator-consularis"@en .
+
+status:senator-praetorius a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "senator-praetorius"@en .
+
+status:slave a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "slave"@en .
+
+status:soldier a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "soldier"@en .
+
+status:tribunus a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "tribunus"@en .
+
+status:unknown a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "unknown"@en .
+
+status:veteran a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "veteran"@en .
+
+status:veteran-decurio a epig:SocialStatus,
+        owl:NamedIndividual ;
+    rdfs:label "veteran-decurio"@en .
+
+epig:Cognomen a owl:Class ;
+    rdfs:label "Cognomen"@en ;
+    rdfs:comment "A Roman personal cognomen."@en ;
+    rdfs:isDefinedBy epig:ontology .
+
+epig:Nomen a owl:Class ;
+    rdfs:label "Nomen"@en ;
+    rdfs:comment "A Roman gentilicial name (family name)."@en ;
+    rdfs:isDefinedBy epig:ontology .
+
+epig:Praenomen a owl:Class ;
+    rdfs:label "Praenomen"@en ;
+    rdfs:comment "A Roman praenomen (first name)."@en ;
+    rdfs:isDefinedBy epig:ontology .
+
+epig:Community a owl:Class ;
+    rdfs:label "Community"@en ;
+    rdfs:comment "A social, political, military, or religious group mentioned in an inscription."@en ;
+    rdfs:isDefinedBy epig:ontology .
+
+epig:Province a owl:Class ;
+    rdfs:label "Province"@en ;
+    rdfs:comment "A Roman administrative province."@en ;
+    rdfs:isDefinedBy epig:ontology .
+
+epig:Relationship a owl:Class ;
+    rdfs:label "Relationship"@en ;
+    rdfs:comment "A directed social relationship between two entities (persons or communities)."@en ;
+    rdfs:isDefinedBy epig:ontology .
+
+epig:Inscription a owl:Class ;
+    rdfs:label "Inscription"@en ;
+    rdfs:comment "A Latin epigraphic inscription from the EDCS corpus."@en ;
+    rdfs:isDefinedBy epig:ontology .
+
+epig:RelationshipType a owl:Class ;
+    rdfs:label "Relationship Type"@en ;
+    rdfs:comment "A high-level category of social relationship (family, patronage, etc.)."@en ;
+    rdfs:isDefinedBy epig:ontology .
+
+epig:CareerPosition a owl:Class ;
+    rdfs:label "Career Position"@en ;
+    rdfs:comment "A single office or position held during a person's career."@en ;
+    rdfs:isDefinedBy epig:ontology .
+
+epig:Benefaction a owl:Class ;
+    rdfs:label "Benefaction"@en ;
+    rdfs:comment "An act of public generosity (construction, donation, games, etc.) recorded in an inscription."@en ;
+    rdfs:isDefinedBy epig:ontology .
+
+epig:Place a owl:Class ;
+    rdfs:label "Place"@en ;
+    rdfs:comment "A geographical location where an inscription was found."@en ;
+    rdfs:isDefinedBy epig:ontology .
+
+epig:CommunityType a owl:Class ;
+    rdfs:label "Community Type"@en ;
+    rdfs:comment "A category of community or collective body (city, legion, collegium, etc.)."@en ;
+    rdfs:isDefinedBy epig:ontology .
+
+foaf:Person a owl:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "A person mentioned in one or more inscriptions."@en ;
+    rdfs:isDefinedBy epig:ontology ;
+    owl:equivalentClass foaf:Person .
+
+epig:SocialStatus a owl:Class ;
+    rdfs:label "Social Status"@en ;
+    rdfs:comment "A controlled-vocabulary term for a person's social rank or civic role."@en ;
+    rdfs:isDefinedBy epig:ontology .
+
+epig:ontology a owl:Ontology ;
+    rdfs:label "Epigraphic Inscription Ontology"@en ;
+    rdfs:comment "OWL ontology for Latin epigraphic inscriptions, derived from the LLM-enriched EDCS career-graph dataset."@en ;
+    owl:imports foaf: ;
+    owl:versionInfo "1.0" .
+
+epig:DivinityType a owl:Class ;
+    rdfs:label "Divinity Type"@en ;
+    rdfs:comment "A deity or deified figure referenced in inscriptions."@en ;
+    rdfs:isDefinedBy epig:ontology .
+
