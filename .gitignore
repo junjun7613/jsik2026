@@ -103,6 +103,8 @@ filter_inscriptions_status.py
 extract_ontology.py
 extract_places_from_province.py
 extract_emperors_list.py
+create_rdf.py
+create_ontology.py
 
 # ============================================================
 # Office / temp files
