@@ -42,6 +42,7 @@ pipeline/validated_career_graphs/
 # Progress / checkpoint files
 *_progress.json
 upsert_to_pinecone_progress.json
+cities_progress.txt
 
 # ============================================================
 # Logs and reports

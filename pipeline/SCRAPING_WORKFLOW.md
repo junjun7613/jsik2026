@@ -1571,43 +1571,19 @@ python create_rdf.py --model claude --place "Uthina" --format json-ld
 - 移行ガイド: [MIGRATION_SUMMARY.md](MIGRATION_SUMMARY.md)
 
 ## 現在の対象都市
-☑️Carthago	チュニス近郊	州都・帝国第2の都市
-☑️☑️Utica	ビゼルト近郊	共和政期から重要都市 enrich:スタート時：102💲（140件）終了時：💲
-☑️☑️Hippo Diarrhytus	ビゼルト	港湾都市　enrich:スタート時：💲（140件）終了時：100💲
-☑️☑️Thugga (Dougga)	ドゥッガ	劇場・神殿遺構が有名　enrich:スタート時：100💲（140件）終了時：81💲
-☑️☑️Bulla Regia	ジャンドゥーバ	地下住宅群
-☑️☑️Simitthu	シェムトゥ	大理石産地
-☑️☑️Sicca Veneria	エル・ケフ	宗教中心地　enrich:スタート時：70💲（821件）終了時：58.5💲
-☑️☑️Mactaris	マクトゥル	先住民・ローマ文化融合都市
-☑️☑️Thuburbo Maius	エル・ファウワール	神殿群
-☑️☑️Uthina	ウドナ	円形闘技場
-☑️☑️Maxula	ラデス	カルタゴ近郊港湾
-☑️☑️Lepcis Magna
 
-☑️Hadrumetum	スース	重要港湾
-☑️Thysdrus	エル・ジェム	巨大円形闘技場
-☑️Sufetula	スベイトラ	三神殿
-☑️Capsa	ガフサ	オアシス都市
-☑️Acholla	ブーカラ	古い港町
-☑️Leptis Minor	ラムタ	商業都市
-☑️Thaenae	ティナ	軍事拠点
-☑️Zama Regia	ジャマ	第二次ポエニ戦争の地
-☑️Cillium	カスリーヌ	凱旋門で有名
+### Africa Proconsularis
+- Utica
+- Hippo Diarrhytus
+- Thugga (Dougga)
+- Bulla Regia
+- Simitthu
+- Sicca Veneria
+- Mactaris
+- Thuburbo Maius
+- Uthina
+- Maxula
+- Lepcis Magna
 
-☑️☑️Cirta	コンスタンティーヌ	州都
-☑️Hippo Regius	アンナバ	アウグスティヌス司教座
-☑️Calama	ゲルマ	司教都市
-☑️Thibilis	アンナバ内陸
-☑️Rusicade	スキクダ	港湾都市
-☑️Chullu	コロ	港湾都市
-☑️Milev
-
-☑️Lambaesis	タズールト	第3アウグスタ軍団本営
-☑️Thamugadi (Timgad)	ティムガッド	計画都市
-☑️Cuicul (Djemila)	ジェミラ	世界遺産
-☑️Theveste	テベッサ	軍事拠点　スタート時：150💲（927件）終了時：118💲
-☑️Madauros	マダウロシュ	アプレイウス出身地
-☑️Diana Veteranorum	ゼララ	退役兵植民都市　スタート時：118💲（102件）終了時：113💲
-☑️Mascula	ケンチェラ	スタート時：113💲（130件）終了時：109💲
-☑️Verecunda	バトナ近郊	スタート時：109💲（113件）終了時：104.5💲
-☑️Tigisis	アイウン スタート時：104.5💲（73件）終了時：102💲
+### Numidia
+- Cirta
