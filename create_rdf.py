@@ -548,8 +548,8 @@ if __name__ == "__main__":
     parser.add_argument('--format', '-f', type=str, default='turtle',
                         choices=['turtle', 'xml', 'n3', 'nt', 'json-ld'],
                         help='RDFのシリアライゼーション形式（デフォルト: turtle）')
-    parser.add_argument('--pleiades-mapping', '-p', type=str, default='place_pleiades_mapping.json',
-                        help='地名とPleiades IDの対応表ファイルパス（JSON形式、デフォルト: place_pleiades_mapping.json）')
+    parser.add_argument('--pleiades-mapping', '-p', type=str, default='pipeline/place_pleiades_mapping.json',
+                        help='地名とPleiades IDの対応表ファイルパス（JSON形式、デフォルト: pipeline/place_pleiades_mapping.json）')
 
     args = parser.parse_args()
 

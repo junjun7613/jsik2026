@@ -103,7 +103,7 @@ python batch_scrape_new_edcs.py --province-csv 2026-02-05-places_Numidia.csv --r
 
 ### 方法B: Pleiades Mapping JSON形式（手動作成）
 
-プロジェクトルートの `place_pleiades_mapping.json` を使用:
+`place_pleiades_mapping.json`（pipelineディレクトリ内） を使用:
 
 ```json
 {
@@ -158,7 +158,7 @@ python batch_scrape_new_edcs.py --province-csv 2026-02-05-places_Numidia.csv --r
 ### Pleiades Mapping JSONを使用
 
 ```bash
-python batch_scrape_new_edcs.py --pleiades-mapping ../place_pleiades_mapping.json
+python batch_scrape_new_edcs.py --pleiades-mapping place_pleiades_mapping.json
 ```
 
 ### テキストファイル形式
@@ -176,7 +176,7 @@ python batch_scrape_new_edcs.py --places-csv places.csv --csv-column PlaceName
 ### 実行例の出力
 
 ```
-Reading places from Pleiades mapping: ../place_pleiades_mapping.json
+Reading places from Pleiades mapping: place_pleiades_mapping.json
 Found 2 places to process
 
 [1/2] Processing: Oudna, Hr. / Udhnah / Uthina
@@ -303,7 +303,7 @@ pipeline/
 スクレイピングが中断された場合、再開できます：
 
 ```bash
-python batch_scrape_new_edcs.py --pleiades-mapping ../place_pleiades_mapping.json --resume
+python batch_scrape_new_edcs.py --pleiades-mapping place_pleiades_mapping.json --resume
 ```
 
 - 既に処理済みの地名はスキップされます
@@ -314,7 +314,7 @@ python batch_scrape_new_edcs.py --pleiades-mapping ../place_pleiades_mapping.jso
 カスタム進捗ファイル：
 
 ```bash
-python batch_scrape_new_edcs.py --pleiades-mapping ../place_pleiades_mapping.json --resume --resume-file my_progress.txt
+python batch_scrape_new_edcs.py --pleiades-mapping place_pleiades_mapping.json --resume --resume-file my_progress.txt
 ```
 
 ## 技術詳細
@@ -1449,7 +1449,7 @@ python extract_places_from_province.py --province "Numidia" --max-records 1000
 python batch_scrape_new_edcs.py --province-csv 2026-02-05-places_Numidia.csv
 
 # Pleiades Mapping JSON形式
-python batch_scrape_new_edcs.py --pleiades-mapping ../place_pleiades_mapping.json
+python batch_scrape_new_edcs.py --pleiades-mapping place_pleiades_mapping.json
 
 # テキストファイル形式
 python batch_scrape_new_edcs.py --places places.txt
