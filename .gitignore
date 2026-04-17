@@ -105,6 +105,7 @@ extract_places_from_province.py
 extract_emperors_list.py
 create_rdf.py
 create_ontology.py
+pipeline/create_ontology.py
 schema_properties.png
 schema_properties.xlsx
 schema_properties_ontology.xlsx
