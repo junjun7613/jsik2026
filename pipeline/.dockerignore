@@ -1,6 +1,0 @@
-.direnv
-output/*
-output_maps/*
-*.zip
-*.tsv
-already_mapped_data/*

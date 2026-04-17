@@ -78,6 +78,8 @@ pipeline/setup.py
 pipeline/pyproject.toml
 pipeline/MIGRATION_SUMMARY.md
 pipeline/CITATION.cff
+pipeline/.github/
+pipeline/.dockerignore
 
 # ============================================================
 # Other subprojects (not part of this paper)
