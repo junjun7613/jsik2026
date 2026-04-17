@@ -31,13 +31,12 @@ load_dotenv()
 
 # Get script directory and project root
 SCRIPT_DIR = Path(__file__).parent
-PROJECT_ROOT = SCRIPT_DIR.parent
 SCRAPED_DATA_DIR = SCRIPT_DIR / 'scraped_data'
 OUTPUT_DIR = SCRIPT_DIR / 'career_graphs'
-EXISTING_CAREER_DIR = PROJECT_ROOT / 'career_graphs' / 'claude'
+EXISTING_CAREER_DIR = SCRIPT_DIR / 'career_graphs' / 'claude'
 
-# Import extraction functions from root extract_career_graph.py
-sys.path.insert(0, str(PROJECT_ROOT))
+# Import extraction functions from extract_career_graph.py (same directory)
+sys.path.insert(0, str(SCRIPT_DIR))
 from extract_career_graph import extract_person_and_career, call_llm, roman_emperors
 
 

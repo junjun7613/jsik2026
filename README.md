@@ -24,7 +24,7 @@ This repository contains the code for a pipeline that:
 | `pipeline/validation/fix_and_export.py` | Schema normalization and export |
 | `pipeline/create_rdf.py` | RDF/Turtle conversion |
 | `pipeline/epig_ontology.ttl` | Custom ontology definition |
-| `extract_career_graph.py` | Single-inscription extraction utility |
+| `pipeline/extract_career_graph.py` | Single-inscription extraction utility |
 | `pipeline/place_pleiades_mapping.json` | Place → Pleiades ID mapping |
 | `prompt_sample.json` | Example LLM prompt |
 | `schema_properties.xlsx` | JSON schema property reference |
