@@ -24,7 +24,7 @@ PAIRS_JSON = DIR.parent / 'name_components' / 'name_eval_result_claude.json'
 MAPPING    = DIR / 'status_mapping.json'
 EDH_CSV    = DIR.parent / 'name_components' / 'edh_linked_data' / 'edh_inscriptions.csv'
 CG_DIR     = PIPELINE / 'provenance' / 'career_graphs' / 'claude'
-HTML_OUT   = DIR / 'status_viewer.html'
+HTML_OUT   = PIPELINE.parent / 'docs' / 'evaluation' / 'status_viewer.html'
 
 
 # ── normalization ─────────────────────────────────────────────────────────────

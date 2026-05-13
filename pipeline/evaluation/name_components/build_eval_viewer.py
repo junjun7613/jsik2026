@@ -19,7 +19,7 @@ EVAL_DIR      = Path(__file__).parent
 PIPELINE      = EVAL_DIR.parent.parent
 CG_DIR        = PIPELINE / 'provenance' / 'career_graphs' / 'claude'
 JSON_IN       = EVAL_DIR / 'name_eval_result_claude.json'
-HTML_OUT      = EVAL_DIR / 'eval_viewer.html'
+HTML_OUT      = PIPELINE.parent / 'docs' / 'evaluation' / 'eval_viewer.html'
 EDH_INSC_CSV  = EVAL_DIR / 'edh_linked_data' / 'edh_inscriptions.csv'
 
 

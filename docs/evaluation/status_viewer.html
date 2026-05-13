@@ -73,7 +73,6 @@ main { padding:16px 24px; max-width:1200px; margin:0 auto; }
   <label><input type="checkbox" id="errOnly"> エラーのある碑文のみ</label>
   <label>HD番号: <input type="text" id="searchBox" placeholder="HD000379"></label>
   <label>カテゴリ: <select id="catFilter"><option value="all">すべて</option>
-<option value="augustalis">augustalis</option>
 <option value="decurial">decurial</option>
 <option value="equestrian">equestrian</option>
 <option value="freedman">freedman</option>
@@ -91,11 +90,6 @@ main { padding:16px 24px; max-width:1200px; margin:0 auto; }
     <table class="summary-table">
       <thead><tr><th>Category</th><th>TP</th><th>FP</th><th>FN</th><th>Precision</th><th>Recall</th><th>F1</th></tr></thead>
       <tbody>
-          <tr>
-            <td>augustalis</td>
-            <td>0</td><td>5</td><td>0</td>
-            <td>0.0%</td><td>0.0%</td><td>0.0%</td>
-          </tr>
           <tr>
             <td>decurial</td>
             <td>34</td><td>5</td><td>11</td>
@@ -133,13 +127,13 @@ main { padding:16px 24px; max-width:1200px; margin:0 auto; }
           </tr><tr><td colspan="7" style="border-top:2px solid #adb5bd;padding:0"></td></tr>
           <tr class="avg-row">
             <td>MICRO avg</td>
-            <td>763</td><td>31</td><td>87</td>
-            <td>96.1%</td><td>89.8%</td><td>92.8%</td>
+            <td>763</td><td>26</td><td>87</td>
+            <td>96.7%</td><td>89.8%</td><td>93.1%</td>
           </tr>
           <tr class="avg-row">
             <td>MACRO avg</td>
             <td colspan="3"></td>
-            <td>80.3%</td><td>68.5%</td><td>72.1%</td>
+            <td>91.8%</td><td>78.3%</td><td>82.4%</td>
           </tr>
           <tr class="avg-row">
             <td>WEIGHTED MACRO avg</td>
@@ -644,13 +638,13 @@ main { padding:16px 24px; max-width:1200px; margin:0 auto; }
           </tr>
         </thead>
         <tbody>
-        <tr class="status-fp">
+        <tr class="status-fn">
           <td class="person-idx">1</td>
           <td>Q. Cassius Taurus</td>
           <td>Quintus Cassius Taurus</td>
           <td><span class="status-val">decurial</span><br><span class="norm-val">→ decurial</span></td>
-          <td><span class="status-val">flamen</span><br><span class="norm-val">→ augustalis</span></td>
-          <td><span class="badge fp-badge">FP</span></td>
+          <td><span class="status-val">flamen</span><br><span class="norm-val">→ —</span></td>
+          <td><span class="badge fn-badge">FN</span></td>
         </tr>
         </tbody>
       </table>
@@ -1343,13 +1337,13 @@ main { padding:16px 24px; max-width:1200px; margin:0 auto; }
           <td><span class="status-val">senator-consularis</span><br><span class="norm-val">→ senatorial</span></td>
           <td><span class="badge match-badge">match</span></td>
         </tr>
-        <tr class="status-fp">
+        <tr class="status-fn">
           <td class="person-idx">4</td>
           <td>Q. Tegonius Saturninus</td>
           <td>Q(uintus) Tegonius Saturninus fl(amen) p(er)p(etuus)</td>
           <td><span class="status-val">decurial</span><br><span class="norm-val">→ decurial</span></td>
-          <td><span class="status-val">flamen</span><br><span class="norm-val">→ augustalis</span></td>
-          <td><span class="badge fp-badge">FP</span></td>
+          <td><span class="status-val">flamen</span><br><span class="norm-val">→ —</span></td>
+          <td><span class="badge fn-badge">FN</span></td>
         </tr>
         </tbody>
       </table>
@@ -7734,13 +7728,13 @@ main { padding:16px 24px; max-width:1200px; margin:0 auto; }
           </tr>
         </thead>
         <tbody>
-        <tr class="status-fp">
+        <tr class="status-fn">
           <td class="person-idx">1</td>
           <td>P. Opstorius Saturninus</td>
           <td>P(ublius) Opstorius Saturninus</td>
           <td><span class="status-val">senatorial</span><br><span class="norm-val">→ senatorial</span></td>
-          <td><span class="status-val">flamen</span><br><span class="norm-val">→ augustalis</span></td>
-          <td><span class="badge fp-badge">FP</span></td>
+          <td><span class="status-val">flamen</span><br><span class="norm-val">→ —</span></td>
+          <td><span class="badge fn-badge">FN</span></td>
         </tr>
         <tr class="status-match">
           <td class="person-idx">2</td>
@@ -11410,13 +11404,13 @@ main { padding:16px 24px; max-width:1200px; margin:0 auto; }
           <td><span class="status-val">senator-consularis</span><br><span class="norm-val">→ senatorial</span></td>
           <td><span class="badge match-badge">match</span></td>
         </tr>
-        <tr class="status-fp">
+        <tr class="status-fn">
           <td class="person-idx">2</td>
           <td>M. Cassinius Secundus</td>
           <td>M(arcus) Cossinius Secundus</td>
           <td><span class="status-val">decurial</span><br><span class="norm-val">→ decurial</span></td>
-          <td><span class="status-val">flamen</span><br><span class="norm-val">→ augustalis</span></td>
-          <td><span class="badge fp-badge">FP</span></td>
+          <td><span class="status-val">flamen</span><br><span class="norm-val">→ —</span></td>
+          <td><span class="badge fn-badge">FN</span></td>
         </tr>
         <tr class="status-fn">
           <td class="person-idx">3</td>
@@ -16682,13 +16676,13 @@ Marcus Lucceius Torquatus Bassianus legatus Augustorum pro praetore patronus col
           <td><span class="status-val">duovir</span><br><span class="norm-val">→ decurial</span></td>
           <td><span class="badge match-badge">match</span></td>
         </tr>
-        <tr class="status-fp">
+        <tr class="status-fn">
           <td class="person-idx">4</td>
           <td>L. Gargilius Felix</td>
           <td>L(ucius) [Gar]gilius Fel(ix)</td>
           <td><span class="status-val">decurial</span><br><span class="norm-val">→ decurial</span></td>
-          <td><span class="status-val">flamen</span><br><span class="norm-val">→ augustalis</span></td>
-          <td><span class="badge fp-badge">FP</span></td>
+          <td><span class="status-val">flamen</span><br><span class="norm-val">→ —</span></td>
+          <td><span class="badge fn-badge">FN</span></td>
         </tr>
         </tbody>
       </table>
