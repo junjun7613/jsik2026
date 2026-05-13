@@ -1,0 +1,2371 @@
+{
+  "summary": {
+    "provinces": [
+      "Africa Proconsularis",
+      "Numidia"
+    ],
+    "edh_hd_in_scope": 50,
+    "matched_to_cg": 50,
+    "match_rate_pct": 100.0,
+    "inscriptions_compared": 50,
+    "avg_name_score": 0.43,
+    "person_count_match_pct": 60.0,
+    "name_score_ge_0.5_pct": 48.0
+  },
+  "results": [
+    {
+      "edh_count": 1,
+      "cg_count": 1,
+      "count_match": true,
+      "avg_name_score": 0.286,
+      "pairs": [
+        {
+          "edh_name": "Traianus Hadrianus",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "Imp(erator) Caesar Traianus Hadrianus Aug(ustus)",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.286
+        }
+      ],
+      "hd_number": "HD000370",
+      "edcs_id": "EDCS-08500625"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 1,
+      "count_match": true,
+      "avg_name_score": 0.0,
+      "pairs": [
+        {
+          "edh_name": "",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD000373",
+      "edcs_id": "EDCS-08500626"
+    },
+    {
+      "edh_count": 2,
+      "cg_count": 1,
+      "count_match": false,
+      "avg_name_score": 0.0,
+      "pairs": [
+        {
+          "edh_name": "L. Pullaienus Papias",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Primigenius",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD000376",
+      "edcs_id": "EDCS-24501023"
+    },
+    {
+      "edh_count": 6,
+      "cg_count": 6,
+      "count_match": true,
+      "avg_name_score": 0.875,
+      "pairs": [
+        {
+          "edh_name": "Gadaeus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "Gadaeus",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 1.0
+        },
+        {
+          "edh_name": "Felix",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "Felix",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 1.0
+        },
+        {
+          "edh_name": "Secunda",
+          "edh_gender": "female",
+          "edh_status": "",
+          "cg_name": "Secunda Secundi fil(ia)",
+          "cg_gender": "female",
+          "cg_status": "",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "Secundus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "Secundus",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 1.0
+        },
+        {
+          "edh_name": "Saturio",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "Saturio",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 1.0
+        },
+        {
+          "edh_name": "Gadaeus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "Gadaeus",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 1.0
+        }
+      ],
+      "hd_number": "HD000379",
+      "edcs_id": "EDCS-15600892"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 1,
+      "count_match": true,
+      "avg_name_score": 0.0,
+      "pairs": [
+        {
+          "edh_name": "Cae[---]? Cae[---]?",
+          "edh_gender": "",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD000382",
+      "edcs_id": "EDCS-08500627"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 1,
+      "count_match": true,
+      "avg_name_score": 1.0,
+      "pairs": [
+        {
+          "edh_name": "Aufidia [---]dia",
+          "edh_gender": "female",
+          "edh_status": "",
+          "cg_name": "Aufidia [3]dia",
+          "cg_gender": "female",
+          "cg_status": "",
+          "name_score": 1.0
+        }
+      ],
+      "hd_number": "HD000385",
+      "edcs_id": "EDCS-08500628"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 1,
+      "count_match": true,
+      "avg_name_score": 0.0,
+      "pairs": [
+        {
+          "edh_name": "Felix?",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD000388",
+      "edcs_id": "EDCS-08500629"
+    },
+    {
+      "edh_count": 2,
+      "cg_count": 2,
+      "count_match": true,
+      "avg_name_score": 0.875,
+      "pairs": [
+        {
+          "edh_name": "Q. Lappius Saturninus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "Q(uintus) Lappius Saturninus",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 0.75
+        },
+        {
+          "edh_name": "Lappia Felicitas",
+          "edh_gender": "female",
+          "edh_status": "",
+          "cg_name": "Lappia Felicitas",
+          "cg_gender": "female",
+          "cg_status": "",
+          "name_score": 1.0
+        }
+      ],
+      "hd_number": "HD000394",
+      "edcs_id": "EDCS-08500631"
+    },
+    {
+      "edh_count": 2,
+      "cg_count": 3,
+      "count_match": false,
+      "avg_name_score": 0.7,
+      "pairs": [
+        {
+          "edh_name": "Zasgia (= Zascia) Victoria Cezzonia (= Caesonia)",
+          "edh_gender": "female",
+          "edh_status": "",
+          "cg_name": "Zasgia Victoria Cezzonia",
+          "cg_gender": "female",
+          "cg_status": "",
+          "name_score": 0.6
+        },
+        {
+          "edh_name": "L. Turius Fabius Lucanianus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Turius Fabius Lucanianus",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 0.8
+        }
+      ],
+      "hd_number": "HD000397",
+      "edcs_id": "EDCS-08500632"
+    },
+    {
+      "edh_count": 2,
+      "cg_count": 3,
+      "count_match": false,
+      "avg_name_score": 0.541,
+      "pairs": [
+        {
+          "edh_name": "Calpurnia Gemina",
+          "edh_gender": "female",
+          "edh_status": "",
+          "cg_name": "Calpurnia Q(uinti) f(ilia) Gemina",
+          "cg_gender": "female",
+          "cg_status": "",
+          "name_score": 0.333
+        },
+        {
+          "edh_name": "L. Calpurnius S[---]?",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Calpurnius S[---]",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 0.75
+        }
+      ],
+      "hd_number": "HD000400",
+      "edcs_id": "EDCS-08500633"
+    },
+    {
+      "edh_count": 2,
+      "cg_count": 2,
+      "count_match": true,
+      "avg_name_score": 0.9,
+      "pairs": [
+        {
+          "edh_name": "Sex. Terentius Saturninus Donnicianus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "Sex(tus) Terentius Saturninus Donnicianus",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 0.8
+        },
+        {
+          "edh_name": "Bommia Saturnina Terentilla",
+          "edh_gender": "female",
+          "edh_status": "",
+          "cg_name": "Bommia Saturnina Terentilla",
+          "cg_gender": "female",
+          "cg_status": "",
+          "name_score": 1.0
+        }
+      ],
+      "hd_number": "HD000403",
+      "edcs_id": "EDCS-08500634"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 1,
+      "count_match": true,
+      "avg_name_score": 0.1,
+      "pairs": [
+        {
+          "edh_name": "C. Annaeus Nonanus Quartianus",
+          "edh_gender": "male",
+          "edh_status": "decurial",
+          "cg_name": "C(aio) Annaeo [N]oniano Arn(ensi) Qu[a]rtiano",
+          "cg_gender": "male",
+          "cg_status": "decurio",
+          "name_score": 0.1
+        }
+      ],
+      "hd_number": "HD000405",
+      "edcs_id": "EDCS-08600645"
+    },
+    {
+      "edh_count": 3,
+      "cg_count": 2,
+      "count_match": false,
+      "avg_name_score": 0.667,
+      "pairs": [
+        {
+          "edh_name": "Aris",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "Aris",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 1.0
+        },
+        {
+          "edh_name": "Storax",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "Storax",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 1.0
+        },
+        {
+          "edh_name": "Arest",
+          "edh_gender": "female",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD000406",
+      "edcs_id": "EDCS-13100023"
+    },
+    {
+      "edh_count": 3,
+      "cg_count": 3,
+      "count_match": true,
+      "avg_name_score": 0.792,
+      "pairs": [
+        {
+          "edh_name": "T. Aelius Antoninus",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "T(itus) Aelius Antoninus Caes(ar) Aug(ustus)",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.375
+        },
+        {
+          "edh_name": "Macer",
+          "edh_gender": "male",
+          "edh_status": "decurial",
+          "cg_name": "Macer",
+          "cg_gender": "male",
+          "cg_status": "municipal-magistrate",
+          "name_score": 1.0
+        },
+        {
+          "edh_name": "Baliato",
+          "edh_gender": "male",
+          "edh_status": "decurial",
+          "cg_name": "Baliato",
+          "cg_gender": "male",
+          "cg_status": "municipal-magistrate",
+          "name_score": 1.0
+        }
+      ],
+      "hd_number": "HD000408",
+      "edcs_id": "EDCS-08600646"
+    },
+    {
+      "edh_count": 4,
+      "cg_count": 2,
+      "count_match": false,
+      "avg_name_score": 0.05,
+      "pairs": [
+        {
+          "edh_name": "Saturnina",
+          "edh_gender": "female",
+          "edh_status": "",
+          "cg_name": "Saturnina M() Zandulis fil(ia)",
+          "cg_gender": "female",
+          "cg_status": "",
+          "name_score": 0.2
+        },
+        {
+          "edh_name": "Mzandulis?",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Rufus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Sen[---]lisus?",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD000409",
+      "edcs_id": "EDCS-08500637"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 1,
+      "count_match": true,
+      "avg_name_score": 0.333,
+      "pairs": [
+        {
+          "edh_name": "Flavius Vitalis",
+          "edh_gender": "male",
+          "edh_status": "decurial",
+          "cg_name": "Fl(avius) Vitalis",
+          "cg_gender": "male",
+          "cg_status": "decurio",
+          "name_score": 0.333
+        }
+      ],
+      "hd_number": "HD000411",
+      "edcs_id": "EDCS-25401742"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 1,
+      "count_match": true,
+      "avg_name_score": 1.0,
+      "pairs": [
+        {
+          "edh_name": "Nasidia Concessa",
+          "edh_gender": "female",
+          "edh_status": "",
+          "cg_name": "Nasidia Concessa",
+          "cg_gender": "female",
+          "cg_status": "",
+          "name_score": 1.0
+        }
+      ],
+      "hd_number": "HD000412",
+      "edcs_id": "EDCS-08500638"
+    },
+    {
+      "edh_count": 3,
+      "cg_count": 1,
+      "count_match": false,
+      "avg_name_score": 0.0,
+      "pairs": [
+        {
+          "edh_name": "M. Praecilius Secundus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Praecilius Rogatus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Praecilius Saturninus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD000414",
+      "edcs_id": "EDCS-08601312"
+    },
+    {
+      "edh_count": 2,
+      "cg_count": 2,
+      "count_match": true,
+      "avg_name_score": 0.875,
+      "pairs": [
+        {
+          "edh_name": "C. Sempronius Ianuarius",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "C(aius) Sempronius Ianuarius",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 0.75
+        },
+        {
+          "edh_name": "Petronia Proba",
+          "edh_gender": "female",
+          "edh_status": "",
+          "cg_name": "Petronia Proba",
+          "cg_gender": "female",
+          "cg_status": "",
+          "name_score": 1.0
+        }
+      ],
+      "hd_number": "HD000415",
+      "edcs_id": "EDCS-08500639"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 1,
+      "count_match": true,
+      "avg_name_score": 0.75,
+      "pairs": [
+        {
+          "edh_name": "P. Iulius Ianuarius",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "P(ublius) Iulius Ianuarius",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 0.75
+        }
+      ],
+      "hd_number": "HD000417",
+      "edcs_id": "EDCS-08600650"
+    },
+    {
+      "edh_count": 2,
+      "cg_count": 1,
+      "count_match": false,
+      "avg_name_score": 0.0,
+      "pairs": [
+        {
+          "edh_name": "[---]erila?",
+          "edh_gender": "female",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "",
+          "edh_gender": "",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD000418",
+      "edcs_id": "EDCS-08500640"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 1,
+      "count_match": true,
+      "avg_name_score": 0.75,
+      "pairs": [
+        {
+          "edh_name": "L. Iulius Mustus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Iulius Mustus",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 0.75
+        }
+      ],
+      "hd_number": "HD000420",
+      "edcs_id": "EDCS-08600649"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 1,
+      "count_match": true,
+      "avg_name_score": 0.75,
+      "pairs": [
+        {
+          "edh_name": "C. Iulius Paris",
+          "edh_gender": "",
+          "edh_status": "",
+          "cg_name": "C(aius) Iulius Paris",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 0.75
+        }
+      ],
+      "hd_number": "HD000423",
+      "edcs_id": "EDCS-08600648"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 1,
+      "count_match": true,
+      "avg_name_score": 0.0,
+      "pairs": [
+        {
+          "edh_name": "Bommia Saturnina",
+          "edh_gender": "female",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD000424",
+      "edcs_id": "EDCS-08500641"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 1,
+      "count_match": true,
+      "avg_name_score": 0.75,
+      "pairs": [
+        {
+          "edh_name": "C. Geminius Rufus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "C(aius) Geminius Rufus",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 0.75
+        }
+      ],
+      "hd_number": "HD000427",
+      "edcs_id": "EDCS-24300174"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 1,
+      "count_match": true,
+      "avg_name_score": 0.75,
+      "pairs": [
+        {
+          "edh_name": "L. Gravius Romanus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Gravius Romanus",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 0.75
+        }
+      ],
+      "hd_number": "HD000429",
+      "edcs_id": "EDCS-65000121"
+    },
+    {
+      "edh_count": 3,
+      "cg_count": 3,
+      "count_match": true,
+      "avg_name_score": 0.917,
+      "pairs": [
+        {
+          "edh_name": "T. Volusenus Potitus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "T(itus) Volusenus Potitus",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 0.75
+        },
+        {
+          "edh_name": "Rufianus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "Rufianus",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 1.0
+        },
+        {
+          "edh_name": "Geminia Secunda",
+          "edh_gender": "female",
+          "edh_status": "",
+          "cg_name": "Geminia Secunda",
+          "cg_gender": "female",
+          "cg_status": "",
+          "name_score": 1.0
+        }
+      ],
+      "hd_number": "HD000433",
+      "edcs_id": "EDCS-08500642"
+    },
+    {
+      "edh_count": 3,
+      "cg_count": 3,
+      "count_match": true,
+      "avg_name_score": 0.717,
+      "pairs": [
+        {
+          "edh_name": "Perellia Fortunata",
+          "edh_gender": "female",
+          "edh_status": "",
+          "cg_name": "Perellia Fortunata",
+          "cg_gender": "female",
+          "cg_status": "freedwoman",
+          "name_score": 1.0
+        },
+        {
+          "edh_name": "L. Perellius Lupercus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Perellius Lupercus",
+          "cg_gender": "male",
+          "cg_status": "freedman",
+          "name_score": 0.75
+        },
+        {
+          "edh_name": "L. Cornelius Saturninus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Cornel[ius] Saturninus",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 0.4
+        }
+      ],
+      "hd_number": "HD000436",
+      "edcs_id": "EDCS-08500643"
+    },
+    {
+      "edh_count": 4,
+      "cg_count": 1,
+      "count_match": false,
+      "avg_name_score": 0.0,
+      "pairs": [
+        {
+          "edh_name": "Sentius",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Namphamo",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Fortunata",
+          "edh_gender": "female",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Sentius Namfamo (= Namphamo) Tires? (= Teres?)",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD000439",
+      "edcs_id": "EDCS-08500635"
+    },
+    {
+      "edh_count": 4,
+      "cg_count": 2,
+      "count_match": false,
+      "avg_name_score": 0.375,
+      "pairs": [
+        {
+          "edh_name": "Amodb[---]",
+          "edh_gender": "female",
+          "edh_status": "",
+          "cg_name": "Amodb[---]",
+          "cg_gender": "unknown",
+          "cg_status": "",
+          "name_score": 1.0
+        },
+        {
+          "edh_name": "L.  Secundus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "Secundus",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 0.5
+        },
+        {
+          "edh_name": "Mutthunus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Felix",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD000445",
+      "edcs_id": "EDCS-24501052"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 1,
+      "count_match": true,
+      "avg_name_score": 0.333,
+      "pairs": [
+        {
+          "edh_name": "Flavius Arpagius",
+          "edh_gender": "male",
+          "edh_status": "senatorial",
+          "cg_name": "Fl(avius) Arpagius",
+          "cg_gender": "male",
+          "cg_status": "senator-clarissimus",
+          "name_score": 0.333
+        }
+      ],
+      "hd_number": "HD000447",
+      "edcs_id": "EDCS-17700482"
+    },
+    {
+      "edh_count": 2,
+      "cg_count": 3,
+      "count_match": false,
+      "avg_name_score": 0.5,
+      "pairs": [
+        {
+          "edh_name": "Valentinianus",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "Valentinianus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 1.0
+        },
+        {
+          "edh_name": "Valens",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD000453",
+      "edcs_id": "EDCS-08600651"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 2,
+      "count_match": false,
+      "avg_name_score": 0.0,
+      "pairs": [
+        {
+          "edh_name": "",
+          "edh_gender": "male",
+          "edh_status": "freedman",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD000456",
+      "edcs_id": "EDCS-08600652"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 2,
+      "count_match": false,
+      "avg_name_score": 0.333,
+      "pairs": [
+        {
+          "edh_name": "Ummidius Bubalio",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "Um(midius) Bubalio",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 0.333
+        }
+      ],
+      "hd_number": "HD000459",
+      "edcs_id": "EDCS-13003736"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 1,
+      "count_match": true,
+      "avg_name_score": 0.75,
+      "pairs": [
+        {
+          "edh_name": "M. Aurelius Claudius",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "M(arcus) Aurelius Claudius",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.75
+        }
+      ],
+      "hd_number": "HD000474",
+      "edcs_id": "EDCS-08600658"
+    },
+    {
+      "edh_count": 55,
+      "cg_count": 3,
+      "count_match": false,
+      "avg_name_score": 0.15,
+      "pairs": [
+        {
+          "edh_name": "L. Septimius Severus",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "L(ucius) Septimius Severus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.75
+        },
+        {
+          "edh_name": "M. Aurelius Antoninus",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "M(arcus) Aurelius Antoninus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.75
+        },
+        {
+          "edh_name": "Iulia",
+          "edh_gender": "female",
+          "edh_status": "imperial_household",
+          "cg_name": "Iulia Augusta",
+          "cg_gender": "female",
+          "cg_status": "empress",
+          "name_score": 0.5
+        },
+        {
+          "edh_name": "L. Maenius Vibidianus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Septimius Severus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "M. Annius Faustus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "M(arcus) Aurelius Antoninus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "C. Popilius Laetus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "L. Longeiius (= Longeius) Primus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Septimius Severus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "L. Licinius Honoratus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Septimius Severus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "M. Volussenius Fortunatus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "M(arcus) Aurelius Antoninus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "Q. Caecilius Ateanus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Q. Timinius Felix",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Q. Lurius Severus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Septimius Severus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "P. Caelius Saturninus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Ti. Claudius Victor",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "L. Iulius Donatus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Septimius Severus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "L. Statius Maximus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Septimius Severus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "M. Cornelius Servandianus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "M(arcus) Aurelius Antoninus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "C. Clodius Saturninus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "L. Aulonius Felix",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Septimius Severus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "L. Valerius Victor",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Septimius Severus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "C. Albanius Aelianus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "P. Aelius Victor",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "M. Aennius Saturninus Leporinus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "M(arcus) Aurelius Antoninus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "M. Acilius Lucanus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "M(arcus) Aurelius Antoninus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "Q. Sallustius Candidus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Q. Iulius Thelemachus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Q. Helvius Muricus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Q. Iulius Mychronius",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "C. Publilius Fortunatus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "M. Ulpius Felix",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "M(arcus) Aurelius Antoninus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "L. Aedius Ianuarius",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Septimius Severus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "L. Caeladius Saturninus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Septimius Severus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "Q. Grattius Fortunatus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "M. Antonius Saturninus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "M(arcus) Aurelius Antoninus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "L. Egnatius Agricola",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Septimius Severus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "M. Ulpius Peculiaris",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "M(arcus) Aurelius Antoninus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "P. Pactimeius Felix",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Q. Antonius Sulla",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "M. Acilius Celadianus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "M(arcus) Aurelius Antoninus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "P. Fabius Catulianus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Q. Iulius Sapa",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "L. Aemilius Victor",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Septimius Severus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "C. Annius Posianus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "L. Claudius Festivus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Septimius Severus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "T. Flavius Cuminus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "L. Aemilius Donatus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Septimius Severus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "Q. Pomponius Geminus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Q. Grattius Donatus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "L. Blossius Honoratus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Septimius Severus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "Q. Cornelius Victor",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "L. Valerius Felix",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "L(ucius) Septimius Severus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.25
+        },
+        {
+          "edh_name": "Q. Iulius Fortunatus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "P. Camerius Faustus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "C. Peticius Castus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Q. Arrius Processus Stablicus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD000480",
+      "edcs_id": "EDCS-08600661"
+    },
+    {
+      "edh_count": 4,
+      "cg_count": 4,
+      "count_match": true,
+      "avg_name_score": 0.0,
+      "pairs": [
+        {
+          "edh_name": "Galerius Valerius Maximianus",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Flavius Valerius Severus",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Galerius Valerius Maximinus",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Flavius Valerius Constantinus",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD000489",
+      "edcs_id": "EDCS-08600665"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 1,
+      "count_match": true,
+      "avg_name_score": 0.0,
+      "pairs": [
+        {
+          "edh_name": "P. Aelius Col(---)",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD000493",
+      "edcs_id": "EDCS-20600076"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 2,
+      "count_match": false,
+      "avg_name_score": 0.5,
+      "pairs": [
+        {
+          "edh_name": "M. Pontius Varanus Sabinus",
+          "edh_gender": "male",
+          "edh_status": "senatorial",
+          "cg_name": "M(arcus) Pontius",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 0.5
+        }
+      ],
+      "hd_number": "HD000603",
+      "edcs_id": "EDCS-08600660"
+    },
+    {
+      "edh_count": 16,
+      "cg_count": 2,
+      "count_match": false,
+      "avg_name_score": 0.059,
+      "pairs": [
+        {
+          "edh_name": "L. Septimius Severus Pertinax",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "L(ucius) Sept(imius) Sever(us) Pius Pertinax Aug(ustus)",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.2
+        },
+        {
+          "edh_name": "Q. Anicius Faustus",
+          "edh_gender": "male",
+          "edh_status": "senatorial",
+          "cg_name": "Q(uintus) Anicius Faustus",
+          "cg_gender": "male",
+          "cg_status": "senator-consularis",
+          "name_score": 0.75
+        },
+        {
+          "edh_name": "Severus",
+          "edh_gender": "male",
+          "edh_status": "senatorial",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Herennianus",
+          "edh_gender": "male",
+          "edh_status": "senatorial",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Acilius Felix",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Commodus",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Verus",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Iulius Sa[-]im[---]",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Aemilius Saturninus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Falcus",
+          "edh_gender": "male",
+          "edh_status": "senatorial",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Clarus",
+          "edh_gender": "male",
+          "edh_status": "senatorial",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Iulius Donatus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Geminius Emeritus",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Tertullus",
+          "edh_gender": "male",
+          "edh_status": "senatorial",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Clemens",
+          "edh_gender": "male",
+          "edh_status": "senatorial",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Arrius",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD000762",
+      "edcs_id": "EDCS-08901193"
+    },
+    {
+      "edh_count": 3,
+      "cg_count": 3,
+      "count_match": true,
+      "avg_name_score": 0.0,
+      "pairs": [
+        {
+          "edh_name": "",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "[---]ns",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "",
+          "edh_gender": "male",
+          "edh_status": "decurial",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD000768",
+      "edcs_id": "EDCS-08600662"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 2,
+      "count_match": false,
+      "avg_name_score": 0.273,
+      "pairs": [
+        {
+          "edh_name": "M. Claudius Tacitus",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "Imp(erator) Caesar M(arcus) Claudius Tacitus Pius Felix Aug(ustus)",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.273
+        }
+      ],
+      "hd_number": "HD000771",
+      "edcs_id": "EDCS-08600663"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 1,
+      "count_match": true,
+      "avg_name_score": 0.667,
+      "pairs": [
+        {
+          "edh_name": "Q. Cassius Taurus",
+          "edh_gender": "male",
+          "edh_status": "decurial",
+          "cg_name": "Quintus Cassius Taurus",
+          "cg_gender": "male",
+          "cg_status": "flamen",
+          "name_score": 0.667
+        }
+      ],
+      "hd_number": "HD000774",
+      "edcs_id": "EDCS-08600664"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 2,
+      "count_match": false,
+      "avg_name_score": 0.0,
+      "pairs": [
+        {
+          "edh_name": "",
+          "edh_gender": "male",
+          "edh_status": "",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD000862",
+      "edcs_id": "EDCS-09400700"
+    },
+    {
+      "edh_count": 5,
+      "cg_count": 7,
+      "count_match": false,
+      "avg_name_score": 0.891,
+      "pairs": [
+        {
+          "edh_name": "A. T. Iulius Vibius Pompilius Piso Laevillus Quadratus Berenicianus",
+          "edh_gender": "male",
+          "edh_status": "senatorial",
+          "cg_name": "A(ulus) Iulius Pompilius A(uli) fil(ius) Corn(elia) Piso Berenicianus",
+          "cg_gender": "male",
+          "cg_status": "senator-praetorius",
+          "name_score": 0.455
+        },
+        {
+          "edh_name": "Glabrio",
+          "edh_gender": "male",
+          "edh_status": "senatorial",
+          "cg_name": "Glabrio",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 1.0
+        },
+        {
+          "edh_name": "Homullus",
+          "edh_gender": "male",
+          "edh_status": "senatorial",
+          "cg_name": "Homullus",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 1.0
+        },
+        {
+          "edh_name": "Praesens",
+          "edh_gender": "male",
+          "edh_status": "senatorial",
+          "cg_name": "Praesens",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 1.0
+        },
+        {
+          "edh_name": "Rufinus",
+          "edh_gender": "male",
+          "edh_status": "senatorial",
+          "cg_name": "Rufinus",
+          "cg_gender": "male",
+          "cg_status": "",
+          "name_score": 1.0
+        }
+      ],
+      "hd_number": "HD000864",
+      "edcs_id": "EDCS-20800609"
+    },
+    {
+      "edh_count": 3,
+      "cg_count": 3,
+      "count_match": true,
+      "avg_name_score": 0.917,
+      "pairs": [
+        {
+          "edh_name": "Sex. Iulius Possessor",
+          "edh_gender": "male",
+          "edh_status": "equestrian",
+          "cg_name": "Sex(tus) Iulius Possessor",
+          "cg_gender": "male",
+          "cg_status": "equestrian",
+          "name_score": 0.75
+        },
+        {
+          "edh_name": "Antoninus",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "Antoninus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 1.0
+        },
+        {
+          "edh_name": "Verus",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "Verus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 1.0
+        }
+      ],
+      "hd_number": "HD000874",
+      "edcs_id": "EDCS-08500644"
+    },
+    {
+      "edh_count": 42,
+      "cg_count": 4,
+      "count_match": false,
+      "avg_name_score": 0.058,
+      "pairs": [
+        {
+          "edh_name": "L. Septimius Severus",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "L(ucius) Septimius Severus Pius Pertinax Augustus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.429
+        },
+        {
+          "edh_name": "M. Aurelius Antoninus",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "M(arcus) Aurelius Antoninus Augustus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.6
+        },
+        {
+          "edh_name": "Iulia",
+          "edh_gender": "female",
+          "edh_status": "imperial_household",
+          "cg_name": "Iulia Augusta",
+          "cg_gender": "female",
+          "cg_status": "empress",
+          "name_score": 0.5
+        },
+        {
+          "edh_name": "Antonius Proculus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Valerius Felix",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Aemilius Crescens",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Flavius Felix",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Annaeus Priscus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Tuccius Fortunatus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Gellius Rogatus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Iulius Messianus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Flavius Iulianus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "[---]ilius Primus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "[---]ndicius Sallustianus?",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Valerius Castus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "[---]ius Speratus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Manilius Saturninus?",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "[---]ius Fortunatus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "[---]lius Venustus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "C. Iulius Victor",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Antistius Successus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Q. Granius Crispinus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Q. Fabius Donatus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Caelius Faustus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Postumius Urbanus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "C. Annius",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "L. Geminius",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "L(ucius) Septimius Severus Pius Pertinax Augustus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.143
+        },
+        {
+          "edh_name": "M. Valerius",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "M(arcus) Aurelius Antoninus Augustus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.2
+        },
+        {
+          "edh_name": "Q. Sulpicius",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Rutilius",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "C. Vereius I[---]",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "C. Secundius",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "L. Cassius Fortunatus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "L(ucius) Septimius Severus Pius Pertinax Augustus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.143
+        },
+        {
+          "edh_name": "Flavius Rogatus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Iulius Datus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Pompeus (= Pompeius) Datus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Gellius Rosinus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Domitius Ci[---]",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "C. Domitius Valens",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Servilius",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        },
+        {
+          "edh_name": "Aurelius Bassus",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "M(arcus) Aurelius Antoninus Augustus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.2
+        },
+        {
+          "edh_name": "Aurelius D[---]",
+          "edh_gender": "male",
+          "edh_status": "military",
+          "cg_name": "M(arcus) Aurelius Antoninus Augustus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.2
+        }
+      ],
+      "hd_number": "HD000973",
+      "edcs_id": "EDCS-16400629"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 1,
+      "count_match": true,
+      "avg_name_score": 1.0,
+      "pairs": [
+        {
+          "edh_name": "Ag(---) Ga(---)",
+          "edh_gender": "",
+          "edh_status": "",
+          "cg_name": "Ag() Ga()",
+          "cg_gender": "unknown",
+          "cg_status": "",
+          "name_score": 1.0
+        }
+      ],
+      "hd_number": "HD001192",
+      "edcs_id": "EDCS-08601258"
+    },
+    {
+      "edh_count": 4,
+      "cg_count": 4,
+      "count_match": true,
+      "avg_name_score": 0.333,
+      "pairs": [
+        {
+          "edh_name": "Flavius Valentinianus",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "Fl[avius] Valentinianus",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.333
+        },
+        {
+          "edh_name": "Flavius Theodosius",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "Fl[avius] Theodosius",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.333
+        },
+        {
+          "edh_name": "Flavius Arcadius",
+          "edh_gender": "male",
+          "edh_status": "imperial_household",
+          "cg_name": "Fl[avius] Arcadius",
+          "cg_gender": "male",
+          "cg_status": "emperor",
+          "name_score": 0.333
+        },
+        {
+          "edh_name": "Pacatus Drepanius",
+          "edh_gender": "male",
+          "edh_status": "senatorial",
+          "cg_name": "Pacat[us Drepanius]",
+          "cg_gender": "male",
+          "cg_status": "senator-clarissimus",
+          "name_score": 0.333
+        }
+      ],
+      "hd_number": "HD001195",
+      "edcs_id": "EDCS-08600912"
+    },
+    {
+      "edh_count": 1,
+      "cg_count": 2,
+      "count_match": false,
+      "avg_name_score": 0.0,
+      "pairs": [
+        {
+          "edh_name": "L.? Pistorius? Rugianus?",
+          "edh_gender": "male",
+          "edh_status": "senatorial",
+          "cg_name": "",
+          "cg_gender": "",
+          "cg_status": "",
+          "name_score": 0.0
+        }
+      ],
+      "hd_number": "HD001216",
+      "edcs_id": "EDCS-09200552"
+    }
+  ]
+}

@@ -111,6 +111,20 @@ schema_properties.xlsx
 schema_properties_ontology.xlsx
 
 # ============================================================
+# Evaluation — large data files
+# ============================================================
+pipeline/evaluation/name_components/edh_linked_data/*.ttl
+pipeline/evaluation/name_components/edh_linked_data/edh_people.csv
+pipeline/evaluation/name_components/edh_linked_data/edh_people_parsed.csv
+pipeline/evaluation/name_components/edh_linked_data/edh_inscriptions.csv
+pipeline/evaluation/name_components/edh_linked_data/edh_geography.csv
+pipeline/evaluation/name_components/hd_to_edcs_cache.json
+pipeline/evaluation/name_components/edcs_to_hd_cache.json
+# HTML viewers (served via docs/ instead)
+pipeline/evaluation/name_components/eval_viewer.html
+pipeline/evaluation/status_components/status_viewer.html
+
+# ============================================================
 # Office / temp files
 # ============================================================
 ~$*

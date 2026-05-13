@@ -1,0 +1,20 @@
+=== Social Status Evaluation ===
+Aligned pairs total : 2,401
+Both missing/unmappable: 1,492
+EDH unmappable (skipped): 59
+Evaluated pairs     : 850
+
+Category                  TP    FP    FN     Prec     Rec      F1
+--------------------------------------------------------------
+augustalis                 0     5     0     0.0%    0.0%    0.0%
+decurial                  34     5    11    87.2%   75.6%   81.0%
+equestrian                34     4     4    89.5%   89.5%   89.5%
+freedman                   6     2     1    75.0%   85.7%   80.0%
+imperial_household       355     7     5    98.1%   98.6%   98.3%
+military                  52     3    12    94.5%   81.2%   87.4%
+senatorial               281     5    52    98.3%   84.4%   90.8%
+slave                      1     0     2   100.0%   33.3%   50.0%
+--------------------------------------------------------------
+MICRO avg                763    31    87    96.1%   89.8%   92.8%
+MACRO avg                                   80.3%   68.5%   72.1%
+WEIGHTED MACRO avg                          96.7%   89.8%   92.9%

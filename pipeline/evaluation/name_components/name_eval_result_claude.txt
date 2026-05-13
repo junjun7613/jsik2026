@@ -1,0 +1,15 @@
+=== Name Component Evaluation Summary ===
+
+Provinces : Africa Proconsularis, Numidia
+EDH HD in scope : 2,041
+Matched to CG   : 2,020 (99.0%)
+Person pairs    : 3,074
+Person count match: 77.6%
+Avg name overlap  : 0.483
+
+Field             Accuracy   Coverage
+-------------------------------------
+praenomen            99.1%      41.4%
+nomen                94.0%      65.2%
+cognomen             84.7%      66.3%
+gender               98.3%      19.3%

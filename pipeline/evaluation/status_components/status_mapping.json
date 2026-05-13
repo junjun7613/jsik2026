@@ -1,0 +1,78 @@
+{
+  "_comment": "EDH social_status カテゴリへの CG 出力値の正規化マッピング。曖昧なカテゴリは除外し、確実にマッピングできるもののみ収録。",
+  "imperial_household": [
+    "emperor",
+    "empress",
+    "imperial-family",
+    "imperial-administration",
+    "imperial-freedman-or-slave",
+    "imperial-slave-or-freedman"
+  ],
+  "senatorial": [
+    "senator",
+    "senator-clarissimus",
+    "senator-consularis",
+    "senator-praetorius",
+    "consul",
+    "legatus",
+    "quaestor",
+    "pontifex",
+    "augur",
+    "augur, pontifex",
+    "patricius",
+    "patrician",
+    "provincial-governor",
+    "curator"
+  ],
+  "equestrian": [
+    "equestrian",
+    "equestrian-perfectissimus",
+    "equestrian-egregius",
+    "equestrian-splendidus",
+    "equestrian-excellentissimus",
+    "equestrian-eminentissimus",
+    "equestrian-decurio"
+  ],
+  "decurial": [
+    "decurio",
+    "decurion",
+    "municipal-magistrate",
+    "municipal-elite",
+    "duovir",
+    "aedilis",
+    "quinquennalis",
+    "promagister",
+    "flamen-decurio",
+    "veteran-decurio"
+  ],
+  "military": [
+    "military",
+    "soldier",
+    "veteran",
+    "centurio",
+    "tribunus",
+    "military-commander"
+  ],
+  "freedman": [
+    "freedman",
+    "freedwoman"
+  ],
+  "slave": [
+    "slave",
+    "imperial-slave"
+  ],
+  "augustalis": [
+    "augustalis",
+    "sevir"
+  ],
+  "local_official": [
+    "local_official",
+    "local",
+    "local-administration",
+    "provincial-administration"
+  ],
+  "foreign_ruler": [
+    "local-ruler",
+    "king"
+  ]
+}

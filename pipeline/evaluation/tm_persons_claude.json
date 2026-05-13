@@ -1,0 +1,42 @@
+[
+  {
+    "edcs_id": "EDCS-00000276",
+    "place": "Archea_Ilida_Ilis_Elis",
+    "province": "Achaia",
+    "tm_text_id": null,
+    "edh_id": null,
+    "persons": []
+  },
+  {
+    "edcs_id": "EDCS-00000277",
+    "place": "Archea_Ilida_Ilis_Elis",
+    "province": "Achaia",
+    "tm_text_id": null,
+    "edh_id": null,
+    "persons": []
+  },
+  {
+    "edcs_id": "EDCS-26200661",
+    "place": "Archea_Ilida_Ilis_Elis",
+    "province": "Achaia",
+    "tm_text_id": "382027",
+    "edh_id": null,
+    "persons": []
+  },
+  {
+    "edcs_id": "EDCS-66200160",
+    "place": "Archea_Ilida_Ilis_Elis",
+    "province": "Achaia",
+    "tm_text_id": "677831",
+    "edh_id": "HD068263",
+    "persons": []
+  },
+  {
+    "edcs_id": "EDCS-24300164",
+    "place": "Abbeda",
+    "province": "Africa_proconsularis",
+    "tm_text_id": "356409",
+    "edh_id": null,
+    "persons": []
+  }
+]

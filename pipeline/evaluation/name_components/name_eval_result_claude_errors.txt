@@ -1,0 +1,2767 @@
+=== FP / FN Error Log ===
+
+[HD000385]  EDCS=EDCS-08500628  EDH=1人  CG=1人
+  person: EDH='Aufidia [---]dia'  CG='Aufidia [3]dia'  overlap=1.0
+    [FN] cognomen: EDH='dia'  CG=(空欄)
+
+[HD000397]  EDCS=EDCS-08500632  EDH=2人  CG=3人
+  person: EDH='L. Turius Fabius Lucanianus'  CG='L(ucius) Turius Fabius Lucanianus'  overlap=0.8
+    [FP] cognomen: EDH='Fabius'  CG='Fabius Lucanianus'
+
+[HD000400]  EDCS=EDCS-08500633  EDH=2人  CG=3人
+  person: EDH='L. Calpurnius S[---]?'  CG='L(ucius) Calpurnius S[---]'  overlap=0.75
+    [FN] cognomen: EDH='S'  CG=(空欄)
+
+[HD000403]  EDCS=EDCS-08500634  EDH=2人  CG=2人
+  person: EDH='Sex. Terentius Saturninus Donnicianus'  CG='Sex(tus) Terentius Saturninus Donnicianus'  overlap=0.8
+    [FP] cognomen: EDH='Saturninus'  CG='Saturninus Donnicianus'
+  person: EDH='Bommia Saturnina Terentilla'  CG='Bommia Saturnina Terentilla'  overlap=1.0
+    [FP] cognomen: EDH='Saturnina'  CG='Saturnina Terentilla'
+
+[HD000405]  EDCS=EDCS-08600645  EDH=1人  CG=1人
+  person: EDH='C. Annaeus Nonanus Quartianus'  CG='C(aio) Annaeo [N]oniano Arn(ensi) Qu[a]rtiano'  overlap=0.1
+    [FP] cognomen: EDH='Nonanus'  CG='Nonianus Quartianus'
+
+[HD000406]  EDCS=EDCS-13100023  EDH=3人  CG=2人
+  person: EDH='Aris'  CG='Aris'  overlap=1.0
+    [FN] cognomen: EDH='Aris'  CG=(空欄)
+  person: EDH='Storax'  CG='Storax'  overlap=1.0
+    [FN] cognomen: EDH='Storax'  CG=(空欄)
+
+[HD000433]  EDCS=EDCS-08500642  EDH=3人  CG=3人
+  person: EDH='Rufianus'  CG='Rufianus'  overlap=1.0
+    [FN] nomen: EDH='Rufianus'  CG=(空欄)
+
+[HD000445]  EDCS=EDCS-24501052  EDH=4人  CG=2人
+  person: EDH='Amodb[---]'  CG='Amodb[---]'  overlap=1.0
+    [FN] cognomen: EDH='Amodb'  CG=(空欄)
+    [FP] gender: EDH='female'  CG='unknown'
+  person: EDH='L.  Secundus'  CG='Secundus'  overlap=0.5
+    [FN] praenomen: EDH='L.'  CG=(空欄)
+
+[HD000453]  EDCS=EDCS-08600651  EDH=2人  CG=3人
+  person: EDH='Valentinianus'  CG='Valentinianus'  overlap=1.0
+    [FN] nomen: EDH='Valentinianus'  CG=(空欄)
+
+[HD000459]  EDCS=EDCS-13003736  EDH=1人  CG=2人
+  person: EDH='Ummidius Bubalio'  CG='Um(midius) Bubalio'  overlap=0.333
+    [FP] nomen: EDH='Ummidius'  CG='Umidius'
+
+[HD000603]  EDCS=EDCS-08600660  EDH=1人  CG=2人
+  person: EDH='M. Pontius Varanus Sabinus'  CG='M(arcus) Pontius'  overlap=0.5
+    [FN] cognomen: EDH='Varanus'  CG=(空欄)
+
+[HD000864]  EDCS=EDCS-20800609  EDH=5人  CG=7人
+  person: EDH='A. T. Iulius Vibius Pompilius Piso Laevillus Quadratus Berenicianus'  CG='A(ulus) Iulius Pompilius A(uli) fil(ius) Corn(elia) Piso Berenicianus'  overlap=0.455
+    [FP] nomen: EDH='T.'  CG='Iulius'
+    [FP] cognomen: EDH='Iulius'  CG='Pompilius Piso Berenicianus'
+
+[HD000874]  EDCS=EDCS-08500644  EDH=3人  CG=3人
+  person: EDH='Antoninus'  CG='Antoninus'  overlap=1.0
+    [FN] cognomen: EDH='Antoninus'  CG=(空欄)
+  person: EDH='Verus'  CG='Verus'  overlap=1.0
+    [FN] cognomen: EDH='Verus'  CG=(空欄)
+
+[HD001192]  EDCS=EDCS-08601258  EDH=1人  CG=1人
+  person: EDH='Ag(---) Ga(---)'  CG='Ag() Ga()'  overlap=1.0
+    [FN] nomen: EDH='Ag('  CG=(空欄)
+    [FN] cognomen: EDH=')'  CG=(空欄)
+
+[HD001195]  EDCS=EDCS-08600912  EDH=4人  CG=4人
+  person: EDH='Pacatus Drepanius'  CG='Pacat[us Drepanius]'  overlap=0.333
+    [FN] nomen: EDH='Pacatus'  CG=(空欄)
+    [FP] cognomen: EDH='Drepanius'  CG='Pacatus'
+
+[HD001950]  EDCS=EDCS-08400556  EDH=1人  CG=1人
+  person: EDH='Sex. Furnius Faustus Sulpicianus'  CG='Sex(to) Furnio Fausto Sulpiciano'  overlap=0.2
+    [FP] cognomen: EDH='Faustus'  CG='Faustus Sulpicianus'
+
+[HD002390]  EDCS=EDCS-08300572  EDH=2人  CG=4人
+  person: EDH='Traianus Hadrianus'  CG='Traianus Hadrianus'  overlap=1.0
+    [FN] nomen: EDH='Traianus'  CG=(空欄)
+
+[HD002393]  EDCS=EDCS-20100188  EDH=2人  CG=5人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='Imp(erator) Caes(ar) T(itus) Aelius Hadrianus Antoninus Aug(ustus) Pius'  overlap=0.333
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD002408]  EDCS=EDCS-08300573  EDH=2人  CG=5人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='Imp(eratore) Caes(are) T(ito) Aelio Hadr]iano [Antoni]no Aug(usto) Pio'  overlap=0.071
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD002411]  EDCS=EDCS-08300574  EDH=2人  CG=5人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='Hadrianus'  overlap=0.25
+    [FN] praenomen: EDH='T.'  CG=(空欄)
+    [FN] nomen: EDH='Aelius'  CG=(空欄)
+    [FN] cognomen: EDH='Hadrianus'  CG=(空欄)
+
+[HD002451]  EDCS=EDCS-24500320  EDH=4人  CG=4人
+  person: EDH='Sex. Anicius Faustus Paulinianus'  CG='Sex(to) Anicio Fausto Anici consularis filio Pauliniano c(larissimo) p(uero)'  overlap=0.083
+    [FP] cognomen: EDH='Faustus'  CG='Faustus Paulinianus'
+
+[HD002454]  EDCS=EDCS-08300575  EDH=2人  CG=5人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Hadrianus Antoninus Aug(ustus) Pius'  overlap=0.5
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD002456]  EDCS=EDCS-13600417  EDH=5人  CG=6人
+  person: EDH='M.  Antoninus'  CG='M(arco) Aurelio Commodo Aug(usto)'  overlap=0.167
+    [FP] cognomen: EDH='Antoninus'  CG='Commodus'
+  person: EDH='M. Aurelius Commodus'  CG='Imp(eratore) M(arco) Antonino Aug(usto)'  overlap=0.143
+    [FP] cognomen: EDH='Commodus'  CG='Antoninus'
+
+[HD002537]  EDCS=EDCS-24500271  EDH=2人  CG=5人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Hadrianus Antoninus Aug(ustus) Pius'  overlap=0.5
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD002763]  EDCS=EDCS-08600647  EDH=5人  CG=4人
+  person: EDH='[---]llisius'  CG='[2]llisius'  overlap=1.0
+    [FN] nomen: EDH='llisius'  CG=(空欄)
+  person: EDH='Gu[---]dis'  CG='Namphamones Gu[1]dis'  overlap=0.667
+    [FN] nomen: EDH='Gu'  CG=(空欄)
+    [FN] cognomen: EDH='dis'  CG=(空欄)
+
+[HD002766]  EDCS=EDCS-24100102  EDH=7人  CG=7人
+  person: EDH='Q. Apuleus Maxssimus (= Maximus) qui et Rideus'  CG='Q(uintus) Apule(i)us Max{ss}imus qui et Rideus'  overlap=0.364
+    [FP] nomen: EDH='Apuleus'  CG='Apuleius'
+    [FP] cognomen: EDH='Maxssimus'  CG='Maximus'
+
+[HD002949]  EDCS=EDCS-08300578  EDH=2人  CG=5人
+  person: EDH='T. Aelius Hadrianus Antoninus Pius'  CG='T(itus) Aelius Hadrianus Antoninus Augustus Pius'  overlap=0.714
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD002952]  EDCS=EDCS-20100187  EDH=2人  CG=2人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Hadrianus Antoninus Augustus Pius'  overlap=0.571
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD002955]  EDCS=EDCS-20100203  EDH=2人  CG=5人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Hadrianus Antoninus Augustus Pius'  overlap=0.571
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD002961]  EDCS=EDCS-59600012  EDH=3人  CG=13人
+  person: EDH='Verus'  CG='Lucius Verus'  overlap=0.5
+    [FN] cognomen: EDH='Verus'  CG=(空欄)
+
+[HD002964]  EDCS=EDCS-08300579  EDH=2人  CG=2人
+  person: EDH='M. Aemilius Macer Saturninus'  CG='M(arcus) Aemiliu[s Macer Saturninus]'  overlap=0.5
+    [FP] cognomen: EDH='Macer'  CG='Macer Saturninus'
+
+[HD002967]  EDCS=EDCS-08300580  EDH=3人  CG=7人
+  person: EDH='M. Aurelius Antoninus'  CG='divus Antoninus Pius'  overlap=0.333
+    [FN] praenomen: EDH='M.'  CG=(空欄)
+    [FN] nomen: EDH='Aurelius'  CG=(空欄)
+  person: EDH='M. Aemilius Macer Saturninus'  CG='M(arcus) Aemilius Macer Saturninus'  overlap=0.8
+    [FP] cognomen: EDH='Macer'  CG='Macer Saturninus'
+  person: EDH='M. Aemilius Macer Saturninus'  CG='Imp(erator) Caes(ar) M(arcus) Aureli(us) Anto(ninus)'  overlap=0.1
+    [FP] nomen: EDH='Aemilius'  CG='Aurelius'
+    [FP] cognomen: EDH='Macer'  CG='Antoninus'
+
+[HD002976]  EDCS=EDCS-24500303  EDH=5人  CG=11人
+  person: EDH='Iulia'  CG='Iulia'  overlap=1.0
+    [FN] cognomen: EDH='Iulia'  CG=(空欄)
+
+[HD002988]  EDCS=EDCS-08300556  EDH=1人  CG=1人
+  person: EDH='Iohannes'  CG='Iohannes'  overlap=1.0
+    [FN] cognomen: EDH='Iohannes'  CG=(空欄)
+
+[HD003000]  EDCS=EDCS-08300560  EDH=1人  CG=1人
+  person: EDH='Bonif[---]'  CG='Bonif[ati'  overlap=0.5
+    [FP] cognomen: EDH='Bonif'  CG='Bonifatius'
+
+[HD003003]  EDCS=EDCS-08300561  EDH=1人  CG=1人
+  person: EDH='Cresconius'  CG='Cresconius'  overlap=1.0
+    [FN] nomen: EDH='Cresconius'  CG=(空欄)
+
+[HD003006]  EDCS=EDCS-08300562  EDH=1人  CG=1人
+  person: EDH='Fatius'  CG='Fatius'  overlap=1.0
+    [FN] nomen: EDH='Fatius'  CG=(空欄)
+
+[HD003024]  EDCS=EDCS-08300568  EDH=1人  CG=1人
+  person: EDH='Epifanius'  CG='Epifanius'  overlap=1.0
+    [FN] nomen: EDH='Epifanius'  CG=(空欄)
+
+[HD003027]  EDCS=EDCS-08300569  EDH=2人  CG=1人
+  person: EDH='Maria'  CG='Maria'  overlap=1.0
+    [FN] cognomen: EDH='Maria'  CG=(空欄)
+
+[HD003030]  EDCS=EDCS-08300570  EDH=1人  CG=1人
+  person: EDH='Bernacla (= Vernacla)'  CG='Bernacla'  overlap=0.5
+    [FN] nomen: EDH='Bernacla'  CG=(空欄)
+    [FP] gender: EDH='female'  CG='unknown'
+
+[HD003052]  EDCS=EDCS-13000656  EDH=3人  CG=3人
+  person: EDH='P.? [---] Saturninus Saturnianus'  CG='[---] Saturninus'  overlap=0.333
+    [FN] nomen: EDH='P.?'  CG=(空欄)
+
+[HD003647]  EDCS=EDCS-07000898  EDH=1人  CG=2人
+  person: EDH='P. Fabius Firmanus'  CG='L(ucius) Fabius'  overlap=0.333
+    [FP] praenomen: EDH='P.'  CG='Lucius'
+    [FN] cognomen: EDH='Firmanus'  CG=(空欄)
+
+[HD004232]  EDCS=EDCS-12800689  EDH=1人  CG=1人
+  person: EDH='Clodius? Qu[---]'  CG='[Cl]odius [---] Arn(ensi) Qu[---]'  overlap=0.2
+    [FN] cognomen: EDH='Qu'  CG=(空欄)
+
+[HD004235]  EDCS=EDCS-13100001  EDH=2人  CG=3人
+  person: EDH='[---]us Proculus'  CG='[3]EI[3]us Procu[lus]'  overlap=0.25
+    [FN] nomen: EDH='us'  CG=(空欄)
+
+[HD004241]  EDCS=EDCS-13100004  EDH=2人  CG=4人
+  person: EDH='[---]eus'  CG=']eus C(ai) f(ilius) Arn(ensi)'  overlap=0.143
+    [FN] cognomen: EDH='eus'  CG=(空欄)
+
+[HD004244]  EDCS=EDCS-13100005  EDH=2人  CG=2人
+  person: EDH='[---]lusius O[---]'  CG='] LVSIO O['  overlap=0.5
+    [FN] nomen: EDH='lusius'  CG=(空欄)
+    [FP] cognomen: EDH='O'  CG='Lusius'
+
+[HD004247]  EDCS=EDCS-13100006  EDH=1人  CG=2人
+  person: EDH='[---]s Celer?'  CG=']S C(ai) f(ilius) [3 Ce]ler'  overlap=0.143
+    [FN] nomen: EDH='s'  CG=(空欄)
+
+[HD004270]  EDCS=EDCS-09200558  EDH=1人  CG=2人
+  person: EDH='M. Lurius Faustus Caecilianus'  CG='M(arcus) Lurius'  overlap=0.5
+    [FN] cognomen: EDH='Faustus'  CG=(空欄)
+
+[HD004300]  EDCS=EDCS-09200547  EDH=2人  CG=2人
+  person: EDH='Aurelia Galeria Lucilla'  CG='Aurelia Galeria Lucilla Augusta'  overlap=0.75
+    [FP] cognomen: EDH='Galeria'  CG='Lucilla'
+
+[HD004333]  EDCS=EDCS-09200561  EDH=2人  CG=1人
+  person: EDH='L. Sc[---] Ianuarius'  CG='[?]ius L(ucius) Sc[?] Ianuarius'  overlap=0.6
+    [FN] nomen: EDH='Sc'  CG=(空欄)
+
+[HD004336]  EDCS=EDCS-09200560  EDH=1人  CG=1人
+  person: EDH='P. Thermestinus Crescens Caecilianus'  CG='P(ublio) Thermestino Crescenti Caeciliano'  overlap=0.2
+    [FP] cognomen: EDH='Crescens'  CG='Crescens Caecilianus'
+
+[HD004342]  EDCS=EDCS-09200559  EDH=2人  CG=2人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='Antoninus Pius Augustus'  overlap=0.25
+    [FN] praenomen: EDH='T.'  CG=(空欄)
+    [FN] nomen: EDH='Aelius'  CG=(空欄)
+    [FN] cognomen: EDH='Hadrianus'  CG=(空欄)
+
+[HD004408]  EDCS=EDCS-09200571  EDH=4人  CG=4人
+  person: EDH='Flavius Valerius Constantinus'  CG='Fl(avius) Valerius Constantinus maximus'  overlap=0.4
+    [FP] nomen: EDH='Flavius'  CG='Flavius Valerius'
+    [FP] cognomen: EDH='Valerius'  CG='Constantinus'
+  person: EDH='Constantinus Iunior'  CG='Constantinus iunior'  overlap=1.0
+    [FN] nomen: EDH='Constantinus'  CG=(空欄)
+    [FP] cognomen: EDH='Iunior'  CG='Constantinus'
+
+[HD004474]  EDCS=EDCS-09200553  EDH=6人  CG=4人
+  person: EDH='Flavius Valerius Constantinus'  CG='Flavius Valerius Constantinus'  overlap=1.0
+    [FP] nomen: EDH='Flavius'  CG='Flavius Valerius'
+    [FP] cognomen: EDH='Valerius'  CG='Constantinus'
+  person: EDH='Licinius Licinianus'  CG='Licinianus Licinius'  overlap=1.0
+    [FP] nomen: EDH='Licinius'  CG='Licinianus'
+    [FP] cognomen: EDH='Licinianus'  CG='Licinius'
+  person: EDH='Flavius Valerius Crispus'  CG='Flavius Valerius Crispus'  overlap=1.0
+    [FP] nomen: EDH='Flavius'  CG='Flavius Valerius'
+    [FP] cognomen: EDH='Valerius'  CG='Crispus'
+  person: EDH='Flavius Claudius Constantinus'  CG='Flavius Claudius Constantinus iunior'  overlap=0.75
+    [FP] nomen: EDH='Flavius'  CG='Flavius Claudius'
+    [FP] cognomen: EDH='Claudius'  CG='Constantinus'
+
+[HD004501]  EDCS=EDCS-09200562  EDH=2人  CG=7人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Hadrianus Antoninus Augustus Pius'  overlap=0.571
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+  person: EDH='Ianuarius'  CG='Ianuarius'  overlap=1.0
+    [FN] nomen: EDH='Ianuarius'  CG=(空欄)
+
+[HD004696]  EDCS=EDCS-09200582  EDH=1人  CG=1人
+  person: EDH='Blossius Trebonius Eucarpius'  CG='Blossius Trebonius Eucarpius'  overlap=1.0
+    [FP] nomen: EDH='Blossius'  CG='Trebonius'
+    [FP] cognomen: EDH='Trebonius'  CG='Eucarpius'
+
+[HD004867]  EDCS=EDCS-25601008  EDH=1人  CG=3人
+  person: EDH='C. Sallustius Fortunatianus'  CG='C(aius)'  overlap=0.333
+    [FN] nomen: EDH='Sallustius'  CG=(空欄)
+    [FN] cognomen: EDH='Fortunatianus'  CG=(空欄)
+
+[HD004870]  EDCS=EDCS-08201701  EDH=4人  CG=4人
+  person: EDH='Iulia'  CG='Iulia Augusta'  overlap=0.5
+    [FN] cognomen: EDH='Iulia'  CG=(空欄)
+  person: EDH='T. Gen[---]iu[s]'  CG='T(itus) Gen[3]iu[s]'  overlap=0.8
+    [FP] nomen: EDH='Gen'  CG='Gen[3]ius'
+    [FN] cognomen: EDH='iu[s]'  CG=(空欄)
+
+[HD005871]  EDCS=EDCS-24800897  EDH=2人  CG=2人
+  person: EDH='Flavianus'  CG='Flavianus'  overlap=1.0
+    [FN] nomen: EDH='Flavianus'  CG=(空欄)
+  person: EDH='Octavianus'  CG='Octavianus'  overlap=1.0
+    [FN] nomen: EDH='Octavianus'  CG=(空欄)
+
+[HD007026]  EDCS=EDCS-08300553  EDH=5人  CG=5人
+  person: EDH='M. Aurelius Cominius Cassianus'  CG='M(arcus) Aurel(ius) Cominius Cassianus'  overlap=0.5
+    [FP] cognomen: EDH='Cominius'  CG='Cominius Cassianus'
+
+[HD008160]  EDCS=EDCS-02000005  EDH=4人  CG=4人
+  person: EDH='Hadrianus'  CG='Hadrianus Augustus'  overlap=0.5
+    [FN] nomen: EDH='Hadrianus'  CG=(空欄)
+
+[HD008746]  EDCS=EDCS-09700370  EDH=2人  CG=2人
+  person: EDH='Philippus'  CG='Philippus III'  overlap=0.5
+    [FN] cognomen: EDH='Philippus'  CG=(空欄)
+  person: EDH='Philippus'  CG='Philippus II'  overlap=0.5
+    [FN] cognomen: EDH='Philippus'  CG=(空欄)
+
+[HD009635]  EDCS=EDCS-13000625  EDH=3人  CG=3人
+  person: EDH='Cornelia Quinta'  CG='Quinta'  overlap=0.5
+    [FN] nomen: EDH='Cornelia'  CG=(空欄)
+    [FP] gender: EDH='female'  CG='male'
+
+[HD009997]  EDCS=EDCS-48200101  EDH=1人  CG=2人
+  person: EDH='M. Caecilius Felixs (= Felix)'  CG='M(arcus) Caecilius Felix'  overlap=0.75
+    [FP] cognomen: EDH='Felixs'  CG='Felix'
+
+[HD010000]  EDCS=EDCS-09700369  EDH=3人  CG=2人
+  person: EDH='M. Aurelius Cominius Cassianus'  CG='M. Aurelio Cominio Cassiano'  overlap=0.25
+    [FP] cognomen: EDH='Cominius'  CG='Cominius Cassianus'
+
+[HD010009]  EDCS=EDCS-09700373  EDH=3人  CG=2人
+  person: EDH='Iulia'  CG='Iulia'  overlap=1.0
+    [FN] cognomen: EDH='Iulia'  CG=(空欄)
+
+[HD010066]  EDCS=EDCS-09700396  EDH=3人  CG=3人
+  person: EDH='Luceius Felix'  CG='Luc(c)eius Felix'  overlap=0.25
+    [FP] nomen: EDH='Luceius'  CG='Lucceius'
+
+[HD011488]  EDCS=EDCS-25501448  EDH=2人  CG=5人
+  person: EDH='M. Aurlius Antoninus'  CG='divi M(arci) Antonini Pii G]erm(anici) Sar[m(atici)]'  overlap=0.1
+    [FP] nomen: EDH='Aurlius'  CG='Antoninus'
+    [FP] cognomen: EDH='Antoninus'  CG='Pius'
+
+[HD015298]  EDCS=EDCS-09800391  EDH=1人  CG=1人
+  person: EDH='M. Aemilius Macer Saturninus'  CG='M(arcus) Aem[ilius] Macro Saturninus'  overlap=0.333
+    [FP] cognomen: EDH='Macer'  CG='Macro Saturninus'
+
+[HD015301]  EDCS=EDCS-09800392  EDH=1人  CG=1人
+  person: EDH='L. Vespronius Sallustius Candidus Sabinianus'  CG='L(ucius) Vespronius Candidus Sallustius Sabinianus'  overlap=0.833
+    [FP] cognomen: EDH='Sallustius'  CG='Candidus Sallustius Sabinianus'
+
+[HD015364]  EDCS=EDCS-23600479  EDH=3人  CG=3人
+  person: EDH='Marcianus'  CG='Marcianus Augustus'  overlap=0.5
+    [FN] nomen: EDH='Marcianus'  CG=(空欄)
+
+[HD016144]  EDCS=EDCS-23600606  EDH=4人  CG=4人
+  person: EDH='Antoninus'  CG='Imp(erator) Antoninus Aug(ustus) Pius'  overlap=0.167
+    [FN] cognomen: EDH='Antoninus'  CG=(空欄)
+
+[HD017102]  EDCS=EDCS-13600157  EDH=2人  CG=2人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='[T(itus) Ael(ius) Hadri]anus Anto[ninus Aug(ustus) Pius]'  overlap=0.091
+    [FP] cognomen: EDH='Hadrianus'  CG='Antoninus'
+
+[HD017111]  EDCS=EDCS-13600160  EDH=4人  CG=4人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Hadrianus Antoninus Aug(ustus) Pius'  overlap=0.5
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+  person: EDH='L. Aelius'  CG='Aelius Aurelius Verus Caes(ar)'  overlap=0.2
+    [FN] praenomen: EDH='L.'  CG=(空欄)
+  person: EDH='C. An[---]us'  CG='C(aius) An[t]o[nius 3]us'  overlap=0.429
+    [FP] nomen: EDH='An'  CG='Antonius'
+    [FN] cognomen: EDH='us'  CG=(空欄)
+
+[HD017465]  EDCS=EDCS-13800214  EDH=2人  CG=5人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='Imp(erator) Caes(ar) T(itus) Aelius Hadrianus Antoninus Aug(ustus) Pius'  overlap=0.333
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+  person: EDH='T. Caesernius Statianus'  CG='T(itus) C[a]eserni[us Statius'  overlap=0.143
+    [FP] cognomen: EDH='Statianus'  CG='Statius'
+
+[HD018011]  EDCS=EDCS-13800216  EDH=2人  CG=4人
+  person: EDH='T. Aelius  Hadrianus Antoninus'  CG='Imp(eratore) Caes(are) T(ito) Aelio Hadriano Antonino Aug(usto) Pio'  overlap=0.083
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD018185]  EDCS=EDCS-06000302  EDH=2人  CG=2人
+  person: EDH='Imp. Caesar Augustus'  CG='Imp(erator) Caesar Aug(ustus)'  overlap=0.4
+    [FN] nomen: EDH='Imp.'  CG=(空欄)
+    [FN] cognomen: EDH='Caesar'  CG=(空欄)
+  person: EDH='Cossus Lentulus'  CG='Cossus Lentulus'  overlap=1.0
+    [FN] nomen: EDH='Cossus'  CG=(空欄)
+
+[HD018188]  EDCS=EDCS-06000294  EDH=2人  CG=2人
+  person: EDH='Q. Fulvius Dida Bibulianus'  CG='Q(uintus) Fulvius Didabubulianus'  overlap=0.5
+    [FP] cognomen: EDH='Dida'  CG='Didabubulianus'
+
+[HD018203]  EDCS=EDCS-43600079  EDH=2人  CG=4人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Hadrianus Antoninus Augustus Pius'  overlap=0.571
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD018780]  EDCS=EDCS-06100629  EDH=3人  CG=5人
+  person: EDH='M. Aurelius Cominius Cassianus'  CG='M(arcus) A(urelius) Cominius Cassianus'  overlap=0.5
+    [FP] cognomen: EDH='Cominius'  CG='Cassianus'
+
+[HD019766]  EDCS=EDCS-13003659  EDH=5人  CG=6人
+  person: EDH='Sex. Sulpicius Senilis'  CG='Sex(tus) Sulpicius (father)'  overlap=0.5
+    [FN] cognomen: EDH='Senilis'  CG=(空欄)
+  person: EDH='Caesonius'  CG='Caesonius'  overlap=1.0
+    [FN] nomen: EDH='Caesonius'  CG=(空欄)
+
+[HD019913]  EDCS=EDCS-25900101  EDH=1人  CG=2人
+  person: EDH='C. Iulius Felix Aurunculeianus'  CG='C(aius) Iulius Q(uinti) f(ilius) Felix Aurunculeianus'  overlap=0.444
+    [FP] cognomen: EDH='Felix'  CG='Felix Aurunculeianus'
+
+[HD020418]  EDCS=EDCS-09801978  EDH=3人  CG=3人
+  person: EDH='P. Iulius Iunianus Martialianus'  CG='[P(ublius)] [I]ulius Iunianus Martia[l]/ianus'  overlap=0.25
+    [FP] cognomen: EDH='Iunianus'  CG='Iunianus Martialianus'
+
+[HD020847]  EDCS=EDCS-06000865  EDH=2人  CG=3人
+  person: EDH='Domitianus'  CG='⟦Domitianus⟧ Aug(ustus) Germ(anicus)'  overlap=0.2
+    [FN] nomen: EDH='Domitianus'  CG=(空欄)
+  person: EDH='Suellius Flaccus'  CG='Suellus Flaccus'  overlap=0.5
+    [FP] nomen: EDH='Suellius'  CG='Suellus'
+
+[HD021010]  EDCS=EDCS-13900478  EDH=2人  CG=2人
+  person: EDH='Hadrianus'  CG='Hadrianus Augustus'  overlap=0.5
+    [FN] nomen: EDH='Hadrianus'  CG=(空欄)
+
+[HD021091]  EDCS=EDCS-06000273  EDH=3人  CG=3人
+  person: EDH='- Suphunibal'  CG='Suphunibal'  overlap=1.0
+    [FN] nomen: EDH='-'  CG=(空欄)
+    [FN] cognomen: EDH='Suphunibal'  CG=(空欄)
+  person: EDH='- Annobal Ruso'  CG='Annobal Rusonis'  overlap=0.5
+    [FN] nomen: EDH='-'  CG=(空欄)
+    [FN] cognomen: EDH='Annobal'  CG=(空欄)
+
+[HD021838]  EDCS=EDCS-06000899  EDH=5人  CG=5人
+  person: EDH='Iulia'  CG='Iulia Aug(usta)'  overlap=0.333
+    [FN] cognomen: EDH='Iulia'  CG=(空欄)
+  person: EDH='M. Caninius Adiutor Faustinianus'  CG='M(arcus) Caninius Adiutor Faustinianus'  overlap=0.8
+    [FP] cognomen: EDH='Adiutor'  CG='Adiutor Faustinianus'
+
+[HD021841]  EDCS=EDCS-06000900  EDH=2人  CG=2人
+  person: EDH='Iunius Sucessus'  CG='Iunius Suc(c)essus'  overlap=0.25
+    [FP] cognomen: EDH='Sucessus'  CG='Successus'
+
+[HD021909]  EDCS=EDCS-06000319  EDH=3人  CG=3人
+  person: EDH='Imp. Caesar Augustus'  CG='Imp(eratore) Caesare divi f(ilio) Aug(usto)'  overlap=0.125
+    [FN] nomen: EDH='Imp.'  CG=(空欄)
+    [FN] cognomen: EDH='Caesar'  CG=(空欄)
+  person: EDH='Annobal Rufus'  CG='Annobal Rufus'  overlap=1.0
+    [FN] nomen: EDH='Annobal'  CG=(空欄)
+  person: EDH='Himilcho Tapapius'  CG='Himilcho Tapapus'  overlap=0.5
+    [FN] nomen: EDH='Himilcho'  CG=(空欄)
+    [FN] cognomen: EDH='Tapapius'  CG=(空欄)
+
+[HD022110]  EDCS=EDCS-24501950  EDH=2人  CG=2人
+  person: EDH='Ser. Cornelius Cethegus'  CG='Cornelius Cethegus'  overlap=0.667
+    [FN] praenomen: EDH='Ser.'  CG=(空欄)
+
+[HD022113]  EDCS=EDCS-25600955  EDH=3人  CG=4人
+  person: EDH='M. Silanus'  CG='M(arcus) Silanus'  overlap=0.667
+    [FN] cognomen: EDH='Silanus'  CG=(空欄)
+
+[HD022168]  EDCS=EDCS-13900624  EDH=1人  CG=7人
+  person: EDH='M. Aurelius Antoninus'  CG='divus M(arcus) Antoninus'  overlap=0.5
+    [FN] nomen: EDH='Aurelius'  CG=(空欄)
+
+[HD022238]  EDCS=EDCS-13000994  EDH=2人  CG=2人
+  person: EDH='Nerva Traianus'  CG='Imp(erator) Nerva Traianus Caes(ar) Aug(ustus) Germanicus Dacicus'  overlap=0.2
+    [FN] nomen: EDH='Nerva'  CG=(空欄)
+    [FN] cognomen: EDH='Traianus'  CG=(空欄)
+
+[HD022241]  EDCS=EDCS-13003868  EDH=2人  CG=2人
+  person: EDH='Nerva Traianus'  CG='Imp(erator) Nerva Traianus Caes(ar) Aug(ustus) Ger(manicus) Dacicus'  overlap=0.182
+    [FN] nomen: EDH='Nerva'  CG=(空欄)
+    [FN] cognomen: EDH='Traianus'  CG=(空欄)
+  person: EDH='L. Acilius Clodius Strabo Nummus'  CG='L(ucius) Acilius Strabo Cl[od]ius Nummus'  overlap=0.5
+    [FP] cognomen: EDH='Clodius'  CG='Strabo'
+
+[HD022262]  EDCS=EDCS-24502092  EDH=4人  CG=4人
+  person: EDH='M. Aurelius Valerius Maximianus'  CG='M(arcus) Aurelius Valerius ⟦Maximianus⟧'  overlap=0.8
+    [FP] cognomen: EDH='Valerius'  CG='Valerius Maximianus'
+
+[HD022272]  EDCS=EDCS-15300545  EDH=3人  CG=3人
+  person: EDH='M. Aemilius Macer'  CG='M(arcus) Aemilius Macro Saturninus'  overlap=0.4
+    [FP] cognomen: EDH='Macer'  CG='Macro Saturninus'
+
+[HD022327]  EDCS=EDCS-15300281  EDH=1人  CG=3人
+  person: EDH='Sex.? Vitellius [---]anus'  CG='S(extus) Vitellius [3] [3]anus'  overlap=0.5
+    [FP] nomen: EDH='Sex.?'  CG='Vitellius'
+    [FN] cognomen: EDH='Vitellius'  CG=(空欄)
+
+[HD023298]  EDCS=EDCS-13300154  EDH=2人  CG=2人
+  person: EDH='Imp. Caesar Augustus'  CG='Imp(erator) Caesar Au[g(ustus)]'  overlap=0.333
+    [FN] nomen: EDH='Imp.'  CG=(空欄)
+    [FN] cognomen: EDH='Caesar'  CG=(空欄)
+
+[HD023563]  EDCS=EDCS-16200636  EDH=2人  CG=3人
+  person: EDH='Theodosius'  CG='Theodosius'  overlap=1.0
+    [FN] nomen: EDH='Theodosius'  CG=(空欄)
+
+[HD023994]  EDCS=EDCS-25600720  EDH=3人  CG=2人
+  person: EDH='Imp. Caesar Augustus'  CG='Imp(erator) Caes(ar) Augusti f(ilius) Augustus'  overlap=0.25
+    [FN] nomen: EDH='Imp.'  CG=(空欄)
+    [FP] cognomen: EDH='Caesar'  CG='Augustus'
+
+[HD023997]  EDCS=EDCS-25600715  EDH=3人  CG=3人
+  person: EDH='Imp. Caesar Augustus'  CG='Imp(erator) Caes(ar) [Augus]/ti [f(ilius)] Aug[ustus]'  overlap=0.1
+    [FN] nomen: EDH='Imp.'  CG=(空欄)
+    [FN] cognomen: EDH='Caesar'  CG=(空欄)
+  person: EDH='Augustus'  CG='Augustus'  overlap=1.0
+    [FN] cognomen: EDH='Augustus'  CG=(空欄)
+  person: EDH='L.  Asprenas'  CG='L(ucius) A[s]pren[as]'  overlap=0.167
+    [FN] cognomen: EDH='Asprenas'  CG=(空欄)
+
+[HD024240]  EDCS=EDCS-08600919  EDH=3人  CG=3人
+  person: EDH='Vespasianus'  CG='Vespasianus'  overlap=1.0
+    [FN] nomen: EDH='Vespasianus'  CG=(空欄)
+  person: EDH='Sentius Ceacilianus'  CG='Sentius Caecilianus'  overlap=0.5
+    [FP] cognomen: EDH='Ceacilianus'  CG='Caecilianus'
+
+[HD025540]  EDCS=EDCS-06000303  EDH=2人  CG=3人
+  person: EDH='[---]imus Priscillanus'  CG='Primus Traiani Aug(usti) ser(vus) Priscillanus'  overlap=0.143
+    [FN] nomen: EDH='imus'  CG=(空欄)
+    [FP] cognomen: EDH='Priscillanus'  CG='Primus Priscillanus'
+  person: EDH='Traianus'  CG='Traianus Augustus'  overlap=0.5
+    [FN] nomen: EDH='Traianus'  CG=(空欄)
+
+[HD026382]  EDCS=EDCS-16201720  EDH=2人  CG=3人
+  person: EDH='M. Aemilius Macer Saturninus'  CG='M(arcus) Aemilius Macer Saturninus'  overlap=0.8
+    [FP] cognomen: EDH='Macer'  CG='Macer Saturninus'
+
+[HD026694]  EDCS=EDCS-04000907  EDH=5人  CG=5人
+  person: EDH='M. Cornelius Fronto Gabinianus'  CG='M(arcus) Cornelius Fronto Quir(ina) Gabin[ia]nus'  overlap=0.333
+    [FP] cognomen: EDH='Fronto'  CG='Fronto Gabinianus'
+  person: EDH='Cornelia Romanilla Postumiana'  CG='Cornelia Romani[ll]a Postumiana'  overlap=0.4
+    [FP] cognomen: EDH='Romanilla'  CG='Romanilla Postumiana'
+  person: EDH='Cornelia Victorina Claudiana'  CG='Vi]ctorina Claudiana'  overlap=0.333
+    [FN] nomen: EDH='Cornelia'  CG=(空欄)
+    [FP] cognomen: EDH='Victorina'  CG='Victorina Claudiana'
+  person: EDH='Cornelia Eulogia Romanilla'  CG='Eulogia Romanilla'  overlap=0.667
+    [FN] nomen: EDH='Cornelia'  CG=(空欄)
+    [FP] cognomen: EDH='Eulogia'  CG='Eulogia Romanilla'
+
+[HD027888]  EDCS=EDCS-06000949  EDH=2人  CG=2人
+  person: EDH='C. Iulius Verus Maximinus'  CG='Imp(erator) Caes(ar) C(aius) Iulius Verus Maximinus Piu(s) Felix Aug(ustus)'  overlap=0.286
+    [FP] cognomen: EDH='Verus'  CG='Maximinus'
+  person: EDH='C. Iulius Verus Maximus'  CG='C(aius) Iulius Verus Maximus nobilissimus Caes(ar)'  overlap=0.5
+    [FP] cognomen: EDH='Verus'  CG='Maximus'
+
+[HD028486]  EDCS=EDCS-15200125  EDH=3人  CG=4人
+  person: EDH='[---]es'  CG='[3]es lib(ertus) et pro(curator)'  overlap=0.167
+    [FN] cognomen: EDH='es'  CG=(空欄)
+
+[HD029259]  EDCS=EDCS-16202031  EDH=2人  CG=3人
+  person: EDH='M. Aemilius Macer Dinarchus'  CG='M(arcus) Aemilius Macro Dinarchus'  overlap=0.6
+    [FP] cognomen: EDH='Macer'  CG='Macro Dinarchus'
+  person: EDH='M. Aemilius Macer'  CG='M(arcus) Aemilius Macro'  overlap=0.5
+    [FP] cognomen: EDH='Macer'  CG='Macro'
+
+[HD029901]  EDCS=EDCS-10300003  EDH=1人  CG=3人
+  person: EDH='C. Clodius Paulus'  CG='C(aius) Claudius'  overlap=0.333
+    [FP] nomen: EDH='Clodius'  CG='Claudius'
+    [FN] cognomen: EDH='Paulus'  CG=(空欄)
+
+[HD030003]  EDCS=EDCS-13002015  EDH=2人  CG=5人
+  person: EDH='Coelia Victoria Potita'  CG='Coelia Sex(ti) filia Vi[cto]ria Potita'  overlap=0.25
+    [FP] cognomen: EDH='Victoria'  CG='Victoria Potita'
+
+[HD030748]  EDCS=EDCS-04000324  EDH=2人  CG=2人
+  person: EDH='Nerva Traianus'  CG='Nerva Traianus'  overlap=1.0
+    [FN] nomen: EDH='Nerva'  CG=(空欄)
+    [FN] cognomen: EDH='Traianus'  CG=(空欄)
+  person: EDH='C. Pomponius Acilius [---] Rufus [---] [---]'  CG='C(aius?) Pomponius [3] f(ilius) Rufus Acilius'  overlap=0.571
+    [FP] cognomen: EDH='Acilius'  CG='Rufus Acilius'
+
+[HD030754]  EDCS=EDCS-18300156  EDH=2人  CG=2人
+  person: EDH='[---] Coe[---] [---]scus [---]'  CG='[3]scus'  overlap=0.5
+    [FN] nomen: EDH='Coe'  CG=(空欄)
+
+[HD030757]  EDCS=EDCS-15300160  EDH=2人  CG=3人
+  person: EDH='Nerva Traianus'  CG='Nerva Traianus Optimus Augustus'  overlap=0.5
+    [FN] nomen: EDH='Nerva'  CG=(空欄)
+
+[HD030778]  EDCS=EDCS-06000539  EDH=3人  CG=5人
+  person: EDH='Traianus Hadrianus'  CG='Imp(erator) Caes(ar) Traianus Hadrianus Aug(ustus)'  overlap=0.25
+    [FN] nomen: EDH='Traianus'  CG=(空欄)
+    [FN] cognomen: EDH='Hadrianus'  CG=(空欄)
+  person: EDH='Traianus'  CG='Imp(erator) Caes(ar) Traianus'  overlap=0.2
+    [FN] nomen: EDH='Traianus'  CG=(空欄)
+
+[HD030781]  EDCS=EDCS-14900064  EDH=2人  CG=3人
+  person: EDH='Laberia Marcia Hostilia Crispina Moecia Cornelia'  CG='Laberia Marci f(ilia) Hostilia Crispina Moecia Cornelia'  overlap=0.625
+    [FP] cognomen: EDH='Marcia'  CG='Hostilia Crispina Moecia Cornelia'
+
+[HD030784]  EDCS=EDCS-14900052  EDH=3人  CG=5人
+  person: EDH='Traianus Hadrianus'  CG='Traianus Hadrianus'  overlap=1.0
+    [FN] nomen: EDH='Traianus'  CG=(空欄)
+    [FN] cognomen: EDH='Hadrianus'  CG=(空欄)
+  person: EDH='P. Aelius Papir[---]'  CG='P(ublius) Aelius Papir[ia]'  overlap=0.6
+    [FN] cognomen: EDH='Papir'  CG=(空欄)
+
+[HD030787]  EDCS=EDCS-06000353  EDH=3人  CG=5人
+  person: EDH='Traianus Hadrianus'  CG='Traianus Hadrianus Augustus'  overlap=0.667
+    [FN] nomen: EDH='Traianus'  CG=(空欄)
+
+[HD030790]  EDCS=EDCS-13000963  EDH=2人  CG=2人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='Imp(eratori) Caes(ari) T(ito) Aelio Hadriano Antonino Aug(usto) Pio'  overlap=0.083
+    [FP] cognomen: EDH='Hadrianus'  CG='Antoninus'
+  person: EDH='T. Salvius Minicius Rufinus Opimianus'  CG='T(itus) Salvius Rufinus Minicius Opimianus'  overlap=0.833
+    [FP] cognomen: EDH='Minicius'  CG='Rufinus Minicius Opimianus'
+
+[HD030793]  EDCS=EDCS-13002088  EDH=3人  CG=5人
+  person: EDH='P. Pactumeius Clemens'  CG='P(ublius) Pactumeius (pater)'  overlap=0.5
+    [FN] cognomen: EDH='Clemens'  CG=(空欄)
+  person: EDH='Antoninus'  CG='Imp(erator) Antoninus Aug(ustus)'  overlap=0.2
+    [FN] cognomen: EDH='Antoninus'  CG=(空欄)
+
+[HD030808]  EDCS=EDCS-06000531  EDH=1人  CG=1人
+  person: EDH='L. Minicius Quadronius Natalis Verus'  CG='L(ucio) Minicio [Natali] Quadron[io] Vero'  overlap=0.143
+    [FP] cognomen: EDH='Quadronius'  CG='Natalis Quadronius Verus'
+
+[HD030811]  EDCS=EDCS-06000528  EDH=2人  CG=2人
+  person: EDH='L. Hedius Rufus Lollianus Avitus'  CG='L(ucius) H[edius Rufus Lollianus Avitus]'  overlap=0.571
+    [FP] cognomen: EDH='Rufus'  CG='Rufus Lollianus Avitus'
+  person: EDH='C. Vibius Claudius Gallio Severus'  CG='C(aius) Vibius Ga[ll]io[ne Claudio Sever]o'  overlap=0.2
+    [FP] cognomen: EDH='Claudius'  CG='Gallio Claudius Severus'
+
+[HD030817]  EDCS=EDCS-06000362  EDH=1人  CG=1人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Hadrianus Antoninus Augustus Pius'  overlap=0.571
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD030823]  EDCS=EDCS-24100032  EDH=4人  CG=4人
+  person: EDH='Q. Voconius Saxa Fidus'  CG='Q(uintus) Voconius S[axa Fidus]'  overlap=0.5
+    [FP] cognomen: EDH='Saxa'  CG='Saxa Fidus'
+  person: EDH='M. Ummidius Annianus Quadratianus'  CG='M(arcus) Ummid[ius] Anni[a]nus Quadr[atianus]'  overlap=0.111
+    [FP] cognomen: EDH='Annianus'  CG='Annianus Quadratianus'
+
+[HD030826]  EDCS=EDCS-13000964  EDH=3人  CG=7人
+  person: EDH='Cocceius Severianus Honorinus'  CG='Cocceius Severianus Honorin[us]'  overlap=0.5
+    [FP] cognomen: EDH='Severianus'  CG='Severianus Honorinus'
+
+[HD030832]  EDCS=EDCS-14200148  EDH=5人  CG=5人
+  person: EDH='Ser. Cornelius Scipio Salvidienus Orfitus'  CG='Ser(vius) Co[rnelius Scipio Salvidienus] Orfitus'  overlap=0.571
+    [FP] cognomen: EDH='Scipio'  CG='Orfitus'
+
+[HD030841]  EDCS=EDCS-24501228  EDH=4人  CG=5人
+  person: EDH='L. Octavius Cornelius Salvius Iulianus Aemilianus'  CG='L(ucio) Octavio Cornelio P(ubli) f(ilio) Salvio Iuliano Aemiliano'  overlap=0.091
+    [FP] cognomen: EDH='Cornelius'  CG='Salvius Iulianus Aemilianus'
+  person: EDH='Hadrianus'  CG='div<u=O>s Hadrianus'  overlap=0.2
+    [FN] nomen: EDH='Hadrianus'  CG=(空欄)
+  person: EDH='Antoninus'  CG='Imp(erator) Antoninus Aug(ustus) Pius'  overlap=0.167
+    [FP] cognomen: EDH='Antoninus'  CG='Antoninus Pius'
+
+[HD030844]  EDCS=EDCS-23200445  EDH=3人  CG=3人
+  person: EDH='Sextius Lateranus'  CG='Sextus Lateranus'  overlap=0.5
+    [FP] nomen: EDH='Sextius'  CG='Lateranus'
+    [FN] cognomen: EDH='Lateranus'  CG=(空欄)
+  person: EDH='L. Rupilius Au[---]'  CG='L(ucius) Rupilius Au['  overlap=0.75
+    [FN] cognomen: EDH='Au'  CG=(空欄)
+
+[HD030850]  EDCS=EDCS-13001585  EDH=1人  CG=2人
+  person: EDH='Q. Servilius Pudens'  CG='Q(uintus) Servilius (father)'  overlap=0.5
+    [FN] cognomen: EDH='Pudens'  CG=(空欄)
+
+[HD030853]  EDCS=EDCS-10300592  EDH=2人  CG=8人
+  person: EDH='M. Aurelius Commodus Antoninus'  CG='M(arcus) Antoninus Pius'  overlap=0.5
+    [FP] nomen: EDH='Aurelius'  CG='Antoninus'
+    [FP] cognomen: EDH='Commodus'  CG='Pius'
+  person: EDH='C. C[[---]]'  CG='C(aius) C[ingius Severus]'  overlap=0.25
+    [FP] nomen: EDH='C['  CG='Cingius'
+
+[HD030874]  EDCS=EDCS-17701090  EDH=5人  CG=11人
+  person: EDH='P. Septimius Severus Geta'  CG='P(ublius) Septimius Geta'  overlap=0.75
+    [FP] cognomen: EDH='Severus'  CG='Geta'
+
+[HD030898]  EDCS=EDCS-25600663  EDH=1人  CG=2人
+  person: EDH='M. Aurellius (= Aurelius) Antoninus'  CG='Imp(erator) Caes(ar) M(arcus) Aurell[ius Antoninus Pius Felix Aug(ustus)]'  overlap=0.154
+    [FP] nomen: EDH='Aurellius'  CG='Aurelius'
+
+[HD030913]  EDCS=EDCS-17900348  EDH=1人  CG=1人
+  person: EDH='Sex. Cocceius Anicius Faustus Paulinus'  CG='Sex(to) Cocceio Anicio Fausto Paulino'  overlap=0.167
+    [FP] cognomen: EDH='Anicius'  CG='Anicius Faustus Paulinus'
+
+[HD030919]  EDCS=EDCS-06000511  EDH=5人  CG=5人
+  person: EDH='M. Atilius Metilius Caucidius Claudius Vibullius Gavidius Bradua Tertullus Atticus Pollio Latiaris Atrius Bassus'  CG='M(arcus) Atilius Metilius Bra[d]uae Cauci[dio Tertullo 3]blico [Vige]llio(?) Pollion[i] Gavidio [L]atiari Atrio Basso'  overlap=0.15
+    [FP] cognomen: EDH='Metilius'  CG='Metilius Braduae Caucidius Tertullus...blicus Vigellius(?) Pollio Gavidius Latiaris Atrius Bassus'
+
+[HD030925]  EDCS=EDCS-18300018  EDH=1人  CG=2人
+  person: EDH='M. Flavius Vettius Sabarrus Severus'  CG='M(arcus) Flavius'  overlap=0.4
+    [FN] cognomen: EDH='Vettius'  CG=(空欄)
+
+[HD030931]  EDCS=EDCS-26900537  EDH=2人  CG=2人
+  person: EDH='Aemilianus'  CG='Aemilianus'  overlap=1.0
+    [FN] nomen: EDH='Aemilianus'  CG=(空欄)
+
+[HD030964]  EDCS=EDCS-22000675  EDH=1人  CG=1人
+  person: EDH='Q. Egrilius Plarianus'  CG='Q(uintus) Egrillius Plerianus'  overlap=0.25
+    [FP] nomen: EDH='Egrilius'  CG='Egrillius'
+    [FP] cognomen: EDH='Plarianus'  CG='Plerianus'
+
+[HD030970]  EDCS=EDCS-13002080  EDH=2人  CG=3人
+  person: EDH='P. Iulius- Geminius Marcianus'  CG='P(ublio) I]ulio P(ubli) fil(io) Quir(ina) Geminio Marciano'  overlap=0.091
+    [FP] cognomen: EDH='Geminius'  CG='Geminius Marcianus'
+
+[HD030973]  EDCS=EDCS-25001466  EDH=3人  CG=3人
+  person: EDH='C. Memmius Iulius Fidus Albius'  CG='C(aius) [pater of C(aius) Memmius]'  overlap=0.4
+    [FN] nomen: EDH='Memmius'  CG=(空欄)
+    [FN] cognomen: EDH='Iulius'  CG=(空欄)
+  person: EDH='C. Annius Iulius Secundus'  CG='C(aius) Annius Iulius Secundus'  overlap=0.8
+    [FP] cognomen: EDH='Iulius'  CG='Iulius Secundus'
+
+[HD030985]  EDCS=EDCS-30100113  EDH=1人  CG=1人
+  person: EDH='C. Iunius Faustinus Placidus Postumianus'  CG='C(aio) Iunio Faustino Placido Postumiano'  overlap=0.167
+    [FP] cognomen: EDH='Faustinus'  CG='Faustinus Placidus Postumianus'
+
+[HD031021]  EDCS=EDCS-25000981  EDH=1人  CG=2人
+  person: EDH='Sex. Caecilius Aemilianus'  CG='Sex(tus) Caecilius'  overlap=0.667
+    [FN] cognomen: EDH='Aemilianus'  CG=(空欄)
+
+[HD031030]  EDCS=EDCS-24501482  EDH=1人  CG=1人
+  person: EDH='C. Arrius Calpurnius Longinus'  CG='C(aio) Arri[o] C(ai) [f(ilio) Quir(ina)] Calpurnio Longino'  overlap=0.091
+    [FP] cognomen: EDH='Calpurnius'  CG='Calpurnius Longinus'
+
+[HD031039]  EDCS=EDCS-06000538  EDH=1人  CG=1人
+  person: EDH='L. Volusius Bassus Cerealis'  CG='L(ucio) Volusio Basso Cereali'  overlap=0.2
+    [FP] cognomen: EDH='Bassus'  CG='Bassus Cerealis'
+
+[HD031051]  EDCS=EDCS-25300419  EDH=1人  CG=3人
+  person: EDH='Q. Caecilius Marcellus Dentilianus'  CG='Q(uintus)'  overlap=0.25
+    [FN] nomen: EDH='Caecilius'  CG=(空欄)
+    [FN] cognomen: EDH='Marcellus'  CG=(空欄)
+
+[HD031096]  EDCS=EDCS-14900018  EDH=1人  CG=2人
+  person: EDH='L. Terentius Aquila Grattianus'  CG='L(ucio) Terentio Aquilae Grattiano'  overlap=0.2
+    [FP] cognomen: EDH='Aquila'  CG='Aquila Grattianus'
+
+[HD031111]  EDCS=EDCS-25700394  EDH=4人  CG=4人
+  person: EDH='Vespasianus'  CG='Imp(erator) Caesar Vespasianus Aug(ustus)'  overlap=0.167
+    [FN] nomen: EDH='Vespasianus'  CG=(空欄)
+  person: EDH='T.  Vespasianus'  CG='Imp(erator) T(itus) Caesar Vespasianus Aug(usti) f(ilius)'  overlap=0.2
+    [FN] nomen: EDH='Vespasianus'  CG=(空欄)
+  person: EDH='Domitianus'  CG='Caesar Aug(usti) f(ilius) Domitianus'  overlap=0.167
+    [FN] nomen: EDH='Domitianus'  CG=(空欄)
+
+[HD031114]  EDCS=EDCS-25700391  EDH=4人  CG=4人
+  person: EDH='T.  Vespasianus'  CG='Imp(erator) T(itus) [Vespasianus Aug(usti)] f(ilius)'  overlap=0.222
+    [FP] nomen: EDH='Vespasianus'  CG='Flavius'
+
+[HD031123]  EDCS=EDCS-24300229  EDH=2人  CG=2人
+  person: EDH='Domitianus'  CG='Domitianus'  overlap=1.0
+    [FN] nomen: EDH='Domitianus'  CG=(空欄)
+
+[HD031129]  EDCS=EDCS-13000608  EDH=2人  CG=3人
+  person: EDH='Cn. Suellius Flaccus'  CG='Cn(aius) Suellius Fl[3]'  overlap=0.5
+    [FN] cognomen: EDH='Flaccus'  CG=(空欄)
+  person: EDH='Q. Mantius'  CG='Q(uintus) [pater]'  overlap=0.333
+    [FN] nomen: EDH='Mantius'  CG=(空欄)
+
+[HD031132]  EDCS=EDCS-24300230  EDH=2人  CG=2人
+  person: EDH='Q. Fabius Valerius Barbarus Magnus Iulianus'  CG='Q(uinto) Fabio Barbaro Valerio Magno Iuliano'  overlap=0.143
+    [FP] cognomen: EDH='Valerius'  CG='Barbarus Valerius Magnus Iulianus'
+
+[HD031135]  EDCS=EDCS-20100182  EDH=2人  CG=3人
+  person: EDH='Nerva Traianus'  CG='divus Nerva'  overlap=0.5
+    [FN] nomen: EDH='Nerva'  CG=(空欄)
+    [FP] cognomen: EDH='Traianus'  CG='Nerva'
+
+[HD031138]  EDCS=EDCS-25800014  EDH=2人  CG=3人
+  person: EDH='Nerva Traianus'  CG='Nerva Traianus'  overlap=1.0
+    [FN] nomen: EDH='Nerva'  CG=(空欄)
+
+[HD031141]  EDCS=EDCS-13002485  EDH=2人  CG=2人
+  person: EDH='Traianus'  CG='Imp(erator) Caes(ar) Traianus Aug(ustus) Ger(manicus) Dacicus'  overlap=0.1
+    [FN] nomen: EDH='Traianus'  CG=(空欄)
+
+[HD031144]  EDCS=EDCS-24500469  EDH=1人  CG=3人
+  person: EDH='L. Muna[---]'  CG='L(ucius) Mun[tius Gallus]'  overlap=0.2
+    [FP] cognomen: EDH='Muna'  CG='Gallus'
+
+[HD031150]  EDCS=EDCS-20300057  EDH=2人  CG=3人
+  person: EDH='Nerva Traianus'  CG='Nerva'  overlap=0.5
+    [FN] cognomen: EDH='Traianus'  CG=(空欄)
+
+[HD031159]  EDCS=EDCS-24500322  EDH=1人  CG=2人
+  person: EDH='A. Larcius Priscus'  CG='A(ulus) Larcius'  overlap=0.667
+    [FN] cognomen: EDH='Priscus'  CG=(空欄)
+
+[HD031168]  EDCS=EDCS-04001494  EDH=2人  CG=2人
+  person: EDH='L. Acilius Clodius Strabo Nummus'  CG='L(ucius) Acilius Strabo Clodius Nummus'  overlap=0.833
+    [FP] cognomen: EDH='Clodius'  CG='Strabo Clodius Nummus'
+
+[HD031174]  EDCS=EDCS-20100184  EDH=2人  CG=4人
+  person: EDH='Traianus Hadrianus'  CG='Traianus Hadrianus Augustus'  overlap=0.667
+    [FN] nomen: EDH='Traianus'  CG=(空欄)
+
+[HD031186]  EDCS=EDCS-25700389  EDH=2人  CG=4人
+  person: EDH='Traianus Hadrianus'  CG='divus Traianus Parthicus'  overlap=0.333
+    [FN] nomen: EDH='Traianus'  CG=(空欄)
+    [FP] cognomen: EDH='Hadrianus'  CG='Traianus'
+
+[HD031189]  EDCS=EDCS-25900545  EDH=2人  CG=2人
+  person: EDH='Traianus Hadrianus'  CG='Imp(erator) Caesar Traianus Hadrianus Aug(ustus)'  overlap=0.286
+    [FN] nomen: EDH='Traianus'  CG=(空欄)
+
+[HD031192]  EDCS=EDCS-20600130  EDH=2人  CG=2人
+  person: EDH='Traianus Hadrianus'  CG='Imp(erator) Cae[s(ar) Traia]nus Hadrianus Augustus'  overlap=0.111
+    [FN] nomen: EDH='Traianus'  CG=(空欄)
+    [FN] cognomen: EDH='Hadrianus'  CG=(空欄)
+
+[HD031195]  EDCS=EDCS-59600005  EDH=2人  CG=8人
+  person: EDH='Traianus Hadrianus'  CG='Traianus Hadrianus Augustus'  overlap=0.667
+    [FN] nomen: EDH='Traianus'  CG=(空欄)
+
+[HD031198]  EDCS=EDCS-20300114  EDH=3人  CG=6人
+  person: EDH='Traianus Hadrianus'  CG='Traianus Hadrianus Augustus'  overlap=0.667
+    [FN] nomen: EDH='Traianus'  CG=(空欄)
+  person: EDH='[---]s Memor(---)'  CG='[---]s C(ai) f(ilius) Cam(ilia) Memor'  overlap=0.25
+    [FN] nomen: EDH='s'  CG=(空欄)
+
+[HD031210]  EDCS=EDCS-20300115  EDH=2人  CG=2人
+  person: EDH='Traianus Hadrianus'  CG='Traianus Hadrianus'  overlap=1.0
+    [FN] nomen: EDH='Traianus'  CG=(空欄)
+    [FN] cognomen: EDH='Hadrianus'  CG=(空欄)
+
+[HD031216]  EDCS=EDCS-44000907  EDH=3人  CG=5人
+  person: EDH='Traianus Hadrianus'  CG='Traianus Hadrianus Augustus'  overlap=0.667
+    [FN] nomen: EDH='Traianus'  CG=(空欄)
+
+[HD031231]  EDCS=EDCS-13002066  EDH=1人  CG=3人
+  person: EDH='T. Caesernius Statius Quintius Memmius Statianus Macrinus'  CG='T(itus) Caesernius'  overlap=0.286
+    [FN] cognomen: EDH='Statius'  CG=(空欄)
+
+[HD031234]  EDCS=EDCS-20600088  EDH=5人  CG=5人
+  person: EDH='Antoninus'  CG='Imp(erator) Antoninus Aug(ustus) Pius'  overlap=0.167
+    [FN] cognomen: EDH='Antoninus'  CG=(空欄)
+  person: EDH='Statianus'  CG='Statianus'  overlap=1.0
+    [FN] nomen: EDH='Statianus'  CG=(空欄)
+
+[HD031237]  EDCS=EDCS-24500462  EDH=2人  CG=6人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='Imp(erator) Caes(ar) T(itus) Aelius Hadrianus Antoninus Aug(ustus) Pius'  overlap=0.333
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+  person: EDH='T. Caesernius Statianus'  CG='T(itus) Caesernius [---]'  overlap=0.667
+    [FN] cognomen: EDH='Statianus'  CG=(空欄)
+
+[HD031240]  EDCS=EDCS-20300116  EDH=3人  CG=4人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Ha[drianus] Antoninus [Aug(ustus) Pius]'  overlap=0.333
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+  person: EDH='C. Prastina Messalinus'  CG='C(aius) Praestina Mess[alino]'  overlap=0.2
+    [FP] nomen: EDH='Prastina'  CG='Praestina'
+  person: EDH='P. Timinius Tertullus'  CG='Publius (father of P. Timinius Tertullus)'  overlap=0.5
+    [FN] nomen: EDH='Timinius'  CG=(空欄)
+    [FN] cognomen: EDH='Tertullus'  CG=(空欄)
+
+[HD031243]  EDCS=EDCS-25900482  EDH=3人  CG=3人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='Imp(eratore) Caes(are) T(ito) Aelio Hadriano Antonino Aug(usto) Pio p(atre) p(atriae)'  overlap=0.067
+    [FP] cognomen: EDH='Hadrianus'  CG='Antoninus'
+  person: EDH='M. Aurelius'  CG='Prastina(m) Messalinum'  overlap=0.333
+    [FN] praenomen: EDH='M.'  CG=(空欄)
+    [FP] nomen: EDH='Aurelius'  CG='Prastinas'
+
+[HD031246]  EDCS=EDCS-20300117  EDH=2人  CG=5人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Hadrianus Antoninus Augustus Pius'  overlap=0.571
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+  person: EDH='C. Prastina Messalinus'  CG='C(aius) Prastina Messallinus'  overlap=0.5
+    [FP] cognomen: EDH='Messalinus'  CG='Messallinus'
+
+[HD031252]  EDCS=EDCS-24500268  EDH=2人  CG=4人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Hadrianus Antoninus Augustus Pius'  overlap=0.571
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+  person: EDH='C. Prastina Messalinus'  CG='C(aius) Prastina Messallinus'  overlap=0.5
+    [FP] cognomen: EDH='Messalinus'  CG='Messallinus'
+
+[HD031255]  EDCS=EDCS-24500324  EDH=1人  CG=1人
+  person: EDH='C. Prastina Pacatus Messalinus'  CG='C(aius) Pr]ast[ina Pacatus] [Messalin]us'  overlap=0.25
+    [FP] cognomen: EDH='Pacatus'  CG='Pacatus Messalinus'
+
+[HD031258]  EDCS=EDCS-20800611  EDH=5人  CG=5人
+  person: EDH='L. Novius Crispinus Martialis Saturninus'  CG='L(ucio) Novio Crispino Martiali Saturnino'  overlap=0.167
+    [FP] cognomen: EDH='Crispinus'  CG='Crispinus Martialis Saturninus'
+
+[HD031261]  EDCS=EDCS-24800728  EDH=7人  CG=8人
+  person: EDH='L. Novius Crispinus Martialis Saturninus'  CG='L(ucius) Novius Crispinus Martialis Saturninus'  overlap=0.833
+    [FP] cognomen: EDH='Crispinus'  CG='Crispinus Martialis Saturninus'
+  person: EDH='[---]ilius Balbus'  CG='[L(ucius?) Aem]ilius Balbus'  overlap=0.4
+    [FP] nomen: EDH='ilius'  CG='Aemilius'
+  person: EDH='Cascellius'  CG='C(aius) [father of Cascellius]'  overlap=0.2
+    [FN] nomen: EDH='Cascellius'  CG=(空欄)
+  person: EDH='Ulpius [---]vi[---]'  CG='Ulpius [3]I[3]'  overlap=0.5
+    [FN] cognomen: EDH='vi'  CG=(空欄)
+  person: EDH='Pompeius Pro[---]'  CG='[M(arcus?)] Pompeius Pro[culus(?) 3]'  overlap=0.4
+    [FP] cognomen: EDH='Pro'  CG='Proculus'
+
+[HD031264]  EDCS=EDCS-20600102  EDH=2人  CG=5人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Hadrianus Antoninus'  overlap=0.8
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD031267]  EDCS=EDCS-24800676  EDH=2人  CG=3人
+  person: EDH='C. Antonius Alexander'  CG='C(aius) Antonius'  overlap=0.667
+    [FN] cognomen: EDH='Alexander'  CG=(空欄)
+
+[HD031276]  EDCS=EDCS-24700801  EDH=2人  CG=2人
+  person: EDH='P. Novius Saturninus Martialis Marcellus'  CG='P(ublio) Novio Saturnino Martiali Marcello'  overlap=0.167
+    [FP] cognomen: EDH='Saturninus'  CG='Saturninus Martialis Marcellus'
+
+[HD031282]  EDCS=EDCS-24500269  EDH=2人  CG=5人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Hadrianus Antoninus'  overlap=0.8
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD031285]  EDCS=EDCS-20300124  EDH=3人  CG=3人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Hadrianus Antoninus Aug(ustus) Pius'  overlap=0.5
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD031288]  EDCS=EDCS-24500272  EDH=2人  CG=5人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Hadrianus Antoninus'  overlap=0.8
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD031294]  EDCS=EDCS-20300080  EDH=2人  CG=2人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='Imp(erator) Caes(ar) T(itus) Aelius Hadrianus Antoninus Aug(ustus) Pius'  overlap=0.333
+    [FP] cognomen: EDH='Hadrianus'  CG='Antoninus'
+
+[HD031297]  EDCS=EDCS-20600081  EDH=3人  CG=3人
+  person: EDH='Volteia Cornifica'  CG='Volteia Cornificia'  overlap=0.5
+    [FP] cognomen: EDH='Cornifica'  CG='Cornificia'
+
+[HD031300]  EDCS=EDCS-27300292  EDH=2人  CG=5人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Hadrianus Antoninus Augustus Pius'  overlap=0.571
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD031303]  EDCS=EDCS-24500273  EDH=2人  CG=2人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Hadrianus Antoninus A[ugustus Pius]'  overlap=0.5
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD031306]  EDCS=EDCS-46800212  EDH=2人  CG=6人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Hadrianus Antoninus'  overlap=0.8
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD031309]  EDCS=EDCS-20600103  EDH=2人  CG=5人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Hadrianus Antoninus Aug(ustus) Pius'  overlap=0.5
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD031312]  EDCS=EDCS-23100042  EDH=2人  CG=5人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='divus Hadrianus'  overlap=0.25
+    [FN] praenomen: EDH='T.'  CG=(空欄)
+    [FN] nomen: EDH='Aelius'  CG=(空欄)
+
+[HD031315]  EDCS=EDCS-20600144  EDH=2人  CG=6人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='divus Hadrianus'  overlap=0.25
+    [FN] praenomen: EDH='T.'  CG=(空欄)
+    [FN] nomen: EDH='Aelius'  CG=(空欄)
+  person: EDH='D. L. Fonteius Stertinius Frontinianus Rufinus'  CG='D(ecimus) Fonteius Frontinianus'  overlap=0.5
+    [FP] cognomen: EDH='Stertinius'  CG='Frontinianus'
+
+[HD031321]  EDCS=EDCS-23100413  EDH=3人  CG=5人
+  person: EDH='M. Cassinius Secundus'  CG='M(arcus) Cossinius Secundus'  overlap=0.5
+    [FP] nomen: EDH='Cassinius'  CG='Cossinius'
+  person: EDH='L. Sutorius Felix'  CG='L(ucius) (father of L. Sutorius Felix)'  overlap=0.5
+    [FN] nomen: EDH='Sutorius'  CG=(空欄)
+    [FN] cognomen: EDH='Felix'  CG=(空欄)
+
+[HD031333]  EDCS=EDCS-23100421  EDH=3人  CG=8人
+  person: EDH='D. L. Fonteius Stertinius Frontinianus Rufinus'  CG='D(ecimus) Fonteius Frontinianus'  overlap=0.5
+    [FP] cognomen: EDH='Stertinius'  CG='Frontinianus'
+
+[HD031348]  EDCS=EDCS-20800603  EDH=2人  CG=3人
+  person: EDH='D. L. Fonteius Stertinius Frontinianus Rufinus'  CG='D(ecimus) Fonteius Frontinianus'  overlap=0.5
+    [FP] cognomen: EDH='Stertinius'  CG='Frontinianus'
+
+[HD031354]  EDCS=EDCS-20600029  EDH=1人  CG=3人
+  person: EDH='D. L. Fonteius Stertinius Frontinianus Rufinus'  CG='D(ecimus) Fonteius Frontinianus'  overlap=0.5
+    [FP] cognomen: EDH='Stertinius'  CG='Frontinianus'
+
+[HD031357]  EDCS=EDCS-20600030  EDH=1人  CG=3人
+  person: EDH='D. L. Fonteius Stertinius Frontinianus Rufinus'  CG='D(ecimus) Fonteius Frontinianus'  overlap=0.5
+    [FP] cognomen: EDH='Stertinius'  CG='Frontinianus'
+
+[HD031363]  EDCS=EDCS-23100430  EDH=1人  CG=2人
+  person: EDH='D. L. Fonteius Stertinius Frontinianus Rufinus'  CG='D(ecimus) Fonteius Frontinianus'  overlap=0.5
+    [FP] cognomen: EDH='Stertinius'  CG='Frontinianus'
+
+[HD031387]  EDCS=EDCS-24700788  EDH=4人  CG=6人
+  person: EDH='Stloga'  CG='Stloga'  overlap=1.0
+    [FN] cognomen: EDH='Stloga'  CG=(空欄)
+  person: EDH='Severus'  CG='Severus'  overlap=1.0
+    [FN] cognomen: EDH='Severus'  CG=(空欄)
+
+[HD031396]  EDCS=EDCS-59600011  EDH=3人  CG=3人
+  person: EDH='[---]us Venustus'  CG='M(arcus) Arrani]us(?) Venustus'  overlap=0.4
+    [FP] nomen: EDH='us'  CG='Arranius'
+
+[HD031399]  EDCS=EDCS-59600010  EDH=3人  CG=1人
+  person: EDH='M. Aurelius Antoninus'  CG='Imp(eratori) Caes(ari) M(arco) Aurelio'  overlap=0.143
+    [FN] cognomen: EDH='Antoninus'  CG=(空欄)
+
+[HD031402]  EDCS=EDCS-20100176  EDH=3人  CG=7人
+  person: EDH='M. Lucceius Torquatus Bassianus'  CG='M(arcus) Lucceius Torquatus Bassianus'  overlap=0.8
+    [FP] cognomen: EDH='Torquatus'  CG='Torquatus Bassianus'
+
+[HD031405]  EDCS=EDCS-59600013  EDH=3人  CG=7人
+  person: EDH='M. Lucceius Torquatus Bassianus'  CG='M(arcus) Lucceius Torquatus Bassianus'  overlap=0.8
+    [FP] cognomen: EDH='Torquatus'  CG='Torquatus Bassianus'
+
+[HD031411]  EDCS=EDCS-59600015  EDH=3人  CG=7人
+  person: EDH='M. Aurelius Antoninus'  CG='divus Antoninus Pius'  overlap=0.333
+    [FN] praenomen: EDH='M.'  CG=(空欄)
+    [FN] nomen: EDH='Aurelius'  CG=(空欄)
+    [FP] cognomen: EDH='Antoninus'  CG='Antoninus Pius'
+  person: EDH='M. Lucceius Torquatus Bassianus'  CG='M(arcus) Lucceius Torquatus Bassianus'  overlap=0.8
+    [FP] cognomen: EDH='Torquatus'  CG='Torquatus Bassianus'
+
+[HD031420]  EDCS=EDCS-20800610  EDH=2人  CG=2人
+  person: EDH='Statia Agrippina'  CG='Statilia Agrippina'  overlap=0.5
+    [FP] nomen: EDH='Statia'  CG='Statilia'
+  person: EDH='Modius Iustus'  CG='Modus Iustus'  overlap=0.5
+    [FP] nomen: EDH='Modius'  CG='Modus'
+
+[HD031426]  EDCS=EDCS-20300127  EDH=2人  CG=2人
+  person: EDH='M. Aemilius Macer Saturninus'  CG='M(arcus) Aem[ilius Macro Satur]ninus'  overlap=0.143
+    [FP] cognomen: EDH='Macer'  CG='Macro Saturninus'
+
+[HD031429]  EDCS=EDCS-23100048  EDH=2人  CG=8人
+  person: EDH='M. Aemilius Macer Saturninus'  CG='M(arcus) Aemilius Macer Saturninus'  overlap=0.8
+    [FP] cognomen: EDH='Macer'  CG='Macer Saturninus'
+
+[HD031438]  EDCS=EDCS-20600104  EDH=2人  CG=2人
+  person: EDH='M. Aemilius Macer Saturninus'  CG='M(arcus) Aemilius [Macro Satu]rninus'  overlap=0.333
+    [FP] cognomen: EDH='Macer'  CG='Saturninus'
+
+[HD031441]  EDCS=EDCS-24500301  EDH=2人  CG=7人
+  person: EDH='M. Aemilius Macer Saturninus'  CG='M(arcus) Aemilius Macer Saturninus'  overlap=0.8
+    [FP] cognomen: EDH='Macer'  CG='Macer Saturninus'
+
+[HD031444]  EDCS=EDCS-20800596  EDH=3人  CG=3人
+  person: EDH='M. Aemilius Macer'  CG='M(arcus) Aemilius Macro Saturninus'  overlap=0.4
+    [FP] cognomen: EDH='Macer'  CG='Macro Saturninus'
+
+[HD031447]  EDCS=EDCS-20600179  EDH=3人  CG=3人
+  person: EDH='M. Aemilius Macer Dinarchus'  CG='M(arcus) Aemilius Macro Dinarchus'  overlap=0.6
+    [FP] cognomen: EDH='Macer'  CG='Macro Dinarchus'
+
+[HD031453]  EDCS=EDCS-08100172  EDH=2人  CG=2人
+  person: EDH='M. Aemilius Macer Saturninus'  CG='M(arcus) Aemilius Macer Saturninus'  overlap=0.8
+    [FP] cognomen: EDH='Macer'  CG='Macer Saturninus'
+
+[HD031456]  EDCS=EDCS-52200580  EDH=2人  CG=2人
+  person: EDH='M. Aurelius Antoninus'  CG='M(arcus) Aurelius Macro Satur]ninus'  overlap=0.333
+    [FP] cognomen: EDH='Antoninus'  CG='Saturninus'
+  person: EDH='M. Aemilius Macer Saturninus'  CG='Imp(erator) Caes(ar) M(arcus) [Aurelius An]toninus Aug(ustus) Arm(eniacus) M[edicus Par]th[icus] Germ(anicus)'  overlap=0.053
+    [FP] nomen: EDH='Aemilius'  CG='Aurelius'
+    [FP] cognomen: EDH='Macer'  CG='Antoninus'
+
+[HD031465]  EDCS=EDCS-20300067  EDH=4人  CG=4人
+  person: EDH='A. Iulius Pompilius Piso Laevillus'  CG='A(ulus) Iulius Pompilius Piso Laevillus'  overlap=0.833
+    [FP] cognomen: EDH='Pompilius'  CG='Pompilius Piso Laevillus'
+
+[HD031468]  EDCS=EDCS-13002100  EDH=2人  CG=2人
+  person: EDH='A. Iulius Pompilius Piso Laevillus'  CG='[A(ulus)] Iulius Po[mpiliu]s Piso Laev[illus]'  overlap=0.333
+    [FP] cognomen: EDH='Pompilius'  CG='Pompilius Piso Laevillus'
+
+[HD031471]  EDCS=EDCS-35500652  EDH=1人  CG=2人
+  person: EDH='A. T. Iulius Pompilius Vibius Piso Laevillus [---]atus Berenicianus'  CG='A(ulus) Iulius Pompilius A(uli) fil(ius) Cornelia Piso T(itus) Vib[ius Laevillus Quadratus] Berenicianus'  overlap=0.467
+    [FP] nomen: EDH='T.'  CG='Iulius'
+    [FP] cognomen: EDH='Iulius'  CG='Pompilius Piso'
+
+[HD031474]  EDCS=EDCS-43700621  EDH=2人  CG=6人
+  person: EDH='M. Aurelius Commodus Antoninus'  CG='M(arco) Valerio Maximiano'  overlap=0.25
+    [FP] nomen: EDH='Aurelius'  CG='Valerius'
+    [FP] cognomen: EDH='Commodus'  CG='Maximianus'
+  person: EDH='M. Valerius Maximianus'  CG='divi M(arci) Antonini Pii Germanici Sarmatici'  overlap=0.143
+    [FP] nomen: EDH='Valerius'  CG='Antoninus'
+    [FP] cognomen: EDH='Maximianus'  CG='Pius'
+
+[HD031477]  EDCS=EDCS-23100431  EDH=4人  CG=4人
+  person: EDH='Marcianus'  CG='Marcianus'  overlap=1.0
+    [FN] nomen: EDH='Marcianus'  CG=(空欄)
+
+[HD031486]  EDCS=EDCS-23100072  EDH=2人  CG=3人
+  person: EDH='Ulpia Aristonice'  CG='Ulpia M(arci) f(ilia) Aristonica'  overlap=0.167
+    [FP] cognomen: EDH='Aristonice'  CG='Aristonica'
+
+[HD031504]  EDCS=EDCS-20600147  EDH=2人  CG=7人
+  person: EDH='T. Caunius Priscus'  CG='L(ucius) Caunius Priscus'  overlap=0.5
+    [FP] praenomen: EDH='T.'  CG='Lucius'
+
+[HD031522]  EDCS=EDCS-04901081  EDH=3人  CG=3人
+  person: EDH='Q. Pomponius Flavius Severus'  CG='Q(uintus) Pompo[nius ---] Fla(via) Sever[us ---]'  overlap=0.125
+    [FP] cognomen: EDH='Flavius'  CG='Severus'
+
+[HD031528]  EDCS=EDCS-20100192  EDH=2人  CG=3人
+  person: EDH='Ti.? Claudius? Gordianus?'  CG='Gordianus (divus)'  overlap=0.333
+    [FN] nomen: EDH='Ti.?'  CG=(空欄)
+    [FP] cognomen: EDH='Claudius?'  CG='Gordianus'
+
+[HD031534]  EDCS=EDCS-23100050  EDH=2人  CG=2人
+  person: EDH='L. Aelius Aurelius Commodus'  CG='L(ucius) Aelius Aurelius Commodus Pius Felix'  overlap=0.571
+    [FP] cognomen: EDH='Aurelius'  CG='Commodus'
+
+[HD031552]  EDCS=EDCS-23100031  EDH=2人  CG=2人
+  person: EDH='Iulius Lepidus Tertullus'  CG='Iulius Lepidus Tertullus'  overlap=1.0
+    [FP] cognomen: EDH='Lepidus'  CG='Lepidus Tertullus'
+
+[HD031555]  EDCS=EDCS-23600555  EDH=2人  CG=2人
+  person: EDH='C. Iulius Lepidus Tertullus'  CG='C(aius) Iulius Lepidus Tertullus'  overlap=0.8
+    [FP] cognomen: EDH='Lepidus'  CG='Lepidus Tertullus'
+
+[HD031860]  EDCS=EDCS-16800231  EDH=3人  CG=2人
+  person: EDH='Vettia Fructa'  CG='Vettia'  overlap=0.5
+    [FN] nomen: EDH='Vettia'  CG=(空欄)
+    [FP] cognomen: EDH='Fructa'  CG='Vettia'
+
+[HD032589]  EDCS=EDCS-16800380  EDH=3人  CG=3人
+  person: EDH='M. Aemilius Macer Saturninus'  CG='M(arcus) Aemilius Macro Sat[urninus]'  overlap=0.333
+    [FP] cognomen: EDH='Macer'  CG='Macro Saturninus'
+
+[HD033021]  EDCS=EDCS-24100015  EDH=1人  CG=1人
+  person: EDH='Flavius Calpurnius Victor'  CG='Fl(avius) Victor Calpurnius'  overlap=0.5
+    [FP] cognomen: EDH='Calpurnius'  CG='Victor Calpurnius'
+
+[HD033328]  EDCS=EDCS-13002031  EDH=3人  CG=9人
+  person: EDH='M. Aurelius Severus Antoninus'  CG='M(arcus) Aurelius Severus Antoninus'  overlap=0.8
+    [FP] cognomen: EDH='Severus'  CG='Antoninus'
+
+[HD033445]  EDCS=EDCS-20300108  EDH=5人  CG=6人
+  person: EDH='Iulia'  CG='Iulia Augusta'  overlap=0.5
+    [FN] cognomen: EDH='Iulia'  CG=(空欄)
+
+[HD033448]  EDCS=EDCS-20300109  EDH=6人  CG=7人
+  person: EDH='Iulia'  CG='Iulia Aug(usta)'  overlap=0.333
+    [FN] cognomen: EDH='Iulia'  CG=(空欄)
+
+[HD033460]  EDCS=EDCS-20300133  EDH=5人  CG=6人
+  person: EDH='Iulia'  CG='Iulia Augusta'  overlap=0.5
+    [FN] cognomen: EDH='Iulia'  CG=(空欄)
+
+[HD033469]  EDCS=EDCS-20300130  EDH=5人  CG=5人
+  person: EDH='Iulia'  CG='Iulia Augusta'  overlap=0.5
+    [FN] cognomen: EDH='Iulia'  CG=(空欄)
+
+[HD033478]  EDCS=EDCS-23100157  EDH=6人  CG=6人
+  person: EDH='Iulia'  CG='Iulia Augusta'  overlap=0.5
+    [FN] cognomen: EDH='Iulia'  CG=(空欄)
+
+[HD033481]  EDCS=EDCS-66300011  EDH=4人  CG=4人
+  person: EDH='Ti. Claudius Subitianus Proculus'  CG='Ti(berius) Cl(audius) Subat[ia]n[u]s P[roc]ulus'  overlap=0.083
+    [FP] cognomen: EDH='Subitianus'  CG='Subatianus Proculus'
+
+[HD033487]  EDCS=EDCS-20300073  EDH=3人  CG=3人
+  person: EDH='M. Aurelius Severus Antoninus'  CG='Imp(eratore) Caes(are) M(arco) Aurelio Severo Antonino Aug(usto)'  overlap=0.091
+    [FP] cognomen: EDH='Severus'  CG='Antoninus'
+  person: EDH='C. Iulius Aelurio'  CG='C(aius) Iulius Aelurion'  overlap=0.5
+    [FP] cognomen: EDH='Aelurio'  CG='Aelurion'
+
+[HD033490]  EDCS=EDCS-20600070  EDH=3人  CG=3人
+  person: EDH='M. Aurelius Severus Antoninus'  CG='M(arcus) Aurelius Severus Antonin[us Pius Fel(ix) Aug(ustus)]'  overlap=0.273
+    [FP] cognomen: EDH='Severus'  CG='Severus Antoninus'
+  person: EDH='Iulia Augusta'  CG='Iulia Augusta'  overlap=1.0
+    [FN] cognomen: EDH='Augusta'  CG=(空欄)
+
+[HD033493]  EDCS=EDCS-24701241  EDH=2人  CG=1人
+  person: EDH='M. Valerius Senecio'  CG='M(arco) Valerio Seneci]one'  overlap=0.2
+    [FP] cognomen: EDH='Senecio'  CG='Senecion'
+
+[HD033496]  EDCS=EDCS-20800608  EDH=3人  CG=3人
+  person: EDH='Sinicius Fortunatus'  CG='Fortunatus'  overlap=0.5
+    [FN] nomen: EDH='Sinicius'  CG=(空欄)
+
+[HD033499]  EDCS=EDCS-20800618  EDH=3人  CG=2人
+  person: EDH='[---]us Iulianus'  CG='[...] Iulianus'  overlap=0.5
+    [FN] nomen: EDH='us'  CG=(空欄)
+
+[HD033517]  EDCS=EDCS-13002079  EDH=1人  CG=1人
+  person: EDH='P. Iulius Iunianus Martialianus'  CG='P(ublio) Iulio Iuniano Martialiano'  overlap=0.2
+    [FP] cognomen: EDH='Iunianus'  CG='Iunianus Martialianus'
+
+[HD033520]  EDCS=EDCS-20100218  EDH=1人  CG=1人
+  person: EDH='P. Iulius Iunianus Martialianus'  CG='P(ublio) Iulio Iuniano Martialiano'  overlap=0.2
+    [FP] cognomen: EDH='Iunianus'  CG='Iunianus Martialianus'
+
+[HD033523]  EDCS=EDCS-20800607  EDH=2人  CG=2人
+  person: EDH='P. Iulius Iunianus Martialianus'  CG='P(ublius) Iul(ius) Iunianus Martialianus'  overlap=0.5
+    [FP] cognomen: EDH='Iunianus'  CG='Iunianus Martialianus'
+
+[HD033526]  EDCS=EDCS-14200126  EDH=4人  CG=4人
+  person: EDH='M. Aurelius Severus Alexander'  CG='Imp(erator) Caes(ar) M(arcus) Aurelius Severus Alexander Pius Felix Aug(ustus)'  overlap=0.308
+    [FP] cognomen: EDH='Severus'  CG='Alexander'
+  person: EDH='Iulia Mamaeae'  CG='Iulia Mamaea Aug(usta)'  overlap=0.25
+    [FP] cognomen: EDH='Mamaeae'  CG='Mamaea'
+
+[HD033529]  EDCS=EDCS-20800602  EDH=2人  CG=2人
+  person: EDH='C. Fabius Vetilius Fabianus Lucilianus'  CG='C(aio) Fabio Fabiano Vetilio Luciliano'  overlap=0.167
+    [FP] cognomen: EDH='Vetilius'  CG='Fabianus Vetilius Lucilianus'
+  person: EDH='A. Tullius Iustinianus'  CG='Aul(us) Tullius Iustianus'  overlap=0.25
+    [FP] cognomen: EDH='Iustinianus'  CG='Iustianus'
+
+[HD033535]  EDCS=EDCS-13000933  EDH=3人  CG=3人
+  person: EDH='Victoricus qui et Verota'  CG='Victoricus qui et Verota'  overlap=1.0
+    [FN] nomen: EDH='Victoricus'  CG=(空欄)
+    [FP] cognomen: EDH='qui'  CG='Victoricus'
+
+[HD033538]  EDCS=EDCS-20100219  EDH=2人  CG=4人
+  person: EDH='T. Iulius Tertullus Antiochus Antacius'  CG='T(itus) Iulius Tertullus Antiochus'  overlap=0.8
+    [FP] cognomen: EDH='Tertullus'  CG='Tertullus Antiochus'
+
+[HD033544]  EDCS=EDCS-20800597  EDH=2人  CG=2人
+  person: EDH='M. Aurelius Cominius Cassianus'  CG='M(arcus) Aurelius Cominius Cassianus'  overlap=0.8
+    [FP] cognomen: EDH='Cominius'  CG='Cominius Cassianus'
+
+[HD033547]  EDCS=EDCS-20800598  EDH=2人  CG=2人
+  person: EDH='M. Aurelius Cominius Cassianus'  CG='M(arcus) Aurelius Cominius Cassianus'  overlap=0.8
+    [FP] cognomen: EDH='Cominius'  CG='Cominius Cassianus'
+
+[HD033550]  EDCS=EDCS-20800599  EDH=4人  CG=4人
+  person: EDH='M. Aurelius Cominius Cassianus'  CG='M(arcus) [Au]relius Cominius Cassianus'  overlap=0.5
+    [FP] cognomen: EDH='Cominius'  CG='Cominius Cassianus'
+
+[HD033553]  EDCS=EDCS-24800724  EDH=1人  CG=1人
+  person: EDH='M. Aurelius Cominius Cassianus'  CG='M(arcus) Aure(lius) Cominius Cassianus'  overlap=0.5
+    [FP] cognomen: EDH='Cominius'  CG='Cominius Cassianus'
+
+[HD033556]  EDCS=EDCS-23700012  EDH=1人  CG=1人
+  person: EDH='M. Aurelius Cominius Cassianus'  CG='M(arcus) Aurelius Cominus Cassianus'  overlap=0.6
+    [FP] cognomen: EDH='Cominius'  CG='Cominus Cassianus'
+
+[HD033559]  EDCS=EDCS-20600040  EDH=1人  CG=3人
+  person: EDH='M. Aurelius Cominius Cassianus'  CG='M(arcus) Aur(elius) Cominius Cassianu[s]'  overlap=0.286
+    [FP] cognomen: EDH='Cominius'  CG='Cominius Cassianus'
+
+[HD033562]  EDCS=EDCS-20600107  EDH=1人  CG=2人
+  person: EDH='M. Aurelius Cominius Cassianus'  CG='M(arcus) Aur(elius) Cominius Cassia[nus]'  overlap=0.286
+    [FP] cognomen: EDH='Cominius'  CG='Cominius Cassianus'
+
+[HD033564]  EDCS=EDCS-24100003  EDH=4人  CG=4人
+  person: EDH='Marchius Fydel'  CG='Fydel'  overlap=0.5
+    [FN] nomen: EDH='Marchius'  CG=(空欄)
+    [FP] gender: EDH='male'  CG='unknown'
+
+[HD033567]  EDCS=EDCS-24100002  EDH=4人  CG=4人
+  person: EDH='Marchia Varnychsin'  CG='Varnychsin'  overlap=0.5
+    [FN] nomen: EDH='Marchia'  CG=(空欄)
+  person: EDH='Marchius Maccurasan'  CG='Maccurasan'  overlap=0.5
+    [FN] nomen: EDH='Marchius'  CG=(空欄)
+    [FP] gender: EDH='male'  CG='unknown'
+
+[HD033577]  EDCS=EDCS-23100060  EDH=3人  CG=4人
+  person: EDH='Carinus'  CG='Carinus'  overlap=1.0
+    [FN] cognomen: EDH='Carinus'  CG=(空欄)
+  person: EDH='Numerianus'  CG='Numerianus'  overlap=1.0
+    [FN] nomen: EDH='Numerianus'  CG=(空欄)
+
+[HD033583]  EDCS=EDCS-13002032  EDH=2人  CG=2人
+  person: EDH='M. Aurelius Karinus'  CG='M(arcus) Aureli[o] Karino(!)'  overlap=0.2
+    [FP] cognomen: EDH='Karinus'  CG='Carinus'
+
+[HD033589]  EDCS=EDCS-20300110  EDH=3人  CG=3人
+  person: EDH='Carinus'  CG='⟦[Carinus]⟧'  overlap=1.0
+    [FN] cognomen: EDH='Carinus'  CG=(空欄)
+  person: EDH='Numerianus'  CG='⟦[Numerianus]⟧'  overlap=1.0
+    [FN] nomen: EDH='Numerianus'  CG=(空欄)
+
+[HD033592]  EDCS=EDCS-20300111  EDH=3人  CG=3人
+  person: EDH='Carinus'  CG='Carinus'  overlap=1.0
+    [FN] cognomen: EDH='Carinus'  CG=(空欄)
+  person: EDH='Numerianus'  CG='Numerianus'  overlap=1.0
+    [FN] nomen: EDH='Numerianus'  CG=(空欄)
+
+[HD033601]  EDCS=EDCS-20600178  EDH=1人  CG=1人
+  person: EDH='Acilius Clavus'  CG='Acilius Clarus'  overlap=0.5
+    [FP] cognomen: EDH='Clavus'  CG='Clarus'
+
+[HD033610]  EDCS=EDCS-23600100  EDH=4人  CG=2人
+  person: EDH='Claudia Salvia'  CG='Claudia Satura'  overlap=0.5
+    [FP] cognomen: EDH='Salvia'  CG='Satura'
+
+[HD039644]  EDCS=EDCS-25002174  EDH=1人  CG=3人
+  person: EDH='C. Bottius Saturninus Abdus Maior'  CG='Abdus Maior'  overlap=0.4
+    [FN] praenomen: EDH='C.'  CG=(空欄)
+    [FN] nomen: EDH='Bottius'  CG=(空欄)
+    [FN] cognomen: EDH='Saturninus'  CG=(空欄)
+
+[HD039645]  EDCS=EDCS-09800706  EDH=1人  CG=2人
+  person: EDH='P. Antonius Antoninus'  CG='P(ublius) Antonius'  overlap=0.667
+    [FN] cognomen: EDH='Antoninus'  CG=(空欄)
+
+[HD039653]  EDCS=EDCS-13003444  EDH=3人  CG=9人
+  person: EDH='Iulia'  CG='Iulia Augusta'  overlap=0.5
+    [FP] cognomen: EDH='Iulia'  CG='Augusta'
+
+[HD039710]  EDCS=EDCS-13002196  EDH=1人  CG=2人
+  person: EDH='[---]us Cicero'  CG='[Bombi]us(?) Sex(ti) fil(ius) Quir(ina) Cicero'  overlap=0.222
+    [FP] nomen: EDH='us'  CG='Bombius'
+
+[HD039711]  EDCS=EDCS-13003446  EDH=3人  CG=3人
+  person: EDH='Q. Bottius Senecio'  CG='T(itus) Bottius'  overlap=0.333
+    [FP] praenomen: EDH='Q.'  CG='Titus'
+    [FN] cognomen: EDH='Senecio'  CG=(空欄)
+
+[HD039713]  EDCS=EDCS-13003447  EDH=2人  CG=2人
+  person: EDH='L. Bottius Senecio'  CG='L(ucius) [Bot]tius Senecion[is pater]'  overlap=0.143
+    [FP] cognomen: EDH='Senecio'  CG='Senecion'
+
+[HD039717]  EDCS=EDCS-09800712  EDH=1人  CG=2人
+  person: EDH='Q. Bottius Senecio'  CG='Q(uintus) Bottius'  overlap=0.667
+    [FN] cognomen: EDH='Senecio'  CG=(空欄)
+
+[HD039721]  EDCS=EDCS-09800715  EDH=3人  CG=3人
+  person: EDH='[---]va'  CG='Scae]va(?)'  overlap=0.5
+    [FP] cognomen: EDH='va'  CG='Scaeva'
+  person: EDH='Crescentianus'  CG='Crescentianus'  overlap=1.0
+    [FN] nomen: EDH='Crescentianus'  CG=(空欄)
+
+[HD039724]  EDCS=EDCS-09800717  EDH=1人  CG=2人
+  person: EDH='[---]ttius'  CG='Bo]ttius(?) L(uci) f(ilius)'  overlap=0.167
+    [FN] nomen: EDH='ttius'  CG=(空欄)
+
+[HD039726]  EDCS=EDCS-09800719  EDH=1人  CG=2人
+  person: EDH='[---]s C[---]'  CG='C(aius)'  overlap=0.5
+    [FN] nomen: EDH='s'  CG=(空欄)
+    [FN] cognomen: EDH='C'  CG=(空欄)
+
+[HD039738]  EDCS=EDCS-09800725  EDH=2人  CG=2人
+  person: EDH='[---]cilia'  CG='[3]cilia LGA[3]'  overlap=0.5
+    [FN] cognomen: EDH='cilia'  CG=(空欄)
+  person: EDH='Q. Avianius Emeritus'  CG='Q(uintus) Avianus Emeritus'  overlap=0.5
+    [FP] nomen: EDH='Avianius'  CG='Avianus'
+
+[HD039741]  EDCS=EDCS-09800726  EDH=1人  CG=1人
+  person: EDH='P. A(---) F(---)'  CG='P(ublius) A() F()'  overlap=0.75
+    [FN] nomen: EDH='A('  CG=(空欄)
+    [FN] cognomen: EDH=')'  CG=(空欄)
+
+[HD039744]  EDCS=EDCS-09800728  EDH=1人  CG=1人
+  person: EDH='Aboia Geminia'  CG='Aboia Geminia'  overlap=1.0
+    [FN] nomen: EDH='Aboia'  CG=(空欄)
+    [FN] cognomen: EDH='Geminia'  CG=(空欄)
+
+[HD039755]  EDCS=EDCS-09800736  EDH=1人  CG=1人
+  person: EDH='C. Aedinius Gaiolus'  CG='C(aius) Ledinius Gaiolus'  overlap=0.5
+    [FP] nomen: EDH='Aedinius'  CG='Ledinius'
+
+[HD039758]  EDCS=EDCS-09800737  EDH=1人  CG=1人
+  person: EDH='C. Aedinius Martialis'  CG='C(aius) Edini(us) Martia/<l=C>i(s?)'  overlap=0.125
+    [FP] nomen: EDH='Aedinius'  CG='Edinius'
+
+[HD039760]  EDCS=EDCS-09800738  EDH=1人  CG=1人
+  person: EDH='Aedinia Hospita'  CG='Edinia Hospita'  overlap=0.5
+    [FP] nomen: EDH='Aedinia'  CG='Edinia'
+
+[HD039784]  EDCS=EDCS-09800745  EDH=1人  CG=2人
+  person: EDH='Q. Aemilius Felix'  CG='Q(uintus) Aemilius'  overlap=0.667
+    [FN] cognomen: EDH='Felix'  CG=(空欄)
+
+[HD039802]  EDCS=EDCS-09800752  EDH=1人  CG=1人
+  person: EDH='M. Aemilius Matutinus'  CG='M(arcus) Aemilius Matutianus'  overlap=0.5
+    [FP] cognomen: EDH='Matutinus'  CG='Matutianus'
+
+[HD039816]  EDCS=EDCS-09800759  EDH=1人  CG=1人
+  person: EDH='Q. Aemilius Rogatus Luciscus'  CG='Q(uintus) (A)emiliu/s Rogat/us Lucisc/us'  overlap=0.125
+    [FP] cognomen: EDH='Rogatus'  CG='Rogatus Luciscus'
+
+[HD039817]  EDCS=EDCS-09800760  EDH=1人  CG=1人
+  person: EDH='L. Aemilius Silanus'  CG='L(ucius) Aemili/s Silvanus'  overlap=0.2
+    [FP] cognomen: EDH='Silanus'  CG='Silvanus'
+
+[HD039836]  EDCS=EDCS-09800774  EDH=1人  CG=1人
+  person: EDH='T. Anaienius Fuscinus'  CG='T(itus) Anaeienius Fuscinus'  overlap=0.5
+    [FP] nomen: EDH='Anaienius'  CG='Anaeienius'
+
+[HD039838]  EDCS=EDCS-09800776  EDH=1人  CG=1人
+  person: EDH='Q. Anaenius Lupus'  CG='Q(uintus) Annaenius Lupus'  overlap=0.5
+    [FP] nomen: EDH='Anaenius'  CG='Annaenius'
+
+[HD039858]  EDCS=EDCS-09800787  EDH=1人  CG=2人
+  person: EDH='Anania Extricoi'  CG='Anania Extricoi'  overlap=1.0
+    [FN] nomen: EDH='Anania'  CG=(空欄)
+    [FP] cognomen: EDH='Extricoi'  CG='Anania'
+
+[HD039862]  EDCS=EDCS-09800790  EDH=1人  CG=1人
+  person: EDH='Annania Muscla'  CG='Annia Muscla'  overlap=0.5
+    [FP] nomen: EDH='Annania'  CG='Annia'
+
+[HD039879]  EDCS=EDCS-09800795  EDH=1人  CG=1人
+  person: EDH='Annia Buturaria'  CG='Annia Buturia'  overlap=0.5
+    [FP] cognomen: EDH='Buturaria'  CG='Buturia'
+
+[HD039891]  EDCS=EDCS-09800804  EDH=1人  CG=1人
+  person: EDH='Antistia Asellia'  CG='Antistia Aselia'  overlap=0.5
+    [FP] cognomen: EDH='Asellia'  CG='Aselia'
+
+[HD039894]  EDCS=EDCS-09800805  EDH=1人  CG=1人
+  person: EDH='Antistia Re[-]ata'  CG='Ant[is]tia Re[---]ata'  overlap=0.4
+    [FP] cognomen: EDH='Re'  CG='Re[---]ata'
+
+[HD039931]  EDCS=EDCS-09800826  EDH=1人  CG=1人
+  person: EDH='L. Anullius Nampamo'  CG='L(uci) Anulli Nampamonis'  overlap=0.25
+    [FP] nomen: EDH='Anullius'  CG='Anullus'
+
+[HD039936]  EDCS=EDCS-09800828  EDH=1人  CG=1人
+  person: EDH='M. Anulius Vilanus'  CG='M(arcus) Annuli/us Vilanu/s'  overlap=0.167
+    [FP] nomen: EDH='Anulius'  CG='Annulius'
+
+[HD039938]  EDCS=EDCS-09800829  EDH=1人  CG=1人
+  person: EDH='Anulia Bombia'  CG='Annullia Bombia'  overlap=0.5
+    [FP] nomen: EDH='Anulia'  CG='Annullia'
+
+[HD039948]  EDCS=EDCS-09800835  EDH=1人  CG=1人
+  person: EDH='C. Aruntius Vitalis'  CG='C(aius) Aruntius Vitalus'  overlap=0.5
+    [FP] cognomen: EDH='Vitalis'  CG='Vitalus'
+
+[HD040006]  EDCS=EDCS-09800843  EDH=1人  CG=1人
+  person: EDH='Aurelius Caluqsi?'  CG='Aurelius Cal()'  overlap=0.5
+    [FP] cognomen: EDH='Caluqsi?'  CG='Cal(---)'
+
+[HD040007]  EDCS=EDCS-09800844  EDH=1人  CG=1人
+  person: EDH='C. Aurelius Ingenuus'  CG='C(aius) Aurelius Ingenus'  overlap=0.5
+    [FP] cognomen: EDH='Ingenuus'  CG='Ingenus'
+
+[HD040026]  EDCS=EDCS-09800859  EDH=1人  CG=1人
+  person: EDH='Basilius Saturus'  CG='Basilius Saturus'  overlap=1.0
+    [FN] nomen: EDH='Basilius'  CG=(空欄)
+    [FN] cognomen: EDH='Saturus'  CG=(空欄)
+
+[HD040029]  EDCS=EDCS-09800862  EDH=1人  CG=1人
+  person: EDH='Basilia Bombia'  CG='Basilia Bombia'  overlap=1.0
+    [FN] nomen: EDH='Basilia'  CG=(空欄)
+    [FN] cognomen: EDH='Bombia'  CG=(空欄)
+
+[HD040030]  EDCS=EDCS-09800863  EDH=1人  CG=1人
+  person: EDH='Bassilia Festiva'  CG='Bassilia Festina'  overlap=0.5
+    [FP] cognomen: EDH='Festiva'  CG='Festina'
+
+[HD040036]  EDCS=EDCS-09800864  EDH=1人  CG=1人
+  person: EDH='Basilia Imirna'  CG='Basilia Imirna'  overlap=1.0
+    [FN] nomen: EDH='Basilia'  CG=(空欄)
+    [FN] cognomen: EDH='Imirna'  CG=(空欄)
+
+[HD040038]  EDCS=EDCS-09800865  EDH=1人  CG=1人
+  person: EDH='Basilia Nuptialis'  CG='Basilia Nuptialis'  overlap=1.0
+    [FN] nomen: EDH='Basilia'  CG=(空欄)
+    [FN] cognomen: EDH='Nuptialis'  CG=(空欄)
+
+[HD040042]  EDCS=EDCS-09800868  EDH=1人  CG=1人
+  person: EDH='Basilia Varitie'  CG='Basilia Varitie'  overlap=1.0
+    [FN] nomen: EDH='Basilia'  CG=(空欄)
+    [FN] cognomen: EDH='Varitie'  CG=(空欄)
+
+[HD040043]  EDCS=EDCS-09800869  EDH=1人  CG=1人
+  person: EDH='Basilia Vitalis'  CG='Basilia Vitalis'  overlap=1.0
+    [FN] nomen: EDH='Basilia'  CG=(空欄)
+    [FN] cognomen: EDH='Vitalis'  CG=(空欄)
+
+[HD040058]  EDCS=EDCS-09800878  EDH=1人  CG=1人
+  person: EDH='L. Benius Restitus'  CG='L(ucius) Ben(n)ius Restitus'  overlap=0.333
+    [FP] nomen: EDH='Benius'  CG='Bennius'
+
+[HD040061]  EDCS=EDCS-09800880  EDH=1人  CG=1人
+  person: EDH='C. Benius Victor'  CG='C(aius) Ben(n)ius Victor'  overlap=0.333
+    [FP] nomen: EDH='Benius'  CG='Bennius'
+
+[HD040071]  EDCS=EDCS-13003467  EDH=1人  CG=1人
+  person: EDH='C. B(---)? Lappius?'  CG='C(aius) Blappius'  overlap=0.333
+    [FP] nomen: EDH='B('  CG='Blappius'
+    [FN] cognomen: EDH=')?'  CG=(空欄)
+
+[HD040072]  EDCS=EDCS-13003468  EDH=1人  CG=2人
+  person: EDH='M. Bombius Cicero'  CG='M(arcus) Bombius'  overlap=0.667
+    [FN] cognomen: EDH='Cicero'  CG=(空欄)
+
+[HD040088]  EDCS=EDCS-09800894  EDH=1人  CG=1人
+  person: EDH='Sp.? Bombius Saturninus'  CG='S(extus?) Bombius Satur[ni]nus'  overlap=0.167
+    [FP] nomen: EDH='Sp.?'  CG='Bombius'
+    [FP] cognomen: EDH='Bombius'  CG='Saturninus'
+
+[HD040106]  EDCS=EDCS-09800900  EDH=1人  CG=1人
+  person: EDH='Bombia Saguntia'  CG='Bombia Saguntia'  overlap=1.0
+    [FN] nomen: EDH='Bombia'  CG=(空欄)
+    [FN] cognomen: EDH='Saguntia'  CG=(空欄)
+
+[HD040113]  EDCS=EDCS-09800904  EDH=2人  CG=3人
+  person: EDH='L. Bottius Celer'  CG='L(ucius) Bottius'  overlap=0.667
+    [FN] cognomen: EDH='Celer'  CG=(空欄)
+  person: EDH='L. Sicinius? Urbanus?'  CG='L(ucius) S[i]c[iniu]s P(ubli) f(ilius) Q(uirina) Ce[---]N[---]ler'  overlap=0.067
+    [FP] cognomen: EDH='Urbanus?'  CG='Ce[---]N[---]ler'
+
+[HD040116]  EDCS=EDCS-13003475  EDH=1人  CG=2人
+  person: EDH='L. Bottius Crescens'  CG='C(aius) Bottius'  overlap=0.333
+    [FP] praenomen: EDH='L.'  CG='Caius'
+    [FN] cognomen: EDH='Crescens'  CG=(空欄)
+
+[HD040122]  EDCS=EDCS-09800910  EDH=1人  CG=1人
+  person: EDH='P. Bottius Fortunatus'  CG='P(ublius) Botius <F=I>ortunatus'  overlap=0.167
+    [FP] nomen: EDH='Bottius'  CG='Botius'
+
+[HD040126]  EDCS=EDCS-09800913  EDH=1人  CG=2人
+  person: EDH='L. Bottius Lucianus'  CG='L(ucius) Bottius'  overlap=0.667
+    [FN] cognomen: EDH='Lucianus'  CG=(空欄)
+
+[HD040132]  EDCS=EDCS-09800917  EDH=1人  CG=2人
+  person: EDH='M. Bottius Postimus'  CG='M(arcus) Bottius P(ubli) f(ilius) Postumus'  overlap=0.25
+    [FP] cognomen: EDH='Postimus'  CG='Postumus'
+
+[HD040134]  EDCS=EDCS-09800918  EDH=1人  CG=1人
+  person: EDH='C. Bottius Potens'  CG='C(aius) <B=P>otus Potentis'  overlap=0.167
+    [FN] nomen: EDH='Bottius'  CG=(空欄)
+    [FP] cognomen: EDH='Potens'  CG='Botus'
+
+[HD040137]  EDCS=EDCS-09800920  EDH=2人  CG=2人
+  person: EDH='Sex. Bottius Rogatus'  CG='Sex(tus) Bottius Rocatus'  overlap=0.5
+    [FP] cognomen: EDH='Rogatus'  CG='Rocatus'
+
+[HD040147]  EDCS=EDCS-09800922  EDH=1人  CG=2人
+  person: EDH='L. Bottius Soricio'  CG='L(ucius) Bottius'  overlap=0.667
+    [FN] cognomen: EDH='Soricio'  CG=(空欄)
+
+[HD040149]  EDCS=EDCS-09800924  EDH=1人  CG=1人
+  person: EDH='Q. Bottius Viator Fedosus'  CG='Q(uintus) Bottius Viator Fedosus'  overlap=0.8
+    [FP] cognomen: EDH='Viator'  CG='Viator Fedosus'
+
+[HD040150]  EDCS=EDCS-09800925  EDH=1人  CG=1人
+  person: EDH='M. Bottius Urbanus'  CG='M(arcus) Botius Urbanus'  overlap=0.5
+    [FP] nomen: EDH='Bottius'  CG='Botius'
+
+[HD040167]  EDCS=EDCS-09800931  EDH=1人  CG=1人
+  person: EDH='Bottia Mona'  CG='Bot(t)ia Mona'  overlap=0.25
+    [FN] nomen: EDH='Bottia'  CG=(空欄)
+    [FN] cognomen: EDH='Mona'  CG=(空欄)
+
+[HD040168]  EDCS=EDCS-09800932  EDH=1人  CG=1人
+  person: EDH='Bottia Pocca'  CG='Bottia Pocca'  overlap=1.0
+    [FN] nomen: EDH='Bottia'  CG=(空欄)
+    [FN] cognomen: EDH='Pocca'  CG=(空欄)
+
+[HD040169]  EDCS=EDCS-13003478  EDH=1人  CG=1人
+  person: EDH='Bottia Poccula'  CG='Bottia Poccula'  overlap=1.0
+    [FN] nomen: EDH='Bottia'  CG=(空欄)
+    [FN] cognomen: EDH='Poccula'  CG=(空欄)
+
+[HD040170]  EDCS=EDCS-09800933  EDH=1人  CG=1人
+  person: EDH='Bottia Rogata'  CG='Bottia Rogata'  overlap=1.0
+    [FN] nomen: EDH='Bottia'  CG=(空欄)
+    [FN] cognomen: EDH='Rogata'  CG=(空欄)
+
+[HD040174]  EDCS=EDCS-09800936  EDH=1人  CG=1人
+  person: EDH='M. Brinius Maximinus'  CG='M(arci) Brini M[a]ximi'  overlap=0.2
+    [FP] cognomen: EDH='Maximinus'  CG='Maximus'
+
+[HD040177]  EDCS=EDCS-09800938  EDH=1人  CG=1人
+  person: EDH='C. Brinius Quetus'  CG='C(aius) Brinius Qu(i)etus'  overlap=0.333
+    [FP] cognomen: EDH='Quetus'  CG='Quietus'
+
+[HD040179]  EDCS=EDCS-09800940  EDH=1人  CG=1人
+  person: EDH='Brinnia Fructosa'  CG='Brinnia Iucunda'  overlap=0.5
+    [FP] cognomen: EDH='Fructosa'  CG='Iucunda'
+
+[HD040187]  EDCS=EDCS-09800944  EDH=1人  CG=1人
+  person: EDH='C(---) Kalendio'  CG='C() Kalend(i)o'  overlap=0.25
+    [FN] nomen: EDH='C('  CG=(空欄)
+
+[HD040194]  EDCS=EDCS-09800950  EDH=1人  CG=1人
+  person: EDH='C. C[---] Ques[---]s'  CG='C(aius) C[3] Ques[itu]s(?)'  overlap=0.6
+    [FP] cognomen: EDH='Ques'  CG='Quaesitus'
+
+[HD040198]  EDCS=EDCS-09800952  EDH=1人  CG=1人
+  person: EDH='Q. C(---) V(---)'  CG='Q(uintus) C() V()'  overlap=0.75
+    [FN] nomen: EDH='C('  CG=(空欄)
+    [FN] cognomen: EDH=')'  CG=(空欄)
+
+[HD040201]  EDCS=EDCS-09800954  EDH=1人  CG=1人
+  person: EDH='C(---) Boncia'  CG='C() Boncia'  overlap=1.0
+    [FN] nomen: EDH='C('  CG=(空欄)
+
+[HD040202]  EDCS=EDCS-09800955  EDH=1人  CG=1人
+  person: EDH='C(---) Fuscina'  CG='C() Fuscina'  overlap=1.0
+    [FN] nomen: EDH='C('  CG=(空欄)
+
+[HD040203]  EDCS=EDCS-09800956  EDH=1人  CG=1人
+  person: EDH='C(---) Cutla?'  CG='C() Cutla(?)'  overlap=1.0
+    [FN] nomen: EDH='C('  CG=(空欄)
+
+[HD040207]  EDCS=EDCS-09800960  EDH=1人  CG=1人
+  person: EDH='Ca(---) Novellus'  CG='Ca(lpurnius?) Novelus'  overlap=0.333
+    [FP] nomen: EDH='Ca('  CG='Calpurnius'
+
+[HD040209]  EDCS=EDCS-09800961  EDH=1人  CG=1人
+  person: EDH='Ca(---) Queta'  CG='Ca(lpurnia?) Qu(i)eta'  overlap=0.2
+    [FP] nomen: EDH='Ca('  CG='Calpurnia'
+
+[HD040210]  EDCS=EDCS-09800962  EDH=1人  CG=1人
+  person: EDH='Cesesius Senecio'  CG='Cecesi[u]s Senecio'  overlap=0.25
+    [FP] nomen: EDH='Cesesius'  CG='Cecesi[u]s'
+
+[HD040213]  EDCS=EDCS-09800964  EDH=1人  CG=1人
+  person: EDH='L. Caecilius Aliquando'  CG='L(ucius) Caecilius L(uci) f(ilius) Qui/rina'  overlap=0.25
+    [FN] cognomen: EDH='Aliquando'  CG=(空欄)
+
+[HD040226]  EDCS=EDCS-09800973  EDH=1人  CG=1人
+  person: EDH='L. Caecilius Lucustinus'  CG='L(ucius) Caecili/us Lucus/tianus'  overlap=0.167
+    [FP] cognomen: EDH='Lucustinus'  CG='Lucustianus'
+
+[HD040231]  EDCS=EDCS-09800977  EDH=1人  CG=2人
+  person: EDH='Q. Caecilius Martialis'  CG='Q(uintus) Caecilius'  overlap=0.667
+    [FN] cognomen: EDH='Martialis'  CG=(空欄)
+
+[HD040243]  EDCS=EDCS-09800986  EDH=1人  CG=1人
+  person: EDH='Caecilius Satur(---)'  CG='Caecilius Satur(us?)'  overlap=0.667
+    [FP] cognomen: EDH='Satur('  CG='Saturus'
+
+[HD040245]  EDCS=EDCS-09800987  EDH=1人  CG=1人
+  person: EDH='Q. Caecilius Tauri(---)'  CG='Q(uintus) C(a)ecili(us) Tauri(cus?)'  overlap=0.25
+    [FP] cognomen: EDH='Tauri('  CG='Tauricus'
+
+[HD040246]  EDCS=EDCS-09800988  EDH=1人  CG=2人
+  person: EDH='Q. Caecilius Vettonianus'  CG='Q(uintus) Caecilius M(arci) f(ilius) Vetto Nilnus'  overlap=0.222
+    [FP] cognomen: EDH='Vettonianus'  CG='Vetto Nilnus'
+
+[HD040252]  EDCS=EDCS-09800994  EDH=1人  CG=1人
+  person: EDH='Caecilia'  CG='Caecilia'  overlap=1.0
+    [FN] cognomen: EDH='Caecilia'  CG=(空欄)
+
+[HD040303]  EDCS=EDCS-09801013  EDH=1人  CG=1人
+  person: EDH='Q. Caecilia'  CG='Q(uinta) Caecilia'  overlap=0.667
+    [FP] praenomen: EDH='Q.'  CG='Quinta'
+    [FN] cognomen: EDH='Caecilia'  CG=(空欄)
+
+[HD040319]  EDCS=EDCS-09801028  EDH=1人  CG=1人
+  person: EDH='Caecinia Secunda'  CG='Cecini[ia] Secunda'  overlap=0.333
+    [FP] nomen: EDH='Caecinia'  CG='Ceciniia'
+
+[HD040321]  EDCS=EDCS-09801029  EDH=1人  CG=1人
+  person: EDH='Caelius Felicio'  CG='Caelius Felico'  overlap=0.5
+    [FP] cognomen: EDH='Felicio'  CG='Felico'
+
+[HD040325]  EDCS=EDCS-09801032  EDH=1人  CG=1人
+  person: EDH='Caelia Tertiola'  CG='Celia Tertiola'  overlap=0.5
+    [FP] nomen: EDH='Caelia'  CG='Celia'
+
+[HD040335]  EDCS=EDCS-09801040  EDH=1人  CG=1人
+  person: EDH='Calicia Colunba (= Columba)'  CG='Caligia Columba'  overlap=0.333
+    [FP] nomen: EDH='Calicia'  CG='Caligia'
+    [FP] cognomen: EDH='Colunba'  CG='Columba'
+
+[HD040338]  EDCS=EDCS-09801042  EDH=1人  CG=1人
+  person: EDH='Calicia Nampamila'  CG='Calicia Nampamina'  overlap=0.5
+    [FP] cognomen: EDH='Nampamila'  CG='Nampamina'
+
+[HD040348]  EDCS=EDCS-09801052  EDH=1人  CG=1人
+  person: EDH='L. Caninius Tracalus'  CG='L(uci) Canini Tracali'  overlap=0.25
+    [FP] nomen: EDH='Caninius'  CG='Canius'
+
+[HD040361]  EDCS=EDCS-09801059  EDH=1人  CG=2人
+  person: EDH='Celsa Fuscina'  CG='Celsa L(uci) f(ilia)'  overlap=0.2
+    [FN] nomen: EDH='Celsa'  CG=(空欄)
+    [FP] cognomen: EDH='Fuscina'  CG='Celsa'
+
+[HD040366]  EDCS=EDCS-09801064  EDH=1人  CG=2人
+  person: EDH='Q. Claudius Lucinus'  CG='Q(uintus)'  overlap=0.333
+    [FN] cognomen: EDH='Lucinus'  CG=(空欄)
+
+[HD040369]  EDCS=EDCS-09801067  EDH=1人  CG=1人
+  person: EDH='Ti. Claudius Tertullus Martialis'  CG='Ti(berius) Claudius Ti(beri) filius Quir(ina) Tertullius Martialis'  overlap=0.333
+    [FP] cognomen: EDH='Tertullus'  CG='Tertullius Martialis'
+
+[HD040378]  EDCS=EDCS-09801073  EDH=1人  CG=1人
+  person: EDH='L. Clodius Flius?'  CG='L(ucius) Clodius'  overlap=0.667
+    [FN] cognomen: EDH='Flius?'  CG=(空欄)
+
+[HD040391]  EDCS=EDCS-09801083  EDH=1人  CG=2人
+  person: EDH='P. Clodius Silvanus'  CG='P(ublius) Clod(i)us'  overlap=0.2
+    [FN] cognomen: EDH='Silvanus'  CG=(空欄)
+
+[HD040492]  EDCS=EDCS-09801094  EDH=1人  CG=1人
+  person: EDH='Clodia Fortunata?'  CG='Clodia Fortunula'  overlap=0.5
+    [FP] cognomen: EDH='Fortunata?'  CG='Fortunula'
+
+[HD040503]  EDCS=EDCS-26100343  EDH=1人  CG=1人
+  person: EDH='L. Cominius Quetus'  CG='L(ucius) Comi/nius Quietus'  overlap=0.2
+    [FP] cognomen: EDH='Quetus'  CG='Quietus'
+
+[HD040506]  EDCS=EDCS-09801107  EDH=1人  CG=1人
+  person: EDH='Cominia Natalis'  CG='Gominia Natalis'  overlap=0.5
+    [FP] nomen: EDH='Cominia'  CG='Gominia'
+
+[HD040507]  EDCS=EDCS-09801108  EDH=1人  CG=1人
+  person: EDH='Cominia Queta'  CG='Cominia Qu(i)eta'  overlap=0.25
+    [FP] cognomen: EDH='Queta'  CG='Quieta'
+
+[HD040508]  EDCS=EDCS-09801109  EDH=1人  CG=1人
+  person: EDH='Cominia Sorio Sorica'  CG='Comi(nia) Sorio Sorica'  overlap=0.5
+    [FP] cognomen: EDH='Sorio'  CG='Sorio Sorica'
+
+[HD040582]  EDCS=EDCS-09801117  EDH=1人  CG=1人
+  person: EDH='Cornelia Eutichia (= Eutychia)'  CG='Cornelia Euticia'  overlap=0.333
+    [FP] cognomen: EDH='Eutichia'  CG='Euticia'
+
+[HD040583]  EDCS=EDCS-09801118  EDH=1人  CG=1人
+  person: EDH='Cornelia Queta'  CG='Cornelia Qu(i)eta'  overlap=0.25
+    [FP] cognomen: EDH='Queta'  CG='Quieta'
+
+[HD040590]  EDCS=EDCS-09801123  EDH=1人  CG=1人
+  person: EDH='Cos(---) Felicia'  CG='Felicia'  overlap=0.5
+    [FN] nomen: EDH='Cos('  CG=(空欄)
+
+[HD040591]  EDCS=EDCS-09801124  EDH=1人  CG=1人
+  person: EDH='Q. Crepereus'  CG='Q(uinto) Crepereo'  overlap=0.333
+    [FN] cognomen: EDH='Crepereus'  CG=(空欄)
+
+[HD040593]  EDCS=EDCS-09801125  EDH=1人  CG=2人
+  person: EDH='C. Crepereius Natalus'  CG='C(aius) Crep(e)reius Q(uinti) f(ilius) Quir(ina) Natalus'  overlap=0.167
+    [FP] nomen: EDH='Crepereius'  CG='Crepreius'
+
+[HD040596]  EDCS=EDCS-09801127  EDH=1人  CG=1人
+  person: EDH='C. Crepereus Quetus'  CG='C(aius) Crepereus Qu(i)etus'  overlap=0.333
+    [FP] cognomen: EDH='Quetus'  CG='Quietus'
+
+[HD040603]  EDCS=EDCS-09801132  EDH=1人  CG=1人
+  person: EDH='[---]ius Cuba[--]us'  CG=']ius Cuba/[3]us'  overlap=1.0
+    [FN] nomen: EDH='ius'  CG=(空欄)
+    [FN] cognomen: EDH='Cuba'  CG=(空欄)
+
+[HD040607]  EDCS=EDCS-09801135  EDH=1人  CG=1人
+  person: EDH='D(---) Murtis'  CG='D(omitius?) Murtis'  overlap=0.667
+    [FP] nomen: EDH='D('  CG='Domitius'
+
+[HD040608]  EDCS=EDCS-09801136  EDH=1人  CG=1人
+  person: EDH='D(---) Severus'  CG='D(omitius?) Severus'  overlap=0.667
+    [FP] nomen: EDH='D('  CG='Domitius'
+
+[HD040620]  EDCS=EDCS-09801148  EDH=1人  CG=1人
+  person: EDH='P. Aegrilius (= Egrilius) Musteolus'  CG='P(ublius) {A}Egrili/us Muste/ol[u]s'  overlap=0.111
+    [FP] nomen: EDH='Aegrilius'  CG='Egrilus'
+
+[HD040625]  EDCS=EDCS-09801153  EDH=1人  CG=1人
+  person: EDH='Q. Fabius Belliqus (= Bellicus)'  CG='Q(uintus) Fabius Belli<c=Q>us'  overlap=0.333
+    [FP] cognomen: EDH='Belliqus'  CG='Bellicus'
+
+[HD040627]  EDCS=EDCS-09801155  EDH=1人  CG=1人
+  person: EDH='Q. Fabius Satullus'  CG='Q(uinti) Kabi(?) Satulli'  overlap=0.25
+    [FP] nomen: EDH='Fabius'  CG='Kabius'
+
+[HD040642]  EDCS=EDCS-09801162  EDH=1人  CG=1人
+  person: EDH='Fabia Satturnina (= Saturnina)'  CG='Fabia Saturnina'  overlap=0.667
+    [FP] cognomen: EDH='Satturnina'  CG='Saturnina'
+
+[HD040648]  EDCS=EDCS-09801167  EDH=1人  CG=2人
+  person: EDH='M. Fannius Vitalus'  CG='M(arcus) Fannius'  overlap=0.667
+    [FN] cognomen: EDH='Vitalus'  CG=(空欄)
+
+[HD040649]  EDCS=EDCS-09801168  EDH=1人  CG=2人
+  person: EDH='Fabia Maxima'  CG='Fannia L(uci) f(ilia) Maxima'  overlap=0.167
+    [FP] nomen: EDH='Fabia'  CG='Fannia'
+
+[HD040652]  EDCS=EDCS-09801170  EDH=1人  CG=1人
+  person: EDH='L. Favonius I[---]?'  CG='L(ucius) Favonius'  overlap=0.667
+    [FN] cognomen: EDH='I'  CG=(空欄)
+
+[HD040659]  EDCS=EDCS-09801175  EDH=1人  CG=1人
+  person: EDH='Floria Successa'  CG='Floria Suc(c)e(s)a'  overlap=0.167
+    [FP] cognomen: EDH='Successa'  CG='Succesa'
+
+[HD040666]  EDCS=EDCS-09801180  EDH=1人  CG=1人
+  person: EDH='Frorrus Estricatus (= Extricatus)'  CG='Frorrus Estr(i)c(a)tus'  overlap=0.167
+    [FN] nomen: EDH='Frorrus'  CG=(空欄)
+    [FN] cognomen: EDH='Estricatus'  CG=(空欄)
+
+[HD040667]  EDCS=EDCS-09801181  EDH=1人  CG=1人
+  person: EDH='C. Fu[---] Victorinus'  CG='G(aius!) Fu[lvius(?)] Victor[i]nus'  overlap=0.143
+    [FP] nomen: EDH='Fu'  CG='Fulvius'
+
+[HD040670]  EDCS=EDCS-09801184  EDH=1人  CG=1人
+  person: EDH='G(---) Iucunda'  CG='G() Iucuda'  overlap=0.5
+    [FN] nomen: EDH='G('  CG=(空欄)
+
+[HD040676]  EDCS=EDCS-09801189  EDH=1人  CG=1人
+  person: EDH='Gabinia Felicia'  CG='Fabinia Felicia'  overlap=0.5
+    [FP] nomen: EDH='Gabinia'  CG='Fabinia'
+
+[HD040682]  EDCS=EDCS-09801195  EDH=1人  CG=2人
+  person: EDH='P. Gargilius Buturarius'  CG='P(ublius) [Gargilius]'  overlap=0.667
+    [FN] cognomen: EDH='Buturarius'  CG=(空欄)
+
+[HD040690]  EDCS=EDCS-09801203  EDH=1人  CG=1人
+  person: EDH='Gargilia Faustilla'  CG='Gargilia Faustila'  overlap=0.5
+    [FP] cognomen: EDH='Faustilla'  CG='Faustila'
+
+[HD040691]  EDCS=EDCS-09801204  EDH=1人  CG=2人
+  person: EDH='Gargilia Oc[-]ati(---)'  CG='Gargilia OC[---]ati [fil(ia?)]'  overlap=0.6
+    [FN] cognomen: EDH='Oc'  CG=(空欄)
+
+[HD040694]  EDCS=EDCS-13003488  EDH=1人  CG=1人
+  person: EDH='Gargilia? Sussca (= Sucessa)?'  CG='Garilia Sussca'  overlap=0.333
+    [FP] nomen: EDH='Gargilia?'  CG='Garilia'
+
+[HD040745]  EDCS=EDCS-09801217  EDH=1人  CG=1人
+  person: EDH='M. Granius Fintirus?'  CG='M(arcus) Granius Fintir()'  overlap=0.5
+    [FP] cognomen: EDH='Fintirus?'  CG='Fintir'
+
+[HD040762]  EDCS=EDCS-09801225  EDH=1人  CG=1人
+  person: EDH='M. Haterius Horfitus (= Orfitus)'  CG='M(arcus) (H)aterius {H}Orfitus'  overlap=0.4
+    [FP] cognomen: EDH='Horfitus'  CG='Orfitus'
+
+[HD040766]  EDCS=EDCS-09801228  EDH=1人  CG=1人
+  person: EDH='L. Helvius Martialis?'  CG='L(ucius) (H)elvius Martis'  overlap=0.2
+    [FP] cognomen: EDH='Martialis?'  CG='Martis'
+
+[HD040767]  EDCS=EDCS-09801229  EDH=1人  CG=2人
+  person: EDH='P. Helvius Rogatus'  CG='P(ublius) Helvius'  overlap=0.667
+    [FN] cognomen: EDH='Rogatus'  CG=(空欄)
+
+[HD040768]  EDCS=EDCS-09801230  EDH=1人  CG=2人
+  person: EDH='P. Helvius Salvianus'  CG='C(aius) Helvius'  overlap=0.333
+    [FP] praenomen: EDH='P.'  CG='Caius'
+    [FN] cognomen: EDH='Salvianus'  CG=(空欄)
+
+[HD040772]  EDCS=EDCS-09801233  EDH=1人  CG=1人
+  person: EDH='Haelvia (= Helvia) Lala'  CG='H{a}elvia Lala'  overlap=0.25
+    [FP] nomen: EDH='Haelvia'  CG='Helvia'
+
+[HD040777]  EDCS=EDCS-09801237  EDH=1人  CG=1人
+  person: EDH='M. Serenius?'  CG='M(arcus) Herenus [3]'  overlap=0.333
+    [FN] cognomen: EDH='Serenius?'  CG=(空欄)
+
+[HD040778]  EDCS=EDCS-09801238  EDH=1人  CG=1人
+  person: EDH='L. Herenius Adlectus'  CG='L(ucius) Heren(n)ius Adlectus'  overlap=0.333
+    [FP] nomen: EDH='Herenius'  CG='Herennius'
+
+[HD040780]  EDCS=EDCS-09801240  EDH=1人  CG=1人
+  person: EDH='C. Herenius Baliafon'  CG='G(aius!) (H)eren(n)ius Baliafon'  overlap=0.143
+    [FP] nomen: EDH='Herenius'  CG='Herennius'
+
+[HD040782]  EDCS=EDCS-09801241  EDH=1人  CG=1人
+  person: EDH='M. Herenius Iunio'  CG='M(arcus) Here/n(n)ius Iu/nio(r?)'  overlap=0.125
+    [FP] nomen: EDH='Herenius'  CG='Herennius'
+    [FP] cognomen: EDH='Iunio'  CG='Iunior'
+
+[HD040796]  EDCS=EDCS-13003491  EDH=1人  CG=1人
+  person: EDH='L. Hierenius (= Herenius) Nivalis'  CG='L(ucius) Hiereniu(s)(!) Nivalis'  overlap=0.4
+    [FP] nomen: EDH='Hierenius'  CG='Hiereniusius'
+
+[HD040797]  EDCS=EDCS-09801244  EDH=1人  CG=1人
+  person: EDH='P. Herennius Victor'  CG='P(ublius) (H)erenni(us) Vistor(?)'  overlap=0.167
+    [FP] cognomen: EDH='Victor'  CG='Vistor'
+
+[HD040801]  EDCS=EDCS-09801247  EDH=1人  CG=1人
+  person: EDH='Herinnia (= Herennia) Luciosa'  CG='Erinni[a] Luciosa'  overlap=0.333
+    [FP] nomen: EDH='Herinnia'  CG='Erinnia'
+
+[HD040806]  EDCS=EDCS-09801250  EDH=1人  CG=1人
+  person: EDH='Herenia Titosa'  CG='Heren(n)ia Titosa'  overlap=0.25
+    [FP] nomen: EDH='Herenia'  CG='Herennia'
+
+[HD040807]  EDCS=EDCS-09801251  EDH=1人  CG=1人
+  person: EDH='Homulius Pacatus'  CG='Homulius Pacatus'  overlap=1.0
+    [FN] nomen: EDH='Homulius'  CG=(空欄)
+    [FN] cognomen: EDH='Pacatus'  CG=(空欄)
+
+[HD040810]  EDCS=EDCS-09801254  EDH=1人  CG=2人
+  person: EDH='Q. Horatius Baricio'  CG='Q(uintus)'  overlap=0.333
+    [FN] cognomen: EDH='Baricio'  CG=(空欄)
+
+[HD040819]  EDCS=EDCS-09801260  EDH=1人  CG=2人
+  person: EDH='Horatia Procula'  CG='Horatia Q(uinti) fil(ia) Pocula'  overlap=0.167
+    [FP] cognomen: EDH='Procula'  CG='Pocula'
+
+[HD040834]  EDCS=EDCS-09801273  EDH=1人  CG=2人
+  person: EDH='P. Iulius Baebianus'  CG='C(aius) [Iulius]'  overlap=0.333
+    [FP] praenomen: EDH='P.'  CG='Caius'
+    [FN] cognomen: EDH='Baebianus'  CG=(空欄)
+
+[HD040835]  EDCS=EDCS-09801274  EDH=1人  CG=1人
+  person: EDH='C. Iulius C(---)'  CG='C(aius) Iul(ius) C()'  overlap=0.25
+    [FN] cognomen: EDH='C('  CG=(空欄)
+
+[HD040838]  EDCS=EDCS-13003498  EDH=1人  CG=2人
+  person: EDH='Sex. Iulius Garamanticus?'  CG='C(aius) Iulius'  overlap=0.333
+    [FP] praenomen: EDH='Sex.'  CG='Caius'
+    [FN] cognomen: EDH='Garamanticus?'  CG=(空欄)
+
+[HD040840]  EDCS=EDCS-09801278  EDH=1人  CG=1人
+  person: EDH='C. Iulius Catervarius'  CG='C(aius) Iulius Caterva/rius'  overlap=0.4
+    [FP] cognomen: EDH='Catervarius'  CG='Catervaius'
+
+[HD040843]  EDCS=EDCS-13003499  EDH=1人  CG=2人
+  person: EDH='M. Iulius Cerialis'  CG='C(aius) [Iulius]'  overlap=0.333
+    [FP] praenomen: EDH='M.'  CG='Caius'
+    [FN] cognomen: EDH='Cerialis'  CG=(空欄)
+
+[HD040844]  EDCS=EDCS-09801281  EDH=1人  CG=1人
+  person: EDH='C. Iulius Colombus (= Columbus)'  CG='C(aius) Iulius Columbus qui et Mustolus'  overlap=0.429
+    [FP] cognomen: EDH='Colombus'  CG='Columbus'
+
+[HD040848]  EDCS=EDCS-09801284  EDH=1人  CG=2人
+  person: EDH='L. Iulius Constans'  CG='L(ucius) [Iulius]'  overlap=0.667
+    [FN] cognomen: EDH='Constans'  CG=(空欄)
+
+[HD040849]  EDCS=EDCS-09801285  EDH=1人  CG=2人
+  person: EDH='L. Iulius Constans'  CG='M(arcus) Iulius'  overlap=0.333
+    [FP] praenomen: EDH='L.'  CG='Marcus'
+    [FN] cognomen: EDH='Constans'  CG=(空欄)
+
+[HD040856]  EDCS=EDCS-13003502  EDH=1人  CG=2人
+  person: EDH='Q. Iulius Felix'  CG='Q(uintus) Iulius'  overlap=0.667
+    [FN] cognomen: EDH='Felix'  CG=(空欄)
+
+[HD040891]  EDCS=EDCS-13003505  EDH=1人  CG=1人
+  person: EDH='P. Iulius Ianuaris'  CG='P(ublius) Iulius Ianuari(u)s'  overlap=0.333
+    [FP] cognomen: EDH='Ianuaris'  CG='Ianuarius'
+
+[HD040898]  EDCS=EDCS-09801312  EDH=1人  CG=2人
+  person: EDH='L. Iulius Iulianus'  CG='L(ucius) Iulius'  overlap=0.667
+    [FN] cognomen: EDH='Iulianus'  CG=(空欄)
+
+[HD040899]  EDCS=EDCS-09801313  EDH=1人  CG=1人
+  person: EDH='Q. Iulius Annianus?'  CG='Quintus Iulius [I]unianus'  overlap=0.25
+    [FP] cognomen: EDH='Annianus?'  CG='Iunianus'
+
+[HD040907]  EDCS=EDCS-09801319  EDH=1人  CG=1人
+  person: EDH='Iulius Martialis?'  CG='Iulius Martis'  overlap=0.5
+    [FP] cognomen: EDH='Martialis?'  CG='Martis'
+
+[HD040914]  EDCS=EDCS-09801324  EDH=1人  CG=1人
+  person: EDH='C. Iulius Murcillus'  CG='C(aius) Iulius Muricillus'  overlap=0.5
+    [FP] cognomen: EDH='Murcillus'  CG='Muricillus'
+
+[HD040917]  EDCS=EDCS-09801327  EDH=1人  CG=1人
+  person: EDH='C. Iulius Novatus'  CG='C(aius) Iulius Novai/tus'  overlap=0.4
+    [FP] cognomen: EDH='Novatus'  CG='Novaitus'
+
+[HD040923]  EDCS=EDCS-09801333  EDH=1人  CG=1人
+  person: EDH='C. Iulius Proclus'  CG='G(aius!) Iulius Proc(u)lus'  overlap=0.167
+    [FP] cognomen: EDH='Proclus'  CG='Proculus'
+
+[HD040926]  EDCS=EDCS-09801336  EDH=1人  CG=1人
+  person: EDH='L. Iulius Quetus'  CG='L(ucius) Iulius Qu(i)etus'  overlap=0.333
+    [FP] cognomen: EDH='Quetus'  CG='Quietus'
+
+[HD040932]  EDCS=EDCS-09801342  EDH=1人  CG=1人
+  person: EDH='Q. Iulius Rustiqus (= Rusticus)'  CG='Q(uintus) Iu<l=I>ius Rus<t=I>i<c=Q>(us)'  overlap=0.1
+    [FP] cognomen: EDH='Rustiqus'  CG='Rusticus'
+
+[HD040941]  EDCS=EDCS-09801348  EDH=1人  CG=1人
+  person: EDH='P. Iulius Satturus (= Saturus)'  CG='P(ublius) Iulius Sat{t}urus'  overlap=0.333
+    [FP] cognomen: EDH='Satturus'  CG='Saturus'
+
+[HD040952]  EDCS=EDCS-13003514  EDH=1人  CG=2人
+  person: EDH='C. Iulius Sittianus'  CG='C(aius)'  overlap=0.333
+    [FN] nomen: EDH='Iulius'  CG=(空欄)
+    [FN] cognomen: EDH='Sittianus'  CG=(空欄)
+
+[HD040978]  EDCS=EDCS-09801378  EDH=2人  CG=2人
+  person: EDH='Iulia'  CG='Iulia Bonitatis f(ilia)'  overlap=0.25
+    [FN] cognomen: EDH='Iulia'  CG=(空欄)
+
+[HD040982]  EDCS=EDCS-09801382  EDH=1人  CG=1人
+  person: EDH='Iulia Albula'  CG='Iulia Albulia'  overlap=0.5
+    [FP] cognomen: EDH='Albula'  CG='Albulia'
+
+[HD041001]  EDCS=EDCS-09801398  EDH=1人  CG=1人
+  person: EDH='Iulia Felicia'  CG='Lucia Felicia'  overlap=0.5
+    [FP] nomen: EDH='Iulia'  CG='Lucia'
+
+[HD041015]  EDCS=EDCS-09801412  EDH=1人  CG=1人
+  person: EDH='Iulia Graeca'  CG='Iulia Greca'  overlap=0.5
+    [FP] cognomen: EDH='Graeca'  CG='Greca'
+
+[HD041017]  EDCS=EDCS-09801414  EDH=1人  CG=1人
+  person: EDH='Iulia Ospita'  CG='Iulia (H)ospita'  overlap=0.667
+    [FP] cognomen: EDH='Ospita'  CG='Hospita'
+
+[HD041037]  EDCS=EDCS-09801431  EDH=2人  CG=2人
+  person: EDH='C. Iulius L(---)'  CG='C(aius) I(ulius) L()'  overlap=0.4
+    [FN] cognomen: EDH='L('  CG=(空欄)
+
+[HD041041]  EDCS=EDCS-09801435  EDH=1人  CG=1人
+  person: EDH='Iulia Matuta'  CG='Iulia Matutia'  overlap=0.5
+    [FP] cognomen: EDH='Matuta'  CG='Matutia'
+
+[HD041049]  EDCS=EDCS-09801444  EDH=1人  CG=2人
+  person: EDH='Iulia Monnula'  CG='Iulia A(uli) f(ilia) Monnila'  overlap=0.167
+    [FP] cognomen: EDH='Monnula'  CG='Monnila'
+
+[HD041050]  EDCS=EDCS-09801445  EDH=1人  CG=1人
+  person: EDH='Iulia Monula'  CG='Iulia Mo(n)nula'  overlap=0.25
+    [FP] cognomen: EDH='Monula'  CG='Monnula'
+
+[HD041067]  EDCS=EDCS-13002201  EDH=1人  CG=1人
+  person: EDH='Iulia P[--]ssin(---)'  CG='Iulia P[3]ssin()'  overlap=1.0
+    [FN] cognomen: EDH='P'  CG=(空欄)
+
+[HD041140]  EDCS=EDCS-09801484  EDH=1人  CG=1人
+  person: EDH='Iunia Vitalis'  CG='Iulia Vitalis'  overlap=0.5
+    [FP] nomen: EDH='Iunia'  CG='Iulia'
+
+[HD041142]  EDCS=EDCS-09801486  EDH=2人  CG=1人
+  person: EDH='Iulia Mustia'  CG='Iulia Vi/talis Mus/tia'  overlap=0.2
+    [FP] cognomen: EDH='Mustia'  CG='Vitalis Mustia'
+
+[HD041151]  EDCS=EDCS-09801493  EDH=1人  CG=1人
+  person: EDH='Iulia Urbanilla'  CG='Iulia Urbanila'  overlap=0.5
+    [FP] cognomen: EDH='Urbanilla'  CG='Urbanila'
+
+[HD041165]  EDCS=EDCS-09801503  EDH=1人  CG=1人
+  person: EDH='L. L(---) Baricio'  CG='Lucius L() Baricius'  overlap=0.333
+    [FN] nomen: EDH='L('  CG=(空欄)
+
+[HD041166]  EDCS=EDCS-09801504  EDH=1人  CG=1人
+  person: EDH='C. L(---) F(---)'  CG='C(aius) L() F()'  overlap=0.75
+    [FN] nomen: EDH='L('  CG=(空欄)
+    [FN] cognomen: EDH=')'  CG=(空欄)
+
+[HD041179]  EDCS=EDCS-09801515  EDH=2人  CG=2人
+  person: EDH='P. Licinius Felix?'  CG='P(ublius) Licini(us)'  overlap=0.25
+    [FN] cognomen: EDH='Felix?'  CG=(空欄)
+
+[HD041181]  EDCS=EDCS-09801517  EDH=1人  CG=1人
+  person: EDH='C. Licinius Messor'  CG='C(ai) Licini Mesoris'  overlap=0.25
+    [FP] cognomen: EDH='Messor'  CG='Mesor'
+
+[HD041191]  EDCS=EDCS-13003532  EDH=1人  CG=2人
+  person: EDH='Lollius Maximus'  CG='C(aius) [Lollius]'  overlap=0.333
+    [FN] cognomen: EDH='Maximus'  CG=(空欄)
+
+[HD041207]  EDCS=EDCS-09801538  EDH=1人  CG=2人
+  person: EDH='M. Lurius Vindicianus'  CG='M(arcus) Lurius'  overlap=0.667
+    [FN] cognomen: EDH='Vindicianus'  CG=(空欄)
+
+[HD041213]  EDCS=EDCS-09801541  EDH=2人  CG=3人
+  person: EDH='M. Luridius'  CG='M(arcus) Luridus L(uci) f(ilius)'  overlap=0.143
+    [FP] nomen: EDH='Luridius'  CG='Luridus'
+
+[HD041214]  EDCS=EDCS-09801542  EDH=1人  CG=1人
+  person: EDH='Sp.? M(---) O(---)'  CG='S(extus) M() O()'  overlap=0.5
+    [FN] nomen: EDH='Sp.?'  CG=(空欄)
+    [FN] cognomen: EDH='M('  CG=(空欄)
+
+[HD041218]  EDCS=EDCS-09801545  EDH=1人  CG=1人
+  person: EDH='Q. Manilius Ceastulus (= Castulus)'  CG='Q(uintus) Manilius C{e}astulus'  overlap=0.333
+    [FP] cognomen: EDH='Ceastulus'  CG='Castulus'
+
+[HD041231]  EDCS=EDCS-09801554  EDH=1人  CG=1人
+  person: EDH='L. Manlius Secundus'  CG='L(ucius) Manilius Secundus'  overlap=0.5
+    [FP] nomen: EDH='Manlius'  CG='Manilius'
+
+[HD041235]  EDCS=EDCS-09801557  EDH=1人  CG=1人
+  person: EDH='[---]lanius Marax'  CG=']lanius Marax'  overlap=1.0
+    [FN] nomen: EDH='lanius'  CG=(空欄)
+
+[HD041239]  EDCS=EDCS-09801558  EDH=1人  CG=1人
+  person: EDH='Marcilia Extricata'  CG='Marcilia Extricaza'  overlap=0.5
+    [FP] cognomen: EDH='Extricata'  CG='Extricaza'
+
+[HD041253]  EDCS=EDCS-09801567  EDH=1人  CG=1人
+  person: EDH='Meloria Felix'  CG='Meloria Felix'  overlap=1.0
+    [FN] nomen: EDH='Meloria'  CG=(空欄)
+    [FN] cognomen: EDH='Felix'  CG=(空欄)
+
+[HD041264]  EDCS=EDCS-09801574  EDH=1人  CG=1人
+  person: EDH='T. Mevius Quetus'  CG='T(itus) Mevius Qu(i)etus'  overlap=0.333
+    [FP] cognomen: EDH='Quetus'  CG='Quietus'
+
+[HD041272]  EDCS=EDCS-09801576  EDH=1人  CG=1人
+  person: EDH='Q. Mevius Sorigio (= Soricio)'  CG='Q(uintus) Mevius Sorigion(is)'  overlap=0.4
+    [FP] cognomen: EDH='Sorigio'  CG='Sorigionis'
+
+[HD041273]  EDCS=EDCS-09801577  EDH=1人  CG=1人
+  person: EDH='Mevia'  CG='Mevia'  overlap=1.0
+    [FN] cognomen: EDH='Mevia'  CG=(空欄)
+
+[HD041288]  EDCS=EDCS-09801585  EDH=1人  CG=1人
+  person: EDH='Mi[---]? Fausta'  CG='Fausta'  overlap=0.5
+    [FN] nomen: EDH='Mi'  CG=(空欄)
+
+[HD041290]  EDCS=EDCS-09801586  EDH=1人  CG=1人
+  person: EDH='Min(---) Ianuaria'  CG='Min() Ianuaria'  overlap=1.0
+    [FP] nomen: EDH='Min('  CG='Min(ia?)'
+
+[HD041293]  EDCS=EDCS-09801589  EDH=2人  CG=2人
+  person: EDH='Mistria (= Mestria)'  CG='Mistria Rogati f(ilia)'  overlap=0.25
+    [FN] nomen: EDH='Mistria'  CG=(空欄)
+
+[HD041294]  EDCS=EDCS-09801590  EDH=1人  CG=1人
+  person: EDH='[---]a Monnula'  CG='Monnula'  overlap=0.5
+    [FN] nomen: EDH='a'  CG=(空欄)
+
+[HD041297]  EDCS=EDCS-09801592  EDH=1人  CG=1人
+  person: EDH='Munatius Narcissus'  CG='Mumatius Narcissus'  overlap=0.5
+    [FP] nomen: EDH='Munatius'  CG='Mumatius'
+
+[HD041299]  EDCS=EDCS-09801594  EDH=1人  CG=1人
+  person: EDH='Mustia Nampula'  CG='Mustia Nampula'  overlap=1.0
+    [FN] nomen: EDH='Mustia'  CG=(空欄)
+    [FN] cognomen: EDH='Nampula'  CG=(空欄)
+
+[HD041302]  EDCS=EDCS-09801596  EDH=1人  CG=1人
+  person: EDH='[---]ius? Namphamo'  CG='Namphamo'  overlap=0.5
+    [FN] nomen: EDH='ius?'  CG=(空欄)
+
+[HD041312]  EDCS=EDCS-09801601  EDH=2人  CG=1人
+  person: EDH='Nonia'  CG='Nonia Catti'  overlap=0.5
+    [FP] cognomen: EDH='Nonia'  CG='Catti'
+
+[HD041316]  EDCS=EDCS-09801604  EDH=1人  CG=1人
+  person: EDH='[---]onia Novella'  CG=']onia Novela'  overlap=0.5
+    [FN] nomen: EDH='onia'  CG=(空欄)
+
+[HD041323]  EDCS=EDCS-09801610  EDH=1人  CG=1人
+  person: EDH='M.? Opinius Victor'  CG='Opiniu[s] Victor'  overlap=0.333
+    [FP] nomen: EDH='M.?'  CG='Opinius'
+    [FP] cognomen: EDH='Opinius'  CG='Victor'
+
+[HD041324]  EDCS=EDCS-09801611  EDH=1人  CG=1人
+  person: EDH='Oppius Axilius'  CG='Opius Axilius'  overlap=0.5
+    [FP] nomen: EDH='Oppius'  CG='Opius'
+
+[HD041325]  EDCS=EDCS-09801612  EDH=1人  CG=1人
+  person: EDH='Q. Oppius Vibius'  CG='Q(uintus) Op(ius) Vibius'  overlap=0.4
+    [FP] nomen: EDH='Oppius'  CG='Opius'
+
+[HD041335]  EDCS=EDCS-09801618  EDH=1人  CG=1人
+  person: EDH='P(---) Ianuaria'  CG='P() Ianuaria'  overlap=1.0
+    [FN] nomen: EDH='P('  CG=(空欄)
+
+[HD041336]  EDCS=EDCS-09801619  EDH=1人  CG=1人
+  person: EDH='P(---) Vitalis'  CG='P(ublius) Vitalis'  overlap=0.667
+    [FN] nomen: EDH='P('  CG=(空欄)
+
+[HD041341]  EDCS=EDCS-09801623  EDH=1人  CG=1人
+  person: EDH='Papiria Paliaria'  CG='Papiria Pal<i=T>aria'  overlap=0.2
+    [FP] cognomen: EDH='Paliaria'  CG='Palataria'
+
+[HD041342]  EDCS=EDCS-09801624  EDH=1人  CG=1人
+  person: EDH='T. Pescennius Ganio'  CG='T(itus) Pescenius Ganio'  overlap=0.5
+    [FP] nomen: EDH='Pescennius'  CG='Pescenius'
+
+[HD041352]  EDCS=EDCS-09801628  EDH=1人  CG=1人
+  person: EDH='Pinnius Lucinus'  CG='Pinius Lucinus'  overlap=0.5
+    [FP] nomen: EDH='Pinnius'  CG='Pinius'
+
+[HD041365]  EDCS=EDCS-13003542  EDH=1人  CG=1人
+  person: EDH='Q. Pompeius Passidenius'  CG='Q(uintus) Pompeius Passideneus'  overlap=0.5
+    [FP] cognomen: EDH='Passidenius'  CG='Passideneus'
+
+[HD041367]  EDCS=EDCS-09801635  EDH=1人  CG=1人
+  person: EDH='Ponpeia (= Pompeia) Contenta'  CG='Po<m=N>peia Contenta'  overlap=0.2
+    [FP] nomen: EDH='Ponpeia'  CG='Pompeia'
+
+[HD041372]  EDCS=EDCS-09801638  EDH=1人  CG=1人
+  person: EDH='M. Ponponius (= Pomponius) Florus'  CG='M(arcus) Ponpo/nius Floru/s'  overlap=0.167
+    [FP] nomen: EDH='Ponponius'  CG='Pomponius'
+
+[HD041373]  EDCS=EDCS-13003545  EDH=1人  CG=2人
+  person: EDH='Q. Pomponius Fortunatus'  CG='Q(uintus) Pomponius'  overlap=0.667
+    [FN] cognomen: EDH='Fortunatus'  CG=(空欄)
+
+[HD041374]  EDCS=EDCS-09801639  EDH=1人  CG=1人
+  person: EDH='L. Ponponius (= Pomponius) Marcus'  CG='L(ucius) Pon(pon)ius Marcus'  overlap=0.4
+    [FP] nomen: EDH='Ponponius'  CG='Pomponius'
+
+[HD041382]  EDCS=EDCS-09801647  EDH=1人  CG=1人
+  person: EDH='L. Popilius Fuscus'  CG='L(ucius) Populius Fuscus'  overlap=0.5
+    [FP] nomen: EDH='Popilius'  CG='Populius'
+
+[HD041384]  EDCS=EDCS-09801649  EDH=1人  CG=1人
+  person: EDH='Porcius Masurus'  CG='Porcius Ma(ximus?) Sur(us)'  overlap=0.2
+    [FP] cognomen: EDH='Masurus'  CG='Maximus Surus'
+
+[HD041394]  EDCS=EDCS-09801657  EDH=1人  CG=1人
+  person: EDH='[-]cmeus Quintianus'  CG='[3]cmeus Quintianus'  overlap=1.0
+    [FN] nomen: EDH='cmeus'  CG=(空欄)
+
+[HD041396]  EDCS=EDCS-09801658  EDH=2人  CG=2人
+  person: EDH='[---]us [---]arius'  CG=']us'  overlap=0.5
+    [FN] nomen: EDH='us'  CG=(空欄)
+    [FN] cognomen: EDH='arius'  CG=(空欄)
+  person: EDH='R(---) Potens'  CG='R() Potens'  overlap=1.0
+    [FN] nomen: EDH='R('  CG=(空欄)
+
+[HD041398]  EDCS=EDCS-09801660  EDH=1人  CG=1人
+  person: EDH='R(---) Matuta'  CG='R() Matuta'  overlap=1.0
+    [FN] nomen: EDH='R('  CG=(空欄)
+
+[HD041400]  EDCS=EDCS-09801662  EDH=1人  CG=1人
+  person: EDH='[---]lius R[-]scubans'  CG='[3]lius R[1]scuban(u)s(?)'  overlap=0.4
+    [FN] nomen: EDH='lius'  CG=(空欄)
+    [FP] cognomen: EDH='R'  CG='Rscubanus'
+
+[HD041401]  EDCS=EDCS-09801663  EDH=1人  CG=2人
+  person: EDH='[---]cunda Restuta'  CG='[Se]cunda'  overlap=0.5
+    [FN] nomen: EDH='cunda'  CG=(空欄)
+    [FP] cognomen: EDH='Restuta'  CG='Secunda'
+
+[HD041406]  EDCS=EDCS-09801669  EDH=1人  CG=1人
+  person: EDH='L. Rusticelius Asellarius'  CG='L(ucius) Rustic(e)liu[s] As(e)l(l)arius'  overlap=0.125
+    [FP] nomen: EDH='Rusticelius'  CG='Rusticellius'
+
+[HD041407]  EDCS=EDCS-09801670  EDH=1人  CG=1人
+  person: EDH='L. Rusticelius Hospes'  CG='L(ucius) Rusticelus Hospes'  overlap=0.5
+    [FP] nomen: EDH='Rusticelius'  CG='Rusticelus'
+
+[HD041411]  EDCS=EDCS-09801674  EDH=1人  CG=1人
+  person: EDH='Saenia'  CG='Saenia'  overlap=1.0
+    [FN] cognomen: EDH='Saenia'  CG=(空欄)
+
+[HD041414]  EDCS=EDCS-09801677  EDH=1人  CG=1人
+  person: EDH='C. Sagunsus Fusqus (= Fuscus)'  CG='C(aius) Sagunsus Fusqus(!)'  overlap=0.75
+    [FP] cognomen: EDH='Fusqus'  CG='Fuscus'
+
+[HD041415]  EDCS=EDCS-09801678  EDH=1人  CG=2人
+  person: EDH='L. Salius Martialis'  CG='L(ucius)'  overlap=0.333
+    [FN] nomen: EDH='Salius'  CG=(空欄)
+    [FN] cognomen: EDH='Martialis'  CG=(空欄)
+
+[HD041417]  EDCS=EDCS-09801680  EDH=1人  CG=1人
+  person: EDH='Lifvius? (= Livius?) Sallustus'  CG='Salust(i)u(s) Lifvius(?)'  overlap=0.2
+    [FP] nomen: EDH='Lifvius?'  CG='Salustius'
+
+[HD041420]  EDCS=EDCS-09801683  EDH=1人  CG=1人
+  person: EDH='L. Sallustius Maximus'  CG='T(itus) Sal(l)u(s)tius Maximus'  overlap=0.25
+    [FP] praenomen: EDH='L.'  CG='Titus'
+
+[HD041425]  EDCS=EDCS-09801688  EDH=1人  CG=1人
+  person: EDH='Salt(---) Nam(---)'  CG='Salt() Nam()'  overlap=1.0
+    [FN] nomen: EDH='Salt('  CG=(空欄)
+    [FN] cognomen: EDH=')'  CG=(空欄)
+
+[HD041427]  EDCS=EDCS-09801690  EDH=1人  CG=1人
+  person: EDH='Q. Satrius Marius Martialis'  CG='Q(uintus) Satrius Marius Martialis'  overlap=0.8
+    [FP] cognomen: EDH='Marius'  CG='Marius Martialis'
+
+[HD041428]  EDCS=EDCS-09801691  EDH=1人  CG=1人
+  person: EDH='Ianuarius Satulus'  CG='Satulus Ianuarius'  overlap=1.0
+    [FN] nomen: EDH='Ianuarius'  CG=(空欄)
+    [FN] cognomen: EDH='Satulus'  CG=(空欄)
+
+[HD041441]  EDCS=EDCS-09801701  EDH=1人  CG=1人
+  person: EDH='Q. Seiius (= Seius) Hortensis'  CG='Q(uintus) Sei{i}us Ortesis'  overlap=0.167
+    [FP] nomen: EDH='Seiius'  CG='Seius'
+
+[HD041447]  EDCS=EDCS-09801707  EDH=1人  CG=1人
+  person: EDH='Seia Quin(---)'  CG='Seia Quin(ta)'  overlap=0.667
+    [FP] cognomen: EDH='Quin('  CG='Quinta'
+
+[HD041459]  EDCS=EDCS-09801719  EDH=1人  CG=1人
+  person: EDH='Sergia Spes'  CG='Sercia(!) Spes'  overlap=0.5
+    [FP] nomen: EDH='Sergia'  CG='Sercia'
+
+[HD041462]  EDCS=EDCS-09801721  EDH=1人  CG=1人
+  person: EDH='P. Sevvius? (= Sevius?) Turusas'  CG='P(ublius) Seunius Turusas'  overlap=0.5
+    [FP] nomen: EDH='Sevvius?'  CG='Seunius'
+
+[HD041468]  EDCS=EDCS-09801727  EDH=1人  CG=1人
+  person: EDH='L. Sigillius Sodalus'  CG='L(ucius) Sigilius Sodalus'  overlap=0.5
+    [FP] nomen: EDH='Sigillius'  CG='Sigilius'
+
+[HD041469]  EDCS=EDCS-09801728  EDH=1人  CG=1人
+  person: EDH='L. Sil(---) Iulianus'  CG='L(ucius) Sil(icius) Iulianus'  overlap=0.6
+    [FP] nomen: EDH='Sil('  CG='Silicius'
+
+[HD041470]  EDCS=EDCS-09801729  EDH=1人  CG=1人
+  person: EDH='L. Silicius'  CG='L(ucius) Silivius'  overlap=0.333
+    [FP] nomen: EDH='Silicius'  CG='Silivius'
+
+[HD041471]  EDCS=EDCS-09801730  EDH=2人  CG=2人
+  person: EDH='[---]sisca'  CG=']sisca'  overlap=1.0
+    [FN] cognomen: EDH='sisca'  CG=(空欄)
+
+[HD041472]  EDCS=EDCS-09801731  EDH=1人  CG=1人
+  person: EDH='P. Sitius Bellicus'  CG='P(ublius) Sitius Belicus'  overlap=0.5
+    [FP] cognomen: EDH='Bellicus'  CG='Belicus'
+
+[HD041474]  EDCS=EDCS-09801733  EDH=1人  CG=2人
+  person: EDH='L. Sittius Celer'  CG='L(ucius) Sittius'  overlap=0.667
+    [FN] cognomen: EDH='Celer'  CG=(空欄)
+
+[HD041481]  EDCS=EDCS-09801739  EDH=1人  CG=1人
+  person: EDH='Q. Sittius Extricatus'  CG='Q(uintus) Extric(a)t(us)'  overlap=0.167
+    [FN] nomen: EDH='Sittius'  CG=(空欄)
+
+[HD041487]  EDCS=EDCS-09801744  EDH=1人  CG=2人
+  person: EDH='P. Sittius Ingenuus'  CG='P(ublius) Sittius'  overlap=0.667
+    [FN] cognomen: EDH='Ingenuus'  CG=(空欄)
+
+[HD041496]  EDCS=EDCS-09801753  EDH=1人  CG=1人
+  person: EDH='M. Sitius Quetus'  CG='M(arcus) Sitius Qu(i)etus'  overlap=0.333
+    [FP] cognomen: EDH='Quetus'  CG='Quietus'
+
+[HD041497]  EDCS=EDCS-09801754  EDH=1人  CG=2人
+  person: EDH='Q. Sitius Reburrus'  CG='Q(uintus) Siti[us] C(ai) f(ilius) Rebur/rus'  overlap=0.1
+    [FP] cognomen: EDH='Reburrus'  CG='Reburrrus'
+
+[HD041505]  EDCS=EDCS-09801758  EDH=1人  CG=1人
+  person: EDH='Q. Sitius Rogatus'  CG='Q(uintus) Sit(t)i[u]s Rog[at]us'  overlap=0.1
+    [FP] nomen: EDH='Sitius'  CG='Sittius'
+
+[HD041509]  EDCS=EDCS-09801760  EDH=1人  CG=1人
+  person: EDH='P. Sitius Saturninus'  CG='P(ublius) Sit(t)ius Saturninus'  overlap=0.333
+    [FP] nomen: EDH='Sitius'  CG='Sittius'
+
+[HD041516]  EDCS=EDCS-09801767  EDH=2人  CG=2人
+  person: EDH='Sittia'  CG='Sittia Sitti filia'  overlap=0.333
+    [FN] cognomen: EDH='Sittia'  CG=(空欄)
+
+[HD041517]  EDCS=EDCS-09801768  EDH=1人  CG=1人
+  person: EDH='Sittia A[-]cata?'  CG='Sit[t]/ia [3]/cata'  overlap=0.25
+    [FP] cognomen: EDH='A'  CG='[---]cata'
+
+[HD041521]  EDCS=EDCS-09801772  EDH=1人  CG=2人
+  person: EDH='Sittia Catulla'  CG='Sittia M(arci) f(ilia) Catula'  overlap=0.167
+    [FP] cognomen: EDH='Catulla'  CG='Catula'
+
+[HD041525]  EDCS=EDCS-09801776  EDH=1人  CG=1人
+  person: EDH='Sittia Qirilla (= Cyrilla)'  CG='Sittia Qirila'  overlap=0.333
+    [FP] cognomen: EDH='Qirilla'  CG='Qirila'
+
+[HD041528]  EDCS=EDCS-09801778  EDH=1人  CG=1人
+  person: EDH='Sittia Extriccata (= Extricata)'  CG='Sittia Extricata'  overlap=0.667
+    [FP] cognomen: EDH='Extriccata'  CG='Extricata'
+
+[HD041535]  EDCS=EDCS-09801784  EDH=1人  CG=1人
+  person: EDH='Sitia Martila'  CG='Sit(t)ia Martila'  overlap=0.25
+    [FP] nomen: EDH='Sitia'  CG='Sittia'
+
+[HD041540]  EDCS=EDCS-09801789  EDH=1人  CG=1人
+  person: EDH='Sitia Novella'  CG='Sit(ti)a Novella'  overlap=0.25
+    [FP] nomen: EDH='Sitia'  CG='Sittia'
+
+[HD041542]  EDCS=EDCS-09801791  EDH=1人  CG=1人
+  person: EDH='Sittia Poca?'  CG='Sittia Pocua'  overlap=0.5
+    [FP] cognomen: EDH='Poca?'  CG='Pocua'
+
+[HD041568]  EDCS=EDCS-09801801  EDH=1人  CG=2人
+  person: EDH='Sitia Urbanilla'  CG='Sitia P(ubli) f(ilia) Urbanila'  overlap=0.167
+    [FP] cognomen: EDH='Urbanilla'  CG='Urbanila'
+
+[HD041569]  EDCS=EDCS-09801802  EDH=1人  CG=1人
+  person: EDH='[-]r[-]ia Somnula'  CG='[3]r[1]ia Somnula'  overlap=1.0
+    [FP] nomen: EDH='r'  CG='[---]r[---]ia'
+    [FP] cognomen: EDH='ia'  CG='Somnula'
+
+[HD041570]  EDCS=EDCS-09801803  EDH=1人  CG=1人
+  person: EDH='Sospita Asellariana'  CG='Sospita Aspariana'  overlap=0.5
+    [FN] nomen: EDH='Sospita'  CG=(空欄)
+    [FN] cognomen: EDH='Asellariana'  CG=(空欄)
+
+[HD041572]  EDCS=EDCS-09801805  EDH=1人  CG=1人
+  person: EDH='Istasa Tabernua?'  CG='Istasa Tabernu(a?)'  overlap=0.333
+    [FN] nomen: EDH='Istasa'  CG=(空欄)
+    [FN] cognomen: EDH='Tabernua?'  CG=(空欄)
+
+[HD041579]  EDCS=EDCS-09801811  EDH=1人  CG=1人
+  person: EDH='Istatilia (= Statilia) Secunda'  CG='I() Statilia Secunda'  overlap=0.667
+    [FP] nomen: EDH='Istatilia'  CG='Statilia'
+
+[HD041580]  EDCS=EDCS-09801812  EDH=1人  CG=1人
+  person: EDH='[---]nius Successus'  CG=']nius Suc(c)es(s)us'  overlap=0.167
+    [FN] nomen: EDH='nius'  CG=(空欄)
+
+[HD041587]  EDCS=EDCS-09801818  EDH=1人  CG=1人
+  person: EDH='T(---) Secundus'  CG='T(itus) S[e]cundus'  overlap=0.2
+    [FN] nomen: EDH='T('  CG=(空欄)
+
+[HD041594]  EDCS=EDCS-09801823  EDH=1人  CG=1人
+  person: EDH='Titurnia'  CG='Titurnia'  overlap=1.0
+    [FN] cognomen: EDH='Titurnia'  CG=(空欄)
+
+[HD041600]  EDCS=EDCS-13003534  EDH=1人  CG=2人
+  person: EDH='C. Trebellius Marcellinus'  CG='C(aius) Trebellius'  overlap=0.667
+    [FN] cognomen: EDH='Marcellinus'  CG=(空欄)
+
+[HD041611]  EDCS=EDCS-09801834  EDH=1人  CG=1人
+  person: EDH='S(---)? Valerius?'  CG='S(extus?) Val(erius) C() S() A()'  overlap=0.167
+    [FP] nomen: EDH='S('  CG='Valerius'
+    [FN] cognomen: EDH=')?'  CG=(空欄)
+
+[HD041634]  EDCS=EDCS-09801840  EDH=1人  CG=1人
+  person: EDH='P. Ve[---]bius Victor'  CG='P(ublius) Ve[3]bius Victor'  overlap=0.8
+    [FP] nomen: EDH='Ve'  CG='Vebius'
+    [FP] cognomen: EDH='bius'  CG='Victor'
+
+[HD041647]  EDCS=EDCS-13003557  EDH=1人  CG=2人
+  person: EDH='[---]ius Victor'  CG=']ius'  overlap=0.5
+    [FN] cognomen: EDH='Victor'  CG=(空欄)
+
+[HD041657]  EDCS=EDCS-09801852  EDH=1人  CG=1人
+  person: EDH='C.? C[---]? [---]lius'  CG='C[---] [---]lio'  overlap=0.5
+    [FN] nomen: EDH='C.?'  CG=(空欄)
+    [FP] cognomen: EDH='C'  CG='[---]lius'
+
+[HD041667]  EDCS=EDCS-09801856  EDH=1人  CG=1人
+  person: EDH='Q.? Iulius San(---)'  CG='Q(uintus) I(ulius?) San()'  overlap=0.4
+    [FP] nomen: EDH='Q.?'  CG='Iulius'
+    [FP] cognomen: EDH='Iulius'  CG='San-'
+
+[HD041669]  EDCS=EDCS-09801858  EDH=1人  CG=1人
+  person: EDH='[---]ator'  CG=']ator'  overlap=1.0
+    [FN] cognomen: EDH='ator'  CG=(空欄)
+
+[HD041673]  EDCS=EDCS-13002204  EDH=1人  CG=1人
+  person: EDH='M[---]ius Cerealis?'  CG='[3]M[3]ius [3]ER[1]A[3]s'  overlap=0.4
+    [FN] nomen: EDH='M'  CG=(空欄)
+    [FN] cognomen: EDH='ius'  CG=(空欄)
+
+[HD041677]  EDCS=EDCS-09801863  EDH=1人  CG=1人
+  person: EDH='M(---) Ei[---]?'  CG='M(arcus?) EI(?)'  overlap=0.667
+    [FN] nomen: EDH='M('  CG=(空欄)
+    [FN] cognomen: EDH=')'  CG=(空欄)
+
+[HD041679]  EDCS=EDCS-09801865  EDH=1人  CG=2人
+  person: EDH='[---]tilus? [---]tilus?'  CG=']tilus L(uci) f(ilius)'  overlap=0.2
+    [FN] nomen: EDH='tilus?'  CG=(空欄)
+
+[HD041684]  EDCS=EDCS-09801868  EDH=1人  CG=1人
+  person: EDH='[---]nia [---]ta'  CG='[---]nia [---]ta'  overlap=1.0
+    [FN] nomen: EDH='nia'  CG=(空欄)
+    [FN] cognomen: EDH='ta'  CG=(空欄)
+
+[HD041695]  EDCS=EDCS-09801871  EDH=2人  CG=1人
+  person: EDH='Iulius R[---]s'  CG='Iulius R[estutu]s(?)'  overlap=0.75
+    [FP] cognomen: EDH='R'  CG='R[estutu]s'
+
+[HD041731]  EDCS=EDCS-13003608  EDH=1人  CG=1人
+  person: EDH='Surius? Caecilius Valentinus'  CG='Surius C(a)ecilius Valentinus'  overlap=0.4
+    [FP] nomen: EDH='Surius?'  CG='Caecilius'
+    [FP] cognomen: EDH='Caecilius'  CG='Valentinus'
+
+[HD041741]  EDCS=EDCS-09801880  EDH=1人  CG=1人
+  person: EDH='Sp.? Gargilius Felicianus'  CG='S(extus) Gargilius Felicianus'  overlap=0.5
+    [FP] nomen: EDH='Sp.?'  CG='Gargilius'
+    [FP] cognomen: EDH='Gargilius'  CG='Felicianus'
+
+[HD041745]  EDCS=EDCS-09801882  EDH=1人  CG=1人
+  person: EDH='L. Iulius Martialis?'  CG='L(ucius) Iulius Martis'  overlap=0.5
+    [FP] cognomen: EDH='Martialis?'  CG='Martis'
+
+[HD041748]  EDCS=EDCS-09801884  EDH=1人  CG=1人
+  person: EDH='Iulius Sittius Martialis'  CG='Iulius Sittius Martialis'  overlap=1.0
+    [FP] cognomen: EDH='Sittius'  CG='Sittius Martialis'
+
+[HD041750]  EDCS=EDCS-09801886  EDH=1人  CG=1人
+  person: EDH='Iulia Collomba (= Columba)'  CG='Iullia Collomba'  overlap=0.333
+    [FP] nomen: EDH='Iulia'  CG='Iullia'
+
+[HD041752]  EDCS=EDCS-09801888  EDH=1人  CG=1人
+  person: EDH='Mommia Monna'  CG='Momia Monna'  overlap=0.5
+    [FP] nomen: EDH='Mommia'  CG='Momia'
+
+[HD041756]  EDCS=EDCS-09801892  EDH=1人  CG=1人
+  person: EDH='S(---) Quintilla Abluta'  CG='Quintila Abluta'  overlap=0.333
+    [FN] nomen: EDH='S('  CG=(空欄)
+
+[HD041764]  EDCS=EDCS-13003640  EDH=2人  CG=1人
+  person: EDH='Martia? Martia?'  CG='Martia'  overlap=1.0
+    [FN] nomen: EDH='Martia?'  CG=(空欄)
+
+[HD045322]  EDCS=EDCS-30100120  EDH=6人  CG=6人
+  person: EDH='Aurelia Prima'  CG='Prima'  overlap=0.5
+    [FN] nomen: EDH='Aurelia'  CG=(空欄)
+
+[HD050640]  EDCS=EDCS-13001734  EDH=4人  CG=5人
+  person: EDH='Philippus'  CG='Philippus (pater)'  overlap=0.5
+    [FN] cognomen: EDH='Philippus'  CG=(空欄)
+  person: EDH='Philippus'  CG='Philippus (filius)'  overlap=0.5
+    [FN] cognomen: EDH='Philippus'  CG=(空欄)
+  person: EDH='T. Iulius Victor Sorotius'  CG='T(itus) Iulius Victor Sorotius'  overlap=0.8
+    [FP] cognomen: EDH='Victor'  CG='Victor Sorotius'
+
+[HD050655]  EDCS=EDCS-25600185  EDH=4人  CG=4人
+  person: EDH='D. N(---) Victor'  CG='D(ecimus) N() Victor'  overlap=0.75
+    [FN] nomen: EDH='N('  CG=(空欄)
+
+[HD051091]  EDCS=EDCS-17700850  EDH=2人  CG=4人
+  person: EDH='Q. Vilanius Nepos'  CG='Q(uintus) Vilanius (father)'  overlap=0.5
+    [FN] cognomen: EDH='Nepos'  CG=(空欄)
+
+[HD051374]  EDCS=EDCS-08000809  EDH=1人  CG=1人
+  person: EDH='M. Aurelius Severus Alexander'  CG='M(arci) Aureli Se⟦veri Ale[xandri'  overlap=0.143
+    [FP] cognomen: EDH='Severus'  CG='Severus Alexander'
+
+[HD053097]  EDCS=EDCS-03700797  EDH=1人  CG=1人
+  person: EDH='Ispendeus'  CG='Ispendeus'  overlap=1.0
+    [FN] cognomen: EDH='Ispendeus'  CG=(空欄)
+
+[HD059042]  EDCS=EDCS-06000052  EDH=1人  CG=2人
+  person: EDH='Q. Herennius Messius Decius Etruscus'  CG='Q(uinto) Herennio Et]rusco Messio Decio'  overlap=0.143
+    [FP] cognomen: EDH='Messius'  CG='Etruscus'
+
+[HD059142]  EDCS=EDCS-06000176  EDH=2人  CG=1人
+  person: EDH='Stat[---]? Stat[---]?'  CG='Stat[---] Ruf[---]'  overlap=0.5
+    [FP] gender: EDH='male'  CG='unknown'
+
+[HD059191]  EDCS=EDCS-06000225  EDH=2人  CG=2人
+  person: EDH='Misekor'  CG='Misekor'  overlap=1.0
+    [FP] gender: EDH='male'  CG='unknown'
+
+[HD059214]  EDCS=EDCS-06000250  EDH=4人  CG=5人
+  person: EDH='Caecilia Namgyddus'  CG='Namgyddus Rogati filius'  overlap=0.333
+    [FN] nomen: EDH='Caecilia'  CG=(空欄)
+    [FP] gender: EDH='female'  CG='male'
+
+[HD059230]  EDCS=EDCS-06000264  EDH=1人  CG=1人
+  person: EDH='V[-]oilim[---]'  CG='V[1]oilim[3]'  overlap=1.0
+    [FN] nomen: EDH='V'  CG=(空欄)
+    [FP] cognomen: EDH='oilim'  CG='V[---]oilim[---]'
+
+[HD059236]  EDCS=EDCS-06000274  EDH=2人  CG=3人
+  person: EDH='- Antonia Victorina'  CG='Antonia Q(uinti) f(ilia) Victorina'  overlap=0.333
+    [FP] cognomen: EDH='Antonia'  CG='Victorina'
+
+[HD059239]  EDCS=EDCS-06000278  EDH=4人  CG=3人
+  person: EDH='- Valerius'  CG='Valerius [3]'  overlap=1.0
+    [FN] cognomen: EDH='Valerius'  CG=(空欄)
+
+[HD059241]  EDCS=EDCS-06000280  EDH=2人  CG=3人
+  person: EDH='- Iulia Iusta'  CG='Iulia Q(uinti) f(ilia) Iusta'  overlap=0.333
+    [FP] cognomen: EDH='Iulia'  CG='Iusta'
+
+[HD059242]  EDCS=EDCS-06000281  EDH=2人  CG=3人
+  person: EDH='Hostilia Honesta'  CG='Quintus (father of Hostilia Honesta)'  overlap=0.4
+    [FN] nomen: EDH='Hostilia'  CG=(空欄)
+    [FN] cognomen: EDH='Honesta'  CG=(空欄)
+    [FP] gender: EDH='female'  CG='male'
+
+[HD059266]  EDCS=EDCS-06000318  EDH=2人  CG=2人
+  person: EDH='Imp. Caesar Augustus'  CG='Imp(erator) Caesar divi f(ilius) Aug(ustus)'  overlap=0.25
+    [FN] nomen: EDH='Imp.'  CG=(空欄)
+    [FN] cognomen: EDH='Caesar'  CG=(空欄)
+
+[HD059267]  EDCS=EDCS-06000320  EDH=3人  CG=5人
+  person: EDH='Imp. Caesar Augustus'  CG='Imp(eratore) Caesare divi f(ilio) Aug(usto)'  overlap=0.125
+    [FN] nomen: EDH='Imp.'  CG=(空欄)
+    [FN] cognomen: EDH='Caesar'  CG=(空欄)
+  person: EDH='Annobal Rufus'  CG='Rufus'  overlap=0.5
+    [FN] nomen: EDH='Annobal'  CG=(空欄)
+  person: EDH='Himilcho Tapapius'  CG='Himilcho Tapapi f(ilius)'  overlap=0.25
+    [FN] nomen: EDH='Himilcho'  CG=(空欄)
+    [FN] cognomen: EDH='Tapapius'  CG=(空欄)
+
+[HD059268]  EDCS=EDCS-06000321  EDH=3人  CG=3人
+  person: EDH='Imp. Caesar Augustus'  CG='Imp(eratore) Caesare divi f(ilio) Aug(usto)'  overlap=0.125
+    [FN] nomen: EDH='Imp.'  CG=(空欄)
+    [FN] cognomen: EDH='Caesar'  CG=(空欄)
+  person: EDH='Annobal Rufus'  CG='Annobal Himilchonis Tapapi f(ilius) Rufus'  overlap=0.333
+    [FN] nomen: EDH='Annobal'  CG=(空欄)
+  person: EDH='Himilcho Tapapius'  CG='Himilcho Tapapus'  overlap=0.5
+    [FN] nomen: EDH='Himilcho'  CG=(空欄)
+    [FN] cognomen: EDH='Tapapius'  CG=(空欄)
+
+[HD059271]  EDCS=EDCS-06000327  EDH=2人  CG=2人
+  person: EDH='Imp. Caesar Augustus'  CG='Imp(eratori) Caesari Aug(u)sti f(ilio) Aug(usto)'  overlap=0.111
+    [FN] nomen: EDH='Imp.'  CG=(空欄)
+    [FN] cognomen: EDH='Caesar'  CG=(空欄)
+
+[HD059275]  EDCS=EDCS-59600004  EDH=5人  CG=10人
+  person: EDH='Nero Claudius Caesar Augustus Germanicus'  CG='Nero Claudius divi Claudi f. Germanici nep. Ti. Caesaris pronep. divi Aug. abnepoti Caesar Aug. Germanicus'  overlap=0.286
+    [FP] nomen: EDH='Nero'  CG='Claudius'
+    [FP] cognomen: EDH='Claudius'  CG='Caesar'
+  person: EDH='Ithymbal Sabinus Tapapius'  CG='Ithymbal Arinis f. Sabinus Tapapius'  overlap=0.6
+    [FN] nomen: EDH='Ithymbal'  CG=(空欄)
+    [FN] cognomen: EDH='Sabinus'  CG=(空欄)
+
+[HD059280]  EDCS=EDCS-06000346  EDH=2人  CG=5人
+  person: EDH='Nerva Traianus'  CG='Nerva Traianus'  overlap=1.0
+    [FN] nomen: EDH='Nerva'  CG=(空欄)
+  person: EDH='[---]s Severus'  CG='[3]s M(arci) f(ilius) Quir(ina) Seve[rus]'  overlap=0.111
+    [FN] nomen: EDH='s'  CG=(空欄)
+
+[HD059283]  EDCS=EDCS-06000349  EDH=1人  CG=2人
+  person: EDH='Nerva Traianus'  CG='Nerva Traianus'  overlap=1.0
+    [FN] nomen: EDH='Nerva'  CG=(空欄)
+
+[HD059285]  EDCS=EDCS-06000351  EDH=2人  CG=4人
+  person: EDH='Traianus Hadrianus'  CG='divus Traianus Parthicus'  overlap=0.333
+    [FN] nomen: EDH='Traianus'  CG=(空欄)
+    [FP] cognomen: EDH='Hadrianus'  CG='Traianus'
+
+[HD059289]  EDCS=EDCS-06000355  EDH=1人  CG=3人
+  person: EDH='Traianus Hadrianus'  CG='Traianus Hadrianus'  overlap=1.0
+    [FN] nomen: EDH='Traianus'  CG=(空欄)
+    [FN] cognomen: EDH='Hadrianus'  CG=(空欄)
+
+[HD059292]  EDCS=EDCS-06000359  EDH=1人  CG=4人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) A[elius] [Hadrian]o A[ntonino Aug(usto) Pio]'  overlap=0.1
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD059296]  EDCS=EDCS-06000363  EDH=1人  CG=1人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='Imp(eratori) Caes(ari) T(ito) Aelio Hadriano Antonino Aug(usto) Pio'  overlap=0.083
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD059297]  EDCS=EDCS-06000364  EDH=2人  CG=5人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius Had[rianus Antoninus Aug(ustus) Pius]'  overlap=0.333
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+  person: EDH='Haterianus'  CG='Haterianus'  overlap=1.0
+    [FN] nomen: EDH='Haterianus'  CG=(空欄)
+
+[HD059298]  EDCS=EDCS-06000365  EDH=2人  CG=2人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='Imp(eratore) Caes(are) T(ito) Aelio Hadriano Antonino Aug(usto) Pio'  overlap=0.083
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD059299]  EDCS=EDCS-06000366  EDH=2人  CG=2人
+  person: EDH='Antoninus'  CG='Imp(erator) Antoninus Aug(ustus) Pius'  overlap=0.167
+    [FN] cognomen: EDH='Antoninus'  CG=(空欄)
+
+[HD059300]  EDCS=EDCS-06000367  EDH=1人  CG=1人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='T(itus) Aelius [Hadrianus] Antoninus [Aug(ustus) Pius]'  overlap=0.5
+    [FP] cognomen: EDH='Hadrianus'  CG='Antoninus'
+
+[HD059301]  EDCS=EDCS-06000368  EDH=1人  CG=1人
+  person: EDH='T. Aelius Hadrianus Antoninus'  CG='Imp(eratori) Caes(ari) T(ito) Aelio Hadr[iano Antonino Aug(usto) Pio'  overlap=0.077
+    [FP] cognomen: EDH='Hadrianus'  CG='Hadrianus Antoninus'
+
+[HD059305]  EDCS=EDCS-06000372  EDH=1人  CG=1人
+  person: EDH='L. Aelius Aurelius Commodus'  CG='L(ucius) Aelius Aurelius Commodus'  overlap=0.8
+    [FP] cognomen: EDH='Aurelius'  CG='Commodus'
+
+[HD059316]  EDCS=EDCS-06000386  EDH=4人  CG=5人
+  person: EDH='Iulia'  CG='Iulia Augusta'  overlap=0.5
+    [FN] cognomen: EDH='Iulia'  CG=(空欄)
+  person: EDH='Rusonianus'  CG='Rusonianus'  overlap=1.0
+    [FN] nomen: EDH='Rusonianus'  CG=(空欄)
+
+[HD059317]  EDCS=EDCS-06000388  EDH=2人  CG=6人
+  person: EDH='M. Aurelius Antoninus'  CG='divus Antoninus Pius'  overlap=0.333
+    [FN] praenomen: EDH='M.'  CG=(空欄)
+    [FN] nomen: EDH='Aurelius'  CG=(空欄)
+
+[HD059322]  EDCS=EDCS-06000395  EDH=3人  CG=3人
+  person: EDH='Iulia'  CG='Iulia Augusta'  overlap=0.5
+    [FN] cognomen: EDH='Iulia'  CG=(空欄)
+
+[HD059351]  EDCS=EDCS-06000438  EDH=1人  CG=1人
+  person: EDH='M. Aurellius (= Aurelius) Severus Alexander'  CG='M(arcus) Au[re]lli[us] [Sev]erus [Alexa]nder'  overlap=0.1
+    [FP] nomen: EDH='Aurellius'  CG='Aurelius'
+
+[HD059355]  EDCS=EDCS-06000443  EDH=1人  CG=1人
+  person: EDH='C. Iulius Verus Maximinus'  CG='C(aius) Iulius Verus Maximinus'  overlap=0.8
+    [FP] cognomen: EDH='Verus'  CG='Maximinus'
+
+[HD059356]  EDCS=EDCS-06000444  EDH=1人  CG=1人
+  person: EDH='C. Iulius Verus Maximus'  CG='C(aius) Iulius Verus Maximus'  overlap=0.8
+    [FP] cognomen: EDH='Verus'  CG='Verus Maximus'
+
+[HD059368]  EDCS=EDCS-06000462  EDH=3人  CG=3人
+  person: EDH='Flavius Iulius Constantius'  CG='Fl(avius) Iulius [Consta]ntius [Maximus]'  overlap=0.167
+    [FP] nomen: EDH='Flavius'  CG='Flavius Iulius'
+    [FP] cognomen: EDH='Iulius'  CG='Constantius Maximus'
+  person: EDH='Flavius Iulius Constans'  CG='[Fl(avius) Iulius Constans M]aximus'  overlap=0.333
+    [FP] nomen: EDH='Flavius'  CG='Flavius Iulius'
+    [FP] cognomen: EDH='Iulius'  CG='Constans Maximus'
+
+[HD059410]  EDCS=EDCS-06000513  EDH=1人  CG=2人
+  person: EDH='- Caecilius Severus Elpidius'  CG='Elpidius'  overlap=0.333
+    [FN] nomen: EDH='-'  CG=(空欄)
+    [FP] cognomen: EDH='Caecilius'  CG='Elpidius'
+
+[HD059425]  EDCS=EDCS-06000546  EDH=3人  CG=3人
+  person: EDH='Antoninus'  CG='Antoninus'  overlap=1.0
+    [FN] cognomen: EDH='Antoninus'  CG=(空欄)
+  person: EDH='Verus'  CG='Verus'  overlap=1.0
+    [FN] cognomen: EDH='Verus'  CG=(空欄)
+
+[HD059436]  EDCS=EDCS-06000566  EDH=1人  CG=1人
+  person: EDH='Iulius Ho[--]'  CG='[?]ulius Ho[---]'  overlap=0.5
+    [FN] cognomen: EDH='Ho'  CG=(空欄)
+
+[HD059441]  EDCS=EDCS-49100331  EDH=1人  CG=1人
+  person: EDH='Flavius Ar[---]'  CG='[3 F]l(avius) Ar[3]'  overlap=0.25
+    [FN] cognomen: EDH='Ar'  CG=(空欄)
+
+[HD059444]  EDCS=EDCS-06000576  EDH=3人  CG=2人
+  person: EDH='D. S[---]'  CG='D(ecimus) S[---]'  overlap=0.667
+    [FN] cognomen: EDH='S'  CG=(空欄)
+  person: EDH='Traianus Hadrianus'  CG='Imp(erator) Caes(ar) Tr[aianus] Hadrianus Au[g(ustus)]'  overlap=0.1
+    [FN] nomen: EDH='Traianus'  CG=(空欄)
+    [FN] cognomen: EDH='Hadrianus'  CG=(空欄)
+
+[HD059446]  EDCS=EDCS-06000578  EDH=2人  CG=2人
+  person: EDH='? ? [---]cianus'  CG=']cianus'  overlap=1.0
+    [FN] nomen: EDH='?'  CG=(空欄)
+    [FN] cognomen: EDH='?'  CG=(空欄)
+  person: EDH='Valerius P[---]'  CG='Valeri P[3]'  overlap=0.5
+    [FN] cognomen: EDH='P'  CG=(空欄)
+
+[HD059453]  EDCS=EDCS-06000591  EDH=2人  CG=2人
+  person: EDH='Q. Cornelius Va[---]'  CG='Q(uintus) Cornelius Va[---]'  overlap=0.75
+    [FN] cognomen: EDH='Va'  CG=(空欄)
+
+[HD059458]  EDCS=EDCS-06000596  EDH=1人  CG=2人
+  person: EDH='Iuttaph Domitius'  CG='Iuttaph Domitius'  overlap=1.0
+    [FP] nomen: EDH='Iuttaph'  CG='Domitius'
+    [FP] cognomen: EDH='Domitius'  CG='Iuttaph'
+
+[HD059476]  EDCS=EDCS-06000622  EDH=1人  CG=1人
+  person: EDH='L. Ar[---]'  CG='L(ucius) Ar[---]'  overlap=0.667
+    [FN] cognomen: EDH='Ar'  CG=(空欄)
+
+[HD059484]  EDCS=EDCS-06000631  EDH=3人  CG=3人
+  person: EDH='M. Antistius Antistius Arrianus Cerialis'  CG='M(arcus) Antistius Arrianus'  overlap=0.75
+    [FP] cognomen: EDH='Antistius'  CG='Arrianus'
+
+[HD059495]  EDCS=EDCS-06000642  EDH=2人  CG=2人
+  person: EDH='L. Granius Sollers Paulianus'  CG='L(ucius) Gr[a]nius Sollers Paulianus'  overlap=0.429
+    [FP] cognomen: EDH='Sollers'  CG='Sollers Paulianus'
+
+[HD059507]  EDCS=EDCS-14200139  EDH=2人  CG=1人
+  person: EDH='Boncar Mecrasi Clodius'  CG='Boncar Mecrasi Clodius'  overlap=1.0
+    [FP] nomen: EDH='Boncar'  CG='Clodius'
+    [FN] cognomen: EDH='Mecrasi'  CG=(空欄)
+
+[HD059508]  EDCS=EDCS-14200140  EDH=6人  CG=3人
+  person: EDH='Byrycth'  CG='Byrycth'  overlap=1.0
+    [FN] cognomen: EDH='Byrycth'  CG=(空欄)
+
+[HD059514]  EDCS=EDCS-24100026  EDH=1人  CG=1人
+  person: EDH='Ann-'  CG='[...]biae Ann[...]atae'  overlap=0.333
+    [FN] cognomen: EDH='Ann-'  CG=(空欄)
+
+[HD059529]  EDCS=EDCS-06000673  EDH=1人  CG=1人
+  person: EDH='Calpurnius Cerialis'  CG=']S Cerialis Calpu[rni'  overlap=0.25
+    [FN] nomen: EDH='Calpurnius'  CG=(空欄)
+
+[HD059537]  EDCS=EDCS-06000677  EDH=1人  CG=1人
+  person: EDH='Cornelius M[---]'  CG='Co]rnelio M['  overlap=0.333
+    [FN] cognomen: EDH='M'  CG=(空欄)
+
+[HD059552]  EDCS=EDCS-06000692  EDH=2人  CG=2人
+  person: EDH='? Calpurnius? [---]orus'  CG='Calpurn(ius?) [3]orus'  overlap=0.333
+    [FN] cognomen: EDH='Calpurnius?'  CG=(空欄)
+
+[HD059557]  EDCS=EDCS-06000697  EDH=1人  CG=2人
+  person: EDH='L. Granius Sollers Paulianus'  CG='L(ucius) Granius Sollers Paulianus Q(uinti) f(ilius)'  overlap=0.444
+    [FP] cognomen: EDH='Sollers'  CG='Sollers Paulianus'
+
+[HD059562]  EDCS=EDCS-06000702  EDH=3人  CG=3人
+  person: EDH='Caecilius Amicus Caecilianus'  CG='Caecilius Amicus Caecilianus'  overlap=1.0
+    [FP] cognomen: EDH='Amicus'  CG='Amicus Caecilianus'
+  person: EDH='L. Caecilius Pusio Caecilianus'  CG='L(ucius) Caecilius Pusio Caecilianus'  overlap=0.8
+    [FP] cognomen: EDH='Pusio'  CG='Pusio Caecilianus'
+
+[HD059567]  EDCS=EDCS-06000707  EDH=3人  CG=3人
+  person: EDH='[---]sius La[---]'  CG='[?]sius La[s?]'  overlap=0.667
+    [FN] nomen: EDH='sius'  CG=(空欄)
+    [FP] cognomen: EDH='La'  CG='Las'
+
+[HD059575]  EDCS=EDCS-06000711  EDH=1人  CG=1人
+  person: EDH='Marcius Cre[---]'  CG='Ma]rcio Cre['  overlap=0.333
+    [FN] cognomen: EDH='Cre'  CG=(空欄)
+
+[HD059578]  EDCS=EDCS-06000715  EDH=1人  CG=1人
+  person: EDH='[---]us Merula'  CG='[...]us Merula A[...]'  overlap=0.667
+    [FN] nomen: EDH='us'  CG=(空欄)
+
+[HD059587]  EDCS=EDCS-06000722  EDH=2人  CG=2人
+  person: EDH='Segullianus'  CG='[...]S Segullianus'  overlap=0.5
+    [FN] nomen: EDH='Segullianus'  CG=(空欄)
+
+[HD059591]  EDCS=EDCS-06000725  EDH=1人  CG=1人
+  person: EDH='Sulpici[---]'  CG='Sulpici['  overlap=1.0
+    [FN] cognomen: EDH='Sulpici'  CG=(空欄)
+
+[HD059600]  EDCS=EDCS-06000732  EDH=2人  CG=3人
+  person: EDH='Cerialis Macar'  CG='Cerialis Macari'  overlap=0.5
+    [FN] nomen: EDH='Cerialis'  CG=(空欄)
+    [FP] cognomen: EDH='Macar'  CG='Cerialis'
+
+[HD059741]  EDCS=EDCS-26801190  EDH=3人  CG=3人
+  person: EDH='Marchius Fydel'  CG='M() Fydel'  overlap=0.5
+    [FN] nomen: EDH='Marchius'  CG=(空欄)
+  person: EDH='Flavia Thesylgum'  CG='F() Thesylgum'  overlap=0.5
+    [FN] nomen: EDH='Flavia'  CG=(空欄)
+    [FP] gender: EDH='female'  CG='unknown'
+
+[HD059813]  EDCS=EDCS-14200003  EDH=1人  CG=1人
+  person: EDH='Domitianus'  CG='Domitianus'  overlap=1.0
+    [FN] nomen: EDH='Domitianus'  CG=(空欄)
+
+[HD067598]  EDCS=EDCS-49100330  EDH=5人  CG=5人
+  person: EDH='Maximianus'  CG='Maximianus'  overlap=1.0
+    [FN] nomen: EDH='Maximianus'  CG=(空欄)
+
+[HD067670]  EDCS=EDCS-06000510  EDH=1人  CG=3人
+  person: EDH='M. Annius Messalla'  CG='M(arcus) Annius Messa[la]'  overlap=0.4
+    [FP] cognomen: EDH='Messalla'  CG='Messala'
