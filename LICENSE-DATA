@@ -1,0 +1,41 @@
+# Data License
+
+The data files in this repository are licensed under the
+**Creative Commons Attribution 4.0 International (CC BY 4.0)** license.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+Summary: https://creativecommons.org/licenses/by/4.0/
+
+Copyright (c) 2026 junjun7613
+
+## Scope
+
+This license covers the data files in this repository, including:
+
+- `pipeline/evaluation/**` — evaluation datasets, ground-truth mappings and results
+- `pipeline/place_list/**` — place lists
+- `pipeline/place_pleiades_mapping.json` — place to Pleiades ID mapping
+- `docs/**` — generated evaluation viewers
+
+Source code (`*.py`) is licensed separately under the MIT License; see `LICENSE`.
+
+## Attribution
+
+When reusing these data, please cite the Zenodo deposit:
+
+> junjun7613 (2026). *LLM-Based Career Graph Extraction from Latin Inscriptions*.
+> Zenodo. https://doi.org/10.5281/zenodo.19593860
+
+## Third-party data
+
+Some files are derived from external databases that carry their own terms.
+Users are responsible for observing those terms in addition to this license:
+
+- **EDH (Epigraphic Database Heidelberg)** — `pipeline/evaluation/name_components/edh_linked_data/`
+  and derived evaluation results. EDH publishes its Linked Data under CC BY-SA 4.0.
+  See https://edh.ub.uni-heidelberg.de/
+- **EDCS (Epigraphik-Datenbank Clauss/Slaby)** — inscription texts and EDCS identifiers,
+  retrieved via Lat-Epig. See https://db.edcs.eu/
+- **Trismegistos** — HD/EDCS identifier correspondences. See https://www.trismegistos.org/
+- **Pleiades** — place identifiers, published under CC BY 3.0.
+  See https://pleiades.stoa.org/
