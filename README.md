@@ -67,11 +67,14 @@ The pipeline uses a custom `epig:` namespace alongside standard vocabularies:
 ## Requirements
 
 ```
-anthropic
-rdflib
-openpyxl
-requests
-beautifulsoup4
+anthropic             # Claude extraction
+google-generativeai   # Gemini backend
+openai                # GPT backend
+ollama                # local model backend
+python-dotenv         # API key loading
+tqdm                  # progress bars
+pandas, requests      # EDCS scraping and evaluation
+pinecone, rdflib      # vector search (optional)
 ```
 
 Install with:
