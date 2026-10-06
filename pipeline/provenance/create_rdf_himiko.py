@@ -952,8 +952,17 @@ def _build_benefaction_statements(record: dict, extract_act_uri: str | None,
 
             # ── v3: recipient fields ──────────────────────────────────────────────
             if has_recip:
+                # recipient_communities は enrich が付与した受益者。community_id が
+                # null のもの（碑文中の共同体一覧に対応先がないもの）は URI を作れ
+                # ないため除く。受益者は v3 以降でのみ現れる値なので、v0〜v2 には
+                # 渡さずこのバージョンから出力する。
+                recip_c_ids = [
+                    rc.get('community_id')
+                    for rc in (benef.get('recipient_communities') or [])
+                    if rc.get('community_id') is not None
+                ]
                 vn_uri = _mk_benefaction(edcs_id, i, v)
-                _emit_benef_base(benef, vn_uri, agent_uris, False, [], [])
+                _emit_benef_base(benef, vn_uri, agent_uris, False, [], recip_c_ids)
                 if has_cost and benef.get('cost_numeric') is not None:
                     try:
                         lines.append(f'    epig:costNumeric {_int_lit(benef["cost_numeric"])} ;')
