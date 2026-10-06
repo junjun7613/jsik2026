@@ -350,8 +350,29 @@ def build_entity_links(record: dict, llm_date: str, scrape_date: str,
     edcs_graph = f'<{GRAPH_NS}{edcs_id}/edcs/{scrape_date}>'
     insc_uri   = _insc(edcs_id)
 
+    # The EDCS graph is described regardless of whether an LLM extraction ran:
+    # it is the scrape of the source database, independent of interpretation.
+    # Inscription metadata (dating, findspot …) lives there and needs a
+    # generation time to be orderable against later corrections.
+    scrape_act_uri = f'<{ACTIVITY_NS}scrape_edcs-{_safe_id(scrape_date)}>'
+    edcs_lines = [
+        f'  {edcs_graph}',
+        f'    a prov:Entity ;',
+        f'    prov:wasGeneratedBy {scrape_act_uri} ;',
+        f'    epig:interpretsInscription {insc_uri} .',
+        '',
+        f'  {scrape_act_uri}',
+        f'    a <{HMKIA_NS}InterpretationCreationAct> ;',
+        f'    <{HMKIA_NS}hasType> "scrape_edcs" ;',
+        f'    <{HMKIA_NS}hasDate> "{scrape_date}"^^xsd:date ;',
+        f'    epig:activityType "scrape_edcs" ;',
+        f'    epig:script "batch_scrape_new_edcs.py" ;',
+        f'    prov:generatedAtTime "{scrape_date}T00:00:00Z"^^xsd:dateTime .',
+        '',
+    ]
+
     if not extract_act_id:
-        return []
+        return edcs_lines
 
     act_uri = _activity_uri(extract_act_id)
     lines = [
@@ -372,7 +393,8 @@ def build_entity_links(record: dict, llm_date: str, scrape_date: str,
         f'    epig:interpretsInscription {insc_uri} .',
         '',
     ]
-    return lines
+
+    return lines + edcs_lines
 
 
 # ── Source graph (史料物理層) ──────────────────────────────────────────────────

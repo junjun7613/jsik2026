@@ -267,7 +267,7 @@ def build_update(payload: dict, edits: list, timestamp: str,
         '',
     ]
 
-    for edit in edits:
+    for i, edit in enumerate(edits):
         subject = edit['subject']
         predicate_iri = _expand(edit['predicate'])
         value = _literal(edit['new_value'], edit.get('datatype', 'xsd:string'))
@@ -285,11 +285,36 @@ def build_update(payload: dict, edits: list, timestamp: str,
                 '',
             ]
         else:
-            # Entity references are not versioned; record the corrected value
-            # in the editor graph and attribute it to the editing act.
+            # Entity references and inscriptions are not versioned; record the
+            # corrected value in the editor graph and attribute it to the act.
             lines += [
                 f'  <{subject}> <{predicate_iri}> {value} ;',
                 f'    <{HMKIA_NS}generatedBy> <{act_uri}> .',
+                '',
+            ]
+
+        # Why the value was changed. One act may carry several edits, so the
+        # rationale is attached per edit rather than to the act as a whole.
+        # This matters most for inscription metadata (dating, findspot), where
+        # the correction departs from an external authority (EDCS) and the
+        # justification is the substance of the scholarly claim.
+        note = (edit.get('note') or '').strip()
+        if note:
+            # Recorded as its own InterpretationUpdateAct so the note attaches
+            # to the specific property that was changed, using only vocabulary
+            # the ontology already defines (hmkia:note / hasType / revises).
+            # hmkia:note's domain is InterpretationAct, so the rationale cannot
+            # hang off the corrected resource directly.
+            note_uri = f'{act_uri}/edit/{i}'
+            lines += [
+                f'  <{note_uri}> a <{HMKIA_NS}InterpretationUpdateAct> ;',
+                f'    <{HMKIA_NS}note> "{_esc(note)}" ;',
+                f'    <{HMKIA_NS}hasType> "manual_edit" ;',
+                f'    <{HMKIA_NS}hasDate> "{timestamp}"^^<{XSD_NS}dateTime> ;',
+                f'    <{EPIG_NS}activityType> "{_esc(edit["predicate"])}" ;',
+                f'    <{PROV_NS}used> <{subject}> ;',
+                f'    <{PROV_NS}wasAssociatedWith> <{agent_uri}> ;',
+                f'    <{HMKIA_NS}revises> <{act_uri}> .',
                 '',
             ]
 
