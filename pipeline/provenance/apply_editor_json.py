@@ -145,14 +145,24 @@ def current_value(fuseki: Fuseki, subject: str, predicate_iri: str):
     Return the value in force for subject/predicate, or None.
 
     A resource may hold the same property in several graphs: once per machine
-    extraction run, plus once per human correction. Editor graphs override
-    machine output, and among graphs of the same kind the latest timestamp wins
-    — graph names sort chronologically, so ordering by graph IRI descending and
-    preferring /editor/ yields the value a reader would currently see.
+    extraction run, plus once per human correction. Recency is read from the
+    graph's own provenance (prov:wasGeneratedBy -> prov:generatedAtTime), which
+    is how the editor's read queries resolve it too. Graph IRIs must not be
+    sorted as strings: the run kind precedes the date in the name, so
+    .../edcs/2026-01-15 sorts after .../claude/2026-05-03 despite being older.
+
+    Graphs whose provenance is missing are ranked oldest rather than dropped,
+    so a value still blocks a conflicting edit even if it cannot be dated.
     """
     rows = fuseki.select(f'''
-        SELECT ?o ?g WHERE {{ GRAPH ?g {{ <{subject}> <{predicate_iri}> ?o }} }}
-        ORDER BY DESC(CONTAINS(STR(?g), "/editor/")) DESC(STR(?g))
+        SELECT ?o (COALESCE(?t, "") AS ?when) WHERE {{
+            GRAPH ?g {{ <{subject}> <{predicate_iri}> ?o }}
+            OPTIONAL {{
+                GRAPH ?gm {{ ?g <{PROV_NS}wasGeneratedBy> ?act }}
+                GRAPH ?ga {{ ?act <{PROV_NS}generatedAtTime> ?t }}
+            }}
+        }}
+        ORDER BY DESC(?when)
         LIMIT 1
     ''')
     if not rows:
@@ -167,13 +177,24 @@ def latest_edit_act(fuseki: Fuseki, subject: str, predicate_iri: str):
 
     Used to chain successive corrections with hmkia:revises so the editorial
     history forms an ordered sequence rather than a flat pile of graphs.
+
+    Ordered by the act's own prov:generatedAtTime rather than by graph name.
+
+    Human acts are identified by their agent being an hmkia:HumanAgent. The
+    graph name cannot be used: machine extraction also writes hmkia:generatedBy
+    onto statements, and the act type does not separate them either, since LLM
+    enrichment likewise records hmkia:InterpretationUpdateAct. Without this
+    restriction a never-corrected statement would chain hmkia:revises to an
+    extraction run.
     """
     rows = fuseki.select(f'''
         SELECT ?act WHERE {{
             GRAPH ?g {{ <{subject}> <{predicate_iri}> ?o ; <{HMKIA_NS}generatedBy> ?act }}
-            FILTER(CONTAINS(STR(?g), "/editor/"))
+            GRAPH ?ga {{ ?act <{PROV_NS}generatedAtTime> ?t ;
+                              <{PROV_NS}wasAssociatedWith> ?agent }}
+            GRAPH ?gg {{ ?agent a <{HMKIA_NS}HumanAgent> }}
         }}
-        ORDER BY DESC(STR(?g))
+        ORDER BY DESC(?t)
         LIMIT 1
     ''')
     return rows[0]['act']['value'] if rows else None
