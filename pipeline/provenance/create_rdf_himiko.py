@@ -25,6 +25,7 @@ import json
 import argparse
 import re
 import sys
+from collections import defaultdict
 from pathlib import Path
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
@@ -1147,6 +1148,133 @@ def _build_relationship_statements(record: dict) -> tuple[list[str], list[str]]:
     return lines, latest_uris
 
 
+# ── History graph (superseded values) ─────────────────────────────────────────
+
+# JSON field -> RDF predicate for the fields that can appear in value_history.
+# EntityReference attributes only: statements already carry their own _vN chain,
+# so a superseded statement value is reachable without a history entry.
+HISTORY_FIELD_PREDICATE = {
+    'persons[].person_name':                       'epig:personName',
+    'persons[].person_name_readable':              'hmki:surfaceForm',
+    'persons[].praenomen':                         'epig:praenomen',
+    'persons[].nomen':                             'epig:nomen',
+    'persons[].cognomen':                          'epig:cognomen',
+    'persons[].person_name_normalized':            'epig:normalizedName',
+    'persons[].gender':                            'epig:gender',
+    'persons[].gender_evidence':                   'epig:genderEvidence',
+    'persons[].ethnicity':                         'epig:ethnicity',
+    'persons[].ethnicity_evidence':                'epig:ethnicityEvidence',
+    'persons[].social_status':                     'epig:socialStatus',
+    'persons[].social_status_evidence':            'epig:socialStatusEvidence',
+    'persons[].age_at_death':                      'epig:ageAtDeath',
+    'persons[].age_at_death_evidence':             'epig:ageAtDeathEvidence',
+    'persons[].divinity':                          'epig:isDivinity',
+    'persons[].divinity_type':                     'epig:divinityType',
+    'persons[].divinity_classification_reasoning': 'epig:divinityClassificationReasoning',
+    'communities[].community_name':                'hmki:surfaceForm',
+    'communities[].community_name_normalized':     'hmki:normalizedForm',
+    'communities[].community_type':                'epig:communityType',
+    'communities[].evidence':                      'epig:evidence',
+}
+
+HISTORY_PATH_RE = re.compile(r'^(?P<kind>person|community)/(?P<idx>\d+)\.(?P<field>.+)$')
+
+
+def _history_value_literal(field_label: str, value) -> str | None:
+    """Render a superseded value using the same datatype as the live triple."""
+    if value is None or value == '' or value == []:
+        return None
+    if field_label == 'persons[].divinity':
+        return f'"{str(value).lower()}"^^xsd:boolean'
+    if field_label == 'persons[].age_at_death':
+        try:
+            return _int_lit(int(value))
+        except (TypeError, ValueError):
+            return None
+    return _lit(value)
+
+
+def build_history_graph(record: dict) -> list[str]:
+    """
+    Emit superseded EntityReference values into an append-only history graph.
+
+    EntityReference URIs are stable and their attributes live in a graph named
+    after the extract date, so regenerating an inscription rewrites that graph
+    in place and the previous value disappears from the store. Statements avoid
+    this by minting _vN successors; entity references cannot, because hundreds
+    of statements cite them (see the editor write-back rationale).
+
+    Each superseded value therefore becomes its own prov:Entity, tied to the
+    reference it is a past state of by prov:specializationOf, and bracketed by
+    prov:generatedAtTime / prov:invalidatedAtTime. The graph is separate from
+    the current-value graph so ordinary read queries never pay for it, and it
+    is keyed on the inscription rather than a run date so re-ingest adds to it
+    rather than replacing it.
+
+    All terms are PROV-O, which epig_ontology.ttl already imports; no new
+    vocabulary is required.
+    """
+    history = record.get('_provenance', {}).get('value_history', [])
+    if not history:
+        return []
+
+    edcs_id = record.get('edcs_id', 'Unknown')
+    graph_uri = f'<{GRAPH_NS}{_safe_id(edcs_id)}/history>'
+    lines = [f'{graph_uri} {{', '']
+
+    # Number the states of each attribute in the order they were superseded, so
+    # the URI carries the sequence and successive states can be chained.
+    seen = defaultdict(int)
+    emitted = 0
+
+    for entry in sorted(history, key=lambda e: e.get('superseded_at') or ''):
+        path = entry.get('path', '')
+        m = HISTORY_PATH_RE.match(path)
+        field_label = entry.get('field', '')
+        predicate = HISTORY_FIELD_PREDICATE.get(field_label)
+        if not m or not predicate:
+            continue
+        value_lit = _history_value_literal(field_label, entry.get('value'))
+        if value_lit is None:
+            continue
+
+        idx = int(m.group('idx'))
+        ref_uri = (_eref_person(edcs_id, idx) if m.group('kind') == 'person'
+                   else _eref_community(edcs_id, idx))
+
+        key = f'{m.group("kind")}/{idx}/{m.group("field")}'
+        n = seen[key]
+        seen[key] = n + 1
+        state_uri = (f'<{ENTITYREF_NS}{_safe_id(edcs_id)}/{m.group("kind")}/'
+                     f'{idx}/{m.group("field")}/{n}>')
+
+        lines.append(f'  {state_uri}')
+        lines.append(f'    a prov:Entity ;')
+        lines.append(f'    prov:specializationOf {ref_uri} ;')
+        lines.append(f'    {predicate} {value_lit} ;')
+        if entry.get('generated_by'):
+            lines.append(f'    hmkia:generatedBy {_activity_uri(entry["generated_by"])} ;')
+        if entry.get('generated_at'):
+            lines.append(f'    prov:generatedAtTime "{entry["generated_at"]}"^^xsd:dateTime ;')
+        if entry.get('superseded_by'):
+            lines.append(f'    prov:wasInvalidatedBy {_activity_uri(entry["superseded_by"])} ;')
+        if n > 0:
+            prev = (f'<{ENTITYREF_NS}{_safe_id(edcs_id)}/{m.group("kind")}/'
+                    f'{idx}/{m.group("field")}/{n - 1}>')
+            lines.append(f'    prov:wasRevisionOf {prev} ;')
+        lines.append(f'    prov:invalidatedAtTime '
+                     f'"{entry.get("superseded_at", "")}"^^xsd:dateTime .')
+        lines.append('')
+        emitted += 1
+
+    if not emitted:
+        return []
+
+    lines.append('}')
+    lines.append('')
+    return lines
+
+
 def build_intrinsic_graph(record: dict, llm_date: str,
                           extract_act_uri: str | None
                           ) -> tuple[list[str], list[str], list[str], list[str], list[str]]:
@@ -1235,6 +1363,10 @@ def process_json_file(json_path: Path, output_path: Path, scrape_date: str,
 
         parts.append('\n'.join(source_lines))
         parts.append('\n'.join(intrinsic_lines))
+
+        history_lines = build_history_graph(record)
+        if history_lines:
+            parts.append('\n'.join(history_lines))
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, 'w', encoding='utf-8') as f:
