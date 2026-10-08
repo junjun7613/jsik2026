@@ -1,0 +1,48 @@
+%% Data update workflow: extraction -> enrichment -> human correction,
+%% including the write-back that returns corrections to the JSON.
+%% Companion diagram: provenance_recording.mmd
+%% Render: npx @mermaid-js/mermaid-cli -i provenance_workflow.mmd \
+%%           -o provenance_workflow.png -b white -s 2 -c mermaid_config.json
+flowchart LR
+
+    SRC[("Inscription text<br/>EDCS")]
+
+    EX["<b>Extraction</b> · <i>LLM</i><br/>InterpretationCreationAct"]
+
+    JSON[("<b>career graph JSON</b><br/><i>working format</i>")]
+
+    EN["<b>Enrichment</b> ×7 passes · <i>LLM</i><br/>InterpretationUpdateAct<br/><i>skips a field that already has a value</i>"]
+
+    RDF["create_rdf_himiko.py<br/>→ TriG"]
+
+    FUS[("<b>Fuseki</b><br/>himiko_epigraphy")]
+
+    ED["<b>Browser editor</b><br/>read-only SPARQL<br/><i>no write credentials</i>"]
+
+    DIFF[/"edit-diff JSON<br/>old_value → new_value"/]
+
+    AP["<b>apply_editor_json.py</b><br/>InterpretationUpdateAct<br/><i>HumanAgent</i>"]
+
+    SRC --> EX --> JSON
+    JSON --> EN --> JSON
+    JSON --> RDF --> FUS
+
+    FUS -. "read" .-> ED
+    ED --> DIFF --> AP
+    AP == "new editor graph" ==> FUS
+
+    AP == "<b>export_corrections_to_json.py</b><br/>write back, so the next enrichment<br/>and re-ingest keep the correction" ==> JSON
+
+    %% edges: 0 SRC-EX, 1 EX-JSON, 2 JSON-EN, 3 EN-JSON, 4 JSON-RDF,
+    %% 5 RDF-FUS, 6 FUS-ED, 7 ED-DIFF, 8 DIFF-AP, 9 AP-FUS, 10 AP-JSON
+    linkStyle 10 stroke:#3a8a3a,stroke-width:3px
+
+    classDef data   fill:#eef3fb,stroke:#2166ac,stroke-width:1.5px,color:#111
+    classDef llm    fill:#fdece7,stroke:#d6604d,stroke-width:1.5px,color:#111
+    classDef human  fill:#eaf5ea,stroke:#3a8a3a,stroke-width:1.5px,color:#111
+    classDef plain  fill:#f5f5f5,stroke:#777,stroke-width:1.2px,color:#111
+
+    class SRC,FUS,JSON data
+    class EX,EN llm
+    class ED,DIFF,AP human
+    class RDF plain

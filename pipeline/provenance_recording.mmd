@@ -1,0 +1,52 @@
+%% How an update is recorded, by resource type.
+%% Companion to provenance_workflow.mmd.
+%% Render: npx @mermaid-js/mermaid-cli -i provenance_recording.mmd -o provenance_recording.png -b white -s 3
+flowchart LR
+
+    UPD(["An interpretation act<br/>updates a value"])
+
+    UPD --> Q{"Which kind<br/>of resource?"}
+
+    subgraph SB ["Statement &mdash; career / benefaction / relationship"]
+        direction LR
+        S0["statement<br/><code>_v0</code>"]
+        S1["statement<br/><code>_v1</code>"]
+        S0 -- "prov:wasRevisionOf" --- S1
+        SNOTE["new URI per version<br/><i>leaf node: few referrers, so a<br/>new URI strands nothing</i>"]
+        S1 ~~~ SNOTE
+    end
+
+    subgraph EB ["EntityReference &mdash; person / community"]
+        direction LR
+        G0["graph<br/>claude/2026-05-01"]
+        G1["graph<br/>editor/20261007T0328Z"]
+        G0 -- "prov:wasDerivedFrom" --- G1
+        ENOTE["URI unchanged; the named graph<br/>is the unit of versioning<br/><i>hub: 172,282 incoming references<br/>would be stranded by a new URI</i>"]
+        G1 ~~~ ENOTE
+    end
+
+    Q -- "Statement" --> SB
+    Q -- "EntityReference" --> EB
+
+    RES["<b>Resolution</b> — both read the same way<br/>graph → prov:wasGeneratedBy → act → prov:generatedAtTime<br/>latest timestamp wins"]
+
+    SB --> RES
+    EB --> RES
+
+    GAP["<b>Known gap</b> — enrich_divinity / enrich_vital_events (94,408 acts) write<br/>EntityReference attributes into the extract-dated graph, with no version<br/>and no hmkia:generatedBy. Which act produced the value is not recoverable."]
+
+    EB -.-> GAP
+
+    classDef q      fill:#ffffff,stroke:#444,stroke-width:1.5px,color:#111
+    classDef snode  fill:#eef3fb,stroke:#2166ac,stroke-width:1.5px,color:#111
+    classDef gnode  fill:#f7f3fa,stroke:#7b5aa6,stroke-width:1.5px,color:#111
+    classDef note   fill:#fafafa,stroke:#999,stroke-width:1px,color:#333,stroke-dasharray:3 2
+    classDef res    fill:#eaf5ea,stroke:#3a8a3a,stroke-width:1.5px,color:#111
+    classDef gap    fill:#fff8e1,stroke:#b8860b,stroke-width:1.5px,color:#111,stroke-dasharray:4 3
+
+    class UPD,Q q
+    class S0,S1 snode
+    class G0,G1 gnode
+    class SNOTE,ENOTE note
+    class RES res
+    class GAP gap
