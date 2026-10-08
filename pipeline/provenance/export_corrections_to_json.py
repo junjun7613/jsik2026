@@ -120,22 +120,33 @@ def fetch_corrections(fuseki: Fuseki, edcs_id: str = None, since: str = None) ->
         f'<{PROV_NS}wasGeneratedBy>',
     ])
 
+    # The human acts are bound first, inside a subquery, so the unbound
+    # ?subject ?predicate ?value scan runs only against those few acts. Stating
+    # the patterns in the other order lets the planner walk every triple in the
+    # store that carries hmkia:generatedBy, which times out at this size.
+    #
     # DISTINCT because the act's description and the agent's type may each sit
     # in more than one graph; without it every row multiplies by that count.
     rows = fuseki.select(f'''
         SELECT DISTINCT ?subject ?predicate ?value ?t ?editor WHERE {{
-            GRAPH ?g {{ ?subject ?predicate ?value ; <{HMKIA_NS}generatedBy> ?act }}
-            GRAPH ?ga {{ ?act <{PROV_NS}generatedAtTime> ?t ;
-                              <{PROV_NS}wasAssociatedWith> ?agent }}
-            GRAPH ?gg {{ ?agent a <{HMKIA_NS}HumanAgent> }}
-            OPTIONAL {{ GRAPH ?gl {{ ?agent
-                <http://www.w3.org/2000/01/rdf-schema#label> ?editor }} }}
+            {{
+                SELECT DISTINCT ?act ?t ?editor WHERE {{
+                    GRAPH ?gg {{ ?agent a <{HMKIA_NS}HumanAgent> }}
+                    GRAPH ?ga {{ ?act <{PROV_NS}wasAssociatedWith> ?agent ;
+                                      <{PROV_NS}generatedAtTime> ?t }}
+                    OPTIONAL {{ GRAPH ?gl {{ ?agent
+                        <http://www.w3.org/2000/01/rdf-schema#label> ?editor }} }}
+                }}
+            }}
+            GRAPH ?g {{ ?subject <{HMKIA_NS}generatedBy> ?act ;
+                                 ?predicate ?value }}
             FILTER(?predicate NOT IN ({structural}))
             {filter_block}
             FILTER NOT EXISTS {{
-                GRAPH ?g2 {{ ?subject ?predicate ?v2 ; <{HMKIA_NS}generatedBy> ?act2 }}
+                GRAPH ?g2 {{ ?subject <{HMKIA_NS}generatedBy> ?act2 ;
+                                      ?predicate ?v2 }}
                 GRAPH ?ga2 {{ ?act2 <{PROV_NS}generatedAtTime> ?t2 ;
-                                   <{PROV_NS}wasAssociatedWith> ?agent2 }}
+                                    <{PROV_NS}wasAssociatedWith> ?agent2 }}
                 GRAPH ?gg2 {{ ?agent2 a <{HMKIA_NS}HumanAgent> }}
                 FILTER(?t2 > ?t)
             }}
