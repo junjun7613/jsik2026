@@ -1,0 +1,144 @@
+{
+ "$comment": "主要官職の統制語彙。仕様は network_analysis/POSITION_INVENTORY.md を参照。",
+ "version": "1.0",
+ "created": "2026-10-17",
+ "source_corpus": "pipeline/provenance/validated_career_graphs/claude/",
+ "total_positions": 20746,
+
+ "$comment_scope": [
+  "全659種のうち上位50種（18,168件・87.6%）のみを統制する。",
+  "object_category / social_status と異なり position_abstract は",
+  "役職名そのものであり、ローマの官職は本来多様である。659種は",
+  "『発散』ではなく『実態』の面があるため、全件の統制は行わない。",
+  "統制対象外の609種（2,578件・12.4%）は position_abstract のまま残す。"
+ ],
+
+ "tiers": {
+  "$comment": "第1階層は既存の position_type（10種）を使う。再設計しない。ここで定義するのは官職の序列軸であり、position_type とは直交する。",
+  "title": "称号・権限（職務ではない）",
+  "senatorial": "元老院身分の官職",
+  "equestrian": "騎士身分の官職",
+  "municipal": "都市の官職",
+  "military": "軍務",
+  "priesthood": "祭司職",
+  "occupation": "職業",
+  "other": "上記に収まらないもの"
+ },
+
+ "titles": {
+  "$comment": "POSITION_INVENTORY.md §3-1。役職ではなく称号・権限。career_path に混在している 5,736 件（27.6%）。position_type を 'title' に移す対象。",
+  "imperator": {"canonical": "imperator", "tier": "title", "note": "軍の最高司令権。勝利のたびに加算される"},
+  "Imperator": {"canonical": "imperator", "tier": "title", "note": "表記ゆれ"},
+  "tribunicia potestas": {"canonical": "tribunicia_potestas", "tier": "title", "note": "護民官職権。官職ではなく権限"},
+  "pater patriae": {"canonical": "pater_patriae", "tier": "title"},
+  "Pater Patriae": {"canonical": "pater_patriae", "tier": "title", "note": "表記ゆれ"},
+  "Augustus": {"canonical": "augustus", "tier": "title"},
+  "Caesar": {"canonical": "caesar", "tier": "title"},
+  "princeps iuventutis": {"canonical": "princeps_iuventutis", "tier": "title"},
+  "Princeps iuventutis": {"canonical": "princeps_iuventutis", "tier": "title", "note": "表記ゆれ"},
+  "Germanicus": {"canonical": "victory_title", "tier": "title", "victory": "Germania"},
+  "Parthicus": {"canonical": "victory_title", "tier": "title", "victory": "Parthia"},
+  "Britannicus": {"canonical": "victory_title", "tier": "title", "victory": "Britannia"},
+  "Sarmaticus": {"canonical": "victory_title", "tier": "title", "victory": "Sarmatia"},
+  "Dacicus": {"canonical": "victory_title", "tier": "title", "victory": "Dacia"},
+  "Armeniacus": {"canonical": "victory_title", "tier": "title", "victory": "Armenia"},
+  "Adiabenicus": {"canonical": "victory_title", "tier": "title", "victory": "Adiabene"},
+  "Medicus": {"canonical": "victory_title", "tier": "title", "victory": "Media",
+              "$warning": "小文字の medicus（医師）とは別物。同綴異義のため小文字化で統合してはならない"}
+ },
+
+ "offices": {
+  "$comment": "上位50種の官職。canonical は snake_case の正規形。tier は官職の序列軸で position_type（行政単位）とは直交する。",
+
+  "consul": {"canonical": "consul", "tier": "senatorial"},
+  "consularis": {"canonical": "consularis", "tier": "senatorial", "note": "執政官経験者としての属州総督"},
+  "proconsul": {"canonical": "proconsul", "tier": "senatorial"},
+  "praetor": {"canonical": "praetor", "tier": "senatorial"},
+  "legatus": {"canonical": "legatus", "tier": "senatorial", "refine": true,
+              "$note": "legatus Augusti pro praetore（総督）と legatus legionis（軍団長）を区別できない。原文での判定が要る"},
+  "praeses": {"canonical": "praeses", "tier": "senatorial"},
+  "adlectus": {"canonical": "adlectus", "tier": "senatorial", "note": "元老院への編入。官職ではなく身分変更"},
+
+  "procurator": {"canonical": "procurator", "tier": "equestrian"},
+  "praefectus": {"canonical": "praefectus", "tier": "equestrian", "refine": true,
+                 "$note": "praefectus praetorio / aegypti / cohortis 等で階層が大きく異なる"},
+  "advocatus": {"canonical": "advocatus", "tier": "equestrian"},
+  "adiutor": {"canonical": "adiutor", "tier": "equestrian"},
+
+  "duovir": {"canonical": "duovir", "tier": "municipal"},
+  "duumvir": {"canonical": "duovir", "tier": "municipal", "note": "duovir の別表記"},
+  "aedilis": {"canonical": "aedilis", "tier": "municipal"},
+  "quaestor": {"canonical": "quaestor", "tier": "municipal", "refine": true,
+               "$note": "都市のクァエストルと元老院のクァエストルがある"},
+  "decurio": {"canonical": "decurio", "tier": "municipal", "refine": true,
+              "$note": "都市参事会員と騎兵小隊長の同綴異義。SOCIAL_STATUS_INVENTORY.md §4-2 と同じ問題"},
+  "quinquennalis": {"canonical": "quinquennalis", "tier": "municipal"},
+  "triumvir": {"canonical": "triumvir", "tier": "municipal"},
+  "sufes": {"canonical": "sufes", "tier": "municipal", "note": "ポエニ系都市の最高官職"},
+  "curator": {"canonical": "curator", "tier": "municipal", "refine": true},
+  "patronus": {"canonical": "patronus", "tier": "municipal", "note": "都市の保護者。官職ではなく関係"},
+  "municipal-magistrate": {"canonical": "municipal_magistrate", "tier": "municipal",
+                           "note": "具体的官職名が不明な場合の上位語"},
+  "magister": {"canonical": "magister", "tier": "municipal", "refine": true,
+               "$note": "magister vici / collegii / militum 等で性質が異なる"},
+  "honores": {"canonical": "honores", "tier": "municipal", "note": "官職一般。具体名なし"},
+  "princeps": {"canonical": "princeps", "tier": "municipal", "refine": true},
+
+  "miles": {"canonical": "miles", "tier": "military"},
+  "veteranus": {"canonical": "veteranus", "tier": "military", "note": "退役。経歴であって官職ではない"},
+  "centurio": {"canonical": "centurio", "tier": "military"},
+  "primus pilus": {"canonical": "primus_pilus", "tier": "military", "note": "軍団首席百人隊長"},
+  "tribunus": {"canonical": "tribunus", "tier": "military", "refine": true,
+               "$note": "tribunus militum と tribunus plebis は別物"},
+  "eques": {"canonical": "eques", "tier": "military", "refine": true,
+            "$note": "騎兵と騎士身分の同綴異義"},
+  "beneficiarius": {"canonical": "beneficiarius", "tier": "military"},
+  "optio": {"canonical": "optio", "tier": "military"},
+  "signifer": {"canonical": "signifer", "tier": "military"},
+  "cornicularius": {"canonical": "cornicularius", "tier": "military"},
+  "praepositus": {"canonical": "praepositus", "tier": "military"},
+
+  "pontifex": {"canonical": "pontifex", "tier": "priesthood"},
+  "pontifex maximus": {"canonical": "pontifex_maximus", "tier": "priesthood",
+                       "note": "皇帝の大神祇官。pontifex とは別個体とする"},
+  "sacerdos": {"canonical": "sacerdos", "tier": "priesthood", "note": "祭司一般"},
+  "flamen": {"canonical": "flamen", "tier": "priesthood"},
+  "flaminica": {"canonical": "flamen", "tier": "priesthood", "note": "flamen の女性形。gender で区別するため統合"},
+  "augur": {"canonical": "augur", "tier": "priesthood"},
+  "episcopus": {"canonical": "episcopus", "tier": "priesthood", "note": "キリスト教"},
+  "Episcopus": {"canonical": "episcopus", "tier": "priesthood", "note": "表記ゆれ"},
+  "presbyter": {"canonical": "presbyter", "tier": "priesthood", "note": "キリスト教"},
+  "diaconus": {"canonical": "diaconus", "tier": "priesthood", "note": "キリスト教"},
+
+  "officinator": {"canonical": "officinator", "tier": "occupation", "note": "工房の管理者"},
+  "officina": {"canonical": "officinator", "tier": "occupation", "note": "工房。officinator と同一視"},
+  "medicus": {"canonical": "medicus", "tier": "occupation",
+              "$warning": "大文字の Medicus（勝利称号）とは別物"}
+ },
+
+ "normalize": {
+  "$comment": "表記ゆれの統合規則。POSITION_INVENTORY.md §3-3",
+  "case_insensitive": false,
+  "$comment_case": "小文字化による一括統合は行わない。medicus（医師）と Medicus（勝利称号）が同綴異義のため。個別に titles / offices へ列挙する",
+  "explicit_variants": {
+   "Imperator": "imperator",
+   "Pater Patriae": "pater patriae",
+   "Princeps iuventutis": "princeps iuventutis",
+   "Episcopus": "episcopus",
+   "duumvir": "duovir",
+   "flaminica": "flamen",
+   "officina": "officinator"
+  }
+ },
+
+ "analysis_flags": {
+  "$comment": "POSITION_INVENTORY.md の実測値",
+  "distinct_total": 659,
+  "covered_by_map": "上位50種 + 称号23種",
+  "coverage_pct": 87.6,
+  "titles_count": 5736,
+  "uncontrolled_remaining": 2578,
+  "position_type_inconsistent": "165種 / 17,877件（86.2%）。正当な区別と揺れが混在するため本マップでは扱わない",
+  "refine_needed": "legatus / praefectus / quaestor / decurio / tribunus / eques / magister / curator / princeps — 原文を見ないと確定できない"
+ }
+}

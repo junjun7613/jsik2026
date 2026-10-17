@@ -1,0 +1,490 @@
+{
+ "$comment": "社会的身分カテゴリ マッピング表。仕様は network_analysis/SOCIAL_STATUS_INVENTORY.md を参照。案C（単軸＋多値配列）に基づく。",
+ "version": "1.0",
+ "created": "2026-10-16",
+ "source_corpus": "pipeline/provenance/validated_career_graphs/claude/",
+ "total_persons": 85118,
+ "total_with_status": 25288,
+ "$comment_design": [
+  "object_category_map.json と異なり、1つの social_status から複数の軸の値が",
+  "生じうる（案C）。そのため surface_rules は『最初にマッチしたものを採用』ではなく",
+  "『マッチしたものをすべて採用』する点に注意。",
+  "役職（office）と具体的な宗教職は career_path に委ねるため軸に含めない。",
+  "宗教は『立場』のみを religious として残す（SOCIAL_STATUS_INVENTORY.md §判断）。"
+ ],
+ "categories": {
+  "legal": "法的身分（市民権・隷属状態）",
+  "ordo": "身分階層（元首・元老院・騎士・参事会）",
+  "military": "軍事的身分",
+  "religious": "宗教的立場（役職ではないもの）",
+  "occupation": "職業",
+  "unknown": "特定不能"
+ },
+ "delegated_to_career_path": {
+  "$comment": "これらは social_statuses に含めず career_path に委ねる。移行時、career_path が空の人物については career_path へ移送する（約280件）。",
+  "office": [
+   "municipal-magistrate",
+   "legatus",
+   "duovir",
+   "aedilis",
+   "tribunus",
+   "quaestor",
+   "consul",
+   "curator",
+   "quinquennalis",
+   "promagister",
+   "provincial-governor",
+   "administrator",
+   "imperial-administration",
+   "provincial-administration",
+   "local-administration",
+   "local",
+   "military-commander"
+  ],
+  "religious_office": [
+   "sacerdos",
+   "flamen",
+   "flaminica",
+   "pontifex",
+   "augur",
+   "diaconus",
+   "deacon",
+   "subdiaconus",
+   "archdeacon",
+   "clericus",
+   "cleric",
+   "lector",
+   "bishop",
+   "presbyter"
+  ]
+ },
+ "resolution_order": [
+  "1. normalize_surface — 表記ゆれ・綴りゆれを正規化",
+  "2. excluded_values   — 人物でない値を除外（別件として分離）",
+  "3. delegated         — career_path に委ねる値を除外（移送対象として記録）",
+  "4. direct_map        — 単一軸に確定する値を割当",
+  "5. multi_axis_map    — 複数軸を生じる値を割当（すべて採用）",
+  "6. ambiguous         — 文脈依存。needs_llm=true",
+  "7. evidence_rules    — evidence から追加の軸を拾う（補助）",
+  "8. 未解決            — needs_llm=true として LLM へ"
+ ],
+ "llm_flags": {
+  "needs_llm": "軸または値が確定しない。LLM 判定が必須",
+  "refine_llm": "既定値は決まるが、evidence から追加の軸を拾える可能性がある。任意パス"
+ },
+ "certainty": {
+  "$comment": "SOCIAL_STATUS_INVENTORY.md §4-4。evidence が原文引用か推論かを区別する。inferred の場合、原文部分を evidence に、解釈部分を reasoning に分離する。",
+  "explicit": "碑文に当該身分が明示されている",
+  "inferred": "名前・部族・他の情報からの推論",
+  "inference_markers": "indicat|suggest|typically|implies|probabl|likely|based on|cognomen|filiation|\\btribe\\b|\\bname\\b|may be|may have"
+ },
+ "normalize_surface": {
+  "$comment": "social_status の値を小文字化したうえで適用する",
+  "rules": [
+   {
+    "pattern": "\\s+",
+    "replace": " ",
+    "note": "連続空白の正規化"
+   },
+   {
+    "pattern": "^\\s+|\\s+$",
+    "replace": "",
+    "note": "前後の空白除去"
+   }
+  ],
+  "spelling_variants": {
+   "$comment": "SOCIAL_STATUS_INVENTORY.md §4-3。左が正規形",
+   "decurio": [
+    "decurion"
+   ],
+   "freedman": [
+    "freedwoman"
+   ],
+   "patricius": [
+    "patrician"
+   ],
+   "soldier": [
+    "military"
+   ],
+   "clericus": [
+    "cleric"
+   ],
+   "diaconus": [
+    "deacon"
+   ],
+   "consecrated-virgin": [
+    "virgo sacrata",
+    "santimoniale",
+    "castimonialis"
+   ],
+   "imperial-freedman-or-slave": [
+    "imperial-slave-or-freedman"
+   ]
+  },
+  "$comment_gender": "freedwoman→freedman, flaminica→flamen は gender フィールドが別にあるため語彙としては統合する（§4-3）"
+ },
+ "excluded_values": {
+  "$comment": "人物でない存在。身分軸では扱わない。SOCIAL_STATUS_INVENTORY.md §4-6 の別件として分離する",
+  "deity": {
+   "reason": "神格。persons[] に神が混入している",
+   "count": 20
+  },
+  "deceased-spirit": {
+   "reason": "Dis Manibus 等の被献呈者",
+   "count": 1
+  }
+ },
+ "direct_map": {
+  "$comment": "単一の軸に確定する値。certainty は evidence から別途判定する",
+  "emperor": {
+   "category": "ordo",
+   "subtype": "ordo.emperor"
+  },
+  "empress": {
+   "category": "ordo",
+   "subtype": "ordo.empress"
+  },
+  "imperial-family": {
+   "category": "ordo",
+   "subtype": "ordo.imperial_family"
+  },
+  "senator": {
+   "category": "ordo",
+   "subtype": "ordo.senator"
+  },
+  "senator-consularis": {
+   "category": "ordo",
+   "subtype": "ordo.senator",
+   "rank": "consularis"
+  },
+  "senator-clarissimus": {
+   "category": "ordo",
+   "subtype": "ordo.senator",
+   "rank": "clarissimus"
+  },
+  "senator-praetorius": {
+   "category": "ordo",
+   "subtype": "ordo.senator",
+   "rank": "praetorius"
+  },
+  "equestrian": {
+   "category": "ordo",
+   "subtype": "ordo.equestrian"
+  },
+  "equestrian-perfectissimus": {
+   "category": "ordo",
+   "subtype": "ordo.equestrian",
+   "rank": "perfectissimus"
+  },
+  "equestrian-egregius": {
+   "category": "ordo",
+   "subtype": "ordo.equestrian",
+   "rank": "egregius"
+  },
+  "equestrian-splendidus": {
+   "category": "ordo",
+   "subtype": "ordo.equestrian",
+   "rank": "splendidus"
+  },
+  "equestrian-excellentissimus": {
+   "category": "ordo",
+   "subtype": "ordo.equestrian",
+   "rank": "excellentissimus"
+  },
+  "equestrian-eminentissimus": {
+   "category": "ordo",
+   "subtype": "ordo.equestrian",
+   "rank": "eminentissimus"
+  },
+  "municipal-elite": {
+   "category": "ordo",
+   "subtype": "ordo.municipal_elite"
+  },
+  "patricius": {
+   "category": "ordo",
+   "subtype": "ordo.patrician"
+  },
+  "king": {
+   "category": "ordo",
+   "subtype": "ordo.foreign_ruler"
+  },
+  "local-ruler": {
+   "category": "ordo",
+   "subtype": "ordo.foreign_ruler"
+  },
+  "centenarius": {
+   "category": "ordo",
+   "subtype": "ordo.equestrian",
+   "rank": "centenarius",
+   "note": "俸給等級。騎士身分の指標として扱う",
+   "refine_llm": true
+  },
+  "citizen": {
+   "category": "legal",
+   "subtype": "legal.citizen"
+  },
+  "freedman": {
+   "category": "legal",
+   "subtype": "legal.freedman"
+  },
+  "slave": {
+   "category": "legal",
+   "subtype": "legal.slave"
+  },
+  "freeborn": {
+   "category": "legal",
+   "subtype": "legal.freeborn"
+  },
+  "imperial-slave": {
+   "category": "legal",
+   "subtype": "legal.imperial_slave"
+  },
+  "imperial-freedman-or-slave": {
+   "category": "legal",
+   "subtype": null,
+   "note": "判定保留値。LLM で確定させる",
+   "needs_llm": true
+  },
+  "soldier": {
+   "category": "military",
+   "subtype": "military.soldier"
+  },
+  "veteran": {
+   "category": "military",
+   "subtype": "military.veteran"
+  },
+  "centurio": {
+   "category": "military",
+   "subtype": "military.centurio"
+  },
+  "martyr": {
+   "category": "religious",
+   "subtype": "religious.martyr"
+  },
+  "monk": {
+   "category": "religious",
+   "subtype": "religious.monk"
+  },
+  "consecrated-virgin": {
+   "category": "religious",
+   "subtype": "religious.consecrated_virgin"
+  },
+  "fidelis": {
+   "category": "religious",
+   "subtype": "religious.faithful"
+  },
+  "sancta": {
+   "category": "religious",
+   "subtype": "religious.venerated"
+  },
+  "local-priesthood": {
+   "category": "religious",
+   "subtype": "religious.priesthood_unspecified",
+   "note": "具体的役職名がないため career_path に移送できない"
+  },
+  "artisan": {
+   "category": "occupation",
+   "subtype": "occupation.artisan"
+  },
+  "merchant": {
+   "category": "occupation",
+   "subtype": "occupation.merchant"
+  },
+  "medicus": {
+   "category": "occupation",
+   "subtype": "occupation.medicus"
+  },
+  "gladiator": {
+   "category": "occupation",
+   "subtype": "occupation.gladiator"
+  },
+  "actor": {
+   "category": "occupation",
+   "subtype": "occupation.performer"
+  },
+  "charioteer": {
+   "category": "occupation",
+   "subtype": "occupation.performer"
+  },
+  "musician": {
+   "category": "occupation",
+   "subtype": "occupation.performer"
+  },
+  "contractor": {
+   "category": "occupation",
+   "subtype": "occupation.contractor"
+  },
+  "occupation": {
+   "category": "occupation",
+   "subtype": null,
+   "note": "軸名が値になっている。evidence から具体化",
+   "needs_llm": true
+  },
+  "unknown": {
+   "category": "unknown",
+   "subtype": "unknown.unspecified"
+  },
+  "other": {
+   "category": null,
+   "subtype": null,
+   "needs_llm": true
+  }
+ },
+ "multi_axis_map": {
+  "$comment": "1つの値が複数の軸を生じるもの。すべての軸を採用する（案C）。SOCIAL_STATUS_INVENTORY.md §4-1",
+  "flamen-decurio": [
+   {
+    "category": "ordo",
+    "subtype": "ordo.decurio_municipal"
+   },
+   {
+    "category": "_delegated",
+    "value": "flamen",
+    "note": "career_path へ"
+   }
+  ],
+  "veteran-decurio": [
+   {
+    "category": "military",
+    "subtype": "military.veteran"
+   },
+   {
+    "category": "ordo",
+    "subtype": "ordo.decurio_municipal",
+    "note": "ex dec(urione) = 退任済み"
+   }
+  ],
+  "equestrian-decurio": [
+   {
+    "category": "ordo",
+    "subtype": "ordo.equestrian"
+   },
+   {
+    "category": "ordo",
+    "subtype": "ordo.decurio_municipal"
+   }
+  ],
+  "augur, pontifex": [
+   {
+    "category": "_delegated",
+    "value": "augur",
+    "note": "career_path へ"
+   },
+   {
+    "category": "_delegated",
+    "value": "pontifex",
+    "note": "career_path へ"
+   }
+  ]
+ },
+ "ambiguous_forms": {
+  "$comment": "文脈（evidence）でしか確定しない値。SOCIAL_STATUS_INVENTORY.md §4-2",
+  "decurio": {
+   "$comment": "都市参事会員(144) と 騎兵小隊長(4) の同綴異義。判別不能437件は LLM へ",
+   "default": {
+    "category": "ordo",
+    "subtype": "ordo.decurio_municipal"
+   },
+   "disambiguate_by_evidence": [
+    {
+     "pattern": "\\balae\\b|\\bturma|\\bequit|\\bala\\b",
+     "category": "ordo",
+     "subtype": "ordo.decurio_cavalry",
+     "note": "騎兵小隊長"
+    },
+    {
+     "pattern": "\\bordo\\b|decurion|splendidissim|\\bcuria\\b|res p\\(ublica\\)",
+     "category": "ordo",
+     "subtype": "ordo.decurio_municipal",
+     "note": "都市参事会員"
+    }
+   ],
+   "needs_llm": true,
+   "$comment_llm": "上記で判別できない場合のみ LLM。実測で437/585が該当"
+  },
+  "augustalis": {
+   "$comment": "sevir Augustalis（解放奴隷の職）と sodalis Augustalis（元老院の祭司団）は別物。前者のみ legal.freedman を含意する",
+   "disambiguate_by_evidence": [
+    {
+     "pattern": "sodal",
+     "category": "_delegated",
+     "value": "sodalis Augustalis",
+     "note": "元老院祭司団。career_path へ。freedman を含意しない"
+    },
+    {
+     "pattern": "IIIIIIvir|VIvir|sevir|6vir",
+     "multi": [
+      {
+       "category": "legal",
+       "subtype": "legal.freedman",
+       "certainty": "inferred",
+       "reasoning": "sevir Augustalis は通常解放奴隷が務める"
+      },
+      {
+       "category": "_delegated",
+       "value": "sevir Augustalis",
+       "note": "career_path へ"
+      }
+     ]
+    }
+   ],
+   "needs_llm": true,
+   "$comment_llm": "どちらの語もない37件は LLM 判定。cognomen 'Augustalis'（人名）の場合は身分ではない点に注意"
+  }
+ },
+ "evidence_rules": {
+  "$comment": "evidence から追加の軸を拾うための補助規則。SOCIAL_STATUS_INVENTORY.md §4-1 証拠2",
+  "enabled": false,
+  "$comment_disabled": [
+   "【重要】既定では無効。機械規則としては使わないこと。",
+   "実測で以下の誤りが検出されたため（2026-10-16）:",
+   "  1. decurio は同綴異義（§4-2）。`dec(urio) alae Flaviae`（騎兵）を",
+   "     decurio_municipal と誤判定する。→ ambiguous_forms 側でのみ扱う。",
+   "  2. 【より重大】evidence が他者を指している場合がある。",
+   "     social_status='emperor' の人物の evidence に `Aug(usti) ser(vus)`",
+   "     （＝皇帝の奴隷）が入っており、規則を適用すると皇帝自身に",
+   "     legal.slave が付く。18件検出。",
+   "     evidence は『この人物の身分の根拠』とは限らず、同じ碑文の",
+   "     他の人物への言及を含むため、語の出現だけでは軸を足せない。",
+   "したがって追加軸の判定は LLM に委ね、人物の同定を含めて行わせる。",
+   "以下の規則は LLM プロンプトで『着目すべき語』を示す参考として残す。"
+  ],
+  "reference_patterns": [
+   {
+    "pattern": "\\blib(ertus|erta|\\.)|\\bl\\(ibert",
+    "category": "legal",
+    "subtype": "legal.freedman"
+   },
+   {
+    "pattern": "\\bser\\(v|\\bservus\\b|\\bserva\\b",
+    "category": "legal",
+    "subtype": "legal.slave"
+   },
+   {
+    "pattern": "vet\\(eran|\\bveteranus\\b",
+    "category": "military",
+    "subtype": "military.veteran"
+   },
+   {
+    "pattern": "\\bcent\\(urio|\\bcenturion",
+    "category": "military",
+    "subtype": "military.centurio"
+   },
+   {
+    "pattern": "\\bmil\\(es|\\bmiles\\b",
+    "category": "military",
+    "subtype": "military.soldier"
+   }
+  ]
+ },
+ "analysis_flags": {
+  "$comment": "移行作業で記録すべき件数（SOCIAL_STATUS_INVENTORY.md 実測）",
+  "empty_social_status": 59830,
+  "delegated_with_career_path": "約1190（破棄してよい・冗長）",
+  "delegated_without_career_path": "約280（career_path へ移送。has_career も更新）",
+  "excluded_non_person": 21,
+  "decurio_needs_llm": 437,
+  "augustalis_needs_llm": 37,
+  "evidence_refers_to_other_person": "18件以上検出。evidence が同碑文の他者を指す場合がある（皇帝の evidence に『皇帝の奴隷』など）"
+ }
+}

@@ -78,6 +78,7 @@ pipeline/setup.cfg
 pipeline/setup.py
 pipeline/pyproject.toml
 pipeline/MIGRATION_SUMMARY.md
+pipeline/WORKFLOW.md
 pipeline/CITATION.cff
 pipeline/.github/
 pipeline/.dockerignore
@@ -89,7 +90,8 @@ pipeline/.dockerignore
 roman_atlas/
 llm-epigraphy-simple/
 viz/
-editor/
+# 校訂エディタは ai_epigraphy_editor リポジトリへ分離（2026-10-16）
+# editor/
 editor_script.js
 
 # ============================================================
@@ -125,6 +127,17 @@ pipeline/evaluation/name_components/eval_viewer.html
 pipeline/evaluation/status_components/status_viewer.html
 
 # ============================================================
+# Ontology survey (paper materials; includes archived third-party sources)
+# ============================================================
+ontology_survey/
+
+# ============================================================
+# Network analysis — regenerable intermediates
+# ============================================================
+# GraphML for Gephi; rebuilt in seconds by the build_*_network.py scripts
+network_analysis/chen_method/output/*.graphml
+
+# ============================================================
 # Office / temp files
 # ============================================================
 ~$*
@@ -141,3 +154,6 @@ Thumbs.db
 .envrc
 secrets.py
 config_local.py
+
+# ネットワーク分析の生成物（build_*.py で再生成できる）
+network_analysis/chen_method/output/

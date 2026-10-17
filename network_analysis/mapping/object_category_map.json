@@ -1,0 +1,698 @@
+{
+ "$comment": "寄進対象カテゴリ マッピング表。仕様は network_analysis/OBJECT_TYPE_INVENTORY.md §7 を参照。",
+ "version": "1.0",
+ "created": "2026-10-06",
+ "source_corpus": "pipeline/provenance/validated_career_graphs/claude/",
+ "total_objects": 7590,
+ "categories": {
+  "structure": "建造物・建築物・建築部材",
+  "monument": "像・祭壇・銘文・記念物",
+  "funerary": "墓・埋葬関連",
+  "infrastructure": "道路・水道・橋・里程標",
+  "distribution": "金銭・食糧・施与",
+  "spectacle": "競技会・演劇・饗宴",
+  "offering": "供犠・奉献物",
+  "privilege": "法的身分・特権（非物理）",
+  "unknown": "判読不能・特定不能"
+ },
+ "resolution_order": [
+  "1. normalize_surface  — 翻刻記号・正書法のゆれを除去",
+  "2. ambiguous_forms    — 多重割当の既知形を最優先で確定",
+  "3. surface_rules      — 表層形の正規表現（上から順に最初にマッチしたもの）",
+  "4. object_type_direct — 表層形で決まらない場合に object_type から引く",
+  "5. 未解決             — needs_llm=true として LLM 再分類へ回す"
+ ],
+ "llm_flags": {
+  "$comment": "LLM へ回す理由を2種に区別する。両者を混同すると必要コストを過大評価する",
+  "needs_llm": "カテゴリが決まらない。LLM の判定が必須。未処理のままでは使えない",
+  "refine_llm": "既定カテゴリは決まっているが、文脈によってより適切な分類がありうる。LLM 判定は任意（精度向上のための追加パス）"
+ },
+ "normalize_surface": {
+  "$comment": "適用順。表層形を小文字化したうえで順に適用する",
+  "rules": [
+   {
+    "pattern": "<[a-z]=[A-Za-z]>",
+    "replace": "",
+    "note": "翻刻の訂正記号 mon<u=I>mentum → monmentum を避けるため、左辺のみ残す処理は expand_correction で行う"
+   },
+   {
+    "pattern": "\\(([^)]*)\\)",
+    "replace": "\\1",
+    "note": "略号展開 fec(it) → fecit"
+   },
+   {
+    "pattern": "\\[([^\\]]*)\\]",
+    "replace": "\\1",
+    "note": "欠損補填 [miliari]a → miliaria"
+   },
+   {
+    "pattern": "\\s+",
+    "replace": " ",
+    "note": "空白正規化"
+   },
+   {
+    "pattern": "[!?]+$",
+    "replace": "",
+    "note": "不確実マーカー除去"
+   }
+  ],
+  "expand_correction": {
+   "$comment": "<u=I> 形式は『正しい読み=刻まれた字』。左辺を採用する",
+   "pattern": "<([a-z]+)=[A-Za-z]+>",
+   "replace": "\\1"
+  }
+ },
+ "ambiguous_forms": {
+  "$comment": "OBJECT_TYPE_INVENTORY.md §7-4。同一表層形が複数の object_type に割り当てられている既知の121種のうち、単一カテゴリに確定できるもの。needs_llm のものは文脈判定が必要",
+  "aram": {
+   "category": "monument",
+   "subtype": "monument.altar"
+  },
+  "ara": {
+   "category": "monument",
+   "subtype": "monument.altar"
+  },
+  "arae": {
+   "category": "monument",
+   "subtype": "monument.altar"
+  },
+  "aras": {
+   "category": "monument",
+   "subtype": "monument.altar"
+  },
+  "arcum": {
+   "category": "structure",
+   "subtype": "structure.arch"
+  },
+  "arcus": {
+   "category": "structure",
+   "subtype": "structure.arch"
+  },
+  "porticum": {
+   "category": "structure",
+   "subtype": "structure.portico"
+  },
+  "porticus": {
+   "category": "structure",
+   "subtype": "structure.portico"
+  },
+  "gymnasium": {
+   "category": "structure",
+   "subtype": "structure.gymnasium"
+  },
+  "gymnasia": {
+   "category": "structure",
+   "subtype": "structure.gymnasium"
+  },
+  "gymnasio": {
+   "category": "structure",
+   "subtype": "structure.gymnasium"
+  },
+  "memoria": {
+   "category": "funerary",
+   "subtype": "funerary.memoria"
+  },
+  "memoriae": {
+   "category": "funerary",
+   "subtype": "funerary.memoria"
+  },
+  "votum": {
+   "category": "offering",
+   "subtype": "offering.unspecified"
+  },
+  "vota": {
+   "category": "offering",
+   "subtype": "offering.unspecified"
+  },
+  "voti": {
+   "category": "offering",
+   "subtype": "offering.unspecified"
+  },
+  "voto": {
+   "category": "offering",
+   "subtype": "offering.unspecified"
+  },
+  "monumentum funerarium": {
+   "category": "funerary",
+   "subtype": "funerary.tomb"
+  },
+  "monumentum/sepulcrum": {
+   "category": "funerary",
+   "subtype": "funerary.tomb_structure"
+  },
+  "monumentum": {
+   "category": "monument",
+   "subtype": "monument.unspecified",
+   "refine_llm": true,
+   "note": "tomb 106 / building 40 / other 48 に分裂。葬礼文脈なら funerary.tomb。既定値は monument.unspecified"
+  },
+  "sacrum": {
+   "category": "offering",
+   "subtype": "offering.unspecified",
+   "refine_llm": true,
+   "note": "altar 17 / other 64 / dedication 8 / temple 27 に分裂。文脈により monument.altar / structure.temple"
+  }
+ },
+ "surface_rules": [
+  {
+   "$comment": "===== 上から順に評価し、最初にマッチしたものを採用する ====="
+  },
+  {
+   "id": "unknown.illegible",
+   "category": "unknown",
+   "subtype": "unknown.illegible",
+   "pattern": "not preserved|not specified|object unknown|unknown object|unknown structure|unspecified structure|^unknown$|^unspecified$|illegible|^-+$|^3$|^$",
+   "est": 556
+  },
+  {
+   "id": "unknown.verb_only",
+   "category": "unknown",
+   "subtype": "unknown.verb_only",
+   "pattern": "^(fecit|fecerunt|fec|posuit|posuerunt|pos|restituit|restituerunt|restitue?runt|dedicavit|dedicaverunt|dedicav|dedit|dederunt|curavit|curav|ded|d)$",
+   "est": 128
+  },
+  {
+   "$comment": "--- offering（供犠は具体語なので structure より先に） ---"
+  },
+  {
+   "id": "offering.sacrifice",
+   "category": "offering",
+   "subtype": "offering.sacrifice",
+   "pattern": "agnu|agnum|verbec|birbec|aries|ariete|ovem|vacca|vaccam|tauru|taurum|taurobol|hostia|porc|victim",
+   "est": 26
+  },
+  {
+   "$comment": "--- infrastructure ---"
+  },
+  {
+   "id": "infrastructure.milestone",
+   "category": "infrastructure",
+   "subtype": "infrastructure.milestone",
+   "pattern": "miliari|milliari|mille passu",
+   "est": 10
+  },
+  {
+   "id": "infrastructure.bridge",
+   "category": "infrastructure",
+   "subtype": "infrastructure.bridge",
+   "pattern": "pontem|pontes|pontib|pontis|^pons$",
+   "est": 50
+  },
+  {
+   "id": "infrastructure.aqueduct",
+   "category": "infrastructure",
+   "subtype": "infrastructure.aqueduct",
+   "pattern": "aquaeduct|aquae duct|aquam perduc|specus",
+   "est": 68
+  },
+  {
+   "id": "infrastructure.road",
+   "category": "infrastructure",
+   "subtype": "infrastructure.road",
+   "pattern": "^via|viam|vias|iter|semita|road",
+   "est": 276
+  },
+  {
+   "$comment": "--- funerary ---"
+  },
+  {
+   "id": "funerary.tomb_structure",
+   "category": "funerary",
+   "subtype": "funerary.tomb_structure",
+   "pattern": "sepulcr|sepulchr|sepultur|tumul|cupul|sarcophag|mausole|bustum|ossuar|cinerari",
+   "est": 109
+  },
+  {
+   "id": "funerary.mensa",
+   "category": "funerary",
+   "subtype": "funerary.mensa",
+   "pattern": "^mensa|mensam|mensas|offering table",
+   "est": 16
+  },
+  {
+   "$comment": "--- structure（具体建造物） ---"
+  },
+  {
+   "id": "structure.gymnasium",
+   "category": "structure",
+   "subtype": "structure.gymnasium",
+   "pattern": "gymnasi|gymnassi|xyst|schola|biblioth|palaestr",
+   "est": 54
+  },
+  {
+   "id": "structure.bath",
+   "category": "structure",
+   "subtype": "structure.bath",
+   "pattern": "balne|balin|therm|lavacr",
+   "est": 109
+  },
+  {
+   "id": "structure.temple",
+   "category": "structure",
+   "subtype": "structure.temple",
+   "pattern": "templ|aedem|aedes|aedicul|sacell|delubr|shrine|fanum|capitoli",
+   "est": 506
+  },
+  {
+   "id": "structure.basilica",
+   "category": "structure",
+   "subtype": "structure.basilica",
+   "pattern": "basilic",
+   "est": 37
+  },
+  {
+   "id": "structure.theater",
+   "category": "structure",
+   "subtype": "structure.theater",
+   "pattern": "theatr|amphitheatr|odeum|^circ|circum|spectacul.*aedific",
+   "est": 21
+  },
+  {
+   "id": "structure.portico",
+   "category": "structure",
+   "subtype": "structure.portico",
+   "pattern": "portic|peristyl|colonnad",
+   "est": 178
+  },
+  {
+   "id": "structure.arch",
+   "category": "structure",
+   "subtype": "structure.arch",
+   "pattern": "arcu|^arcs|ianu|^porta$|portam|portas",
+   "est": 99
+  },
+  {
+   "id": "structure.civic",
+   "category": "structure",
+   "subtype": "structure.civic",
+   "pattern": "curia|curiam|tribunal|rostra|comiti|senacul",
+   "est": 27
+  },
+  {
+   "id": "structure.utility",
+   "category": "structure",
+   "subtype": "structure.utility",
+   "pattern": "macell|horre|tabern|apothec|cella|cellam|pistrin|carcer|latrin",
+   "est": 50
+  },
+  {
+   "id": "structure.domestic",
+   "category": "structure",
+   "subtype": "structure.domestic",
+   "pattern": "^domu|^domo|^domus|villa|insula|hospit|cubicul",
+   "est": 43
+  },
+  {
+   "id": "structure.wall",
+   "category": "structure",
+   "subtype": "structure.wall",
+   "pattern": "muru|murum|moeni|turre|turri|maceria|vallum|castell|propugnacul",
+   "est": 48
+  },
+  {
+   "id": "structure.forum",
+   "category": "structure",
+   "subtype": "structure.forum",
+   "pattern": "^forum|forumq|platea|^area$|aream",
+   "est": 26
+  },
+  {
+   "id": "structure.water",
+   "category": "structure",
+   "subtype": "structure.water",
+   "pattern": "cistern|piscin|nymphae|^fons|fontem|lacum|^lacus",
+   "est": 11
+  },
+  {
+   "id": "structure.church",
+   "category": "structure",
+   "subtype": "structure.church",
+   "pattern": "ecclesi|church|basilica christ",
+   "est": 1
+  },
+  {
+   "id": "structure.element",
+   "category": "structure",
+   "subtype": "structure.element",
+   "pattern": "column|colum|^pila|pilas|fundament|gradus|marmor|pavimen|stratur|tessell|tegul|caement|superfici|testud|camer|absid|exedr|pronau|podium|culmin|tect[au]|^opus dol",
+   "est": 142
+  },
+  {
+   "$comment": "--- distribution ---"
+  },
+  {
+   "id": "distribution.largesse",
+   "category": "distribution",
+   "subtype": "distribution.largesse",
+   "pattern": "missili|iactus|largiti",
+   "est": 9
+  },
+  {
+   "id": "distribution.sportulae",
+   "category": "distribution",
+   "subtype": "distribution.sportulae",
+   "pattern": "sportul|congiari|divisio",
+   "est": 111
+  },
+  {
+   "id": "distribution.banquet",
+   "category": "distribution",
+   "subtype": "distribution.banquet",
+   "pattern": "epul|convivi|public banquet|cena|prandi",
+   "est": 171
+  },
+  {
+   "id": "distribution.food",
+   "category": "distribution",
+   "subtype": "distribution.food",
+   "pattern": "tritic|frument|^vinu|^vini|^vino|oleum|olei|annona|panem|modio|modios|semodi|alimen",
+   "est": 27
+  },
+  {
+   "id": "distribution.money",
+   "category": "distribution",
+   "subtype": "distribution.money",
+   "pattern": "pecuni|nummi|sestert|denari|^hs |summa|money",
+   "est": 405
+  },
+  {
+   "$comment": "--- spectacle ---"
+  },
+  {
+   "id": "spectacle.gladiatorial",
+   "category": "spectacle",
+   "subtype": "spectacle.gladiatorial",
+   "pattern": "gladiator|munus gladiat|venatio|ludi gladiat|pugil",
+   "est": 140
+  },
+  {
+   "id": "spectacle.theatrical",
+   "category": "spectacle",
+   "subtype": "spectacle.theatrical",
+   "pattern": "ludi scaenic|scaenic|theatrical|pantomim|histrio",
+   "est": 83
+  },
+  {
+   "$comment": "--- monument ---"
+  },
+  {
+   "id": "monument.statue",
+   "category": "monument",
+   "subtype": "monument.statue",
+   "pattern": "statua|statuam|statuas|signum|signa|simulacr|effigi|^imago|imagin|thorace",
+   "est": 576
+  },
+  {
+   "id": "monument.altar",
+   "category": "monument",
+   "subtype": "monument.altar",
+   "pattern": "^ara|aram|arae$|altar",
+   "est": 361
+  },
+  {
+   "id": "monument.vessel",
+   "category": "monument",
+   "subtype": "monument.vessel",
+   "pattern": "urce|patera|^vas|vasa|lanx|crater|candelab|lucern|aene|^mensa argent",
+   "est": 19
+  },
+  {
+   "id": "monument.decoration",
+   "category": "monument",
+   "subtype": "monument.decoration",
+   "pattern": "ornament|ornavit|^ornat|clipe|coron|palma|pictur|^musei|horologi|^opus musiv",
+   "est": 19
+  },
+  {
+   "id": "monument.inscription",
+   "category": "monument",
+   "subtype": "monument.inscription",
+   "pattern": "titul|^tabul|tabulam|inscription|cippus|stele|^carmin|^elogi",
+   "est": 843
+  },
+  {
+   "$comment": "--- privilege（非物理） ---"
+  },
+  {
+   "id": "privilege.land",
+   "category": "privilege",
+   "subtype": "privilege.land",
+   "pattern": "praedi|^fund[ou]|^agr[ioe]|^fines|territor|^locum|^locus|^spatium|estate|land",
+   "est": 37
+  },
+  {
+   "id": "privilege.legal_status",
+   "category": "privilege",
+   "subtype": "privilege.legal_status",
+   "pattern": "libertas|civitas|municipi|^ius |^honor|honorem|privileg|immunit|conubium",
+   "est": 32
+  },
+  {
+   "$comment": "--- generic 受け皿（最後に評価。史料側の限界を表すカテゴリ） ---"
+  },
+  {
+   "id": "offering.unspecified",
+   "category": "offering",
+   "subtype": "offering.unspecified",
+   "pattern": "^votu|^vota|^voti|^sacr|ex voto|v s l m|donum|dona$|munificenti|liberalitas|muner",
+   "est": 246
+  },
+  {
+   "id": "monument.unspecified",
+   "category": "monument",
+   "subtype": "monument.unspecified",
+   "pattern": "monument|monumentu|monimentu|^memori|dedicatio|^dedication",
+   "est": 900
+  },
+  {
+   "id": "structure.water_extra",
+   "category": "structure",
+   "subtype": "structure.water",
+   "pattern": "nymfium|nymfeum|exceptori",
+   "$comment": "裾の具体語を既存 subtype に回収する追加規則（2026-10-14）。既存50規則の後ろに置くため、先に確定する分類は一切変更しない。"
+  },
+  {
+   "id": "structure.wall_extra",
+   "category": "structure",
+   "subtype": "structure.wall",
+   "pattern": "munimenta|^arce$|^arces|arcem|k\\(?a\\)?st\\(?r|castra|burgum|τείχεα|^muri |^muri$|^muros|^munitionem$|^hanc munitionem$",
+   "$comment": "裾の具体語を既存 subtype に回収する追加規則（2026-10-14）。既存50規則の後ろに置くため、先に確定する分類は一切変更しない。"
+  },
+  {
+   "id": "structure.utility_extra",
+   "category": "structure",
+   "subtype": "structure.utility",
+   "pattern": "officina|off\\(|^furnus|f\\[?urnus|fornac|orreum|horreum|teloneum|ponderario|^station|meritoria|^puteus|^casam|conditiv",
+   "$comment": "裾の具体語を既存 subtype に回収する追加規則（2026-10-14）。既存50規則の後ろに置くため、先に確定する分類は一切変更しない。"
+  },
+  {
+   "id": "structure.domestic_extra",
+   "category": "structure",
+   "subtype": "structure.domestic",
+   "pattern": "pr\\(?a\\)?etorium|praetorium|^aula$|^aulas|triclas|z\\[?othec|cryptam|c\\]?ry\\[?ptam|ex\\{?h\\}?edra",
+   "$comment": "裾の具体語を既存 subtype に回収する追加規則（2026-10-14）。既存50規則の後ろに置くため、先に確定する分類は一切変更しない。"
+  },
+  {
+   "id": "structure.temple_extra",
+   "category": "structure",
+   "subtype": "structure.temple",
+   "pattern": "pantheum|s<y=i>nagoga|synagoga|κτίσμα|martyri",
+   "$comment": "裾の具体語を既存 subtype に回収する追加規則（2026-10-14）。既存50規則の後ろに置くため、先に確定する分類は一切変更しない。"
+  },
+  {
+   "id": "structure.civic_extra",
+   "category": "structure",
+   "subtype": "structure.civic",
+   "pattern": "septizon|septizod|helioforum|c\\(?h\\)?alc.?.?idic|cuchlia|t\\(?h\\)?ol[ou]|thol\\[?o|paganic|viridiari",
+   "$comment": "裾の具体語を既存 subtype に回収する追加規則（2026-10-14）。既存50規則の後ろに置くため、先に確定する分類は一切変更しない。"
+  },
+  {
+   "id": "structure.element_extra",
+   "category": "structure",
+   "subtype": "structure.element",
+   "pattern": "epist|tetrastyl|propyl|^antas|^antis|pronao|στύλοι|capitulum|valv|^limen|plute|concamarat|compagin|contig|tessellat|tesellat|opus tector|opus quadrat|opus intestin|signin|solarium|soliar|gradib|graduum|ascensus|^aditus|ingressus|^ostia|osteum|^ostium|super ostia|^frontes|front\\[?i|facies oper|^faciem|parieti|podism|anaclit",
+   "$comment": "裾の具体語を既存 subtype に回収する追加規則（2026-10-14）。既存50規則の後ろに置くため、先に確定する分類は一切変更しない。"
+  }
+ ],
+ "object_type_direct": {
+  "$comment": "表層形で決まらなかった場合のフォールバック。needs_llm=true は表層形を見ても確定できないため LLM へ回す",
+  "temple": {
+   "category": "structure",
+   "subtype": "structure.temple"
+  },
+  "shrine": {
+   "category": "structure",
+   "subtype": "structure.temple"
+  },
+  "bath": {
+   "category": "structure",
+   "subtype": "structure.bath"
+  },
+  "portico": {
+   "category": "structure",
+   "subtype": "structure.portico"
+  },
+  "basilica": {
+   "category": "structure",
+   "subtype": "structure.basilica"
+  },
+  "theater": {
+   "category": "structure",
+   "subtype": "structure.theater"
+  },
+  "arch": {
+   "category": "structure",
+   "subtype": "structure.arch"
+  },
+  "forum": {
+   "category": "structure",
+   "subtype": "structure.forum"
+  },
+  "wall": {
+   "category": "structure",
+   "subtype": "structure.wall"
+  },
+  "column": {
+   "category": "structure",
+   "subtype": "structure.element"
+  },
+  "church": {
+   "category": "structure",
+   "subtype": "structure.church"
+  },
+  "building": {
+   "category": "structure",
+   "subtype": null,
+   "needs_llm": true,
+   "note": "1,157件。表層形ルールで498件が降格、234件が unknown.illegible、残425件が LLM 対象"
+  },
+  "statue": {
+   "category": "monument",
+   "subtype": "monument.statue"
+  },
+  "signum": {
+   "category": "monument",
+   "subtype": "monument.statue"
+  },
+  "altar": {
+   "category": "monument",
+   "subtype": "monument.altar"
+  },
+  "decoration": {
+   "category": "monument",
+   "subtype": "monument.decoration"
+  },
+  "monument": {
+   "category": "monument",
+   "subtype": "monument.unspecified"
+  },
+  "tomb": {
+   "category": "funerary",
+   "subtype": "funerary.tomb"
+  },
+  "road": {
+   "category": "infrastructure",
+   "subtype": "infrastructure.road"
+  },
+  "aqueduct": {
+   "category": "infrastructure",
+   "subtype": "infrastructure.aqueduct"
+  },
+  "bridge": {
+   "category": "infrastructure",
+   "subtype": "infrastructure.bridge"
+  },
+  "fountain": {
+   "category": "infrastructure",
+   "subtype": "infrastructure.water"
+  },
+  "water source": {
+   "category": "infrastructure",
+   "subtype": "infrastructure.water"
+  },
+  "military infrastructure": {
+   "category": "infrastructure",
+   "subtype": "infrastructure.military"
+  },
+  "money": {
+   "category": "distribution",
+   "subtype": "distribution.money"
+  },
+  "sportulae": {
+   "category": "distribution",
+   "subtype": "distribution.sportulae"
+  },
+  "congiarium": {
+   "category": "distribution",
+   "subtype": "distribution.sportulae"
+  },
+  "public banquet": {
+   "category": "distribution",
+   "subtype": "distribution.banquet"
+  },
+  "gladiatorial games": {
+   "category": "spectacle",
+   "subtype": "spectacle.gladiatorial"
+  },
+  "games": {
+   "category": "spectacle",
+   "subtype": "spectacle.gladiatorial"
+  },
+  "theatrical performances": {
+   "category": "spectacle",
+   "subtype": "spectacle.theatrical"
+  },
+  "ritual sacrifice": {
+   "category": "offering",
+   "subtype": "offering.sacrifice"
+  },
+  "votive offering": {
+   "category": "offering",
+   "subtype": "offering.votive"
+  },
+  "ritual": {
+   "category": "offering",
+   "subtype": "offering.unspecified",
+   "refine_llm": true,
+   "note": "行為の軸。対象物ではないため要判断（§6 論点5）"
+  },
+  "dedication": {
+   "category": "monument",
+   "subtype": "monument.unspecified",
+   "refine_llm": true,
+   "note": "行為の軸。対象物ではないため要判断（§6 論点5）"
+  },
+  "land": {
+   "category": "privilege",
+   "subtype": "privilege.land"
+  },
+  "city": {
+   "category": "privilege",
+   "subtype": "privilege.legal_status"
+  },
+  "vicus": {
+   "category": "privilege",
+   "subtype": "privilege.legal_status"
+  },
+  "unknown": {
+   "category": "unknown",
+   "subtype": "unknown.illegible"
+  },
+  "other": {
+   "category": null,
+   "subtype": null,
+   "needs_llm": true,
+   "note": "2,833件。表層形ルールで大半を解決し、残りを LLM へ"
+  }
+ },
+ "analysis_flags": {
+  "$comment": "ネットワーク分析時に人工的ハブとなるため除外オプションを用意すべきカテゴリ（OBJECT_TYPE_INVENTORY.md §7-6）",
+  "artificial_hub": [
+   "monument.unspecified",
+   "offering.unspecified",
+   "unknown.illegible",
+   "unknown.verb_only"
+  ]
+ },
+ "$comment_structure_tail": "structure 系の裾（239種・339件）のうち、反復する識別可能な建造物語彙を *_extra 規則で既存 subtype に回収した（118件）。残り221件は opus / aedificium などの真の汎用語か、読解困難な断片であり、語彙追加では解決しない（§3-1 と同じ結論）。"
+}
