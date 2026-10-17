@@ -38,6 +38,12 @@ ontology/
 
 # Validated data (published separately via Zenodo)
 pipeline/validated_career_graphs/
+# provenance 配下のデータと生成物（549MB / 424MB）。
+# validated_career_graphs は抽出・enrich の成果、rdf_output_himiko は
+# create_rdf_himiko.py がそこから生成する派生物
+pipeline/provenance/validated_career_graphs/
+pipeline/provenance/rdf_output_himiko/
+pipeline/provenance/edits/
 
 # Progress / checkpoint files
 *_progress.json
