@@ -21,6 +21,20 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).parent.parent
 LOG_DIR = Path(__file__).parent / "logs"
 
+
+def iter_place_dirs(model_dir: Path):
+    """Iterate place dirs, transparently handling province subdirectory layer."""
+    for entry in sorted(model_dir.iterdir()):
+        if not entry.is_dir():
+            continue
+        if any(entry.glob('*.json')):
+            yield entry
+        else:
+            for sub in sorted(entry.iterdir()):
+                if sub.is_dir():
+                    yield sub
+
+
 # ── Controlled vocabularies ─────────────────────────────────────────────────
 
 VALID_GENDERS = {"male", "female", "unknown", ""}
@@ -29,7 +43,11 @@ VALID_POSITION_TYPES = {
     "military", "other",
     "local-administration", "provincial-administration",
     "imperial-administration", "local-priesthood", "provincial-priesthood",
-    "imperial-priesthood", "economic", "occupation"
+    "imperial-priesthood", "economic", "occupation",
+    # 称号（imperator, pater patriae, 勝利称号等）。職務ではないが
+    # career_path に記録される。2026-10-17 に classify_position.py が
+    # 5,693 件を分離した。epig:PositionType の11個体と対応する。
+    "title",
 }
 VALID_BENEFACTION_TYPES = {
     "construction", "repair", "donation", "games", "feast", "other", "", "statue", "dedication"
@@ -166,11 +184,15 @@ def validate_community(errors, path, comm):
 
 
 def validate_relationship(errors, path, rel):
-    check_field(errors, path, rel, "source_person_id", int)
+    # source_person_id is null when the source is a community rather than a person
+    if "source_person_id" in rel:
+        v = rel["source_person_id"]
+        if v is not None and not isinstance(v, int):
+            errors.append(f"{path}.source_person_id: expected int or null, got {type(v).__name__} ({v!r})")
     check_field(errors, path, rel, "type", str, allowed_values=VALID_RELATIONSHIP_TYPES)
-    check_field(errors, path, rel, "property", str)
-    check_field(errors, path, rel, "property_text", str)
-    check_field(errors, path, rel, "notes", str)
+    check_field(errors, path, rel, "property", str, required=False)
+    check_field(errors, path, rel, "property_text", str, required=False)
+    check_field(errors, path, rel, "notes", str, required=False)
     for f in ("target_person_id", "target_community_id"):
         if f in rel:
             v = rel[f]
@@ -289,7 +311,7 @@ def main():
     log_path = LOG_DIR / f"{log_prefix}_{args.model}_{timestamp}.log"
     logger = setup_logger(log_path)
 
-    place_dirs = sorted([d for d in model_dir.iterdir() if d.is_dir()])
+    place_dirs = list(iter_place_dirs(model_dir))
     if args.places:
         names = {p.strip() for p in args.places.split(",")}
         place_dirs = [d for d in place_dirs if d.name in names]
