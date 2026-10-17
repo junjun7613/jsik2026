@@ -67,6 +67,9 @@ def _load_sirar_mapping() -> dict:
 BASE         = 'http://epigraphic-careers.org/'
 EPIG_NS      = BASE + 'ontology#'
 EPIGF_NS     = BASE + 'ontology/funding/'
+EPIGO_NS     = BASE + 'ontology/object/'
+EPIGS_NS     = BASE + 'ontology/status/'
+EPIGP_NS     = BASE + 'ontology/position/'
 ACTIVITY_NS  = BASE + 'activity/'
 AGENT_NS     = BASE + 'agent/'
 GRAPH_NS     = BASE + 'graph/'
@@ -93,6 +96,9 @@ SCHEMA_NS  = 'https://schema.org/'
 
 PREFIXES = f"""\
 @prefix epig:   <{EPIG_NS}> .
+@prefix epigo:  <{EPIGO_NS}> .
+@prefix epigs:  <{EPIGS_NS}> .
+@prefix epigp:  <{EPIGP_NS}> .
 @prefix hmkp:   <{HMKP_NS}> .
 @prefix hmki:   <{HMKI_NS}> .
 @prefix hmke:   <{HMKE_NS}> .
@@ -104,6 +110,14 @@ PREFIXES = f"""\
 @prefix pleiad: <{PLEIADES_NS}> .
 @prefix schema: <{SCHEMA_NS}> .
 """
+
+
+# epig:positionType は 2026-10-17 に xsd:string から epig:PositionType へ
+# range を変更した。JSON 側は文字列のままなので、ここで URI に写像する。
+# ハイフンは URI のローカル名に使えるがアンダースコアに揃える
+# （epigp:imperial_administration）。
+def _position_type_uri(value: str) -> str:
+    return f'<{EPIGP_NS}{value.strip().replace("-", "_")}>'
 
 
 # ── Serialisation helpers ─────────────────────────────────────────────────────
@@ -521,6 +535,9 @@ def _build_entity_refs(record: dict) -> list[str]:
     lines: list[str] = []
     entity_nodes: list[str] = []   # hmke:Entity blocks, deduplicated
     emitted_entities: set[str] = set()
+    # epig:SocialStatusStatement blocks, emitted after the person references
+    # so each person's own block stays contiguous.
+    status_nodes: list[str] = []
 
     for person in record.get('persons', []):
         p_name = person.get('person_name', '')
@@ -545,7 +562,7 @@ def _build_entity_refs(record: dict) -> list[str]:
         if person.get('cognomen'):
             lines.append(f'    epig:cognomen {_lit(person["cognomen"])} ;')
         if person.get('person_name_normalized'):
-            lines.append(f'    epig:normalizedName {_lit(person["person_name_normalized"])} ;')
+            lines.append(f'    hmki:normalizedForm {_lit(person["person_name_normalized"])} ;')
         gender = person.get('gender', '')
         if gender and gender != 'unknown':
             lines.append(f'    epig:gender {_lit(gender)} ;')
@@ -559,6 +576,34 @@ def _build_entity_refs(record: dict) -> list[str]:
             lines.append(f'    epig:socialStatus {_lit(person["social_status"])} ;')
         if person.get('social_status_evidence'):
             lines.append(f'    epig:socialStatusEvidence {_lit(person["social_status_evidence"])} ;')
+        # Social status statements (classify_social_status.py).  A person can
+        # hold several statuses at once — legal standing, ordo, occupation and
+        # religious standing are independent axes — so each is a separate node
+        # carrying its own evidence and certainty.  epig:socialStatus above is
+        # the uncontrolled extraction value and is kept for provenance.
+        for n, st in enumerate(person.get('social_statuses') or []):
+            st_uri = f'<{ENTITYREF_NS}{_safe_id(edcs_id)}/person/{p_id}/status/{n}>'
+            lines.append(f'    epig:hasSocialStatusStatement {st_uri} ;')
+            status_nodes.append(f'  {st_uri}')
+            status_nodes.append(f'    a epig:SocialStatusStatement ;')
+            status_nodes.append(
+                f'    epig:socialStatusCategory <{EPIGS_NS}{st["category"]}> ;')
+            if st.get('subtype'):
+                status_nodes.append(
+                    f'    epig:socialStatusSubtype <{EPIGS_NS}{st["subtype"]}> ;')
+            if st.get('rank'):
+                status_nodes.append(f'    epig:statusRank {_lit(st["rank"])} ;')
+            if st.get('evidence'):
+                status_nodes.append(f'    epig:statusEvidence {_lit(st["evidence"])} ;')
+            if st.get('certainty'):
+                status_nodes.append(f'    epig:statusCertainty {_lit(st["certainty"])} ;')
+            if st.get('reasoning'):
+                status_nodes.append(f'    epig:statusReasoning {_lit(st["reasoning"])} ;')
+            if st.get('source'):
+                status_nodes.append(
+                    f'    epig:socialStatusSource {_lit(st["source"])} ;')
+            status_nodes[-1] = status_nodes[-1][:-1].rstrip() + ' .'
+            status_nodes.append('')
         wikidata_qid = person.get('person_name_link', '').strip()
         if wikidata_qid and person.get('social_status') == 'emperor':
             norm = person.get('person_name_normalized', '').strip().replace(' ', '_')
@@ -613,6 +658,7 @@ def _build_entity_refs(record: dict) -> list[str]:
         lines.append('')
 
     lines.extend(entity_nodes)
+    lines.extend(status_nodes)
 
     for community in record.get('communities', []):
         c_name = community.get('community_name', '')
@@ -694,7 +740,17 @@ def _build_career_statements(record: dict, extract_act_uri: str | None,
             if cp.get('position_abstract'):
                 lines.append(f'    epig:positionAbstract {_lit(cp["position_abstract"])} ;')
             if cp.get('position_type'):
-                lines.append(f'    epig:positionType {_lit(cp["position_type"])} ;')
+                lines.append(f'    epig:positionType {_position_type_uri(cp["position_type"])} ;')
+            # 官職の統制語彙（classify_position.py）。全659種のうち主要な
+            # 52種のみを定義しているため、対応がない役職には付与しない。
+            if cp.get('position_canonical'):
+                lines.append(f'    epig:positionCanonical <{EPIGP_NS}{cp["position_canonical"]}> ;')
+            if cp.get('position_tier'):
+                lines.append(f'    epig:positionTier <{EPIGP_NS}tier_{cp["position_tier"]}> ;')
+            if cp.get('position_canonical_source'):
+                lines.append(f'    epig:positionCanonicalSource {_lit(cp["position_canonical_source"])} ;')
+            if cp.get('victory_title'):
+                lines.append(f'    epig:victoryTitle {_lit(cp["victory_title"])} ;')
             if cp.get('position_description'):
                 lines.append(f'    epig:positionDescription {_lit(cp["position_description"])} ;')
             order = cp.get('order')
@@ -721,7 +777,15 @@ def _build_career_statements(record: dict, extract_act_uri: str | None,
                 if cp.get('position_abstract'):
                     lines.append(f'    epig:positionAbstract {_lit(cp["position_abstract"])} ;')
                 if cp.get('position_type'):
-                    lines.append(f'    epig:positionType {_lit(cp["position_type"])} ;')
+                    lines.append(f'    epig:positionType {_position_type_uri(cp["position_type"])} ;')
+                if cp.get('position_canonical'):
+                    lines.append(f'    epig:positionCanonical <{EPIGP_NS}{cp["position_canonical"]}> ;')
+                if cp.get('position_tier'):
+                    lines.append(f'    epig:positionTier <{EPIGP_NS}tier_{cp["position_tier"]}> ;')
+                if cp.get('position_canonical_source'):
+                    lines.append(f'    epig:positionCanonicalSource {_lit(cp["position_canonical_source"])} ;')
+                if cp.get('victory_title'):
+                    lines.append(f'    epig:victoryTitle {_lit(cp["victory_title"])} ;')
                 if cp.get('position_description'):
                     lines.append(f'    epig:positionDescription {_lit(cp["position_description"])} ;')
                 if order is not None:
@@ -823,6 +887,10 @@ def _build_benefaction_statements(record: dict, extract_act_uri: str | None,
     """
     edcs_id = record.get('edcs_id', 'Unknown')
     lines: list[str] = []
+    # Per-object nodes for benefactions naming objects in more than one
+    # category; collected separately and appended after the statements so the
+    # statement block stays contiguous.
+    obj_lines: list[str] = []
     latest_uris: list[str] = []
     i = 0
 
@@ -859,6 +927,47 @@ def _build_benefaction_statements(record: dict, extract_act_uri: str | None,
             lines.append(f'    epig:objectText {_lit(benef["object"])} ;')
         if benef.get('object_type'):
             lines.append(f'    epig:objectType {_lit(benef["object_type"])} ;')
+        # Object categories (classify_object_category.py).  The controlled
+        # vocabulary lives on benefactions[].objects[], not on the scalar
+        # object_type above: objects[] is the post-enrichment split and is what
+        # the classifier actually ran over.
+        #
+        # Only emit the category onto the statement itself when the benefaction
+        # names a single object.  501 benefactions list several objects and 135
+        # of those span more than one category; flattening them here would pair
+        # every category with every subtype and silently corrupt the data.  Such
+        # benefactions get their categories on per-object nodes instead, so that
+        # each category keeps its own subtype and source.
+        objs = benef.get('objects') or []
+        classified = [o for o in objs if o.get('object_category')]
+        if len(classified) == 1:
+            obj = classified[0]
+            lines.append(f'    epig:objectCategory <{EPIGO_NS}{obj["object_category"]}> ;')
+            if obj.get('object_subtype'):
+                lines.append(f'    epig:objectSubtype <{EPIGO_NS}{obj["object_subtype"]}> ;')
+            if obj.get('object_category_source'):
+                lines.append(f'    epig:objectCategorySource {_lit(obj["object_category_source"])} ;')
+        elif len(classified) > 1:
+            for n, obj in enumerate(classified):
+                o_uri = f'{mk_uri[:-1]}/object/{n}>'
+                lines.append(f'    epig:hasObjectStatement {o_uri} ;')
+                obj_lines.append(f'  {o_uri}')
+                obj_lines.append(f'    a epig:BenefactionObjectStatement ;')
+                if obj.get('object'):
+                    obj_lines.append(f'    epig:objectText {_lit(obj["object"])} ;')
+                if obj.get('object_type'):
+                    obj_lines.append(f'    epig:objectType {_lit(obj["object_type"])} ;')
+                obj_lines.append(
+                    f'    epig:objectCategory <{EPIGO_NS}{obj["object_category"]}> ;')
+                if obj.get('object_subtype'):
+                    obj_lines.append(
+                        f'    epig:objectSubtype <{EPIGO_NS}{obj["object_subtype"]}> ;')
+                if obj.get('object_category_source'):
+                    obj_lines.append(
+                        f'    epig:objectCategorySource '
+                        f'{_lit(obj["object_category_source"])} ;')
+                obj_lines[-1] = obj_lines[-1][:-1].rstrip() + ' .'
+                obj_lines.append('')
         if benef.get('cost'):
             lines.append(f'    epig:costOriginalText {_lit(benef["cost"])} ;')
         if benef.get('cost_conversion_reasoning'):
@@ -1024,7 +1133,7 @@ def _build_benefaction_statements(record: dict, extract_act_uri: str | None,
             latest_uris.append(v0_uri)
             i += 1
 
-    return lines, latest_uris
+    return lines + obj_lines, latest_uris
 
 
 def _build_relationship_statements(record: dict) -> tuple[list[str], list[str]]:
@@ -1159,13 +1268,22 @@ HISTORY_FIELD_PREDICATE = {
     'persons[].praenomen':                         'epig:praenomen',
     'persons[].nomen':                             'epig:nomen',
     'persons[].cognomen':                          'epig:cognomen',
-    'persons[].person_name_normalized':            'epig:normalizedName',
+    'persons[].person_name_normalized':            'hmki:normalizedForm',
     'persons[].gender':                            'epig:gender',
     'persons[].gender_evidence':                   'epig:genderEvidence',
     'persons[].ethnicity':                         'epig:ethnicity',
     'persons[].ethnicity_evidence':                'epig:ethnicityEvidence',
     'persons[].social_status':                     'epig:socialStatus',
     'persons[].social_status_evidence':            'epig:socialStatusEvidence',
+    'persons[].social_statuses':                   'epig:hasSocialStatusStatement',
+    'career_path[].position_canonical':            'epig:positionCanonical',
+    'career_path[].position_tier':                 'epig:positionTier',
+    'career_path[].position_canonical_source':     'epig:positionCanonicalSource',
+    'career_path[].victory_title':                 'epig:victoryTitle',
+    'persons[].social_status_source':              'epig:socialStatusSource',
+    'benefactions[].objects[].object_category':    'epig:objectCategory',
+    'benefactions[].objects[].object_subtype':     'epig:objectSubtype',
+    'benefactions[].objects[].object_category_source': 'epig:objectCategorySource',
     'persons[].age_at_death':                      'epig:ageAtDeath',
     'persons[].age_at_death_evidence':             'epig:ageAtDeathEvidence',
     'persons[].divinity':                          'epig:isDivinity',
