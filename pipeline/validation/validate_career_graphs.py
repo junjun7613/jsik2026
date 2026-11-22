@@ -15,10 +15,51 @@ Usage:
 import json
 import argparse
 import logging
+import sys
 from datetime import datetime
 from pathlib import Path
 
-SCRIPT_DIR = Path(__file__).parent.parent
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from vocab import (  # noqa: E402
+    COMMUNITY_TYPES, DEATH_PLACE_SOURCES, LIFE_EVENT_TYPES,
+    SOCIAL_STATUS_LABELS, STATUS_CERTAINTY, load_vocab,
+)
+
+SCRIPT_DIR = Path(__file__).parent.parent / "provenance"  # where *_career_graphs live
+
+
+class IssueList(list):
+    """Errors go in the list itself; warnings in `.warnings`.
+
+    Warnings mark values that are out of vocabulary but already superseded by
+    a later controlled field (e.g. raw social_status → social_statuses[]).
+    """
+    def __init__(self):
+        super().__init__()
+        self.warnings = []
+
+
+def warn(errors, msg):
+    if isinstance(errors, IssueList):
+        errors.warnings.append(msg)
+    else:
+        errors.append(msg)
+
+
+def check_vocab(errors, path, obj, field, allowed, level="error"):
+    """Out-of-vocabulary check for an optional field (absent / null → skipped)."""
+    if field not in obj or obj[field] is None:
+        return
+    if obj[field] not in allowed:
+        msg = f"{path}.{field}: out-of-vocabulary value {obj[field]!r}"
+        (errors.append if level == "error" else lambda m: warn(errors, m))(msg)
+
+
+def check_hierarchical(errors, path, obj, cat_field, sub_field):
+    """subtype must be '<category>.<x>'."""
+    c, s = obj.get(cat_field), obj.get(sub_field)
+    if c and s and not s.startswith(f"{c}."):
+        errors.append(f"{path}.{sub_field}: {s!r} inconsistent with {cat_field} {c!r}")
 LOG_DIR = Path(__file__).parent / "logs"
 
 
@@ -91,6 +132,15 @@ def validate_career_position(errors, path, pos):
     check_field(errors, path, pos, "position_description", str)
     check_field(errors, path, pos, "order", int)
 
+    # classify_position.py output. A tier needs a canonical; a canonical may lack
+    # a tier when its map entry derives the tier from context and none applies
+    # (adlectus with no stated target, map v1.1).
+    v = load_vocab()
+    if "position_tier" in pos and "position_canonical" not in pos:
+        errors.append(f"{path}: position_tier without position_canonical")
+    check_vocab(errors, path, pos, "position_canonical", v["position_canonical"])
+    check_vocab(errors, path, pos, "position_tier", v["position_tier"])
+
 
 def validate_benefaction(errors, path, benef):
     check_field(errors, path, benef, "benefaction_type", str, allowed_values=VALID_BENEFACTION_TYPES)
@@ -109,6 +159,19 @@ def validate_benefaction(errors, path, benef):
         check_field(errors, path, benef, "cost_original", str, required=False)
     if "cost_conversion_reasoning" in benef:
         check_field(errors, path, benef, "cost_conversion_reasoning", str, required=False)
+
+    # The prompt requires objects[] on every benefaction ("Always populate").
+    v = load_vocab()
+    if not isinstance(benef.get("objects"), list) or not benef["objects"]:
+        errors.append(f"{path}: missing or empty 'objects' (prompt requires at least one entry)")
+    else:
+        for j, o in enumerate(benef["objects"]):
+            p = f"{path}.objects[{j}]"
+            check_field(errors, p, o, "object", str)
+            check_field(errors, p, o, "object_type", str)
+            check_vocab(errors, p, o, "object_category", v["object_category"])
+            check_vocab(errors, p, o, "object_subtype", v["object_subtype"])
+            check_hierarchical(errors, p, o, "object_category", "object_subtype")
 
 
 def validate_person(errors, path, person, simplified=False):
@@ -173,12 +236,50 @@ def validate_person(errors, path, person, simplified=False):
     if "divinity_classification_reasoning" in person:
         check_field(errors, path, person, "divinity_classification_reasoning", str, required=False)
 
+    validate_person_controlled(errors, path, person)
+
+
+def validate_person_controlled(errors, path, person):
+    """Checks against vocabularies defined after extraction (enrich / classify passes)."""
+    v = load_vocab()
+
+    # Enrichment passes (divinity, vital_events) run on every person.
+    for f in ("divinity", "life_events", "vital_events_reasoning"):
+        if f not in person:
+            errors.append(f"{path}: missing enrichment field '{f}'")
+    for i, ev in enumerate(person.get("life_events") or []):
+        p = f"{path}.life_events[{i}]"
+        check_field(errors, p, ev, "event_type", str, allowed_values=LIFE_EVENT_TYPES)
+        if "place_source" in ev and ev["place_source"] not in DEATH_PLACE_SOURCES:
+            errors.append(f"{p}.place_source: out-of-vocabulary value {ev['place_source']!r}")
+
+    # Raw social_status is superseded by social_statuses[] → warning only.
+    check_vocab(errors, path, person, "social_status", SOCIAL_STATUS_LABELS, level="warning")
+
+    # Emperor identification must use the ROMAN EMPERORS LIST.
+    name, link = person.get("person_name_normalized") or "", person.get("person_name_link") or ""
+    if name and name not in v["emperor_names"]:
+        errors.append(f"{path}.person_name_normalized: {name!r} not in ROMAN EMPERORS LIST")
+    if link and link not in v["emperor_qids"]:
+        errors.append(f"{path}.person_name_link: {link!r} not in ROMAN EMPERORS LIST")
+    if name in v["emperor_by_name"] and link and v["emperor_by_name"][name] != link:
+        errors.append(f"{path}: person_name_link {link!r} does not match {name!r} "
+                      f"({v['emperor_by_name'][name]})")
+
+    for i, s in enumerate(person.get("social_statuses") or []):
+        p = f"{path}.social_statuses[{i}]"
+        check_field(errors, p, s, "category", str, allowed_values=v["status_category"])
+        check_vocab(errors, p, s, "subtype", v["status_subtype"])
+        check_vocab(errors, p, s, "rank", v["status_rank"])
+        check_field(errors, p, s, "certainty", str, allowed_values=STATUS_CERTAINTY)
+        check_hierarchical(errors, p, s, "category", "subtype")
+
 
 def validate_community(errors, path, comm):
     check_field(errors, path, comm, "community_id", int)
     check_field(errors, path, comm, "community_name", str)
     check_field(errors, path, comm, "community_name_normalized", str)
-    check_field(errors, path, comm, "community_type", str)
+    check_field(errors, path, comm, "community_type", str, allowed_values=COMMUNITY_TYPES)
     check_field(errors, path, comm, "community_description", str)
     check_field(errors, path, comm, "evidence", str)
 
@@ -243,8 +344,15 @@ def validate_inscription(errors, path, insc):
             errors.append(f"{path}.notes: expected string or null")
 
 
+def validate_inscription_issues(insc, path="$"):
+    """Validate one inscription; return (errors, warnings). Used by the evaluation queue."""
+    issues = IssueList()
+    validate_inscription(issues, path, insc)
+    return list(issues), issues.warnings
+
+
 def validate_file(json_path):
-    errors = []
+    errors = IssueList()
     try:
         with open(json_path, encoding="utf-8") as f:
             data = json.load(f)
@@ -331,22 +439,27 @@ def main():
     total_files = 0
     total_inscriptions = 0
     total_errors = 0
+    total_warnings = 0
     files_with_errors = 0
     report = []
 
     for place_dir in place_dirs:
         for json_path in sorted(place_dir.glob("*.json")):
             errors, count = validate_file(json_path)
+            warnings = getattr(errors, "warnings", [])
             total_files += 1
             total_inscriptions += count
             total_errors += len(errors)
+            total_warnings += len(warnings)
             rel_path = json_path.relative_to(SCRIPT_DIR)
 
             report.append({
                 "file": str(rel_path),
                 "inscriptions": count,
                 "error_count": len(errors),
-                "errors": errors,
+                "errors": list(errors),
+                "warning_count": len(warnings),
+                "warnings": warnings,
             })
 
             if errors:
@@ -365,6 +478,7 @@ def main():
     logger.info(f"Total inscriptions : {total_inscriptions}")
     logger.info(f"Files with errors  : {files_with_errors} / {total_files}")
     logger.info(f"Total errors       : {total_errors}")
+    logger.info(f"Total warnings     : {total_warnings}  (out-of-vocabulary raw social_status)")
     if total_errors == 0:
         logger.info("✓ All files passed validation")
     logger.info(f"Log saved to       : {log_path}")
@@ -379,6 +493,7 @@ def main():
             "total_inscriptions": total_inscriptions,
             "files_with_errors": files_with_errors,
             "total_errors": total_errors,
+            "total_warnings": total_warnings,
             "files": report,
         }, f, ensure_ascii=False, indent=2)
     logger.info(f"JSON report saved  : {out_path}")
