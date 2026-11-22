@@ -166,7 +166,7 @@ function flagHTML(d, i, f, k) {
        onclick="setField(${i},${k},'${v}')">${label}</button>`;
   return `<div class="flag" data-h="${esc(h.verdict || '')}">
     <div class="flag-path">${esc(f.path)}</div>
-    <div class="flag-val">${f.current_value == null ? '<i>（抽出結果に該当フィールドなし）</i>' : esc(f.current_value)}</div>
+    <div class="flag-val">${f.judged_value == null ? '<i>（抽出結果に該当フィールドなし）</i>' : esc(f.judged_value)}</div>
     ${judgeRows(f)}
     <div class="h-row">
       ${btn('extraction_correct', '✓ 抽出値は正しい', 'correct')}

@@ -247,7 +247,8 @@
    "flagged": [
     {
      "path": "persons[0].life_events",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
      "judges": {
@@ -276,7 +277,8 @@
     },
     {
      "path": "persons[1].life_events[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
      "judges": {
@@ -305,7 +307,8 @@
     },
     {
      "path": "persons[2].life_events[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
      "judges": {
@@ -334,7 +337,8 @@
     },
     {
      "path": "persons[3].life_events[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
      "judges": {
@@ -363,7 +367,8 @@
     },
     {
      "path": "communities",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
      "judges": {
@@ -392,7 +397,8 @@
     },
     {
      "path": "person_relationships",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
      "judges": {
@@ -421,7 +427,8 @@
     },
     {
      "path": "person_relationships[3]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
      "judges": {
@@ -450,7 +457,8 @@
     },
     {
      "path": "persons[0].ethnicity_evidence",
-     "current_value": "\"Roman tria nomina, Roman tribe (Voltinia)\"",
+     "judged_value": "\"Roman tria nomina, Roman tribe (Voltinia)\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -479,7 +487,8 @@
     },
     {
      "path": "persons[0].gender_evidence",
-     "current_value": "\"Q(uinti) f(ilius), centurio, masculine grammatical forms\"",
+     "judged_value": "\"Q(uinti) f(ilius), centurio, masculine grammatical forms\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -508,7 +517,8 @@
     },
     {
      "path": "persons[1].ethnicity_evidence",
-     "current_value": "\"Roman emperor\"",
+     "judged_value": "\"Roman emperor\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -537,7 +547,8 @@
     },
     {
      "path": "persons[1].gender_evidence",
-     "current_value": "\"Emperor Domitian\"",
+     "judged_value": "\"Emperor Domitian\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -566,7 +577,8 @@
     },
     {
      "path": "persons[2].ethnicity_evidence",
-     "current_value": "\"Roman tria nomina\"",
+     "judged_value": "\"Roman tria nomina\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -595,7 +607,8 @@
     },
     {
      "path": "persons[2].gender_evidence",
-     "current_value": "\"M(arcus), optio, masculine grammatical forms\"",
+     "judged_value": "\"M(arcus), optio, masculine grammatical forms\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -624,7 +637,8 @@
     },
     {
      "path": "persons[3].ethnicity_evidence",
-     "current_value": "\"Roman name\"",
+     "judged_value": "\"Roman name\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -653,7 +667,8 @@
     },
     {
      "path": "persons[3].gender_evidence",
-     "current_value": "\"Q(uinti) f(ilius) - father designation\"",
+     "judged_value": "\"Q(uinti) f(ilius) - father designation\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -682,7 +697,8 @@
     },
     {
      "path": "persons[3].person_name",
-     "current_value": "\"Q(uintus) Vilanius (father)\"",
+     "judged_value": "\"Q(uintus) Vilanius (father)\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -704,7 +720,8 @@
     },
     {
      "path": "persons[0].social_statuses",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -719,7 +736,8 @@
     },
     {
      "path": "communities[0].community_name",
-     "current_value": "\"coh(ors) XIII urb(ana)\"",
+     "judged_value": "\"coh(ors) XIII urb(ana)\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -734,7 +752,8 @@
     },
     {
      "path": "person_relationships[1].property_text",
-     "current_value": "\"M(arcus) Silius Quintianus optio bene merenti posuit\"",
+     "judged_value": "\"M(arcus) Silius Quintianus optio bene merenti posuit\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -749,7 +768,8 @@
     },
     {
      "path": "person_relationships[2].property_text",
-     "current_value": "\"bene merenti posuit\"",
+     "judged_value": "\"bene merenti posuit\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -764,7 +784,8 @@
     },
     {
      "path": "persons[0].life_events[0].place_evidence",
-     "current_value": "\"inferred from findspot\"",
+     "judged_value": "\"inferred from findspot\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -779,7 +800,8 @@
     },
     {
      "path": "persons[1].social_status_evidence",
-     "current_value": "\"donis donatus a Domitiano\"",
+     "judged_value": "\"donis donatus a Domitiano\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -794,7 +816,8 @@
     },
     {
      "path": "persons[1].social_statuses[0].certainty",
-     "current_value": "\"explicit\"",
+     "judged_value": "\"explicit\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -809,7 +832,8 @@
     },
     {
      "path": "persons[3].nomen",
-     "current_value": "\"Vilanius\"",
+     "judged_value": "\"Vilanius\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -824,7 +848,8 @@
     },
     {
      "path": "persons[3].person_name_readable",
-     "current_value": "\"Quintus Vilanius (father of the deceased)\"",
+     "judged_value": "\"Quintus Vilanius (father of the deceased)\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -1042,7 +1067,8 @@
    "flagged": [
     {
      "path": "persons[3].gender",
-     "current_value": "\"male\"",
+     "judged_value": "\"male\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
      "judges": {
@@ -1071,7 +1097,8 @@
     },
     {
      "path": "person_relationships",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
      "judges": {
@@ -1100,7 +1127,8 @@
     },
     {
      "path": "persons[2].life_events[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
      "judges": {
@@ -1129,7 +1157,8 @@
     },
     {
      "path": "persons[3].life_events[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
      "judges": {
@@ -1158,7 +1187,8 @@
     },
     {
      "path": "persons[0].ethnicity_evidence",
-     "current_value": "\"Single name (cognomen only) without Roman tria nomina structure\"",
+     "judged_value": "\"Single name (cognomen only) without Roman tria nomina structure\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -1187,7 +1217,8 @@
     },
     {
      "path": "persons[0].gender_evidence",
-     "current_value": "\"Veneria (feminine name), vixit (feminine subject), se viva (feminine form)\"",
+     "judged_value": "\"Veneria (feminine name), vixit (feminine subject), se viva (feminine form)\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -1216,7 +1247,8 @@
     },
     {
      "path": "persons[2].ethnicity_evidence",
-     "current_value": "\"Single name (cognomen only), but Latin cognomen\"",
+     "judged_value": "\"Single name (cognomen only), but Latin cognomen\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -1245,7 +1277,8 @@
     },
     {
      "path": "persons[2].gender_evidence",
-     "current_value": "\"Fortunatus (masculine name), filius (son)\"",
+     "judged_value": "\"Fortunatus (masculine name), filius (son)\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -1274,7 +1307,8 @@
     },
     {
      "path": "persons[3].ethnicity_evidence",
-     "current_value": "\"Single name (cognomen only) with non-Latin form\"",
+     "judged_value": "\"Single name (cognomen only) with non-Latin form\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -1303,7 +1337,8 @@
     },
     {
      "path": "persons[3].gender_evidence",
-     "current_value": "\"filius (son)\"",
+     "judged_value": "\"filius (son)\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -1332,7 +1367,8 @@
     },
     {
      "path": "person_relationships[4].property",
-     "current_value": "\"daughter\"",
+     "judged_value": "\"daughter\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -1354,7 +1390,8 @@
     },
     {
      "path": "persons[2].ethnicity",
-     "current_value": "\"Roman with local name\"",
+     "judged_value": "\"Roman with local name\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -1376,7 +1413,8 @@
     },
     {
      "path": "persons[1].gender_evidence",
-     "current_value": "\"marito suo (masculine form)\"",
+     "judged_value": "\"marito suo (masculine form)\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -1398,7 +1436,8 @@
     },
     {
      "path": "person_relationships[5].property",
-     "current_value": "\"daughter\"",
+     "judged_value": "\"daughter\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -1413,7 +1452,8 @@
     },
     {
      "path": "persons[0].ethnicity",
-     "current_value": "\"local\"",
+     "judged_value": "\"local\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -1428,7 +1468,8 @@
     },
     {
      "path": "persons[0].cognomen",
-     "current_value": "\"Veneria\"",
+     "judged_value": "\"Veneria\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -1443,7 +1484,8 @@
     },
     {
      "path": "persons[0].life_events[0].place_evidence",
-     "current_value": "\"inferred from findspot\"",
+     "judged_value": "\"inferred from findspot\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -1458,7 +1500,8 @@
     },
     {
      "path": "persons[1].ethnicity",
-     "current_value": "\"unknown\"",
+     "judged_value": "\"unknown\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -1473,7 +1516,8 @@
     },
     {
      "path": "persons[1].life_events[0].place_evidence",
-     "current_value": "\"inferred from findspot\"",
+     "judged_value": "\"inferred from findspot\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -1488,7 +1532,8 @@
     },
     {
      "path": "persons[2].cognomen",
-     "current_value": "\"Fortunatus\"",
+     "judged_value": "\"Fortunatus\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -1503,7 +1548,8 @@
     },
     {
      "path": "persons[3].cognomen",
-     "current_value": "\"Matauta\"",
+     "judged_value": "\"Matauta\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -1639,7 +1685,8 @@
    "flagged": [
     {
      "path": "persons[1].benefactions[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
      "judges": {
@@ -1668,7 +1715,8 @@
     },
     {
      "path": "persons[0].social_status",
-     "current_value": "\"freedman\"",
+     "judged_value": "\"freedman\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
      "judges": {
@@ -1697,7 +1745,8 @@
     },
     {
      "path": "persons[1].life_events[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
      "judges": {
@@ -1726,7 +1775,8 @@
     },
     {
      "path": "person_relationships",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 1,
      "judges": {
@@ -1755,7 +1805,8 @@
     },
     {
      "path": "persons[0].ethnicity_evidence",
-     "current_value": "\"Roman tria nomina (Aulus Baebius) with Greek cognomen (Antiochus)\"",
+     "judged_value": "\"Roman tria nomina (Aulus Baebius) with Greek cognomen (Antiochus)\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -1784,7 +1835,8 @@
     },
     {
      "path": "persons[0].gender_evidence",
-     "current_value": "\"Masculine name forms (Aulus, Baebius, Antiochus)\"",
+     "judged_value": "\"Masculine name forms (Aulus, Baebius, Antiochus)\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -1813,7 +1865,8 @@
     },
     {
      "path": "persons[0].social_status_evidence",
-     "current_value": "\"Antioc(h)us (Greek cognomen typical of freedmen) and context of libertus relationship\"",
+     "judged_value": "\"Antioc(h)us (Greek cognomen typical of freedmen) and context of libertus relationship\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -1842,7 +1895,8 @@
     },
     {
      "path": "persons[1].ethnicity_evidence",
-     "current_value": "\"Latin/Greek cognomen (Hilarus) typical of freedman\"",
+     "judged_value": "\"Latin/Greek cognomen (Hilarus) typical of freedman\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -1871,7 +1925,8 @@
     },
     {
      "path": "persons[1].gender_evidence",
-     "current_value": "\"Masculine name form (Hilarus) and libertus (masculine)\"",
+     "judged_value": "\"Masculine name form (Hilarus) and libertus (masculine)\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -1900,7 +1955,8 @@
     },
     {
      "path": "persons[1].social_status_evidence",
-     "current_value": "\"l(ibertus) - explicitly identified as freedman\"",
+     "judged_value": "\"l(ibertus) - explicitly identified as freedman\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -1929,7 +1985,8 @@
     },
     {
      "path": "persons[1].social_statuses[0].evidence",
-     "current_value": "\"l(ibertus) - explicitly identified as freedman\"",
+     "judged_value": "\"l(ibertus) - explicitly identified as freedman\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -1958,7 +2015,8 @@
     },
     {
      "path": "persons[0].social_statuses[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
      "judges": {
@@ -1980,7 +2038,8 @@
     },
     {
      "path": "persons[1].ethnicity",
-     "current_value": "\"Roman with local name\"",
+     "judged_value": "\"Roman with local name\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -2002,7 +2061,8 @@
     },
     {
      "path": "persons[1].cognomen",
-     "current_value": "\"Hilarus\"",
+     "judged_value": "\"Hilarus\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -2024,7 +2084,8 @@
     },
     {
      "path": "persons[0].life_events[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -2039,7 +2100,8 @@
     },
     {
      "path": "persons[0].social_statuses[0].evidence",
-     "current_value": "\"Antioc(h)us (Greek cognomen typical of freedmen) and context of libertus relationship\"",
+     "judged_value": "\"Antioc(h)us (Greek cognomen typical of freedmen) and context of libertus relationship\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -2119,7 +2181,8 @@
    "flagged": [
     {
      "path": "communities[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
      "judges": {
@@ -2148,7 +2211,8 @@
     },
     {
      "path": "persons[0].ethnicity_evidence",
-     "current_value": "\"Roman nomen Iulius with local-sounding cognomen Icustus\"",
+     "judged_value": "\"Roman nomen Iulius with local-sounding cognomen Icustus\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -2177,7 +2241,8 @@
     },
     {
      "path": "persons[0].gender_evidence",
-     "current_value": "\"Iulius (masculine nomen)\"",
+     "judged_value": "\"Iulius (masculine nomen)\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -2206,7 +2271,8 @@
     },
     {
      "path": "persons",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
      "judges": {
@@ -2228,7 +2294,8 @@
     },
     {
      "path": "person_relationships",
-     "current_value": "[]",
+     "judged_value": "[]",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -2250,7 +2317,8 @@
     },
     {
      "path": "persons[0].ethnicity",
-     "current_value": "\"Roman with local name\"",
+     "judged_value": "\"Roman with local name\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -2265,7 +2333,8 @@
     },
     {
      "path": "persons[0].life_events",
-     "current_value": "[]",
+     "judged_value": "[]",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -2353,7 +2422,8 @@
    "flagged": [
     {
      "path": "persons[0].social_status",
-     "current_value": "\"freedman\"",
+     "judged_value": "\"freedman\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
      "judges": {
@@ -2382,7 +2452,8 @@
     },
     {
      "path": "persons[0].ethnicity_evidence",
-     "current_value": "\"Roman tria nomina with Greek cognomen\"",
+     "judged_value": "\"Roman tria nomina with Greek cognomen\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -2411,7 +2482,8 @@
     },
     {
      "path": "persons[0].gender_evidence",
-     "current_value": "\"masculine name forms\"",
+     "judged_value": "\"masculine name forms\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -2440,7 +2512,8 @@
     },
     {
      "path": "persons[0].social_status_evidence",
-     "current_value": "\"Greek cognomen 'Eutices' typical of freedmen\"",
+     "judged_value": "\"Greek cognomen 'Eutices' typical of freedmen\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -2469,7 +2542,8 @@
     },
     {
      "path": "persons[0].social_statuses[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
      "judges": {
@@ -2491,7 +2565,8 @@
     },
     {
      "path": "persons[0].ethnicity",
-     "current_value": "\"Roman with local name\"",
+     "judged_value": "\"Roman with local name\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -2513,7 +2588,8 @@
     },
     {
      "path": "persons[0].social_statuses[0].subtype",
-     "current_value": "\"legal.freedman\"",
+     "judged_value": "\"legal.freedman\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -2687,7 +2763,8 @@
    "flagged": [
     {
      "path": "person_relationships[4]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
      "judges": {
@@ -2716,7 +2793,8 @@
     },
     {
      "path": "persons[0].ethnicity_evidence",
-     "current_value": "\"Roman cognomen Adventus\"",
+     "judged_value": "\"Roman cognomen Adventus\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -2745,7 +2823,8 @@
     },
     {
      "path": "persons[0].nomen",
-     "current_value": "\"\"",
+     "judged_value": "\"\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -2774,7 +2853,8 @@
     },
     {
      "path": "persons[0].person_name",
-     "current_value": "\"Adventus\"",
+     "judged_value": "\"Adventus\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -2803,7 +2883,8 @@
     },
     {
      "path": "persons[1].ethnicity_evidence",
-     "current_value": "\"Roman cognomen Burrus\"",
+     "judged_value": "\"Roman cognomen Burrus\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -2832,7 +2913,8 @@
     },
     {
      "path": "persons[1].nomen",
-     "current_value": "\"\"",
+     "judged_value": "\"\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -2861,7 +2943,8 @@
     },
     {
      "path": "persons[1].person_name",
-     "current_value": "\"Burrus\"",
+     "judged_value": "\"Burrus\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -2890,7 +2973,8 @@
     },
     {
      "path": "persons[2].ethnicity_evidence",
-     "current_value": "\"Greek cognomen Agathopus with libertus status\"",
+     "judged_value": "\"Greek cognomen Agathopus with libertus status\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -2919,7 +3003,8 @@
     },
     {
      "path": "persons",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -2941,7 +3026,8 @@
     },
     {
      "path": "persons[1].gender_evidence",
-     "current_value": "\"Antistior(um) Burri\"",
+     "judged_value": "\"Antistior(um) Burri\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -2963,7 +3049,8 @@
     },
     {
      "path": "persons[2].ethnicity",
-     "current_value": "\"Roman with local name\"",
+     "judged_value": "\"Roman with local name\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -2985,7 +3072,8 @@
     },
     {
      "path": "person_relationships",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -3000,7 +3088,8 @@
     },
     {
      "path": "person_relationships[2].target_person_id",
-     "current_value": "0",
+     "judged_value": "0",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -3015,7 +3104,8 @@
     },
     {
      "path": "person_relationships[3]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -3030,7 +3120,8 @@
     },
     {
      "path": "persons[2].benefactions[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -3045,7 +3136,8 @@
     },
     {
      "path": "persons[0].person_name_readable",
-     "current_value": "\"Adventus\"",
+     "judged_value": "\"Adventus\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -3060,7 +3152,8 @@
     },
     {
      "path": "persons[1].person_name_readable",
-     "current_value": "\"Burrus\"",
+     "judged_value": "\"Burrus\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -3075,7 +3168,8 @@
     },
     {
      "path": "persons[2].benefactions[0].object",
-     "current_value": "\"dedication to Victoria Augusta\"",
+     "judged_value": "\"dedication to Victoria Augusta\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -3090,7 +3184,8 @@
     },
     {
      "path": "persons[2].benefactions[0].object_description",
-     "current_value": "\"Sacred dedication to Victoria Augusta for the health of the Antistiores\"",
+     "judged_value": "\"Sacred dedication to Victoria Augusta for the health of the Antistiores\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -3105,7 +3200,8 @@
     },
     {
      "path": "persons[2].benefactions[0].objects[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -3120,7 +3216,8 @@
     },
     {
      "path": "persons[2].benefactions[0].objects[0].object_type",
-     "current_value": "\"altar\"",
+     "judged_value": "\"altar\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -3135,7 +3232,8 @@
     },
     {
      "path": "persons[2].cognomen",
-     "current_value": "\"Agathopus\"",
+     "judged_value": "\"Agathopus\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -3309,7 +3407,8 @@
    "flagged": [
     {
      "path": "persons[3].life_events[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
      "judges": {
@@ -3338,7 +3437,8 @@
     },
     {
      "path": "person_relationships",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 1,
      "judges": {
@@ -3367,7 +3467,8 @@
     },
     {
      "path": "persons[0].ethnicity_evidence",
-     "current_value": "\"Octavia (Roman nomen gentilicium)\"",
+     "judged_value": "\"Octavia (Roman nomen gentilicium)\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -3396,7 +3497,8 @@
     },
     {
      "path": "persons[0].gender_evidence",
-     "current_value": "\"Octavia (feminine name), Victoria (feminine name), matri (mother)\"",
+     "judged_value": "\"Octavia (feminine name), Victoria (feminine name), matri (mother)\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -3425,7 +3527,8 @@
     },
     {
      "path": "persons[1].gender_evidence",
-     "current_value": "\"Valerius (masculine name), Saturus (masculine name)\"",
+     "judged_value": "\"Valerius (masculine name), Saturus (masculine name)\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -3454,7 +3557,8 @@
     },
     {
      "path": "persons[3].gender_evidence",
-     "current_value": "\"Felix (masculine name in this context)\"",
+     "judged_value": "\"Felix (masculine name in this context)\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -3483,7 +3587,8 @@
     },
     {
      "path": "persons[1].ethnicity_evidence",
-     "current_value": "\"Valerius (Roman nomen gentilicium)\"",
+     "judged_value": "\"Valerius (Roman nomen gentilicium)\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -3505,7 +3610,8 @@
     },
     {
      "path": "persons[2].ethnicity_evidence",
-     "current_value": "\"Martia (Roman name)\"",
+     "judged_value": "\"Martia (Roman name)\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -3527,7 +3633,8 @@
     },
     {
      "path": "persons[2].gender_evidence",
-     "current_value": "\"Martia (feminine name)\"",
+     "judged_value": "\"Martia (feminine name)\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -3549,7 +3656,8 @@
     },
     {
      "path": "persons[2].nomen",
-     "current_value": "\"\"",
+     "judged_value": "\"\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -3571,7 +3679,8 @@
     },
     {
      "path": "persons[3].ethnicity_evidence",
-     "current_value": "\"Felix (Roman cognomen)\"",
+     "judged_value": "\"Felix (Roman cognomen)\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -3593,7 +3702,8 @@
     },
     {
      "path": "persons[3].nomen",
-     "current_value": "\"\"",
+     "judged_value": "\"\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -3615,7 +3725,8 @@
     },
     {
      "path": "person_relationships[2].property",
-     "current_value": "\"son\"",
+     "judged_value": "\"son\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -3630,7 +3741,8 @@
     },
     {
      "path": "persons[3].gender",
-     "current_value": "\"male\"",
+     "judged_value": "\"male\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -3645,7 +3757,8 @@
     },
     {
      "path": "person_relationships[0].property_text",
-     "current_value": "\"matri carissimae fecerunt\"",
+     "judged_value": "\"matri carissimae fecerunt\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -3660,7 +3773,8 @@
     },
     {
      "path": "person_relationships[1].property_text",
-     "current_value": "\"matri carissimae fecerunt\"",
+     "judged_value": "\"matri carissimae fecerunt\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -3675,7 +3789,8 @@
     },
     {
      "path": "person_relationships[2].property_text",
-     "current_value": "\"matri carissimae fecerunt\"",
+     "judged_value": "\"matri carissimae fecerunt\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -3690,7 +3805,8 @@
     },
     {
      "path": "persons[0].life_events[0].place_evidence",
-     "current_value": "\"inferred from findspot\"",
+     "judged_value": "\"inferred from findspot\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -3705,7 +3821,8 @@
     },
     {
      "path": "persons[2].cognomen",
-     "current_value": "\"Martia\"",
+     "judged_value": "\"Martia\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -3720,7 +3837,8 @@
     },
     {
      "path": "persons[2].person_name",
-     "current_value": "\"Martia\"",
+     "judged_value": "\"Martia\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -3735,7 +3853,8 @@
     },
     {
      "path": "persons[3].cognomen",
-     "current_value": "\"Felix\"",
+     "judged_value": "\"Felix\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -3750,7 +3869,8 @@
     },
     {
      "path": "persons[3].person_name",
-     "current_value": "\"Felix\"",
+     "judged_value": "\"Felix\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -3874,7 +3994,8 @@
    "flagged": [
     {
      "path": "persons[1].life_events[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
      "judges": {
@@ -3903,7 +4024,8 @@
     },
     {
      "path": "persons[0].social_status",
-     "current_value": "\"citizen\"",
+     "judged_value": "\"citizen\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 1,
      "judges": {
@@ -3932,7 +4054,8 @@
     },
     {
      "path": "persons[0].ethnicity_evidence",
-     "current_value": "\"Tria nomina with Roman praenomen, nomen, and cognomen\"",
+     "judged_value": "\"Tria nomina with Roman praenomen, nomen, and cognomen\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -3961,7 +4084,8 @@
     },
     {
      "path": "persons[0].gender_evidence",
-     "current_value": "\"Male praenomen Publius and male cognomen Potitus\"",
+     "judged_value": "\"Male praenomen Publius and male cognomen Potitus\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -3990,7 +4114,8 @@
     },
     {
      "path": "persons[0].social_status_evidence",
-     "current_value": "\"Filiation P(ubli) f(ilius) indicates freeborn Roman citizen status\"",
+     "judged_value": "\"Filiation P(ubli) f(ilius) indicates freeborn Roman citizen status\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -4019,7 +4144,8 @@
     },
     {
      "path": "persons[0].social_statuses[0].evidence",
-     "current_value": "\"Filiation P(ubli) f(ilius) indicates freeborn Roman citizen status\"",
+     "judged_value": "\"Filiation P(ubli) f(ilius) indicates freeborn Roman citizen status\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -4048,7 +4174,8 @@
     },
     {
      "path": "persons[1].ethnicity_evidence",
-     "current_value": "\"Roman praenomen and nomen\"",
+     "judged_value": "\"Roman praenomen and nomen\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -4077,7 +4204,8 @@
     },
     {
      "path": "persons[1].gender_evidence",
-     "current_value": "\"Male praenomen Publius\"",
+     "judged_value": "\"Male praenomen Publius\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -4106,7 +4234,8 @@
     },
     {
      "path": "persons[1].social_status_evidence",
-     "current_value": "\"Mentioned as father of a Roman citizen with filiation P(ubli) f(ilius)\"",
+     "judged_value": "\"Mentioned as father of a Roman citizen with filiation P(ubli) f(ilius)\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -4135,7 +4264,8 @@
     },
     {
      "path": "persons[0].social_statuses[0].subtype",
-     "current_value": "\"legal.citizen\"",
+     "judged_value": "\"legal.citizen\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -4157,7 +4287,8 @@
     },
     {
      "path": "persons[1].social_statuses[0].evidence",
-     "current_value": "\"Mentioned as father of a Roman citizen with filiation P(ubli) f(ilius)\"",
+     "judged_value": "\"Mentioned as father of a Roman citizen with filiation P(ubli) f(ilius)\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -4179,7 +4310,8 @@
     },
     {
      "path": "persons[1].social_status",
-     "current_value": "\"citizen\"",
+     "judged_value": "\"citizen\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -4194,7 +4326,8 @@
     },
     {
      "path": "persons[1].social_statuses[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -4209,7 +4342,8 @@
     },
     {
      "path": "persons[0].life_events[0].place_evidence",
-     "current_value": "\"inferred from findspot\"",
+     "judged_value": "\"inferred from findspot\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -4224,7 +4358,8 @@
     },
     {
      "path": "persons[1].nomen",
-     "current_value": "\"Gavius\"",
+     "judged_value": "\"Gavius\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -4239,7 +4374,8 @@
     },
     {
      "path": "persons[1].person_name",
-     "current_value": "\"P(ublius) Gavius\"",
+     "judged_value": "\"P(ublius) Gavius\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -4254,7 +4390,8 @@
     },
     {
      "path": "persons[1].person_name_readable",
-     "current_value": "\"Publius Gavius\"",
+     "judged_value": "\"Publius Gavius\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -4379,7 +4516,8 @@
    "flagged": [
     {
      "path": "persons[0].benefactions[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
      "judges": {
@@ -4408,7 +4546,8 @@
     },
     {
      "path": "persons[1].life_events[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 1,
      "judges": {
@@ -4437,7 +4576,8 @@
     },
     {
      "path": "persons[0].ethnicity_evidence",
-     "current_value": "\"Names Arinis, Tapafius, Diodorus, Nizaz suggest non-Roman origin; Diodorus is Greek, Tapafius and Nizaz appear to be local/indigenous names\"",
+     "judged_value": "\"Names Arinis, Tapafius, Diodorus, Nizaz suggest non-Roman origin; Diodorus is Greek, Tapafius and Nizaz appear to be local/indigenous names\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -4466,7 +4606,8 @@
     },
     {
      "path": "persons[0].gender_evidence",
-     "current_value": "\"filius (son)\"",
+     "judged_value": "\"filius (son)\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -4495,7 +4636,8 @@
     },
     {
      "path": "persons[1].ethnicity_evidence",
-     "current_value": "\"Name Arinis appears to be of local/indigenous origin\"",
+     "judged_value": "\"Name Arinis appears to be of local/indigenous origin\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -4524,7 +4666,8 @@
     },
     {
      "path": "persons[1].gender_evidence",
-     "current_value": "\"Father of person 0\"",
+     "judged_value": "\"Father of person 0\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -4553,7 +4696,8 @@
     },
     {
      "path": "persons[0].cognomen",
-     "current_value": "\"Diodorus Nizaz\"",
+     "judged_value": "\"Diodorus Nizaz\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -4568,7 +4712,8 @@
     },
     {
      "path": "persons[0].life_events[0].place_evidence",
-     "current_value": "\"inferred from findspot\"",
+     "judged_value": "\"inferred from findspot\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -4583,7 +4728,8 @@
     },
     {
      "path": "persons[0].nomen",
-     "current_value": "\"Tapafius\"",
+     "judged_value": "\"Tapafius\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -4598,7 +4744,8 @@
     },
     {
      "path": "persons[1].person_name",
-     "current_value": "\"Arinis\"",
+     "judged_value": "\"Arinis\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -4704,7 +4851,8 @@
    "flagged": [
     {
      "path": "persons[1]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
      "judges": {
@@ -4733,7 +4881,8 @@
     },
     {
      "path": "persons[0].person_name",
-     "current_value": "\"Q(uintus) Iulius Missus\"",
+     "judged_value": "\"Q(uintus) Iulius Missus\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 1,
      "judges": {
@@ -4762,7 +4911,8 @@
     },
     {
      "path": "persons[0].ethnicity_evidence",
-     "current_value": "\"Tria nomina structure (Quintus Iulius Missus)\"",
+     "judged_value": "\"Tria nomina structure (Quintus Iulius Missus)\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -4791,7 +4941,8 @@
     },
     {
      "path": "persons[0].gender_evidence",
-     "current_value": "\"Quintus (masculine praenomen), Missus (masculine cognomen)\"",
+     "judged_value": "\"Quintus (masculine praenomen), Missus (masculine cognomen)\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -4820,7 +4971,8 @@
     },
     {
      "path": "persons[0].person_name_readable",
-     "current_value": "\"Quintus Iulius Missus\"",
+     "judged_value": "\"Quintus Iulius Missus\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -4842,7 +4994,8 @@
     },
     {
      "path": "persons[0].cognomen",
-     "current_value": "\"Missus\"",
+     "judged_value": "\"Missus\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -4857,7 +5010,8 @@
     },
     {
      "path": "persons[0].life_events[0].place_evidence",
-     "current_value": "\"inferred from findspot\"",
+     "judged_value": "\"inferred from findspot\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -4957,7 +5111,8 @@
    "flagged": [
     {
      "path": "persons[1]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
      "judges": {
@@ -4986,7 +5141,8 @@
     },
     {
      "path": "persons[0].ethnicity_evidence",
-     "current_value": "\"Greek script used for non-Roman name\"",
+     "judged_value": "\"Greek script used for non-Roman name\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -5015,7 +5171,8 @@
     },
     {
      "path": "persons[0].ethnicity",
-     "current_value": "\"local\"",
+     "judged_value": "\"local\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -5037,7 +5194,8 @@
     },
     {
      "path": "persons[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -5115,7 +5273,8 @@
    "flagged": [
     {
      "path": "persons[0].gender",
-     "current_value": "\"unknown\"",
+     "judged_value": "\"unknown\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
      "judges": {
@@ -5144,7 +5303,8 @@
     },
     {
      "path": "persons[0].gender_evidence",
-     "current_value": "\"\"",
+     "judged_value": "\"\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -5166,7 +5326,8 @@
     },
     {
      "path": "persons[0].life_events[0].place_evidence",
-     "current_value": "\"inferred from findspot\"",
+     "judged_value": "\"inferred from findspot\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -5188,7 +5349,8 @@
     },
     {
      "path": "persons[0].nomen",
-     "current_value": "\"\"",
+     "judged_value": "\"\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -5210,7 +5372,8 @@
     },
     {
      "path": "persons[0].cognomen",
-     "current_value": "\"\"",
+     "judged_value": "\"\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -5225,7 +5388,8 @@
     },
     {
      "path": "persons[0].person_name",
-     "current_value": "\"[3]lius V[3]\"",
+     "judged_value": "\"[3]lius V[3]\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -5505,7 +5669,8 @@
    "flagged": [
     {
      "path": "persons[0].social_status_evidence",
-     "current_value": "\"I(ovi) Aug(usto) sacrum – deity, not a person\"",
+     "judged_value": "\"I(ovi) Aug(usto) sacrum – deity, not a person\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -5534,7 +5699,8 @@
     },
     {
      "path": "persons[1].ethnicity_evidence",
-     "current_value": "\"Greek cognomen Euelpistus used in a Roman colonial context\"",
+     "judged_value": "\"Greek cognomen Euelpistus used in a Roman colonial context\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -5563,7 +5729,8 @@
     },
     {
      "path": "persons[1].social_status_evidence",
-     "current_value": "\"Augustalis coloniae – Augustales were typically freedmen; the Greek cognomen also supports freedman status\"",
+     "judged_value": "\"Augustalis coloniae – Augustales were typically freedmen; the Greek cognomen also supports freedman status\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -5592,7 +5759,8 @@
     },
     {
      "path": "persons[2].gender_evidence",
-     "current_value": "\"fili(i) – genitive of filius, masculine\"",
+     "judged_value": "\"fili(i) – genitive of filius, masculine\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -5621,7 +5789,8 @@
     },
     {
      "path": "persons[2].life_events[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
      "judges": {
@@ -5643,7 +5812,8 @@
     },
     {
      "path": "persons",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -5665,7 +5835,8 @@
     },
     {
      "path": "persons[1].benefactions[0].object_description",
-     "current_value": "\"A temple dedicated to Jupiter Augustus, built by testament of Euelpistus's son, daughter, freedmen and heirs\"",
+     "judged_value": "\"A temple dedicated to Jupiter Augustus, built by testament of Euelpistus's son, daughter, freedmen and heirs\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -5687,7 +5858,8 @@
     },
     {
      "path": "persons[1].ethnicity",
-     "current_value": "\"Roman with local name\"",
+     "judged_value": "\"Roman with local name\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -5709,7 +5881,8 @@
     },
     {
      "path": "persons[1].social_status",
-     "current_value": "\"freedman\"",
+     "judged_value": "\"freedman\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -5731,7 +5904,8 @@
     },
     {
      "path": "persons[2].benefactions",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -5753,7 +5927,8 @@
     },
     {
      "path": "persons[3].benefactions",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -5775,7 +5950,8 @@
     },
     {
      "path": "persons[4].benefactions",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -5797,7 +5973,8 @@
     },
     {
      "path": "persons[0].gender_evidence",
-     "current_value": "\"Iovi – dative of Iuppiter, male deity\"",
+     "judged_value": "\"Iovi – dative of Iuppiter, male deity\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -5819,7 +5996,8 @@
     },
     {
      "path": "persons[1].career_path[0].location",
-     "current_value": "\"colonia\"",
+     "judged_value": "\"colonia\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -5841,7 +6019,8 @@
     },
     {
      "path": "persons[1].gender_evidence",
-     "current_value": "\"Augustalis – masculine form\"",
+     "judged_value": "\"Augustalis – masculine form\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -5863,7 +6042,8 @@
     },
     {
      "path": "persons[2].social_status_evidence",
-     "current_value": "\"fili(i) – mentioned as son in the testament\"",
+     "judged_value": "\"fili(i) – mentioned as son in the testament\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -5885,7 +6065,8 @@
     },
     {
      "path": "persons[3].gender_evidence",
-     "current_value": "\"filiae – genitive of filia, feminine\"",
+     "judged_value": "\"filiae – genitive of filia, feminine\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -5907,7 +6088,8 @@
     },
     {
      "path": "persons[3].social_status_evidence",
-     "current_value": "\"filiae – mentioned as daughter in the testament\"",
+     "judged_value": "\"filiae – mentioned as daughter in the testament\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -5929,7 +6111,8 @@
     },
     {
      "path": "persons[4].gender_evidence",
-     "current_value": "\"lib(erti) – could be masculine plural or mixed group\"",
+     "judged_value": "\"lib(erti) – could be masculine plural or mixed group\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -5951,7 +6134,8 @@
     },
     {
      "path": "persons[4].social_status_evidence",
-     "current_value": "\"lib(erti) – freedmen of Euelpistus\"",
+     "judged_value": "\"lib(erti) – freedmen of Euelpistus\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -5973,7 +6157,8 @@
     },
     {
      "path": "persons[4].social_statuses[0].evidence",
-     "current_value": "\"lib(erti) – freedmen of Euelpistus\"",
+     "judged_value": "\"lib(erti) – freedmen of Euelpistus\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -5995,7 +6180,8 @@
     },
     {
      "path": "person_relationships",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -6010,7 +6196,8 @@
     },
     {
      "path": "person_relationships[3]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -6025,7 +6212,8 @@
     },
     {
      "path": "persons[1].benefactions[0].recipient_communities[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -6040,7 +6228,8 @@
     },
     {
      "path": "persons[1].social_statuses",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -6055,7 +6244,8 @@
     },
     {
      "path": "persons[1].social_statuses[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -6070,7 +6260,8 @@
     },
     {
      "path": "persons[2].benefactions[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -6085,7 +6276,8 @@
     },
     {
      "path": "persons[2].life_events",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -6100,7 +6292,8 @@
     },
     {
      "path": "persons[2].person_name_readable",
-     "current_value": "\"Son of Euelpistus (unnamed)\"",
+     "judged_value": "\"Son of Euelpistus (unnamed)\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -6115,7 +6308,8 @@
     },
     {
      "path": "persons[3].benefactions[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -6130,7 +6324,8 @@
     },
     {
      "path": "persons[3].person_name_readable",
-     "current_value": "\"Daughter of Euelpistus (unnamed)\"",
+     "judged_value": "\"Daughter of Euelpistus (unnamed)\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -6145,7 +6340,8 @@
     },
     {
      "path": "persons[4].benefactions[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -6160,7 +6356,8 @@
     },
     {
      "path": "persons[4].gender",
-     "current_value": "\"unknown\"",
+     "judged_value": "\"unknown\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -6175,7 +6372,8 @@
     },
     {
      "path": "persons[1].benefactions[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -6190,7 +6388,8 @@
     },
     {
      "path": "persons[1].career_path[0].location_evidence",
-     "current_value": "\"Augustalis co[loniae]\"",
+     "judged_value": "\"Augustalis co[loniae]\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -6205,7 +6404,8 @@
     },
     {
      "path": "persons[1].career_path[0].position_canonical",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -6220,7 +6420,8 @@
     },
     {
      "path": "persons[1].career_path[0].position_tier",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -6235,7 +6436,8 @@
     },
     {
      "path": "persons[1].cognomen",
-     "current_value": "\"Euelpistus\"",
+     "judged_value": "\"Euelpistus\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -6250,7 +6452,8 @@
     },
     {
      "path": "persons[1].social_statuses[0].evidence",
-     "current_value": "\"Augustalis coloniae – Augustales were typically freedmen; the Greek cognomen also supports freedman status\"",
+     "judged_value": "\"Augustalis coloniae – Augustales were typically freedmen; the Greek cognomen also supports freedman status\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -6265,7 +6468,8 @@
     },
     {
      "path": "persons[2].person_name",
-     "current_value": "\"filius [Euelpisti]\"",
+     "judged_value": "\"filius [Euelpisti]\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -6280,7 +6484,8 @@
     },
     {
      "path": "persons[3].person_name",
-     "current_value": "\"filia [Euelpisti]\"",
+     "judged_value": "\"filia [Euelpisti]\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -6295,7 +6500,8 @@
     },
     {
      "path": "persons[4].person_name",
-     "current_value": "\"lib(erti) [Euelpisti]\"",
+     "judged_value": "\"lib(erti) [Euelpisti]\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -6370,7 +6576,8 @@
    "flagged": [
     {
      "path": "persons[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
      "judges": {
@@ -6392,7 +6599,8 @@
     },
     {
      "path": "persons[0].person_name",
-     "current_value": "\"MAR\"",
+     "judged_value": "\"MAR\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -6504,7 +6712,8 @@
    "flagged": [
     {
      "path": "persons[1].life_events[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 1,
      "judges": {
@@ -6533,7 +6742,8 @@
     },
     {
      "path": "persons[0].ethnicity_evidence",
-     "current_value": "\"Single name with patronymic in genitive (Nati), no tria nomina, suggesting non-Roman or provincial local naming convention\"",
+     "judged_value": "\"Single name with patronymic in genitive (Nati), no tria nomina, suggesting non-Roman or provincial local naming convention\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -6562,7 +6772,8 @@
     },
     {
      "path": "persons[0].gender_evidence",
-     "current_value": "\"Male name Honoratus\"",
+     "judged_value": "\"Male name Honoratus\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -6591,7 +6802,8 @@
     },
     {
      "path": "persons[1].ethnicity_evidence",
-     "current_value": "\"Single name, no tria nomina, suggesting non-Roman or provincial local naming convention\"",
+     "judged_value": "\"Single name, no tria nomina, suggesting non-Roman or provincial local naming convention\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -6620,7 +6832,8 @@
     },
     {
      "path": "persons[1].gender_evidence",
-     "current_value": "\"Male name Natus implied by genitive form Nati used as patronymic\"",
+     "judged_value": "\"Male name Natus implied by genitive form Nati used as patronymic\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -6649,7 +6862,8 @@
     },
     {
      "path": "persons[0].ethnicity",
-     "current_value": "\"local\"",
+     "judged_value": "\"local\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -6671,7 +6885,8 @@
     },
     {
      "path": "persons[0].cognomen",
-     "current_value": "\"Honoratus\"",
+     "judged_value": "\"Honoratus\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -6693,7 +6908,8 @@
     },
     {
      "path": "persons[1].cognomen",
-     "current_value": "\"Natus\"",
+     "judged_value": "\"Natus\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -6715,7 +6931,8 @@
     },
     {
      "path": "persons[1].ethnicity",
-     "current_value": "\"local\"",
+     "judged_value": "\"local\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -6730,7 +6947,8 @@
     },
     {
      "path": "person_relationships[0].property_text",
-     "current_value": "\"Honoratus Nati\"",
+     "judged_value": "\"Honoratus Nati\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -6745,7 +6963,8 @@
     },
     {
      "path": "persons[0].life_events[0].place_evidence",
-     "current_value": "\"inferred from findspot\"",
+     "judged_value": "\"inferred from findspot\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -6820,7 +7039,8 @@
    "flagged": [
     {
      "path": "persons[0].ethnicity_evidence",
-     "current_value": "\"The ending '-ius' is characteristic of Roman nomenclature\"",
+     "judged_value": "\"The ending '-ius' is characteristic of Roman nomenclature\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -6849,7 +7069,8 @@
     },
     {
      "path": "persons[0].gender_evidence",
-     "current_value": "\"The ending '-ius' is a masculine Latin nominative suffix\"",
+     "judged_value": "\"The ending '-ius' is a masculine Latin nominative suffix\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -6878,7 +7099,8 @@
     },
     {
      "path": "persons[0].ethnicity",
-     "current_value": "\"Roman\"",
+     "judged_value": "\"Roman\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -6900,7 +7122,8 @@
     },
     {
      "path": "persons[0].gender",
-     "current_value": "\"male\"",
+     "judged_value": "\"male\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -6922,7 +7145,8 @@
     },
     {
      "path": "persons[0].person_name",
-     "current_value": "\"]ius\"",
+     "judged_value": "\"]ius\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -7029,7 +7253,8 @@
    "flagged": [
     {
      "path": "persons[0].ethnicity_evidence",
-     "current_value": "\"Single cognomen-style name Secundus, common in Roman provincial contexts\"",
+     "judged_value": "\"Single cognomen-style name Secundus, common in Roman provincial contexts\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -7058,7 +7283,8 @@
     },
     {
      "path": "persons[0].gender_evidence",
-     "current_value": "\"f(ilius) — described as son\"",
+     "judged_value": "\"f(ilius) — described as son\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -7087,7 +7313,8 @@
     },
     {
      "path": "persons[1].ethnicity_evidence",
-     "current_value": "\"Name Prima is a common Roman cognomen; abbreviated P() may indicate a nomen or praenomen\"",
+     "judged_value": "\"Name Prima is a common Roman cognomen; abbreviated P() may indicate a nomen or praenomen\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -7116,7 +7343,8 @@
     },
     {
      "path": "persons[1].gender_evidence",
-     "current_value": "\"filia — described as daughter\"",
+     "judged_value": "\"filia — described as daughter\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -7145,7 +7373,8 @@
     },
     {
      "path": "persons[0].ethnicity",
-     "current_value": "\"Roman with local name\"",
+     "judged_value": "\"Roman with local name\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -7167,7 +7396,8 @@
     },
     {
      "path": "persons[1].ethnicity",
-     "current_value": "\"Roman with local name\"",
+     "judged_value": "\"Roman with local name\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -7189,7 +7419,8 @@
     },
     {
      "path": "person_relationships",
-     "current_value": "[]",
+     "judged_value": "[]",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -7204,7 +7435,8 @@
     },
     {
      "path": "persons[0].age_at_death_evidence",
-     "current_value": "\"vixit an(n)is XXXXI\"",
+     "judged_value": "\"vixit an(n)is XXXXI\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -7219,7 +7451,8 @@
     },
     {
      "path": "persons[0].cognomen",
-     "current_value": "\"Secundus\"",
+     "judged_value": "\"Secundus\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -7234,7 +7467,8 @@
     },
     {
      "path": "persons[0].life_events[0].place_evidence",
-     "current_value": "\"inferred from findspot\"",
+     "judged_value": "\"inferred from findspot\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -7249,7 +7483,8 @@
     },
     {
      "path": "persons[1].age_at_death_evidence",
-     "current_value": "\"vixit an(n)is XXX\"",
+     "judged_value": "\"vixit an(n)is XXX\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -7264,7 +7499,8 @@
     },
     {
      "path": "persons[1].life_events[0].place_evidence",
-     "current_value": "\"inferred from findspot\"",
+     "judged_value": "\"inferred from findspot\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -7279,7 +7515,8 @@
     },
     {
      "path": "persons[1].nomen",
-     "current_value": "\"\"",
+     "judged_value": "\"\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -7357,7 +7594,8 @@
    "flagged": [
     {
      "path": "persons[0].ethnicity",
-     "current_value": "\"local\"",
+     "judged_value": "\"local\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 1,
      "judges": {
@@ -7386,7 +7624,8 @@
     },
     {
      "path": "persons[0].cognomen",
-     "current_value": "\"Pascasia\"",
+     "judged_value": "\"Pascasia\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -7415,7 +7654,8 @@
     },
     {
      "path": "persons[0].ethnicity_evidence",
-     "current_value": "\"Pascasia is a late antique Christian name of non-classical Roman origin, likely local/Christian community\"",
+     "judged_value": "\"Pascasia is a late antique Christian name of non-classical Roman origin, likely local/Christian community\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -7444,7 +7684,8 @@
     },
     {
      "path": "persons[0].gender_evidence",
-     "current_value": "\"The name Pascasia is a feminine form\"",
+     "judged_value": "\"The name Pascasia is a feminine form\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -7473,7 +7714,8 @@
     },
     {
      "path": "persons[0].social_statuses",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -7495,7 +7737,8 @@
     },
     {
      "path": "persons[0].life_events[0].place_evidence",
-     "current_value": "\"inferred from findspot\"",
+     "judged_value": "\"inferred from findspot\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -7577,7 +7820,8 @@
    "flagged": [
     {
      "path": "persons[0].gender_evidence",
-     "current_value": "\"Name ending in -us suggests male\"",
+     "judged_value": "\"Name ending in -us suggests male\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -7606,7 +7850,8 @@
     },
     {
      "path": "persons[0].gender",
-     "current_value": "\"male\"",
+     "judged_value": "\"male\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -7628,7 +7873,8 @@
     },
     {
      "path": "persons[0].person_name",
-     "current_value": "\"[---]us [---]ensis\"",
+     "judged_value": "\"[---]us [---]ensis\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -7650,7 +7896,8 @@
     },
     {
      "path": "persons[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -7665,7 +7912,8 @@
     },
     {
      "path": "persons[0].person_name_readable",
-     "current_value": "\"Unknown (fragmentary name ending in -us, with epithet ending in -ensis)\"",
+     "judged_value": "\"Unknown (fragmentary name ending in -us, with epithet ending in -ensis)\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -7741,7 +7989,8 @@
    "flagged": [
     {
      "path": "persons[0].ethnicity_evidence",
-     "current_value": "\"Ianuaria (Latin name)\"",
+     "judged_value": "\"Ianuaria (Latin name)\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -7770,7 +8019,8 @@
     },
     {
      "path": "persons[0].gender_evidence",
-     "current_value": "\"Ianuaria (feminine name), pia (feminine adjective)\"",
+     "judged_value": "\"Ianuaria (feminine name), pia (feminine adjective)\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -7799,7 +8049,8 @@
     },
     {
      "path": "persons[0].cognomen",
-     "current_value": "\"Ianuaria\"",
+     "judged_value": "\"Ianuaria\"",
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
      "judges": {
@@ -7821,7 +8072,8 @@
     },
     {
      "path": "persons[0].ethnicity",
-     "current_value": "\"Roman\"",
+     "judged_value": "\"Roman\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -7836,7 +8088,8 @@
     },
     {
      "path": "persons[0].age_at_death_evidence",
-     "current_value": "\"vixit an(n)is LXVII\"",
+     "judged_value": "\"vixit an(n)is LXVII\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -7851,7 +8104,8 @@
     },
     {
      "path": "persons[0].life_events[0].place_evidence",
-     "current_value": "\"inferred from findspot\"",
+     "judged_value": "\"inferred from findspot\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {
@@ -7925,7 +8179,8 @@
    "flagged": [
     {
      "path": "persons[0].ethnicity_evidence",
-     "current_value": "\"Claudius is a Roman nomen, but Syrapiacus appears to be a local/Greek-derived cognomen\"",
+     "judged_value": "\"Claudius is a Roman nomen, but Syrapiacus appears to be a local/Greek-derived cognomen\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -7954,7 +8209,8 @@
     },
     {
      "path": "persons[0].gender_evidence",
-     "current_value": "\"Claudius (masculine nomen), Syrapiacus (masculine cognomen)\"",
+     "judged_value": "\"Claudius (masculine nomen), Syrapiacus (masculine cognomen)\"",
+     "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
      "judges": {
@@ -7983,7 +8239,8 @@
     },
     {
      "path": "persons[0].ethnicity",
-     "current_value": "\"Roman with local name\"",
+     "judged_value": "\"Roman with local name\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
      "judges": {
@@ -8058,7 +8315,8 @@
    "flagged": [
     {
      "path": "persons[0]",
-     "current_value": null,
+     "judged_value": null,
+     "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
      "judges": {
@@ -8080,7 +8338,8 @@
     },
     {
      "path": "persons[0].gender",
-     "current_value": "\"unknown\"",
+     "judged_value": "\"unknown\"",
+     "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
      "judges": {

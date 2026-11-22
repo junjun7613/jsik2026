@@ -49,7 +49,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from judge_common import RUNS_DIR, flatten, inscription_header, load_record  # noqa: E402
+from judge_common import RUNS_DIR, flatten, inscription_header, load_record, value_map  # noqa: E402
 from validate_career_graphs import validate_inscription_issues  # noqa: E402
 
 TIER_ORDER = ["format", "agree_all", "agree_2", "single", "unjudged", "audit"]
@@ -69,14 +69,6 @@ def load_judge_rows(run_dir, judges):
             if prev is None or prev["status"] != "ok":
                 rows[(j, r["key"])] = r
     return rows
-
-
-def current_values(rec):
-    out = {}
-    for line in flatten(rec)[0]:
-        path, _, val = line.partition(" = ")
-        out[path] = val.replace("   (context)", "")
-    return out
 
 
 def build_item(key, rec, judges, rows):
@@ -100,12 +92,19 @@ def build_item(key, rec, judges, rows):
                                            ("verdict", "severity", "reason", "suggested_value", "path_valid")}
 
     ok_judges = [j for j in judges if judge_status[j] == "ok"]
-    vals = current_values(rec)
+    # Value at judging time (every judge saw the same input). Rows written
+    # before run_judge.py recorded it fall back to the current data.
+    judged_vals = {}
+    for j in ok_judges:
+        judged_vals.update(rows[(j, key)].get("flagged_values") or {})
+    live = value_map(rec)
     flagged = []
     for path, fj in by_path.items():
+        known = any(path in (rows[(j, key)].get("flagged_values") or {}) for j in fj)
         flagged.append({
             "path": path,
-            "current_value": vals.get(path),
+            "judged_value": judged_vals.get(path) if known else live.get(path),
+            "judged_value_known": known,
             "n_flag": len(fj),
             "n_major": sum(1 for f in fj.values() if f["severity"] == "major"),
             "judges": fj,
@@ -217,6 +216,46 @@ def agreement(items, judges):
     return out
 
 
+BLIND_FIELDS = ("judge_notes", "judge_overall", "flagged")
+
+
+def build_run(run_id, judges, audit_n=None, seed=42):
+    """Return (items, agreement, summary) for a run.
+
+    items holds every target, queued or not, in queue order first. Audit items
+    keep their judge output under `blind` so the editor can reveal it once the
+    reviewer has recorded a verdict; review_queue.json strips it.
+    """
+    run_dir = RUNS_DIR / run_id
+    targets = json.loads((run_dir / "targets.json").read_text())
+    rows = load_judge_rows(run_dir, judges)
+
+    items = [build_item(k, load_record(k), judges, rows) for k in targets]
+    # Agreement is computed before audit items are hidden for blind review.
+    agr = agreement(items, judges)
+
+    pool = [it for it in items if it["tier"] in NOT_QUEUED]
+    n_audit = audit_n if audit_n is not None else (max(1, round(len(pool) * 0.1)) if pool else 0)
+    for it in random.Random(seed).sample(pool, min(n_audit, len(pool))):
+        it["audit_origin"] = it["tier"]
+        it["tier"], it["audit"] = "audit", True
+        it["blind"] = {f: it[f] for f in BLIND_FIELDS}
+        it["judge_notes"], it["judge_overall"], it["flagged"] = {}, {}, []
+
+    order = TIER_ORDER + NOT_QUEUED
+    items.sort(key=lambda it: (order.index(it["tier"]), [-x for x in it["score"]], it["key"]))
+    for rank, it in enumerate(items, 1):
+        it["rank"] = rank
+
+    tiers = Counter(it["tier"] for it in items)
+    summary = {
+        "run_id": run_id, "judges": judges, "targets": len(targets),
+        "tiers": {t: tiers.get(t, 0) for t in order},
+        "queue_length": sum(1 for it in items if it["tier"] in TIER_ORDER), "audit_seed": seed,
+    }
+    return items, agr, summary
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--run-id", required=True)
@@ -229,32 +268,8 @@ def main():
 
     run_dir = RUNS_DIR / args.run_id
     judges = args.judges.split(",")
-    targets = json.loads((run_dir / "targets.json").read_text())
-    rows = load_judge_rows(run_dir, judges)
-
-    items = [build_item(k, load_record(k), judges, rows) for k in targets]
-    # Agreement is computed before audit items are blanked for blind review.
-    agr = agreement(items, judges)
-
-    pool = [it for it in items if it["tier"] in NOT_QUEUED]
-    n_audit = args.audit_n if args.audit_n is not None else (max(1, round(len(pool) * 0.1)) if pool else 0)
-    for it in random.Random(args.seed).sample(pool, min(n_audit, len(pool))):
-        it["audit_origin"] = it["tier"]
-        it["tier"], it["audit"] = "audit", True
-        # blind: the reviewer sees no judge output
-        it["judge_notes"], it["judge_overall"], it["flagged"] = {}, {}, []
-
-    queue = [it for it in items if it["tier"] in TIER_ORDER]
-    queue.sort(key=lambda it: (TIER_ORDER.index(it["tier"]), [-x for x in it["score"]], it["key"]))
-    for rank, it in enumerate(queue, 1):
-        it["rank"] = rank
-
-    tiers = Counter(it["tier"] for it in items)
-    summary = {
-        "run_id": args.run_id, "judges": judges, "targets": len(targets),
-        "tiers": {t: tiers.get(t, 0) for t in TIER_ORDER + NOT_QUEUED},
-        "queue_length": len(queue), "audit_seed": args.seed,
-    }
+    items, agr, summary = build_run(args.run_id, judges, args.audit_n, args.seed)
+    queue = [{k: v for k, v in it.items() if k != "blind"} for it in items if it["tier"] in TIER_ORDER]
     (run_dir / "review_queue.json").write_text(
         json.dumps({"summary": summary, "items": queue}, ensure_ascii=False, indent=1))
     (run_dir / "agreement.json").write_text(json.dumps(agr, ensure_ascii=False, indent=2))

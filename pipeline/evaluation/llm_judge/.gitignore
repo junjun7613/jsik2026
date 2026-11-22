@@ -1,0 +1,3 @@
+# Derived from runs/ by export_for_editor.py; read by ai_epigraphy_editor via symlink
+editor_export/
+# Human verdicts on judge findings are kept (runs/<run_id>/human/)

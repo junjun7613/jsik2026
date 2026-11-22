@@ -21,9 +21,12 @@ validated_career_graphs/claude/**/*.json
         │   runs/<run_id>/review_queue.json
         │   runs/<run_id>/agreement.json（judge間一致率）
         ▼
-[4] build_judge_review_editor.py                      人手確認エディタ
-            docs/evaluation/judge_review_<run_id>.html
-            → ダウンロードした judge_review_<run_id>_annotations.json
+[4] export_for_editor.py                              校訂エディタ向けに地名ごとに書き出し
+        │   editor_export/（ai_epigraphy_editor が data/judge として読む）
+        ▼
+    ai_epigraphy_editor                               指摘を入力欄の横に表示
+            校訂 → provenance/edits/pending/（従来どおり）
+            指摘への判定 → runs/<run_id>/human/
 ```
 
 ---
@@ -145,19 +148,27 @@ python build_review_queue.py --run-id full01 --audit-n 300
 
 ---
 
-## [4] 人手確認エディタ
+## [4] 人手確認（ai_epigraphy_editor）
+
+judge の指摘は、校訂エディタ `ai_epigraphy_editor` に重ねて表示する。地名ごとに書き出し、エディタは symlink（`data/judge` → `editor_export/`）で読む。
 
 ```bash
-python build_judge_review_editor.py --run-id pilot01
-python build_judge_review_editor.py --run-id full01 --limit 500 --offset 500   # 分割
-python build_judge_review_editor.py --run-id full01 --tiers agree_all,agree_2
+python export_for_editor.py --run-id pilot02 --run-id uthina01
 ```
 
-碑文ごとに次を記録する。
-- 指摘された各項目について「抽出値は正しい／誤り／判断保留」、誤りなら正しい値
-- judge が指摘しなかった誤りや抜け（judge の見落とし率の算出に使う）
-- 碑文全体のメモと「確認済み」
+- `editor_export/manifest.json`: run ごとの judge モデル・プロンプトのハッシュ・区分の件数、judge 済みの地名
+- `editor_export/places/<province>/<place>.json`: 地名ファイルのレコード位置ごとの指摘
 
-入力はブラウザ（localStorage）に自動保存される。「アノテーション結果をダウンロード」で record key をキーにした JSON を書き出し、「保存済みJSONを読み込む」で復元する。
+`editor_export/` は `runs/` から作る派生物なので、git には入れない。
 
-人手確認の結果を `provenance/edits` の修正として取り込む処理は、このワークフローには含めない。
+エディタ上での操作は ai_epigraphy_editor の README（「LLM-as-a-Judge の指摘」）を参照。指摘への人の判定は、エディタのサーバー（`tools/serve.py`）が `runs/<run_id>/human/review_<EDCS-ID>_<校訂者>.json` に保存する。校訂差分（`provenance/edits/`）とは分けている。校訂差分は「データをどう直したか」、こちらは「judge の指摘が正しかったか」の記録で、「直す必要はないが指摘は正しかった」という判定は差分では表せないためである。
+
+### judge 時の値
+
+judge の行（`<judge>.jsonl`）には、指摘したパスの judge 時の値（`flagged_values`）と入力のハッシュ（`input_sha`）を記録する。エディタは今のデータと比べ、judge の後に値が変わった指摘に「データ更新済み」と表示する。値を記録しているのは末端の値だけで、オブジェクトや配列を指す指摘は変化を判定しない。
+
+pilot02 と uthina01 は、この記録を始める前に実行した。値は `backfill_judge_time_values.py` で、position_canonical_map v1.1 を適用する直前（2026-11-22T06:36Z）に取ったバックアップから補った。両 run の judge とこの適用の間に、データはほかに変わっていない。
+
+### 単独のエディタ
+
+`build_judge_review_editor.py` は、judge の結果だけを見る単独の HTML を作る（`docs/evaluation/judge_review_<run_id>.html`）。校訂を伴わない確認や、ai_epigraphy_editor を起動できない環境向け。人の判定はブラウザに保存され、JSON でダウンロードする。

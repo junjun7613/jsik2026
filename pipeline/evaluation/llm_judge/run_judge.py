@@ -20,7 +20,10 @@ Usage
   python run_judge.py run --run-id pilot01 --judges claude,gpt,gemini --workers 4
 
 Output: runs/<run_id>/<judge>.jsonl, one line per inscription:
-  {key, edcs_id, judge, model, status, result, usage, latency_s, timestamp, error}
+  {key, edcs_id, judge, model, status, result, usage, latency_s, timestamp, error,
+   input_sha, flagged_values}
+  flagged_values holds the value each flagged path had when it was judged
+  (null for a path that does not exist, e.g. an omission container).
   status ∈ ok | refusal | truncated | parse_error | api_error | skipped_large
 
 This script never writes to validated_career_graphs or provenance/edits.
@@ -40,8 +43,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from judge_common import (  # noqa: E402
     JUDGE_SCHEMA, MAX_LINES, PROJECT_DIR, PROMPT_VERSION, RUNS_DIR,
-    build_system_prompt, build_user_message, check_paths, flatten,
-    load_config, load_record, prompt_hash, sample_keys,
+    build_system_prompt, build_user_message, check_paths, flatten, input_sha,
+    load_config, load_record, prompt_hash, sample_keys, value_map,
 )
 
 
@@ -257,9 +260,18 @@ def cmd_run(args):
                            error=f"{len(lines)} lines > {MAX_LINES}")
             else:
                 t0 = time.time()
-                status, parsed, usage, raw, err = caller(client, cfg, system, build_user_message(rec))
+                user = build_user_message(rec)
+                status, parsed, usage, raw, err = caller(client, cfg, system, user)
                 row.update(status=status, usage=usage, latency_s=round(time.time() - t0, 1),
-                           error=err, result=check_paths(parsed, rec) if parsed else None)
+                           error=err, result=check_paths(parsed, rec) if parsed else None,
+                           input_sha=input_sha(user))
+                # Values the judge saw at the flagged paths. The record may be
+                # edited or reclassified later; the editor compares these with
+                # the current data to mark findings whose value has changed.
+                if parsed:
+                    vals = value_map(rec)
+                    row["flagged_values"] = {i["path"]: vals.get(i["path"])
+                                             for i in parsed.get("issues", [])}
                 if status != "ok":
                     row["raw_text"] = raw[:4000]
             with lock:

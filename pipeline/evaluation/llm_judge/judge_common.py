@@ -141,6 +141,19 @@ def flatten(rec):
     return lines, judged, containers
 
 
+def value_map(rec):
+    """{path: value as shown to the judge (JSON text)} for every leaf."""
+    out = {}
+    for line in flatten(rec)[0]:
+        path, _, val = line.partition(" = ")
+        out[path] = val.replace("   (context)", "")
+    return out
+
+
+def input_sha(user_message):
+    return hashlib.sha256(user_message.encode("utf-8")).hexdigest()[:16]
+
+
 def inscription_header(rec):
     od = rec.get("original_data") or {}
     meta = {
