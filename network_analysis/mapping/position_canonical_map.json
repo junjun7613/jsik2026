@@ -1,6 +1,6 @@
 {
  "$comment": "主要官職の統制語彙。仕様は network_analysis/POSITION_INVENTORY.md を参照。",
- "version": "1.0",
+ "version": "1.1",
  "created": "2026-10-17",
  "source_corpus": "pipeline/provenance/validated_career_graphs/claude/",
  "total_positions": 20746,
@@ -57,7 +57,20 @@
   "legatus": {"canonical": "legatus", "tier": "senatorial", "refine": true,
               "$note": "legatus Augusti pro praetore（総督）と legatus legionis（軍団長）を区別できない。原文での判定が要る"},
   "praeses": {"canonical": "praeses", "tier": "senatorial"},
-  "adlectus": {"canonical": "adlectus", "tier": "senatorial", "note": "元老院への編入。官職ではなく身分変更"},
+  "adlectus": {"canonical": "adlectus", "tier": null,
+              "note": "編入（adlectio）。官職ではなく身分変更。編入先によって序列が変わる",
+              "$note": "v1.1（2026-11-22）。v1.0 は一律 senatorial としていたが、86件中28件は equo publico（騎士身分）への編入だった。LLM-as-a-Judge の uthina01 で3モデルが一致して指摘。編入先を position_normalized / position から読み、上から順に最初に一致した規則を採る。どれにも一致しなければ tier を付けない（ontology に other の tier はない）",
+              "tier_rules": [
+                {"pattern": "\\bin\\s+legion", "tier": "military",
+                 "$note": "adlectus ex equite Romano in legionem（百人隊長への任命）"},
+                {"pattern": "equo\\s+publico|\\beq(ues|uit|uestr)|turm|decuri(ae|as|is)\\b|inter\\s+selectos", "tier": "equestrian",
+                 "$note": "騎士身分・騎士隊、および陪審員団（quinque decuriae, selecti iudices）。decurio（都市参事会員）とは語尾で区別する"},
+                {"pattern": "inter\\s+aedilicios", "tier": "senatorial", "unless_position_type": {"local-administration": "municipal"},
+                 "$note": "元老院の aedilicii 格への編入と、都市の aedilicii への編入（EDCS-26000913）の両方がある。抽出時の position_type で区別する"},
+                {"pattern": "in\\s+senatum|amplissimum\\s+ordinem|inter\\s+(quaestorios|tribunicios|praetorios|consulares|patricios)", "tier": "senatorial"},
+                {"pattern": "decurio|ob\\s+honorem|aedilitat|quinquennalic|\\bcivis\\b|in\\s+curiam|in\\s+ordinem", "tier": "municipal"}
+              ],
+              "tier_fallback_by_position_type": {"local-administration": "municipal"}},
 
   "procurator": {"canonical": "procurator", "tier": "equestrian"},
   "praefectus": {"canonical": "praefectus", "tier": "equestrian", "refine": true,

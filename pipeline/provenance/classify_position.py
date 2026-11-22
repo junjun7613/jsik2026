@@ -5,7 +5,8 @@ network_analysis/mapping/position_canonical_map.json の規則を適用し、
 career_path[] の各要素に以下を **追記** する。
 
     position_canonical         統制語彙（52種）。対応がなければ付与しない
-    position_tier              官職の序列軸（7種）
+    position_tier              官職の序列軸（7種）。tier_rules を持つ官職（adlectus）で
+                               文脈から決まらなければ付与しない
     position_canonical_source  判定の来歴（direct / variant）
     victory_title              勝利称号の対象地域（該当時のみ）
 
@@ -30,6 +31,7 @@ import argparse
 import collections
 import json
 import os
+import re
 import sys
 import tempfile
 from datetime import datetime, timezone
@@ -66,13 +68,33 @@ class Classifier:
         self.offices = {k: v for k, v in spec["offices"].items()
                         if not k.startswith("$")}
         self.variants = spec["normalize"]["explicit_variants"]
+        # tier が編入先などの文脈で決まる官職（v1.1 で adlectus に導入）
+        self.tier_rules = {
+            k: [(re.compile(r["pattern"], re.IGNORECASE), r["tier"],
+                 r.get("unless_position_type", {})) for r in v["tier_rules"]]
+            for k, v in self.offices.items() if v.get("tier_rules")}
         # 小文字化による一括統合は行わない。medicus（医師）と
         # Medicus（勝利称号）が同綴異義のため（POSITION_INVENTORY.md §3-3）
         assert spec["normalize"]["case_insensitive"] is False
 
-    def classify(self, abstract):
+    def contextual_tier(self, canonical_key, entry, context):
+        """tier_rules を持つ官職の tier を文脈から決める。決まらなければ None.
+
+        context は career_path の要素。position_normalized と position
+        （抽出時の表記）を照合し、上から順に最初に一致した規則を採る。
+        """
+        text = " ".join(filter(None, [(context or {}).get("position_normalized"),
+                                       (context or {}).get("position")]))
+        ptype = (context or {}).get("position_type")
+        for pattern, tier, unless in self.tier_rules[canonical_key]:
+            if pattern.search(text):
+                return unless.get(ptype, tier)
+        return entry.get("tier_fallback_by_position_type", {}).get(ptype)
+
+    def classify(self, abstract, context=None):
         """(canonical, tier, is_title, victory, source) を返す。
-        統制対象外なら canonical が None."""
+        統制対象外なら canonical が None。tier_rules を持つ官職で文脈から
+        tier が決まらない場合、tier は None."""
         a = (abstract or "").strip()
         if not a:
             return None, None, False, None, None
@@ -93,7 +115,9 @@ class Classifier:
         if e:
             src = source if source == "variant" else (
                 "variant" if e.get("note", "").endswith("別表記") else "direct")
-            return e["canonical"], e["tier"], False, None, src
+            tier = (self.contextual_tier(a, e, context) if a in self.tier_rules
+                    else e["tier"])
+            return e["canonical"], tier, False, None, src
 
         return None, None, False, None, None
 
@@ -108,7 +132,20 @@ def validate_map(spec):
                 continue
             if not v.get("canonical"):
                 errors.append(f"{section}[{k}]: canonical がありません")
-            if v.get("tier") not in tiers:
+            if v.get("tier_rules"):
+                produced = [r.get("tier") for r in v["tier_rules"]]
+                produced += [t for r in v["tier_rules"]
+                             for t in r.get("unless_position_type", {}).values()]
+                produced += list(v.get("tier_fallback_by_position_type", {}).values())
+                for t in produced:
+                    if t not in tiers:
+                        errors.append(f"{section}[{k}]: tier_rules に未知の tier {t!r}")
+                for r in v["tier_rules"]:
+                    try:
+                        re.compile(r["pattern"])
+                    except re.error as e:
+                        errors.append(f"{section}[{k}]: 不正な pattern {r['pattern']!r}: {e}")
+            elif v.get("tier") not in tiers:
                 errors.append(f"{section}[{k}]: 未知の tier {v.get('tier')!r}")
     return errors
 
@@ -179,6 +216,7 @@ def main():
     canon = collections.Counter()
     tier = collections.Counter()
     oldtype = collections.Counter()
+    tier_changes = collections.Counter()
     changed_files = 0
 
     try:
@@ -202,18 +240,35 @@ def main():
                 for ci, c in enumerate(person.get("career_path") or []):
                     st["total"] += 1
                     cn, tr, is_title, victory, src = clf.classify(
-                        c.get("position_abstract"))
+                        c.get("position_abstract"), context=c)
                     if cn is None:
                         st["uncontrolled"] += 1
                         continue
 
+                    # 前回の分類結果から tier が変わる場合は旧値を履歴に残す
+                    old_tier = c.get("position_tier")
+                    if old_tier is not None and old_tier != tr:
+                        tier_changes[(cn, old_tier, tr)] += 1
+                        if record_superseded_value:
+                            record_superseded_value(
+                                record,
+                                path=f"person/{pi}.career_path[{ci}].position_tier",
+                                field_label="career_path[].position_tier",
+                                old_value=old_tier,
+                                superseded_by={"activity_id": activity_id},
+                                superseded_at=now_iso())
+
                     c["position_canonical"] = cn
-                    c["position_tier"] = tr
+                    if tr is None:
+                        c.pop("position_tier", None)
+                        st["tier_unresolved"] += 1
+                    else:
+                        c["position_tier"] = tr
+                        tier[tr] += 1
                     c["position_canonical_source"] = src
                     if victory:
                         c["victory_title"] = victory
                     canon[cn] += 1
-                    tier[tr] += 1
                     st["controlled"] += 1
                     hit = True
 
@@ -259,6 +314,12 @@ def main():
         print("\n--- title へ変更した元の position_type ---")
         for k, v in oldtype.most_common():
             print(f"{v:7d}  {k}")
+    if tier_changes:
+        print("\n--- 前回から tier が変わるもの (canonical: 旧 → 新) ---")
+        for (cn, o, n), v in tier_changes.most_common():
+            print(f"{v:7d}  {cn}: {o} → {n or '（付与しない）'}")
+    if st["tier_unresolved"]:
+        print(f"\n文脈から tier が決まらず付与しないもの: {st['tier_unresolved']}")
     print("\n--- tier 別 ---")
     for k, v in tier.most_common():
         print(f"{v:7d}  {k}")
@@ -273,7 +334,9 @@ def main():
         with open(args.report, "w", encoding="utf-8") as f:
             json.dump({"activity_id": activity_id, "applied": args.apply,
                        "stats": dict(st), "canonical": dict(canon),
-                       "tier": dict(tier), "retyped_from": dict(oldtype)},
+                       "tier": dict(tier), "retyped_from": dict(oldtype),
+                       "tier_changes": [{"canonical": c, "from": o, "to": n, "count": v}
+                                        for (c, o, n), v in tier_changes.most_common()]},
                       f, ensure_ascii=False, indent=1)
         print(f"\nreport -> {args.report}")
     return 0

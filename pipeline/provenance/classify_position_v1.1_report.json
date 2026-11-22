@@ -1,0 +1,100 @@
+{
+ "activity_id": "classify_position-v1.1-rulebased-2026-11-22T063618Z",
+ "applied": true,
+ "stats": {
+  "total": 20750,
+  "controlled": 18618,
+  "uncontrolled": 2132,
+  "tier_unresolved": 5
+ },
+ "canonical": {
+  "sacerdos": 944,
+  "eques": 168,
+  "legatus": 844,
+  "tribunicia_potestas": 1436,
+  "consul": 1673,
+  "pater_patriae": 1062,
+  "pontifex": 1396,
+  "victory_title": 665,
+  "imperator": 1492,
+  "proconsul": 1010,
+  "praeses": 152,
+  "magister": 273,
+  "centurio": 370,
+  "praepositus": 60,
+  "procurator": 291,
+  "decurio": 170,
+  "praefectus": 463,
+  "optio": 51,
+  "beneficiarius": 72,
+  "miles": 459,
+  "curator": 398,
+  "aedilis": 386,
+  "duovir": 472,
+  "flamen": 961,
+  "princeps": 90,
+  "patronus": 141,
+  "municipal_magistrate": 106,
+  "veteranus": 256,
+  "episcopus": 66,
+  "quaestor": 249,
+  "tribunus": 234,
+  "caesar": 387,
+  "adlectus": 86,
+  "princeps_iuventutis": 83,
+  "augur": 98,
+  "sufes": 53,
+  "praetor": 107,
+  "triumvir": 61,
+  "consularis": 115,
+  "presbyter": 98,
+  "medicus": 32,
+  "pontifex_maximus": 43,
+  "quinquennalis": 49,
+  "honores": 40,
+  "officinator": 120,
+  "diaconus": 54,
+  "augustus": 568,
+  "cornicularius": 35,
+  "signifer": 47,
+  "advocatus": 35,
+  "adiutor": 67,
+  "primus_pilus": 30
+ },
+ "tier": {
+  "priesthood": 3660,
+  "military": 1784,
+  "senatorial": 3917,
+  "title": 5693,
+  "municipal": 2495,
+  "equestrian": 912,
+  "occupation": 152
+ },
+ "retyped_from": {},
+ "tier_changes": [
+  {
+   "canonical": "adlectus",
+   "from": "senatorial",
+   "to": "equestrian",
+   "count": 56
+  },
+  {
+   "canonical": "adlectus",
+   "from": "senatorial",
+   "to": "municipal",
+   "count": 7
+  },
+  {
+   "canonical": "adlectus",
+   "from": "senatorial",
+   "to": null,
+   "count": 5
+  },
+  {
+   "canonical": "adlectus",
+   "from": "senatorial",
+   "to": "military",
+   "count": 2
+  }
+ ]
+}
