@@ -24,6 +24,11 @@ requests>=2.31
 # use requests (above); the remaining evaluation scripts use only the
 # standard library (csv, json, argparse, pathlib, collections).
 
+# evaluation/llm_judge/run_judge.py — three judge providers (anthropic and
+# openai are listed above). Gemini uses the current google-genai SDK, not the
+# deprecated google-generativeai used by the extraction scripts.
+google-genai>=1.55
+
 # --- Vector search (optional) -------------------------------------------
 # upsert_to_pinecone.py imports these lazily inside functions.
 pinecone>=5.0

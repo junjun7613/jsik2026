@@ -1,0 +1,139 @@
+{
+  "n_inscriptions_all_judges_ok": 30,
+  "pairwise_path_agreement": {
+    "claude~gpt": {
+      "path_jaccard": 0.498,
+      "shared_paths": 134,
+      "union_paths": 269
+    },
+    "claude~gemini": {
+      "path_jaccard": 0.619,
+      "shared_paths": 122,
+      "union_paths": 197
+    },
+    "gpt~gemini": {
+      "path_jaccard": 0.553,
+      "shared_paths": 151,
+      "union_paths": 273
+    }
+  },
+  "fleiss_kappa_any_major": 0.466,
+  "recurring_patterns": [
+    {
+      "field": "persons[].ethnicity_evidence",
+      "inscriptions": 24,
+      "share": 0.8,
+      "majority_minor": 36,
+      "majority_major": 0
+    },
+    {
+      "field": "persons[].gender_evidence",
+      "inscriptions": 23,
+      "share": 0.767,
+      "majority_minor": 35,
+      "majority_major": 0
+    },
+    {
+      "field": "persons[].life_events[]",
+      "inscriptions": 7,
+      "share": 0.233,
+      "majority_minor": 2,
+      "majority_major": 8
+    },
+    {
+      "field": "person_relationships",
+      "inscriptions": 4,
+      "share": 0.133,
+      "majority_minor": 2,
+      "majority_major": 2
+    },
+    {
+      "field": "persons[].social_status_evidence",
+      "inscriptions": 4,
+      "share": 0.133,
+      "majority_minor": 7,
+      "majority_major": 0
+    },
+    {
+      "field": "persons[].social_status",
+      "inscriptions": 3,
+      "share": 0.1,
+      "majority_minor": 1,
+      "majority_major": 2
+    },
+    {
+      "field": "persons[].benefactions[]",
+      "inscriptions": 2,
+      "share": 0.067,
+      "majority_minor": 0,
+      "majority_major": 2
+    },
+    {
+      "field": "persons[].social_statuses[].evidence",
+      "inscriptions": 2,
+      "share": 0.067,
+      "majority_minor": 2,
+      "majority_major": 0
+    },
+    {
+      "field": "person_relationships[]",
+      "inscriptions": 2,
+      "share": 0.067,
+      "majority_minor": 0,
+      "majority_major": 2
+    },
+    {
+      "field": "persons[]",
+      "inscriptions": 2,
+      "share": 0.067,
+      "majority_minor": 0,
+      "majority_major": 2
+    },
+    {
+      "field": "persons[].person_name",
+      "inscriptions": 2,
+      "share": 0.067,
+      "majority_minor": 3,
+      "majority_major": 0
+    },
+    {
+      "field": "persons[].gender",
+      "inscriptions": 2,
+      "share": 0.067,
+      "majority_minor": 0,
+      "majority_major": 2
+    }
+  ],
+  "per_judge": {
+    "claude": {
+      "flagged_paths": 149,
+      "major": 20,
+      "invalid_paths": 0,
+      "overall": {
+        "acceptable": 14,
+        "has_errors": 11,
+        "cannot_judge": 5
+      }
+    },
+    "gpt": {
+      "flagged_paths": 254,
+      "major": 81,
+      "invalid_paths": 3,
+      "overall": {
+        "acceptable": 6,
+        "has_errors": 18,
+        "cannot_judge": 6
+      }
+    },
+    "gemini": {
+      "flagged_paths": 170,
+      "major": 26,
+      "invalid_paths": 1,
+      "overall": {
+        "acceptable": 14,
+        "has_errors": 12,
+        "cannot_judge": 4
+      }
+    }
+  }
+}
