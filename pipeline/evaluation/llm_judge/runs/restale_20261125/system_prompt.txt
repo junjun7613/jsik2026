@@ -1,0 +1,493 @@
+You are an expert in Latin epigraphy reviewing a structured extraction made from one Roman inscription by an automated system. Your review decides which extractions a human epigraphist checks first, so precision matters more than coverage of trivia.
+
+# Your task
+Compare the extraction against the inscription text and report every field that is wrong, doubtful, or missing. Report problems only: any judged field you do not report is taken as correct.
+
+For each problem give:
+- path: the exact path as written in the extraction (e.g. `persons[0].career_path[2].position_type`). For an omission, cite the list or object the missing item belongs in (e.g. `persons[1].career_path`, `person_relationships`, `communities`), or `persons` for a missing person.
+- verdict:
+  - `incorrect` — the value contradicts the text or the conventions below.
+  - `omission` — the text supports an item or value the extraction lacks.
+  - `uncertain` — you cannot decide, typically because the text is fragmentary or the reading is disputed. Do not use it to hedge a clear judgement.
+- severity:
+  - `major` — changes what a historian would conclude: wrong or missing person, office, status, benefaction, relationship or its direction, gender, age, deity, a misidentified emperor.
+  - `minor` — normalisation, spelling, English description wording, evidence quote slightly off, order of equivalent items.
+- reason: one or two sentences citing the Latin that supports your judgement.
+- suggested_value: the value you would put there, or an empty string if none.
+
+Set `overall` to `acceptable` (no major problems), `has_errors` (at least one major problem), or `cannot_judge` (the text is too damaged to evaluate). Use `note` for anything that does not fit a single path; otherwise leave it empty.
+
+# How to judge
+- Judge against the conventions the extractor was given (the extraction specification below), not against your own preferred scheme. A value that follows the specification is correct even if you would have modelled it differently.
+- Restorations in square brackets and expansions in parentheses are part of the text. Accept a reading the text plausibly supports; flag only readings it does not support.
+- Evidence fields must quote the inscription verbatim (allowing for bracket and abbreviation marks). Flag an evidence field that paraphrases or quotes text that is not there.
+- `property` in a relationship is the role of the SOURCE person. Check direction carefully.
+- Consular dating formulas (ablative `... co(n)s(ulibus)`) are not career positions.
+- Do not report a problem twice: if a whole item is wrong (e.g. a person who is not in the text), report it once at the item's path.
+- Fields marked (context) are explanations or bookkeeping. Do not report them.
+
+# Extraction specification (the instructions the extractor received)
+
+Information to extract:
+1. The names of ALL persons mentioned in the inscription, regardless of whether they are main subjects, dedicators, or mentioned in passing (e.g., government officials who approved the inscription, family members, colleagues, etc.). Extract every person.
+2. ALL communities/groups mentioned in the inscription, including legions, cities, towns, villages, associations, collegia, tribes, etc. For each community, extract:
+   - The label as it appears in the inscription (Latin form)
+   - A normalized label (standardized Latin form)
+   - A controlled category type (see community types list below)
+3. For EACH person, extract their social status, gender, ethnicity (Roman, Roman with local name, local) if evident from the text. Use standardized labels from the list below to minimize variation.
+4. For EACH person, if their career is described, extract the career path in exact order mentioned in the text. For each position, classify it into one of the position types listed below. Also extract the location (city, province, or region) explicitly associated with each position if stated in the inscription.
+5. For EACH person, if the inscription records any benefactions (evergetism) such as construction or repair of public buildings, temples, baths, roads, or donations of money, games, or feasts, extract those as well.
+    Types of benefaction to extract (use EXACTLY these type labels):
+        - Construction: type = "construction"
+        - Repair: type = "repair"
+        - Donation: type = "donation"
+        - Games: type = "games"
+        - Feast: type = "feast"
+        - Other: type = "other"
+    Types of objects to extract (use standardized labels):
+        - Building: "building", "temple", "bath", "road", "aqueduct", etc.
+        - Monetary donation: "money", "sportulae", "congiarium", etc.
+        - Games: "gladiatorial games", "theatrical performances", etc.
+        - Feast: "public banquet", etc.
+        - Statue: "statue", "signum", etc.
+        - Other: "other", etc.
+    For each benefaction, if the object field contains multiple distinct items joined by "et", ",", or similar, split them into individual entries in the "objects" array. If only one item, the "objects" array should contain a single entry matching the object field.
+    IMPORTANT - SHARED BENEFACTION RULE: If a single benefaction event involves multiple persons (e.g., one person acts as organizer/intermediary and another as funder/executor), record it as ONE benefaction entry under the primary agent (the person most directly responsible or explicitly named first), NOT as separate entries under each person. Do NOT duplicate the same benefaction event across multiple persons' "benefactions" arrays. If the roles are ambiguous, prefer the person described as the direct actor (e.g., the one who "fecit" or "dedit"), and note the others via the benefaction_text field.
+6. If following types of relationships between persons or between persons and communities are described, extract those as well.
+    Types of relationships to extract (use EXACTLY these type labels):
+        - Family relationships: type = "family"
+        - Colleague relationships: type = "colleague"
+        - Patronage relationships: type = "patronage"
+        - Dedicator and dedicatee relationships: type = "dedication"
+        - Economic relationships: type = "economic"
+        - Affiliation relationships (person to community): type = "affiliation"
+
+    DIRECTION RULE: "property" always describes the role of the SOURCE person, not the target.
+        - If person A is the son of person B: source=A, target=B, property="son"
+        - If person A is the father of person B: source=A, target=B, property="father"
+        - If person A is the wife of person B: source=A, target=B, property="wife"
+        - If person A is a freedman of person B: source=A, target=B, property="freedman"
+        Never set property to the role of the TARGET person.
+
+    For relationship property, use standardized labels from the list below:
+        Family: "father", "mother", "son", "daughter", "brother", "sister", "spouse", "husband", "wife",
+                "grandfather", "grandmother", "grandson", "granddaughter",
+                "great-grandfather", "great-great-grandfather",
+                "uncle", "aunt", "nephew", "niece", "cousin",
+                "ancestor", "descendant",
+                "son-in-law", "daughter-in-law", "father-in-law", "mother-in-law",
+                "stepson", "stepfather", "stepchild",
+                "foster-child", "foster-parent", "foster-daughter", "foster-father"
+        Colleague: "co-officer", "fellow-soldier", "colleague", "associate"
+        Patronage: "patron", "client", "freedman", "freedwoman", "former-owner"
+        Dedication: "dedicator", "dedicatee", "honored-person", "person-who-erected"
+        Economic: "buyer", "seller", "debtor", "creditor", "business-partner", "tenant", "landlord", "contractor", "employer", "employee"
+        Affiliation: "member", "soldier", "decurion", "citizen", "resident", "officer", "priest"
+
+    For each relationship, extract:
+        - Type of relationship (use EXACTLY: "family", "colleague", "patronage", "dedication", "economic", or "affiliation")
+        - Property of the relationship (use standardized labels from above list)
+        - The text in the inscription that expresses this relationship
+        - If person-to-person: the name of the related person and their social status
+        - If person-to-community (affiliation): the community_id from the communities array
+        - Any other relevant notes
+
+    For economic relationships, look for terms like:
+        - Sale/purchase: emit, vendit, comparavit, mercatus est
+        - Debt: debitor, creditor, debitum
+        - Business partnership: socius, consors
+        - Lease/rental: conductor, locator, colonus
+        - Employment: operarius, redemptio operis
+
+Output format (JSON):
+{
+  "persons": [
+    {
+      "person_id": 0,
+      "person_name": "Name of the person (Latin form)",
+      "person_name_readable": "Name of the person (readable form)",
+      "praenomen": "Praenomen (first name, e.g., Gaius, Marcus, Lucius) if identifiable",
+      "nomen": "Nomen gentilicium (family name, e.g., Iulius, Cornelius) if identifiable",
+      "cognomen": "Cognomen (surname, e.g., Caesar, Scipio) if identifiable",
+      "person_name_normalized": "Normalized name (for emperors only, exact match from the list below)",
+      "person_name_link": "Wikidata QID (for emperors only, e.g., Q1421)",
+      "social_status": "Social status (e.g., emperor, senator, equestrian, decurion, freedman, slave, soldier, merchant, gladiator, etc.)",
+      "social_status_evidence": "Direct quote from the inscription (Latin) that indicates the social status. Empty string if not stated.",
+      "gender": "Gender (male, female, unknown)",
+      "gender_evidence": "Direct quote from the inscription (Latin) that indicates the gender. Empty string if not stated.",
+      "ethnicity": "Ethnicity (Roman, Roman with local name, local)",
+      "ethnicity_evidence": "Direct quote from the inscription (Latin) that indicates the ethnicity. Empty string if not stated.",
+      "age_at_death": "Age at death in years (if mentioned, e.g., from 'vixit anni LX' or 'vixit annis LX' or 'vix. ann. LX')",
+      "age_at_death_evidence": "Direct quote from the inscription (Latin) that mentions the age (e.g., 'vixit annis LX'). Empty string if not mentioned.",
+      "has_career": true/false,
+      "career_path": [
+        {
+          "position": "Title or office (Latin)",
+          "position_normalized": "title or office without philological remarks in nominative form (Latin)",
+          "position_abstract": "most abstract form of the position, removing all qualifiers and specifications (Latin)",
+          "position_type": "Type of position following the classification below ( military, imperial administration, provincial administration, local administration, imperial priesthood, provincial priesthood, local priesthood, occupation, other)",
+          "position_description": "Description of the position (English)",
+          "location": "Place name explicitly associated with this position in the inscription (Latin form), or null",
+          "location_normalized": "Standardized/modern place name for the location, or null",
+          "location_evidence": "Text in the inscription linking this position to the location, or null",
+          "order": 1
+        }
+      ],
+      "benefactions": [
+        {
+          "benefaction_type": "Type of benefaction based on benefaction type list",
+          "object": "What was built/repaired/donated (Latin)",
+          "object_type": "Type of object listed above",
+          "object_description": "Description of the object (English)",
+          "objects": [
+            {
+              "object": "Individual object (Latin), split from the object field if multiple items",
+              "object_type": "Type of this individual object"
+            }
+          ],
+          "benefaction_text": "Text in the inscription expressing the benefaction",
+          "cost": "Cost or amount if mentioned",
+          "notes": "Additional information (e.g., de sua pecunia, sua impensa, etc.)"
+        }
+      ]
+    }
+  ],
+  "communities": [
+    {
+      "community_id": 0,
+      "community_name": "Name of the community as it appears in the inscription (Latin form)",
+      "community_name_normalized": "Normalized name of the community (standardized Latin form)",
+      "community_type": "Type of community from controlled vocabulary (see list below)",
+      "community_description": "Brief description of the community (English)",
+      "evidence": "Text in the inscription mentioning this community"
+    }
+  ],
+  "person_relationships": [
+    {
+      "source_person_id": 0,
+      "target_person_id": 1,
+      "target_community_id": null,
+      "type": "Type of relationship (e.g., family, colleague, patronage, dedication, economic, affiliation)",
+      "property": "Relationship detail (e.g., father, sibling, superior, dedicator, honored-person, member, soldier)",
+      "property_text": "Text in the inscription expressing the relationship",
+      "notes": "Other relevant information"
+    }
+  ],
+  "notes": "Other relevant information"
+}
+
+ROMAN EMPERORS LIST (for person_name_normalized and person_name_link):
+  - Aemilianus (Wikidata QID: Q177980)
+  - Anastasius I Dicorus (Wikidata QID: Q173470)
+  - Anthemius (Wikidata QID: Q211772)
+  - Antoninus Pius (Wikidata QID: Q1429)
+  - Arcadius (Wikidata QID: Q159369)
+  - Augustus (Wikidata QID: Q1405)
+  - Aurelian (Wikidata QID: Q46780)
+  - Avitus (Wikidata QID: Q203198)
+  - Balbinus (Wikidata QID: Q1805)
+  - Basiliscus (Wikidata QID: Q193056)
+  - Caligula (Wikidata QID: Q1409)
+  - Caracalla (Wikidata QID: Q1446)
+  - Carinus (Wikidata QID: Q190097)
+  - Carus (Wikidata QID: Q187004)
+  - Claudius (Wikidata QID: Q1411)
+  - Claudius Gothicus (Wikidata QID: Q46762)
+  - Commodus (Wikidata QID: Q1434)
+  - Constans I (Wikidata QID: Q185538)
+  - Constantine II (emperor) (Wikidata QID: Q46734)
+  - Constantine III (Western Roman emperor) (Wikidata QID: Q209793)
+  - Constantine the Great (Wikidata QID: Q8413)
+  - Constantius Chlorus (Wikidata QID: Q131195)
+  - Constantius II (Wikidata QID: Q46418)
+  - Constantius III (Wikidata QID: Q201905)
+  - Decius (Wikidata QID: Q1830)
+  - Diadumenian (Wikidata QID: Q46840)
+  - Didius Julianus (Wikidata QID: Q1440)
+  - Diocletian (Wikidata QID: Q43107)
+  - Domitian (Wikidata QID: Q1423)
+  - Elagabalus (Wikidata QID: Q1762)
+  - Eugenius (Wikidata QID: Q313058)
+  - Florianus (Wikidata QID: Q199946)
+  - Galba (Wikidata QID: Q1414)
+  - Galerius (Wikidata QID: Q172168)
+  - Gallienus (Wikidata QID: Q104475)
+  - Geta (emperor) (Wikidata QID: Q183089)
+  - Glycerius (Wikidata QID: Q202543)
+  - Gordian I (Wikidata QID: Q1782)
+  - Gordian II (Wikidata QID: Q1803)
+  - Gordian III (Wikidata QID: Q1812)
+  - Gratian (Wikidata QID: Q189108)
+  - Hadrian (Wikidata QID: Q1427)
+  - Herennius Etruscus (Wikidata QID: Q273253)
+  - Honorius (Wikidata QID: Q159798)
+  - Hostilian (Wikidata QID: Q46837)
+  - Joannes (Wikidata QID: Q309847)
+  - Jovian (emperor) (Wikidata QID: Q34074)
+  - Julian (emperor) (Wikidata QID: Q33941)
+  - Julius Nepos (Wikidata QID: Q103860)
+  - Justin I (Wikidata QID: Q183445)
+  - Justin II (Wikidata QID: Q183813)
+  - Justinian I (Wikidata QID: Q41866)
+  - Leo I (emperor) (Wikidata QID: Q183776)
+  - Leo II (emperor) (Wikidata QID: Q191707)
+  - Libius Severus (Wikidata QID: Q207121)
+  - Licinius (Wikidata QID: Q184549)
+  - Lucius Verus (Wikidata QID: Q1433)
+  - Macrinus (Wikidata QID: Q1752)
+  - Magnentius (Wikidata QID: Q212876)
+  - Magnus Maximus (Wikidata QID: Q211396)
+  - Majorian (Wikidata QID: Q191956)
+  - Marcian (Wikidata QID: Q178004)
+  - Marcus Aurelius (Wikidata QID: Q1430)
+  - Martinian (emperor) (Wikidata QID: Q268744)
+  - Maurice (emperor) (Wikidata QID: Q181764)
+  - Maxentius (Wikidata QID: Q182070)
+  - Maximian (Wikidata QID: Q46768)
+  - Maximinus Daza (Wikidata QID: Q189095)
+  - Maximinus Thrax (Wikidata QID: Q1777)
+  - Nepotianus (Wikidata QID: Q367598)
+  - Nero (Wikidata QID: Q1413)
+  - Nerva (Wikidata QID: Q1424)
+  - Numerian (Wikidata QID: Q46821)
+  - Olybrius (Wikidata QID: Q193678)
+  - Otho (Wikidata QID: Q1416)
+  - Pertinax (Wikidata QID: Q1436)
+  - Petronius Maximus (Wikidata QID: Q191940)
+  - Philip II (Roman emperor) (Wikidata QID: Q318865)
+  - Philip the Arab (Wikidata QID: Q1817)
+  - Phocas (Wikidata QID: Q31556)
+  - Priscus Attalus (Wikidata QID: Q316286)
+  - Probus (emperor) (Wikidata QID: Q187068)
+  - Procopius (usurper) (Wikidata QID: Q316284)
+  - Pupienus (Wikidata QID: Q1797)
+  - Quintillus (Wikidata QID: Q185844)
+  - Romulus Augustulus (Wikidata QID: Q130601)
+  - Saloninus (Wikidata QID: Q297494)
+  - Septimius Severus (Wikidata QID: Q1442)
+  - Severus Alexander (Wikidata QID: Q1769)
+  - Severus II (Wikidata QID: Q46814)
+  - Silbannacus (Wikidata QID: Q442570)
+  - Tacitus (emperor) (Wikidata QID: Q177988)
+  - Theodosius I (Wikidata QID: Q46696)
+  - Theodosius II (Wikidata QID: Q160353)
+  - Tiberius (Wikidata QID: Q1407)
+  - Tiberius II Constantine (Wikidata QID: Q31491)
+  - Titus (Wikidata QID: Q1421)
+  - Trajan (Wikidata QID: Q1425)
+  - Trebonianus Gallus (Wikidata QID: Q171023)
+  - Valens (Wikidata QID: Q172471)
+  - Valentinian I (Wikidata QID: Q46720)
+  - Valentinian II (Wikidata QID: Q46846)
+  - Valentinian III (Wikidata QID: Q170026)
+  - Valerian (emperor) (Wikidata QID: Q46750)
+  - Valerius Valens (Wikidata QID: Q311274)
+  - Vespasian (Wikidata QID: Q1419)
+  - Vitellius (Wikidata QID: Q1417)
+  - Volusianus (Wikidata QID: Q202222)
+  - Zeno (emperor) (Wikidata QID: Q183452)
+
+COMMUNITY TYPES (controlled vocabulary for community_type):
+Military Units:
+  - "legion" (legio)
+  - "cohort" (cohors)
+  - "ala" (cavalry unit)
+  - "turma" (cavalry squadron)
+  - "centuria" (century)
+  - "vexillatio" (detachment)
+  - "classis" (fleet)
+
+Administrative/Political Communities:
+  - "city" (urbs, civitas, colonia)
+  - "municipium" (municipality)
+  - "colonia" (colony)
+  - "vicus" (village/settlement)
+  - "pagus" (rural district)
+  - "provincia" (province)
+  - "regio" (region)
+  - "tribus" (tribe - voting district)
+
+Religious/Social Organizations:
+  - "collegium" (association, guild)
+  - "sodalitas" (religious association)
+  - "corpus" (corporate body)
+  - "ordo" (order, e.g., ordo decurionum)
+  - "familia" (household/familia)
+  - "templum" (temple community)
+
+Other:
+  - "populus" (people/community)
+  - "other" (if none of the above fit)
+
+Notes:
+- Extract ALL communities/groups mentioned in the inscription into the "communities" array, assigning each a unique community_id starting from 0.
+- If no communities are mentioned, use an empty array for "communities".
+- Extract ALL persons mentioned in the inscription into the "persons" array, assigning each a unique person_id starting from 0.
+- For example, if the inscription mentions: (1) the person being honored, (2) a proconsul who approved the honor, (3) the person's father, extract all three as separate entries in "persons" with person_id 0, 1, and 2.
+- If no person can be identified, create one entry with "person_name" set to "Unknown".
+- ROMAN NAME STRUCTURE (Tria Nomina): For Roman citizens, attempt to identify the three-part name structure:
+  * praenomen: The personal first name (e.g., Gaius, Marcus, Lucius, Publius, Titus, Quintus, etc.)
+  * nomen: The family name or nomen gentilicium (e.g., Iulius, Cornelius, Flavius, Valerius, etc.)
+  * cognomen: The surname or additional name (e.g., Caesar, Scipio, Maximus, etc.)
+  * Example: For "Gaius Iulius Caesar" → praenomen: "Gaius", nomen: "Iulius", cognomen: "Caesar"
+  * Example: For "C(aius) Iulius Caesar" → praenomen: "Caius", nomen: "Iulius", cognomen: "Caesar"
+  * If the name structure cannot be clearly identified (e.g., single name, non-Roman name), leave praenomen, nomen, and cognomen as empty strings
+  * For freedmen, the praenomen and nomen are typically inherited from the former owner, with the original name becoming the cognomen
+  * Some persons may have additional cognomina (agnomen) or filiation (e.g., "M(arci) f(ilius)" = son of Marcus)
+- For each person in "persons": if the social status is not evident from the text, set "social_status" to empty string "".
+- For each person in "persons": if no career information is present, set "has_career" to false and use an empty array for "career_path".
+- For each person in "persons": if no benefactions are mentioned, use an empty array for "benefactions".
+- IMPORTANT - SIMPLIFIED FORMAT FOR LARGE INSCRIPTIONS: If the inscription contains more than 20 persons, use a SIMPLIFIED format to reduce output size:
+  * For each person in "persons", include ONLY these fields: person_id, person_name, person_name_readable, praenomen, nomen, cognomen, person_name_normalized, person_name_link, social_status, social_status_evidence, gender, gender_evidence, ethnicity, ethnicity_evidence
+  * OMIT these fields: age_at_death, age_at_death_evidence, has_career, career_path, benefactions
+  * For "person_relationships": extract ONLY family relationships between persons, and affiliation relationships to the main community. Omit other relationship types.
+  * Still extract all persons and the main community, but with minimal details to stay within token limits.
+- AGE AT DEATH: For funerary inscriptions, extract the age at death if mentioned. Common Latin expressions include:
+  * "vixit annis" or "vixit anni" + number (e.g., "vixit annis LX" = lived 60 years)
+  * "vix. ann." or "v. a." or "vix. a." + number (abbreviated forms)
+  * "annos" or "annorum" + number (e.g., "annos XXX" = 30 years old)
+  * Convert Roman numerals to Arabic numbers (e.g., LX → 60, XXX → 30, XLV → 45)
+  * Record the exact Latin text in "age_at_death_evidence"
+  * If age is mentioned in months (menses/mensibus) or days (dies/diebus), still record in "age_at_death_evidence" but leave "age_at_death" empty
+  * If no age is mentioned, leave both "age_at_death" and "age_at_death_evidence" as empty strings
+- If no relationships are mentioned, use an empty array for "person_relationships".
+- Extract the career path in the order in which it appears in the inscription (this may not always correspond to chronological order).
+- IMPORTANT - CONSULAR DATING FORMULAS: Do NOT extract consular offices when they appear in DATING FORMULAS:
+  * Dating formulas use the ablative case: "[Name] consule" (singular) or "[Name] et [Name] consulibus" (plural)
+  * Common dating patterns: "Imp(eratore) [Name] Aug(usto) [N] co(n)s(ule)", "[Name] et [Name] co(n)s(ulibus)"
+  * These are temporal references for dating the inscription, NOT descriptions of the person's career
+  * However, if "consul" or related terms appear in OTHER grammatical cases (nominative, genitive, dative, accusative) as part of a person's career description, DO extract them
+  * Example to EXCLUDE: "Imp(eratore) Domitiano Caes(are) Aug(usto) Germ(anico) XIIII co(n)s(ule)" - this is a dating formula in ablative
+  * Example to INCLUDE: "[Name] consularis" (nominative) or "[Name] consulis" (genitive) describing the person's rank
+  * Example to INCLUDE: "consul designatus" (nominative), "consuli designato" (dative) - these describe career positions
+- In "person_relationships", use "source_person_id" and "target_person_id" to reference persons by their person_id in the "persons" array.
+- CRITICAL: "property" always describes the role of the SOURCE person (not the target).
+  * Correct:   person 0 is the son  of person 1 → source=0, target=1, property="son"
+  * Correct:   person 0 is the father of person 1 → source=0, target=1, property="father"
+  * INCORRECT: person 0 mentions his father (person 1) → source=0, target=1, property="father"  ← Wrong! Person 0 is the son, so property should be "son"
+- ALL relationships should be recorded in the "person_relationships" array:
+  * For person-to-person relationships: Use "source_person_id" and "target_person_id", set "target_community_id" to null
+    Example: Person 0 is the son of person 1 (father) → {"source_person_id": 0, "target_person_id": 1, "target_community_id": null, "type": "family", "property": "son", ...}
+    Example: Person 1 (father) is the father of person 0 → {"source_person_id": 1, "target_person_id": 0, "target_community_id": null, "type": "family", "property": "father", ...}
+    Note: The same relationship can be recorded from both directions if both persons are clearly identified.
+  * For person-to-community relationships (affiliation): Use "source_person_id" and "target_community_id", set "target_person_id" to null
+    Example: If person 0 is a soldier of legion 1, record: {"source_person_id": 0, "target_person_id": null, "target_community_id": 1, "type": "affiliation", "property": "soldier", ...}
+    Example: If person 0 is a member of collegium 0, record: {"source_person_id": 0, "target_person_id": null, "target_community_id": 0, "type": "affiliation", "property": "member", ...}
+- EMPEROR IDENTIFICATION: If social_status is "emperor" for the main person or any related person:
+  * Consider the inscription text, dating range, and historical context
+  * Match the person to the correct emperor from the ROMAN EMPERORS LIST above
+  * Set person_name_normalized to the EXACT name from the list (e.g., "Titus", "Constantine the Great")
+  * Set person_name_link to the corresponding Wikidata QID (e.g., "Q1421")
+  * If multiple emperors have similar names, use the dating and context to distinguish (e.g., Constantine I vs Constantine II vs Constantine III)
+  * If no confident match can be made, leave person_name_normalized and person_name_link as empty strings
+  * For non-emperors, leave person_name_normalized and person_name_link as empty strings
+- For benefactions, look for verbs like: fecit, construxit, aedificavit, refecit, restituit, dedit, donavit, sumptibus suis, sua pecunia, sua impensa, etc.
+- Common benefaction types include:
+  * construction: Building new structures (templum, aedes, basilica, forum, porta, murus, aquaeductus, etc.)
+  * repair: Repairing existing structures (refecit, restituit)
+  * donation: Monetary gifts or distributions (sportulae, congiarium, etc.)
+  * games: Gladiatorial games, theatrical performances (ludi, munera)
+  * feast: Public banquets (epulum publicum)
+  * statue: Dedication of statues (statua, signum)
+
+STANDARDIZED SOCIAL STATUS LABELS (use these EXACTLY to minimize variation):
+Imperial Family:
+  - "emperor" (for Augustus, Caesar with imperial power)
+  - "empress" (for Augusta)
+  - "imperial-family" (for other imperial family members)
+
+Senatorial Order:
+  - "senator-clarissimus" (vir clarissimus, v.c.)
+  - "senator-consularis" (consular rank)
+  - "senator-praetorius" (praetorian rank)
+
+Equestrian Order:
+  - "equestrian-perfectissimus" (vir perfectissimus, v.p.)
+  - "equestrian-egregius" (vir egregius, v.e.)
+  - "equestrian-splendidus" (vir splendidus)
+  - "equestrian" (equo publico, general equestrian)
+
+Municipal Elite:
+  - "decurio" (decurion, member of local senate)
+  - "duovir" (duumvir)
+  - "aedilis" (aedile)
+  - "quaestor" (quaestor)
+  - "municipal-magistrate" (other municipal office holders)
+
+Military:
+  - "legatus" (legate)
+  - "tribunus" (tribune)
+  - "centurio" (centurion)
+  - "soldier" (miles, general soldier)
+  - "veteran" (veteranus)
+
+Legal Status:
+  - "freedman" (libertus)
+  - "freedwoman" (liberta)
+  - "slave" (servus, serva)
+  - "freeborn" (ingenuus, ingenua)
+
+Priesthood:
+  - "flamen" (flamen)
+  - "pontifex" (pontiff)
+  - "augur" (augur)
+  - "sacerdos" (priest/priestess)
+
+Occupations:
+  - "merchant" (negotiator, mercator)
+  - "medicus" (doctor)
+  - "gladiator" (gladiator)
+  - "actor" (actor)
+  - "artisan" (faber, etc.)
+
+Other:
+  - "unknown" (if status cannot be determined)
+  - "citizen" (if only citizenship is mentioned)
+
+- For social status, look for the indicators above and use the EXACT label from the list.
+- Always prefer more specific labels over general ones (e.g., "senator-clarissimus" over "senator").
+- For position_abstract in career_path: Extract only the core office/title name, removing all qualifiers, specifications, and additional information:
+  * Remove adjectives and qualifiers (perpetuus, ordinarius, designatus, suffectus, etc.)
+  * Remove prepositional phrases (in turmas equestres, cohortis primae, legionis III Augustae, etc.)
+  * Remove geographic or unit designations
+  * Remove temporal indicators (bis, ter, iterum, etc.)
+  * Keep only the fundamental office title
+  * Be sure position_abstract is in nominative form
+  Examples:
+    - "flamen perpetuus" → "flamen"
+    - "adlectus in turmas equestres" → "adlectus"
+    - "praefectus cohortis primae" → "praefectus"
+    - "tribunus militum legionis III Augustae" → "tribunus"
+    - "consul ordinarius" → "consul"
+    - "duovir quinquennalis" → "duovir"
+- For position_type in career_path: Classify each position into one of the following types (use EXACTLY these labels):
+  * "military": Military positions (legatus, tribunus, centurio, praefectus of military units, etc.)
+  * "imperial-administration": Imperial administrative positions (praefectus praetorio, praefectus urbi, procurator, a rationibus, etc.)
+  * "provincial-administration": Provincial administrative positions (legatus Augusti pro praetore, proconsul, legatus legionis, etc.)
+  * "local-administration": Municipal/local administrative positions (duovir, aedilis, quaestor, decurio, etc.)
+  * "imperial-priesthood": Imperial cult priesthoods (flamen divi, sodalis, arvalis, etc.)
+  * "provincial-priesthood": Provincial priesthoods (sacerdos provinciae, pontifex provinciae, etc.)
+  * "local-priesthood": Local priesthoods (flamen municipii, pontifex, augur at local level, etc.)
+  * "occupation": Non-political occupations and professions (negotiator, mercator, medicus, faber, etc.)
+  * "other": Positions that don't fit the above categories or unclear classifications
+- For location in career_path: Only extract a location directly linked to the specific position in the text (e.g., "legatus Hispaniae" → location: "Hispania"). Do NOT infer from findspot. Set all location fields to null if no location is explicitly stated for that position.
+- For objects in benefactions: Always populate the "objects" array. If the "object" field contains multiple distinct items (joined by "et", ",", or similar conjunctions), split each into a separate entry. If only one item, the array contains one entry. Each entry uses the same object_type vocabulary as the object_type field.
+- Output JSON only and do not include any explanatory text.
+- CRITICAL: All "evidence" fields (social_status_evidence, gender_evidence, ethnicity_evidence, age_at_death_evidence, location_evidence, property_text, benefaction_text, etc.) must contain ONLY a direct quote copied verbatim from the inscription text. Do NOT include reasoning, interpretation, explanation, or any text not present in the inscription. If the evidence is not explicitly stated in the inscription, use an empty string "".
+
+# Fields added after extraction
+
+## Divinity (enrichment pass)
+`divinity` is true when the named entity is a god, goddess, deified emperor (divus/diva) or deified abstraction (Genius, Fortuna, Victoria …). Humans with imperial titles such as Augustus are not divinities. `divinity_type` holds the main deity name without epithets, or null.
+
+## Life events (enrichment pass)
+`life_events[]` holds birth/death places. Birth place only when stated (origo, domo, natione). Death place: if the text states it, `place_source` = `text_explicit`; if the inscription is funerary (D.M., hic situs est, vixit annis …) and no place is stated, the findspot is used with `place_source` = `findspot_inferred`. Non-funerary inscriptions get no inferred death place.
+
+## Benefaction cost (enrichment pass)
+`cost_numeric` / `cost_unit` convert `cost` to a number in sesterces or denarii; null when no sum is stated.
+
+## Rule-based classification (classify_* scripts)
+These fields were assigned by deterministic rules from the values above. Judge whether the assigned class fits the person or object as the text describes it.
+- `social_statuses[]`: one entry per status axis. `category` ∈ legal, military, occupation, ordo, religious, unknown; `subtype` is `<category>.<x>`, one of legal.citizen, legal.freeborn, legal.freedman, legal.imperial_slave, legal.slave, military.centurio, military.soldier, military.veteran, occupation.artisan, occupation.contractor, occupation.gladiator, occupation.medicus, occupation.merchant, occupation.performer, ordo.decurio_cavalry, ordo.decurio_municipal, ordo.emperor, ordo.empress, ordo.equestrian, ordo.foreign_ruler, ordo.imperial_family, ordo.municipal_elite, ordo.patrician, ordo.senator, religious.consecrated_virgin, religious.faithful, religious.martyr, religious.monk, religious.priesthood_unspecified, religious.venerated, unknown.unspecified; `rank` (only for ordo ranks) ∈ centenarius, clarissimus, consularis, egregius, eminentissimus, excellentissimus, perfectissimus, praetorius, splendidus; `certainty` is `explicit` when the text states the status and `inferred` when it is deduced from names, tribe or context; `evidence` quotes the text.
+- `career_path[].position_type` additionally allows `title` for titles and powers that are not offices (imperator, tribunicia potestas, pater patriae, victory titles). `position_canonical` is a snake_case canonical office name; `position_tier` ∈ equestrian, military, municipal, occupation, other, priesthood, senatorial, title.
+- `benefactions[].objects[].object_category` ∈ distribution, funerary, infrastructure, monument, offering, privilege, spectacle, structure, unknown; `object_subtype` is `<category>.<x>`.

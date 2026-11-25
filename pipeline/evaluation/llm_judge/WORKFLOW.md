@@ -87,6 +87,9 @@ cd pipeline/evaluation/llm_judge
 # 対象の確定（全 judge 共通）
 python run_judge.py prepare --run-id pilot01 --sample 30 --seed 42
 python run_judge.py prepare --run-id uthina01 --place Uthina   # 地名（ファイルパス）で絞り込み
+# judge の後に値が変わって失効した碑文だけを判定し直す（先に compute_assessment_status.py を実行しておく）。
+# 判定は碑文の全体に対して行う（項目だけを渡すとプロンプトと判定の条件が変わり、抜けも見られないため）
+python run_judge.py prepare --run-id restale_20261125 --from-status llm_judged
 
 # 入力トークンの見積もり（Anthropic の count_tokens、無料）
 python run_judge.py estimate --run-id pilot01

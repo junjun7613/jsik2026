@@ -42,10 +42,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from judge_common import (  # noqa: E402
-    JUDGE_SCHEMA, MAX_LINES, PROJECT_DIR, PROMPT_VERSION, RUNS_DIR,
-    build_system_prompt, build_user_message, check_paths, flatten, input_sha,
+    JUDGE_SCHEMA, MAX_LINES, PIPELINE_DIR, PROJECT_DIR, PROMPT_VERSION, RUNS_DIR,
+    build_system_prompt, build_user_message, check_paths, flatten, input_sha, iter_records,
     load_config, load_record, prompt_hash, sample_keys, value_map, value_shas,
 )
+
+ASSESSMENT_STATUS_PATH = PIPELINE_DIR / "evaluation" / "assessment" / "assessment_status.json"
 
 
 def now():
@@ -185,6 +187,18 @@ def cmd_prepare(args):
     if args.copy_targets_from:
         shutil.copy(RUNS_DIR / args.copy_targets_from / "targets.json", run_dir / "targets.json")
         n = len(json.loads((run_dir / "targets.json").read_text()))
+    elif args.from_status:
+        # Re-judge inscriptions whose judgement lapsed because their values
+        # changed (docs/ASSESSMENT_STATUS_SPEC.md). The whole record is judged
+        # again, as in every run, so the protocol and omission checks are the same.
+        status = json.loads(ASSESSMENT_STATUS_PATH.read_text())["records"]
+        want = {eid for eid, r in status.items() if r.get("stale_from") == args.from_status}
+        keys = [k for k, rec in iter_records() if rec.get("edcs_id") in want]
+        missing = want - {load_record(k).get("edcs_id") for k in keys}
+        if missing:
+            print(f"warning: {len(missing)} inscriptions not found in the corpus: {sorted(missing)[:5]}")
+        (run_dir / "targets.json").write_text(json.dumps(keys, indent=0))
+        n = len(keys)
     else:
         keys = sample_keys(None if (args.all or args.place) else args.sample, args.seed,
                            include_duplicates=args.include_duplicates)
@@ -335,6 +349,9 @@ def main():
     g.add_argument("--all", action="store_true")
     g.add_argument("--copy-targets-from")
     g.add_argument("--place", help="every record whose file path contains this text (e.g. Uthina)")
+    g.add_argument("--from-status", choices=["llm_judged", "human_reviewed", "human_corrected"],
+                   help="every inscription whose assessment of this level lapsed (stale_from), "
+                        "from pipeline/evaluation/assessment/assessment_status.json")
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--include-duplicates", action="store_true",
                    help="judge every copy of an EDCS-ID that appears in several place files")

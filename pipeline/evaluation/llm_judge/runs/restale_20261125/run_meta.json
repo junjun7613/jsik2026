@@ -1,0 +1,40 @@
+{
+  "sessions": [
+    {
+      "started": "2026-11-25T15:35:13Z",
+      "judges": [
+        "claude",
+        "gpt",
+        "gemini"
+      ],
+      "sdk": {
+        "anthropic": "0.75.0",
+        "openai": "2.13.0",
+        "google-genai": "1.55.0"
+      }
+    }
+  ],
+  "prompt_version": "judge-v1",
+  "prompt_hash": "b5db3f2898c2",
+  "max_lines": 600,
+  "judges": {
+    "claude": {
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "medium",
+      "max_tokens": 16000
+    },
+    "gpt": {
+      "provider": "openai",
+      "model": "gpt-6.2-sol",
+      "reasoning_effort": "medium",
+      "max_completion_tokens": 16000
+    },
+    "gemini": {
+      "provider": "google",
+      "model": "gemini-4-argon",
+      "temperature": 0,
+      "max_output_tokens": 16000
+    }
+  }
+}
