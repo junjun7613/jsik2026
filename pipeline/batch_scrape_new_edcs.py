@@ -74,9 +74,18 @@ def read_places_from_pleiades_mapping(filepath):
     return places
 
 
-def scrape_place_api(place, base_url="https://edcs.hist.uzh.ch", batch_size=100):
+def scrape_place_api(place, base_url="https://edcs.hist.uzh.ch", batch_size=100,
+                     exact_place=True):
     """
     Scrape EDCS data for a single place using the new API
+
+    The API's `place` parameter is a substring match: "Sid" also returns every
+    "Sidi ..." findspot and "Thibilis" returns "Sellaoua Announa / ... / Thibilis".
+    Since the output folder is named after the query, those records ended up in
+    the wrong folder and were extracted once per folder (4,846 duplicated
+    inscriptions, removed by provenance/dedupe_place_copies.py on 2026-11-25).
+    With exact_place=True (default) only records whose findspot equals the query
+    are kept.
 
     Parameters:
     -----------
@@ -86,6 +95,8 @@ def scrape_place_api(place, base_url="https://edcs.hist.uzh.ch", batch_size=100)
         Base URL for EDCS API
     batch_size : int
         Number of results to fetch per API call
+    exact_place : bool
+        Keep only records whose `place` (EDCS `ort`) equals the query.
 
     Returns:
     --------
@@ -141,6 +152,15 @@ def scrape_place_api(place, base_url="https://edcs.hist.uzh.ch", batch_size=100)
 
             if len(results) == 0:
                 break
+
+        if exact_place:
+            matched = [x for x in inscriptions
+                       if (x.get('place') or '').strip() == place.strip()]
+            if len(matched) != len(inscriptions):
+                print(f"  Kept {len(matched)}/{len(inscriptions)} "
+                      f"(dropped {len(inscriptions) - len(matched)} from other findspots "
+                      f"matched as substrings)")
+            inscriptions = matched
 
         return inscriptions
 
