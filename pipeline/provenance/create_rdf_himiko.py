@@ -1223,7 +1223,16 @@ def _build_relationship_statements(record: dict) -> tuple[list[str], list[str]]:
         if tgt_p_id is None and tgt_c_id is None:
             continue
 
-        if has_reextract:
+        if rel.get('generated_by_activity'):
+            # restored from the extract snapshot (restore_community_relationships.py):
+            # the extract act produced it and no later act revised it, so a single v0.
+            v0_uri = _mk_relationship(edcs_id, i, 0)
+            _rel_triples(v0_uri, rel)
+            lines.append(f'    hmkia:generatedBy {_activity_uri(rel["generated_by_activity"])} ;')
+            _close(lines)
+            lines.append('')
+            latest_uris.append(v0_uri)
+        elif has_reextract:
             # v0: original extract values (from snapshot if available, else current)
             snap_key = (src_p_id, tgt_p_id, tgt_c_id)
             v0_rel = snapshot_rels.get(snap_key, rel)

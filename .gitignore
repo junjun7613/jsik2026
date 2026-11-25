@@ -42,6 +42,10 @@ pipeline/validated_career_graphs/
 # validated_career_graphs は抽出・enrich の成果、rdf_output_himiko は
 # create_rdf_himiko.py がそこから生成する派生物
 pipeline/provenance/validated_career_graphs/
+# dedupe_place_copies.py が validated_career_graphs から除いた重複コピー
+pipeline/provenance/excluded_duplicates/
+# 本番 Fuseki を入れ替える前の内容（戻し用。2026-11-22 に投入した all.trig の分割）
+pipeline/provenance/prod_rollback_*/
 pipeline/provenance/rdf_output_himiko/
 pipeline/provenance/edits/
 
