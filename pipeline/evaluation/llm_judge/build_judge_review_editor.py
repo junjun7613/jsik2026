@@ -47,6 +47,9 @@ TIER_LABELS = {
     "unjudged": "未判定",
     "audit": "監査（ブラインド）",
 }
+# What the consensus fields agree on (build_review_queue.py consensus_verdict)
+VERDICT_LABELS = {"incorrect": "誤り", "mixed": "判定が混在",
+                  "omission": "抜け", "uncertain": "判断不能"}
 
 CSS = BASE_CSS + """
 main { max-width: 1180px; margin: 0 auto; padding: 18px 20px 80px; }
@@ -110,6 +113,7 @@ const RUN_ID = __RUN_ID__;
 const JUDGES = __JUDGES__;
 const JUDGE_LABELS = __JUDGE_LABELS__;
 const TIER_LABELS = __TIER_LABELS__;
+const VERDICT_LABELS = __VERDICT_LABELS__;
 const DATA = __DATA__;
 const STORE_KEY = 'judge_review:' + RUN_ID;
 
@@ -142,7 +146,7 @@ function headerHTML(d, i) {
   const meta = d.audit ? '' : (nf ? `${nf} 項目に指摘` : '') + (d.format_errors.length ? ` / 形式エラー ${d.format_errors.length}` : '');
   return `<span class="card-idx">${d.rank}</span>
     <span class="edcs-id">${esc(d.edcs_id)}</span>
-    <span class="tier-badge tier-${d.tier}">${esc(TIER_LABELS[d.tier] || d.tier)}</span>
+    <span class="tier-badge tier-${d.tier}">${esc(TIER_LABELS[d.tier] || d.tier)}${d.consensus_verdict ? '・' + esc(VERDICT_LABELS[d.consensus_verdict] || d.consensus_verdict) : ''}</span>
     <span class="card-meta">${esc(meta)}</span>
     <span class="verdict-badge ${badge[0]}">${badge[1]}</span>
     <span class="chevron">▼</span>`;
@@ -376,6 +380,7 @@ def build_html(run_id, judges, items, summary):
             .replace("__JUDGES__", js_literal(judges))
             .replace("__JUDGE_LABELS__", js_literal({j: JUDGE_LABELS.get(j, j) for j in judges}))
             .replace("__TIER_LABELS__", js_literal(TIER_LABELS))
+            .replace("__VERDICT_LABELS__", js_literal(VERDICT_LABELS))
             .replace("__DATA__", js_literal(items)))
     present = [t for t in TIER_LABELS if any(it["tier"] == t for it in items)]
     tier_opts = "".join(f'<option value="{t}">{TIER_LABELS[t]}</option>' for t in present)

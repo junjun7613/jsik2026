@@ -27,6 +27,12 @@ gender_evidence / ethnicity_evidence) in nearly every inscription; ranking by
 agreement alone put 26 of 30 inscriptions in the top tier. Such recurring
 minor findings are reported once, as corpus-level patterns, in agreement.json.
 
+Within agree_all and agree_2, a major-consensus field is classed by what its
+major-calling judges say (consensus_verdict): incorrect (all say wrong),
+mixed, omission (all say missing) or uncertain (all say they cannot tell).
+Inscriptions whose tier-defining fields are incorrect come first, uncertain
+last; "agree_all" alone does not mean the judges agree a value is wrong.
+
 Within a tier, inscriptions with more major-consensus fields, then more
 flagged fields, come first. `audit` exists to estimate what the judges miss:
 without it, a pass from every judge cannot be distinguished from a shared
@@ -49,7 +55,9 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from judge_common import RUNS_DIR, flatten, inscription_header, load_record, value_map  # noqa: E402
+from judge_common import (  # noqa: E402
+    CONSENSUS_VERDICTS, RUNS_DIR, consensus_verdict, flatten, inscription_header, load_record, value_map,
+)
 from validate_career_graphs import validate_inscription_issues  # noqa: E402
 
 TIER_ORDER = ["format", "agree_all", "agree_2", "single", "unjudged", "audit"]
@@ -107,6 +115,7 @@ def build_item(key, rec, judges, rows):
             "judged_value_known": known,
             "n_flag": len(fj),
             "n_major": sum(1 for f in fj.values() if f["severity"] == "major"),
+            "consensus_verdict": consensus_verdict(fj),
             "judges": fj,
         })
     flagged.sort(key=lambda f: (-f["n_flag"], -f["n_major"], f["path"]))
@@ -128,11 +137,20 @@ def build_item(key, rec, judges, rows):
     else:
         tier = "clean"
 
+    # What the tier-defining consensus fields agree on: wrong, cannot tell, or
+    # missing. Within a tier, inscriptions whose judges agree a value is wrong
+    # come first (docs/ASSESSMENT_STATUS_SPEC.md §2.3).
+    defining = ([f for f in consensus if f["n_flag"] == len(ok_judges)]
+                if tier == "agree_all" else consensus)
+    verdict = (min((f["consensus_verdict"] for f in defining), key=CONSENSUS_VERDICTS.index, default=None)
+               if tier in ("agree_all", "agree_2") else None)
+
     meta, text = inscription_header(rec)
     return {
         "key": key,
         "edcs_id": rec.get("edcs_id"),
         "tier": tier,
+        "consensus_verdict": verdict,
         "audit": False,
         "score": [len(consensus), sum(f["n_major"] for f in flagged), len(flagged)],
         "metadata": meta,
@@ -243,14 +261,20 @@ def build_run(run_id, judges, audit_n=None, seed=42):
         it["judge_notes"], it["judge_overall"], it["flagged"] = {}, {}, []
 
     order = TIER_ORDER + NOT_QUEUED
-    items.sort(key=lambda it: (order.index(it["tier"]), [-x for x in it["score"]], it["key"]))
+    vorder = CONSENSUS_VERDICTS + [None]
+    items.sort(key=lambda it: (order.index(it["tier"]), vorder.index(it.get("consensus_verdict")),
+                               [-x for x in it["score"]], it["key"]))
     for rank, it in enumerate(items, 1):
         it["rank"] = rank
 
     tiers = Counter(it["tier"] for it in items)
+    by_verdict = Counter((it["tier"], it.get("consensus_verdict")) for it in items
+                         if it["tier"] in ("agree_all", "agree_2"))
     summary = {
         "run_id": run_id, "judges": judges, "targets": len(targets),
         "tiers": {t: tiers.get(t, 0) for t in order},
+        "consensus_verdicts": {t: {v: by_verdict[(t, v)] for v in CONSENSUS_VERDICTS
+                                   if by_verdict[(t, v)]} for t in ("agree_all", "agree_2")},
         "queue_length": sum(1 for it in items if it["tier"] in TIER_ORDER), "audit_seed": seed,
     }
     return items, agr, summary

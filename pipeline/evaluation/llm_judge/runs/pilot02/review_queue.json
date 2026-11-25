@@ -17,6 +17,16 @@
    "minor_only": 6,
    "clean": 1
   },
+  "consensus_verdicts": {
+   "agree_all": {
+    "incorrect": 9,
+    "mixed": 3
+   },
+   "agree_2": {
+    "incorrect": 1,
+    "uncertain": 1
+   }
+  },
   "queue_length": 23,
   "audit_seed": 42
  },
@@ -25,6 +35,7 @@
    "key": "Africa_proconsularis/Carthago/Carthago_career.json#2219",
    "edcs_id": "EDCS-17700850",
    "tier": "agree_all",
+   "consensus_verdict": "incorrect",
    "audit": false,
    "score": [
     7,
@@ -227,7 +238,23 @@
     "person_relationships[3].type = \"other\"",
     "person_relationships[3].property = \"client\"",
     "person_relationships[3].property_text = \"donis donatus a Domitiano ob bellum Dacicum item ab eodem ob bellum Germanicum\"",
-    "person_relationships[3].notes = \"Quintus Vilanius Nepos received military decorations from Domitian, indicating a relationship of imperial favor/patronage\"   (context)"
+    "person_relationships[3].notes = \"Quintus Vilanius Nepos received military decorations from Domitian, indicating a relationship of imperial favor/patronage\"   (context)",
+    "person_relationships[4].source_person_id = 0",
+    "person_relationships[4].target_person_id = null",
+    "person_relationships[4].target_community_id = 0",
+    "person_relationships[4].type = \"affiliation\"",
+    "person_relationships[4].property = \"officer\"",
+    "person_relationships[4].property_text = \"|(centurio) coh(ortis) XIII urb(anae)\"",
+    "person_relationships[4].notes = \"Quintus Vilanius Nepos served as centurion of the 13th urban cohort\"   (context)",
+    "person_relationships[4].generated_by_activity = \"extract_career_graph-extract-claude-sonnet-4-5-20250929-20260428T142321Z\"",
+    "person_relationships[5].source_person_id = 0",
+    "person_relationships[5].target_person_id = null",
+    "person_relationships[5].target_community_id = 1",
+    "person_relationships[5].type = \"affiliation\"",
+    "person_relationships[5].property = \"member\"",
+    "person_relationships[5].property_text = \"Vol(tinia)\"",
+    "person_relationships[5].notes = \"Quintus Vilanius Nepos was enrolled in the Voltinia tribe\"   (context)",
+    "person_relationships[5].generated_by_activity = \"extract_career_graph-extract-claude-sonnet-4-5-20250929-20260428T142321Z\""
    ],
    "format_errors": [],
    "format_warnings": [],
@@ -251,6 +278,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "omission",
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -281,6 +309,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -311,6 +340,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -341,6 +371,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -371,6 +402,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
+     "consensus_verdict": "omission",
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -401,6 +433,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
+     "consensus_verdict": "omission",
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -431,6 +464,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -461,6 +495,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -491,6 +526,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -521,6 +557,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -551,6 +588,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -581,6 +619,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -611,6 +650,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -641,6 +681,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -671,6 +712,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -701,6 +743,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -724,6 +767,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -740,6 +784,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -756,6 +801,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -772,6 +818,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -788,6 +835,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -804,6 +852,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -820,6 +869,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -836,6 +886,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -852,6 +903,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -869,6 +921,7 @@
    "key": "Numidia/Ksar_elBirsgaun/Ksar_elBirsgaun_career.json#8",
    "edcs_id": "EDCS-13000855",
    "tier": "agree_all",
+   "consensus_verdict": "incorrect",
    "audit": false,
    "score": [
     4,
@@ -1071,6 +1124,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "uncertain",
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -1101,6 +1155,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
+     "consensus_verdict": "omission",
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -1131,6 +1186,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1161,6 +1217,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1191,6 +1248,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1221,6 +1279,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1251,6 +1310,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1281,6 +1341,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1311,6 +1372,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1341,6 +1403,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1371,6 +1434,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -1394,6 +1458,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -1417,6 +1482,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1440,6 +1506,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -1456,6 +1523,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1472,6 +1540,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1488,6 +1557,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1504,6 +1574,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1520,6 +1591,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1536,6 +1608,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1552,6 +1625,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1569,6 +1643,7 @@
    "key": "Africa_proconsularis/Carthago/Carthago_career.json#1642",
    "edcs_id": "EDCS-06400055",
    "tier": "agree_all",
+   "consensus_verdict": "incorrect",
    "audit": false,
    "score": [
     4,
@@ -1689,6 +1764,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1719,6 +1795,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -1749,6 +1826,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1779,6 +1857,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -1809,6 +1888,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1839,6 +1919,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1869,6 +1950,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1899,6 +1981,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1929,6 +2012,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1959,6 +2043,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1989,6 +2074,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2019,6 +2105,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -2042,6 +2129,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -2065,6 +2153,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -2088,6 +2177,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -2104,6 +2194,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2118,242 +2209,10 @@
    "rank": 3
   },
   {
-   "key": "Numidia/Bouhadjar_Bou_Hadjar_Sigus/Bouhadjar_Bou_Hadjar_Sigus_career.json#385",
-   "edcs_id": "EDCS-25900450",
-   "tier": "agree_all",
-   "audit": false,
-   "score": [
-    2,
-    6,
-    7
-   ],
-   "metadata": "EDCS-ID: EDCS-25900450\nprovince: Numidia\nplace (findspot): Bouhadjar / Bou Hadjar / Sigus\nlanguage: la\nmaterial: lapis",
-   "inscription": "Iulius Ic/ustu(s) / Atrimae [3] / v(i)",
-   "extraction": [
-    "persons[0].person_id = 0   (context)",
-    "persons[0].person_name = \"Iulius Ic/ustu(s)\"",
-    "persons[0].person_name_readable = \"Iulius Icustus\"",
-    "persons[0].praenomen = \"\"",
-    "persons[0].nomen = \"Iulius\"",
-    "persons[0].cognomen = \"Icustus\"",
-    "persons[0].person_name_normalized = \"\"",
-    "persons[0].person_name_link = \"\"",
-    "persons[0].social_status = \"\"",
-    "persons[0].social_status_evidence = \"\"",
-    "persons[0].gender = \"male\"",
-    "persons[0].gender_evidence = \"Iulius (masculine nomen)\"",
-    "persons[0].ethnicity = \"Roman with local name\"",
-    "persons[0].ethnicity_evidence = \"Roman nomen Iulius with local-sounding cognomen Icustus\"",
-    "persons[0].age_at_death = \"\"",
-    "persons[0].age_at_death_evidence = \"\"",
-    "persons[0].has_career = false",
-    "persons[0].career_path = []",
-    "persons[0].benefactions = []",
-    "persons[0].divinity = false",
-    "persons[0].divinity_type = null",
-    "persons[0].divinity_classification_reasoning = \"Iulius Icustus is a personal name with the gentilicium 'Iulius' and cognomen 'Icustus', typical of a Roman human. The inscription appears to be a dedication by this person to Atrima (a deity), indicated by 'v(otum)' formula.\"   (context)",
-    "persons[0].life_events = []",
-    "persons[0].vital_events_reasoning = \"The inscription 'Iulius Ic/ustu(s) / Atrimae [3] / v(i)' lacks clear funerary markers such as D.M., hic situs est, vixit annis, or posuit. The abbreviation 'v(i)' is ambiguous and could represent various formulae (e.g., v(otum) i(nvit), v(ivus) i(pse), or other possibilities). Without explicit funerary indicators, this appears to be a votive or dedicatory inscription rather than funerary, so death place cannot be inferred from the findspot. No birth place information is present in the text.\"   (context)",
-    "communities[0].community_id = 0   (context)",
-    "communities[0].community_name = \"Atrimae\"",
-    "communities[0].community_name_normalized = \"Atrimae\"",
-    "communities[0].community_type = \"city\"",
-    "communities[0].community_description = \"City or settlement named Atrimae\"",
-    "communities[0].evidence = \"Atrimae\"",
-    "communities[0].benefactions = []",
-    "person_relationships = []"
-   ],
-   "format_errors": [],
-   "format_warnings": [],
-   "judge_status": {
-    "claude": "ok",
-    "gpt": "ok",
-    "gemini": "ok"
-   },
-   "judge_overall": {
-    "claude": "has_errors",
-    "gpt": "has_errors",
-    "gemini": "has_errors"
-   },
-   "judge_notes": {
-    "claude": "The text is probably a short funerary stele from Sigus: Iulius Icustus, son of Atrima, v(ixit)... The extraction misreads the genitive personal name as a community."
-   },
-   "flagged": [
-    {
-     "path": "communities[0]",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 3,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "'Atrimae' is followed by a lacuna and stands where a filiation would go (Name + genitive + [f(ilius)]). It is best read as the genitive of a personal name, probably the female name Atrima (his mother). Nothing in the text supports a city called Atrimae.",
-       "suggested_value": "",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "Nothing in `Atrimae [3] / v(i)` identifies `Atrimae` as a city or settlement. The form is more naturally read here as the dative of the recipient's name, Atrima.",
-       "suggested_value": "",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "uncertain",
-       "severity": "major",
-       "reason": "'Atrimae' is an otherwise unattested form in this fragmentary inscription (possibly a personal name, deity name, or garbled reading before 'v(ixit)'), not an established city or community.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].ethnicity_evidence",
-     "judged_value": "\"Roman nomen Iulius with local-sounding cognomen Icustus\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The field is a paraphrase or reasoning, not a verbatim quote from the inscription.",
-       "suggested_value": "Iulius Ic/ustu(s)",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The field gives an interpretation rather than quoting the name as inscribed: `Iulius Ic/ustu(s)`.",
-       "suggested_value": "Iulius Ic/ustu(s)",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "Evidence fields must contain only a direct verbatim quote from the inscription text, not an explanatory sentence.",
-       "suggested_value": "Iulius Ic/ustu(s)",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].gender_evidence",
-     "judged_value": "\"Iulius (masculine nomen)\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The evidence field adds interpretation ('masculine nomen') instead of quoting the text verbatim.",
-       "suggested_value": "Iulius Ic/ustu(s)",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The text has `Iulius`; `(masculine nomen)` is commentary, not part of the inscription.",
-       "suggested_value": "Iulius",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "Evidence fields must contain only a direct quote copied verbatim from the inscription text, without explanatory parentheticals like '(masculine nomen)'.",
-       "suggested_value": "Iulius Ic/ustu(s)",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 2,
-     "n_major": 2,
-     "judges": {
-      "claude": {
-       "verdict": "omission",
-       "severity": "major",
-       "reason": "'Atrimae [3]' most plausibly gives a parent's name in the genitive (Atrima, probably the mother). That person should be extracted.",
-       "suggested_value": "Atrima, female, mother of Iulius Icustus",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "omission",
-       "severity": "major",
-       "reason": "`Atrimae`, following the nominative `Iulius Ic/ustu(s)`, is best read as naming the recipient Atrima. Atrima is probably a deity on the dedicatory reading, although the surviving text does not explicitly identify the recipient as divine.",
-       "suggested_value": "Add person_id 1: person_name = Atrimae; person_name_readable = Atrima; probable deity (divinity = true, divinity_type = Atrima).",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "person_relationships",
-     "judged_value": "[]",
-     "judged_value_known": true,
-     "n_flag": 2,
-     "n_major": 1,
-     "judges": {
-      "claude": {
-       "verdict": "omission",
-       "severity": "minor",
-       "reason": "If 'Atrimae [f(ilius)]' is the filiation, there is a family relationship: Iulius Icustus is the son of Atrima. The restoration is uncertain because of the lacuna.",
-       "suggested_value": "source=0, target=Atrima, type=family, property=son",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "omission",
-       "severity": "major",
-       "reason": "On the likely dedicatory reading of `Iulius Ic/ustu(s) / Atrimae`, Iulius Icustus is the dedicator and Atrima is the recipient; the closing formula is too fragmentary to restore with confidence.",
-       "suggested_value": "source_person_id = 0; target_person_id = 1; target_community_id = null; type = dedication; property = dedicator; property_text = Iulius Ic/ustu(s) / Atrimae",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].ethnicity",
-     "judged_value": "\"Roman with local name\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gpt": {
-       "verdict": "uncertain",
-       "severity": "minor",
-       "reason": "`Iulius Ic/ustu(s)` has a Roman gentilicium, but the text does not establish whether `Ic/ustu(s)` is a local name or a variant of the Latin cognomen Iustus.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].life_events",
-     "judged_value": "[]",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "uncertain",
-       "severity": "minor",
-       "reason": "The final 'v(i)' may be the start of v(ixit), which is typical of Sigus funerary stelae. If so, the text is funerary and a findspot-inferred death place would apply.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    }
-   ],
-   "rank": 4
-  },
-  {
    "key": "Numidia/Constantine_Bordj_Saguiet_er_Roum_Cirta/Constantine_Bordj_Saguiet_er_Roum_Cirta_career.json#975",
    "edcs_id": "EDCS-13002005",
    "tier": "agree_all",
+   "consensus_verdict": "incorrect",
    "audit": false,
    "score": [
     2,
@@ -2426,6 +2285,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2456,6 +2316,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2486,6 +2347,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2516,6 +2378,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2546,6 +2409,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -2569,6 +2433,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2592,6 +2457,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2603,656 +2469,13 @@
      }
     }
    ],
-   "rank": 5
-  },
-  {
-   "key": "Numidia/Sellaoua_Announa_Salaoua_Announa_El_Announa_Thibilis/Sellaoua_Announa_Salaoua_Announa_El_Announa_Thibilis_career.json#1336",
-   "edcs_id": "EDCS-25600206",
-   "tier": "agree_all",
-   "audit": false,
-   "score": [
-    1,
-    7,
-    22
-   ],
-   "metadata": "EDCS-ID: EDCS-25600206\nprovince: Numidia\nplace (findspot): Sellaoua Announa / Salaoua Announa / El Announa / Thibilis\nlanguage: la\nmaterial: lapis",
-   "inscription": "Victoriae / Aug(ustae) sacr(um) / pro salute / Antistior(um) Ad/venti et Bur/ri et liberoru(m) / eorum Agatho/pus lib(ertus) d(e)d(icavit)",
-   "extraction": [
-    "persons[0].person_id = 0   (context)",
-    "persons[0].person_name = \"Adventus\"",
-    "persons[0].person_name_readable = \"Adventus\"",
-    "persons[0].praenomen = \"\"",
-    "persons[0].nomen = \"\"",
-    "persons[0].cognomen = \"Adventus\"",
-    "persons[0].person_name_normalized = \"\"",
-    "persons[0].person_name_link = \"\"",
-    "persons[0].social_status = \"\"",
-    "persons[0].social_status_evidence = \"\"",
-    "persons[0].gender = \"male\"",
-    "persons[0].gender_evidence = \"Antistior(um) Adventi\"",
-    "persons[0].ethnicity = \"Roman\"",
-    "persons[0].ethnicity_evidence = \"Roman cognomen Adventus\"",
-    "persons[0].age_at_death = \"\"",
-    "persons[0].age_at_death_evidence = \"\"",
-    "persons[0].has_career = false",
-    "persons[0].career_path = []",
-    "persons[0].benefactions = []",
-    "persons[0].divinity = false",
-    "persons[0].divinity_type = null",
-    "persons[0].divinity_classification_reasoning = \"Adventus is a human name in this inscription, referring to one of the Antistii for whose health (pro salute) the dedication is made. The dedication is to Victoria Augusta (the divinity), while Adventus and Burrus are the human beneficiaries.\"   (context)",
-    "persons[0].life_events = []",
-    "persons[0].vital_events_reasoning = \"This is a votive inscription dedicated to Victoria Augusta for the health/well-being ('pro salute') of the Antistii Adventus and Burrus and their children, set up by their freedman Agathopus. It contains no funerary markers (no D.M., hic situs est, vixit annis, etc.) and is clearly dedicatory/votive in nature. Therefore, no death place should be inferred from the findspot. No birth place information is provided in the text.\"   (context)",
-    "persons[1].person_id = 1   (context)",
-    "persons[1].person_name = \"Burrus\"",
-    "persons[1].person_name_readable = \"Burrus\"",
-    "persons[1].praenomen = \"\"",
-    "persons[1].nomen = \"\"",
-    "persons[1].cognomen = \"Burrus\"",
-    "persons[1].person_name_normalized = \"\"",
-    "persons[1].person_name_link = \"\"",
-    "persons[1].social_status = \"\"",
-    "persons[1].social_status_evidence = \"\"",
-    "persons[1].gender = \"male\"",
-    "persons[1].gender_evidence = \"Antistior(um) Burri\"",
-    "persons[1].ethnicity = \"Roman\"",
-    "persons[1].ethnicity_evidence = \"Roman cognomen Burrus\"",
-    "persons[1].age_at_death = \"\"",
-    "persons[1].age_at_death_evidence = \"\"",
-    "persons[1].has_career = false",
-    "persons[1].career_path = []",
-    "persons[1].benefactions = []",
-    "persons[1].divinity = false",
-    "persons[1].divinity_type = null",
-    "persons[1].divinity_classification_reasoning = \"Burrus is one of the Antistii mentioned in the inscription, along with Adventus, for whose health (pro salute) the dedication is made. He is a human beneficiary of the dedication, not a deity.\"   (context)",
-    "persons[1].life_events = []",
-    "persons[1].vital_events_reasoning = \"This is a votive inscription dedicated to Victoria Augusta for the health/safety ('pro salute') of the Antistii Adventus and Burrus and their children, set up by their freedman Agathopus. It contains no funerary markers (no D.M., hic situs est, vixit annis, etc.) and is clearly dedicatory/votive in nature. Therefore, no death place should be inferred from the findspot. No birth place information is provided in the text.\"   (context)",
-    "persons[2].person_id = 2   (context)",
-    "persons[2].person_name = \"Agathopus\"",
-    "persons[2].person_name_readable = \"Agathopus\"",
-    "persons[2].praenomen = \"\"",
-    "persons[2].nomen = \"\"",
-    "persons[2].cognomen = \"Agathopus\"",
-    "persons[2].person_name_normalized = \"\"",
-    "persons[2].person_name_link = \"\"",
-    "persons[2].social_status = \"freedman\"",
-    "persons[2].social_status_evidence = \"Agathopus lib(ertus)\"",
-    "persons[2].gender = \"male\"",
-    "persons[2].gender_evidence = \"Agathopus lib(ertus)\"",
-    "persons[2].ethnicity = \"Roman with local name\"",
-    "persons[2].ethnicity_evidence = \"Greek cognomen Agathopus with libertus status\"",
-    "persons[2].age_at_death = \"\"",
-    "persons[2].age_at_death_evidence = \"\"",
-    "persons[2].has_career = false",
-    "persons[2].career_path = []",
-    "persons[2].benefactions[0].benefaction_type = \"other\"",
-    "persons[2].benefactions[0].object = \"dedication to Victoria Augusta\"",
-    "persons[2].benefactions[0].object_type = \"other\"",
-    "persons[2].benefactions[0].object_description = \"Sacred dedication to Victoria Augusta for the health of the Antistiores\"",
-    "persons[2].benefactions[0].benefaction_text = \"Victoriae Aug(ustae) sacr(um) pro salute Antistior(um) Adventi et Burri et liberoru(m) eorum Agathopus lib(ertus) d(e)d(icavit)\"",
-    "persons[2].benefactions[0].cost = \"\"",
-    "persons[2].benefactions[0].notes = \"Dedication made by freedman Agathopus for the health/safety of his former owners and their children\"   (context)",
-    "persons[2].benefactions[0].objects[0].object = \"dedication to Victoria Augusta\"",
-    "persons[2].benefactions[0].objects[0].object_type = \"altar\"",
-    "persons[2].benefactions[0].objects[0].object_category = \"monument\"",
-    "persons[2].benefactions[0].objects[0].object_subtype = \"monument.unspecified\"",
-    "persons[2].benefactions[0].objects[0].object_category_source = \"surface:monument.unspecified\"   (context)",
-    "persons[2].benefactions[0].recipient_communities = []",
-    "persons[2].divinity = false",
-    "persons[2].divinity_type = null",
-    "persons[2].divinity_classification_reasoning = \"Agathopus is identified as 'lib(ertus)' (freedman) who dedicated the inscription, making him a human dedicator, not a divinity\"   (context)",
-    "persons[2].life_events = []",
-    "persons[2].vital_events_reasoning = \"This is a votive/dedicatory inscription, not a funerary one. Agathopus, a freedman (libertus), dedicated this to Victoria Augusta for the health (pro salute) of the Antistii Adventus and Burrus and their children. The inscription contains no funerary markers (no D.M., hic situs est, vixit annis, etc.) and no birth or death information. As a non-funerary inscription, the findspot cannot be used to infer death place.\"   (context)",
-    "persons[2].social_statuses[0].category = \"legal\"",
-    "persons[2].social_statuses[0].subtype = \"legal.freedman\"",
-    "persons[2].social_statuses[0].evidence = \"Agathopus lib(ertus)\"",
-    "persons[2].social_statuses[0].certainty = \"explicit\"",
-    "persons[2].social_statuses[0].source = \"direct\"   (context)",
-    "persons[2].social_status_source = \"rulebased\"   (context)",
-    "communities = []",
-    "person_relationships[0].source_person_id = 2",
-    "person_relationships[0].target_person_id = 0",
-    "person_relationships[0].target_community_id = null",
-    "person_relationships[0].type = \"patronage\"",
-    "person_relationships[0].property = \"freedman\"",
-    "person_relationships[0].property_text = \"lib(ertus)\"",
-    "person_relationships[0].notes = \"Agathopus is identified as a freedman of the Antistii (Adventus and Burrus)\"   (context)",
-    "person_relationships[1].source_person_id = 2",
-    "person_relationships[1].target_person_id = 1",
-    "person_relationships[1].target_community_id = null",
-    "person_relationships[1].type = \"patronage\"",
-    "person_relationships[1].property = \"freedman\"",
-    "person_relationships[1].property_text = \"lib(ertus)\"",
-    "person_relationships[1].notes = \"Agathopus is identified as a freedman of the Antistii (Adventus and Burrus)\"   (context)",
-    "person_relationships[2].source_person_id = 2",
-    "person_relationships[2].target_person_id = 0",
-    "person_relationships[2].target_community_id = null",
-    "person_relationships[2].type = \"dedication\"",
-    "person_relationships[2].property = \"dedicator\"",
-    "person_relationships[2].property_text = \"d(e)d(icavit)\"",
-    "person_relationships[2].notes = \"Agathopus dedicated this inscription for the welfare of Adventus and Burrus and their children\"   (context)",
-    "person_relationships[3].source_person_id = 2",
-    "person_relationships[3].target_person_id = 1",
-    "person_relationships[3].target_community_id = null",
-    "person_relationships[3].type = \"dedication\"",
-    "person_relationships[3].property = \"dedicator\"",
-    "person_relationships[3].property_text = \"d(e)d(icavit)\"",
-    "person_relationships[3].notes = \"Agathopus dedicated this inscription for the welfare of Adventus and Burrus and their children\"   (context)",
-    "person_relationships[4].source_person_id = 0",
-    "person_relationships[4].target_person_id = 1",
-    "person_relationships[4].target_community_id = null",
-    "person_relationships[4].type = \"family\"",
-    "person_relationships[4].property = \"brother\"",
-    "person_relationships[4].property_text = \"Antistior(um) Adventi et Burri et liberoru(m) eorum\"",
-    "person_relationships[4].notes = \"Adventus and Burrus appear to be brothers (or at least relatives) sharing the same nomen Antistius and sharing children, though the exact relationship is uncertain; they may be brothers with shared children or co-patrons\"   (context)"
-   ],
-   "format_errors": [],
-   "format_warnings": [],
-   "judge_status": {
-    "claude": "ok",
-    "gpt": "ok",
-    "gemini": "ok"
-   },
-   "judge_overall": {
-    "claude": "has_errors",
-    "gpt": "has_errors",
-    "gemini": "has_errors"
-   },
-   "judge_notes": {
-    "claude": "The unnamed 'liberi eorum' are reasonably not extracted as individuals."
-   },
-   "flagged": [
-    {
-     "path": "person_relationships[4]",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 2,
-     "judges": {
-      "claude": {
-       "verdict": "uncertain",
-       "severity": "major",
-       "reason": "'Antistior(um) Adventi et Burri et liberoru(m) eorum' shows only a shared nomen and joint co-patronage. Brotherhood is not stated: they could be father and son, cousins, or co-freedmen.",
-       "suggested_value": "",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "«Antistior(um) Ad/venti et Bur/ri» supplies a shared gentilicium, not a statement that the two men are brothers. «Liberoru(m) / eorum» identifies their children collectively without specifying how the men are related to each other.",
-       "suggested_value": "",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "uncertain",
-       "severity": "minor",
-       "reason": "While 'Antistior(um) Adventi et Burri' sharing the nomen Antistius could be brothers, they are famous historical figures (Q. Antistius Adventus Postumius Aquilinus and L. Antistius Burrus, who were father and son, or Adventus and his relative). The text itself does not specify 'brother'.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].ethnicity_evidence",
-     "judged_value": "\"Roman cognomen Adventus\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "This is a paraphrase, not a verbatim quote from the inscription.",
-       "suggested_value": "Antistior(um) Adventi",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "“Roman cognomen Adventus” is an interpretation, not a quotation. The inscription supplies the Roman name in «Antistior(um) Ad/venti».",
-       "suggested_value": "Antistior(um) Ad/venti",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "Evidence fields must contain only a verbatim quote from the inscription, not commentary.",
-       "suggested_value": "Antistior(um) Adventi",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].nomen",
-     "judged_value": "\"\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "omission",
-       "severity": "minor",
-       "reason": "The genitive plural 'Antistior(um)' gives both men the nomen Antistius, so Adventus's nomen is identifiable.",
-       "suggested_value": "Antistius",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "«Antistior(um)» supplies the gentilicium Antistius for Adventus.",
-       "suggested_value": "Antistius",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "omission",
-       "severity": "minor",
-       "reason": "The text explicitly provides the plural gentilicium 'Antistior(um)' for both Adventus and Burrus.",
-       "suggested_value": "Antistius",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].person_name",
-     "judged_value": "\"Adventus\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The full name, with the shared nomen from 'Antistior(um) Adventi', is Antistius Adventus.",
-       "suggested_value": "Antistius Adventus",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "In «Antistior(um) Ad/venti et Bur/ri», the shared gentilicium applies to Adventus as well as Burrus.",
-       "suggested_value": "Antistius Adventus",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The shared gentilicium 'Antistior(um)' applies to both Adventus and Burrus, so his full name in the text is Antistius Adventus.",
-       "suggested_value": "Antistius Adventus",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[1].ethnicity_evidence",
-     "judged_value": "\"Roman cognomen Burrus\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "This is a paraphrase, not a verbatim quote from the inscription.",
-       "suggested_value": "Antistior(um) ... Burri",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "“Roman cognomen Burrus” is not in the inscription. Quote the name with its shared gentilicium instead.",
-       "suggested_value": "Antistior(um) Ad/venti et Bur/ri",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "Evidence fields must contain only a verbatim quote from the inscription, not commentary.",
-       "suggested_value": "Antistior(um) ... Burri",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[1].nomen",
-     "judged_value": "\"\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "omission",
-       "severity": "minor",
-       "reason": "'Antistior(um) ... Burri' gives Burrus the nomen Antistius.",
-       "suggested_value": "Antistius",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "«Antistior(um)» supplies the gentilicium Antistius for Burrus.",
-       "suggested_value": "Antistius",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "omission",
-       "severity": "minor",
-       "reason": "The text explicitly provides the plural gentilicium 'Antistior(um)' for both Adventus and Burrus.",
-       "suggested_value": "Antistius",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[1].person_name",
-     "judged_value": "\"Burrus\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The full name, with the shared nomen, is Antistius Burrus.",
-       "suggested_value": "Antistius Burrus",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "In «Antistior(um) Ad/venti et Bur/ri», the shared gentilicium applies to Burrus as well as Adventus.",
-       "suggested_value": "Antistius Burrus",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The shared gentilicium 'Antistior(um)' applies to both Adventus and Burrus, so his full name in the text is Antistius Burrus.",
-       "suggested_value": "Antistius Burrus",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[2].ethnicity_evidence",
-     "judged_value": "\"Greek cognomen Agathopus with libertus status\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "This is interpretation, not a verbatim quote.",
-       "suggested_value": "Agathopus",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "“Greek cognomen Agathopus with libertus status” is explanatory prose, not a quotation. «Agatho/pus lib(ertus)» does not explicitly state ethnicity.",
-       "suggested_value": "",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "Evidence fields must contain only a verbatim quote from the inscription, not commentary.",
-       "suggested_value": "Agathopus lib(ertus)",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 2,
-     "n_major": 1,
-     "judges": {
-      "claude": {
-       "verdict": "omission",
-       "severity": "minor",
-       "reason": "The deity 'Victoriae Aug(ustae)', the dedicatee, is not extracted as an entity with divinity=true (divinity_type Victoria).",
-       "suggested_value": "Victoria Augusta",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "omission",
-       "severity": "major",
-       "reason": "«Victoriae / Aug(ustae) sacr(um)» names the goddess who receives the dedication. Augusta is her epithet here, not a reference to an empress.",
-       "suggested_value": "{\"person_id\":3,\"person_name\":\"Victoria Augusta\",\"person_name_readable\":\"Victoria Augusta\",\"gender\":\"female\",\"gender_evidence\":\"Victoriae / Aug(ustae)\",\"divinity\":true,\"divinity_type\":\"Victoria\"}",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[1].gender_evidence",
-     "judged_value": "\"Antistior(um) Burri\"",
-     "judged_value_known": true,
-     "n_flag": 2,
-     "n_major": 0,
-     "judges": {
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "«Antistior(um) Burri» is not a continuous quotation: «Ad/venti et» intervenes.",
-       "suggested_value": "Antistior(um) Ad/venti et Bur/ri",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The quote omits 'Adventi et' which lies between 'Antistior(um)' and 'Burri' in the text.",
-       "suggested_value": "Burri",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[2].ethnicity",
-     "judged_value": "\"Roman with local name\"",
-     "judged_value_known": true,
-     "n_flag": 2,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "Agathopus is a Greek name typical of freedmen, not a local (African) name; 'Roman with local name' is misleading.",
-       "suggested_value": "",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "uncertain",
-       "severity": "minor",
-       "reason": "«Agatho/pus lib(ertus)» gives a Greek-derived name and freedman status, but does not establish a local origin or make the classification “Roman with local name” secure.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "person_relationships",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 1,
-     "judges": {
-      "gpt": {
-       "verdict": "omission",
-       "severity": "major",
-       "reason": "«Liberoru(m) / eorum» links the children to Adventus and Burrus collectively. Record the paternal links without assigning any individual child to either man.",
-       "suggested_value": "[{\"source_person_id\":0,\"target_person_id\":4,\"target_community_id\":null,\"type\":\"family\",\"property\":\"father\",\"property_text\":\"Antistior(um) Ad/venti et Bur/ri et liberoru(m) / eorum\",\"notes\":\"Children are named collectively; individual parentage is not stated.\"},{\"source_person_id\":1,\"target_person_id\":4,\"target_community_id\":null,\"type\":\"family\",\"property\":\"father\",\"property_text\":\"Antistior(um) Ad/venti et Bur/ri et liberoru(m) / eorum\",\"notes\":\"Children are named collectively; individual parentage is not stated.\"}]",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "person_relationships[2].target_person_id",
-     "judged_value": "0",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 1,
-     "judges": {
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "The dative «Victoriae / Aug(ustae)» identifies the recipient of Agathopus's dedication. Adventus is named under «pro salute» as a beneficiary, not as the dedicatee.",
-       "suggested_value": "3",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "person_relationships[3]",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 1,
-     "judges": {
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "Burrus is named under «pro salute», while «Victoriae / Aug(ustae) sacr(um)» identifies the dedicatee. The text does not support a separate dedicator–dedicatee relationship with Burrus.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[2].benefactions[0]",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 1,
-     "judges": {
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "A standard votive dedication ('Victoriae Aug(ustae) sacr(um) ... d(e)d(icavit)') without mention of a public building, statue, or monetary gift is not a public benefaction (evergetism). Moreover, the object field was filled with an English paraphrase rather than a Latin word from the text.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].person_name_readable",
-     "judged_value": "\"Adventus\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The readable name should include Antistius, supplied by «Antistior(um) Ad/venti et Bur/ri».",
-       "suggested_value": "Antistius Adventus",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[1].person_name_readable",
-     "judged_value": "\"Burrus\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The readable name should include Antistius, supplied by «Antistior(um) Ad/venti et Bur/ri».",
-       "suggested_value": "Antistius Burrus",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[2].benefactions[0].object",
-     "judged_value": "\"dedication to Victoria Augusta\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The object field requires Latin. «Victoriae / Aug(ustae) sacr(um)» identifies the dedication as sacred to Victoria Augusta but does not name a more specific object.",
-       "suggested_value": "sacrum",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[2].benefactions[0].object_description",
-     "judged_value": "\"Sacred dedication to Victoria Augusta for the health of the Antistiores\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "«Antistior(um)» is the genitive plural of Antistius, not “Antistiores”; «et liberoru(m) / eorum» also includes the children among the beneficiaries.",
-       "suggested_value": "Sacred dedication to Victoria Augusta for the welfare of Antistius Adventus, Antistius Burrus, and their children",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[2].benefactions[0].objects[0]",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "«Victoriae / Aug(ustae) sacr(um)» identifies a votive offering but does not specify an altar or another monument. The single object entry should match the parent object's label and type.",
-       "suggested_value": "{\"object\":\"sacrum\",\"object_type\":\"other\",\"object_category\":\"offering\",\"object_subtype\":\"offering.unspecified\"}",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[2].benefactions[0].objects[0].object_type",
-     "judged_value": "\"altar\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The text does not mention an altar ('sacrum ... d(e)d(icavit)'). The value is also inconsistent with the parent object_type 'other'.",
-       "suggested_value": "other",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[2].cognomen",
-     "judged_value": "\"Agathopus\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "«Agatho/pus lib(ertus)» gives only a single name. Under the specification, the name-component fields stay empty when the name structure cannot be established.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    }
-   ],
-   "rank": 6
+   "rank": 4
   },
   {
    "key": "Numidia/Lambaesis/Lambaesis_career.json#1698",
    "edcs_id": "EDCS-22000627",
    "tier": "agree_all",
+   "consensus_verdict": "incorrect",
    "audit": false,
    "score": [
     1,
@@ -3411,6 +2634,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -3441,6 +2665,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -3471,6 +2696,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -3501,6 +2727,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -3531,6 +2758,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -3561,6 +2789,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -3591,6 +2820,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3614,6 +2844,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3637,6 +2868,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3660,6 +2892,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -3683,6 +2916,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3706,6 +2940,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -3729,6 +2964,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -3745,6 +2981,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -3761,6 +2998,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3777,6 +3015,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3793,6 +3032,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3809,6 +3049,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3825,6 +3066,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3841,6 +3083,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "incorrect",
@@ -3857,6 +3100,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3873,6 +3117,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "incorrect",
@@ -3884,12 +3129,13 @@
      }
     }
    ],
-   "rank": 7
+   "rank": 5
   },
   {
    "key": "Numidia/Mechtet_Ain_Hallouf_Castellum_Arsacalitanum/Mechtet_Ain_Hallouf_Castellum_Arsacalitanum_career.json#98",
    "edcs_id": "EDCS-23701010",
    "tier": "agree_all",
+   "consensus_verdict": "incorrect",
    "audit": false,
    "score": [
     1,
@@ -3998,6 +3244,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4028,6 +3275,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -4058,6 +3306,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4088,6 +3337,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4118,6 +3368,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4148,6 +3399,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4178,6 +3430,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4208,6 +3461,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4238,6 +3492,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4268,6 +3523,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -4291,6 +3547,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4314,6 +3571,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -4330,6 +3588,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -4346,6 +3605,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -4362,6 +3622,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -4378,6 +3639,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -4394,6 +3656,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -4405,12 +3668,13 @@
      }
     }
    ],
-   "rank": 8
+   "rank": 6
   },
   {
    "key": "Africa_proconsularis/AlKhums_Khoms_Homs_Lebdah_Lebida_Labdah_Wadi_Zennad_Wadi_az_Zannad_Leptis_Magna_Lepcis_Magna_Neapolis/AlKhums_Khoms_Homs_Lebdah_Lebida_Labdah_Wadi_Zennad_Wadi_az_Zannad_Leptis_Magna_Lepcis_Magna_Neapolis_career.json#434",
    "edcs_id": "EDCS-06000726",
    "tier": "agree_all",
+   "consensus_verdict": "incorrect",
    "audit": false,
    "score": [
     1,
@@ -4520,6 +3784,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4550,6 +3815,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4580,6 +3846,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4610,6 +3877,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4640,6 +3908,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4670,6 +3939,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4700,6 +3970,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -4716,6 +3987,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -4732,6 +4004,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -4748,6 +4021,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "incorrect",
@@ -4759,12 +4033,13 @@
      }
     }
    ],
-   "rank": 9
+   "rank": 7
   },
   {
    "key": "Africa_proconsularis/Dougga_Thugga/Dougga_Thugga_career.json#653",
    "edcs_id": "EDCS-16201286",
    "tier": "agree_all",
+   "consensus_verdict": "incorrect",
    "audit": false,
    "score": [
     1,
@@ -4855,6 +4130,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4885,6 +4161,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -4915,6 +4192,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4945,6 +4223,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4975,6 +4254,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -4998,6 +4278,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "incorrect",
@@ -5014,6 +4295,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -5025,12 +4307,1129 @@
      }
     }
    ],
+   "rank": 8
+  },
+  {
+   "key": "Africa_proconsularis/Zama_Jama_Djama_AlJamah_elChar_Hr_echChar_Hr_EchChar_Soualem_Hr_ElLehs_Nafidat_elZawamil_Nafidat_azZawamil_Zama_Regia/Zama_Jama_Djama_AlJamah_elChar_Hr_echChar_Hr_EchChar_Soualem_Hr_ElLehs_Nafidat_elZawamil_Nafidat_azZawamil_Zama_Regia_career.json#29",
+   "edcs_id": "EDCS-26900651",
+   "tier": "agree_all",
+   "consensus_verdict": "incorrect",
+   "audit": false,
+   "score": [
+    1,
+    2,
+    6
+   ],
+   "metadata": "EDCS-ID: EDCS-26900651\nprovince: Africa proconsularis\nplace (findspot): Zama / Jama / Djama / Al-Jamah / el-Char, Hr. / ech-Char, Hr. / Ech-Char / Soualem, Hr. / El-Lehs / Nafidat el-Zawamil / Nafidat az-Zawamil / Zama Regia\nlanguage: la\nmaterial: lapis",
+   "inscription": "D(is) M(anibus) / [3]lius V[3] / [3]R vix[it] / [ann]is [",
+   "extraction": [
+    "persons[0].person_id = 0   (context)",
+    "persons[0].person_name = \"[3]lius V[3]\"",
+    "persons[0].person_name_readable = \"[...]lius V[...]\"",
+    "persons[0].praenomen = \"\"",
+    "persons[0].nomen = \"\"",
+    "persons[0].cognomen = \"\"",
+    "persons[0].person_name_normalized = \"\"",
+    "persons[0].person_name_link = \"\"",
+    "persons[0].social_status = \"\"",
+    "persons[0].social_status_evidence = \"\"",
+    "persons[0].gender = \"unknown\"",
+    "persons[0].gender_evidence = \"\"",
+    "persons[0].ethnicity = \"\"",
+    "persons[0].ethnicity_evidence = \"\"",
+    "persons[0].age_at_death = \"\"",
+    "persons[0].age_at_death_evidence = \"vix[it] / [ann]is [\"",
+    "persons[0].has_career = false",
+    "persons[0].career_path = []",
+    "persons[0].benefactions = []",
+    "persons[0].divinity = false",
+    "persons[0].divinity_type = null",
+    "persons[0].divinity_classification_reasoning = \"This is a funerary inscription (D(is) M(anibus)) for a deceased human. The fragmentary name '[3]lius V[3]' appears to be a regular Roman personal name (likely ending in -lius), and the text mentions the person lived a certain number of years (vix[it] [ann]is), which is typical of human epitaphs, not dedications to divinities.\"   (context)",
+    "persons[0].life_events[0].event_type = \"death\"",
+    "persons[0].life_events[0].place = \"Zama / Jama / Djama / Al-Jamah / el-Char, Hr. / ech-Char, Hr. / Ech-Char / Soualem, Hr. / El-Lehs / Nafidat el-Zawamil / Nafidat az-Zawamil / Zama Regia\"",
+    "persons[0].life_events[0].place_normalized = null",
+    "persons[0].life_events[0].place_source = \"findspot_inferred\"",
+    "persons[0].life_events[0].place_evidence = \"inferred from findspot\"",
+    "persons[0].vital_events_reasoning = \"This is a funerary inscription as indicated by 'D(is) M(anibus)' (to the spirits of the dead) and 'vix[it]' (lived) followed by '[ann]is' (years). No birth place is mentioned in the text. No explicit death place is stated in the inscription text itself, but given the funerary nature of the inscription, the findspot serves as a proxy for the burial/death place.\"   (context)",
+    "communities = []",
+    "person_relationships = []"
+   ],
+   "format_errors": [],
+   "format_warnings": [],
+   "judge_status": {
+    "claude": "ok",
+    "gpt": "ok",
+    "gemini": "ok"
+   },
+   "judge_overall": {
+    "claude": "acceptable",
+    "gpt": "has_errors",
+    "gemini": "has_errors"
+   },
+   "judge_notes": {
+    "claude": "The text is very fragmentary. Line 3 '[3]R' may belong to the cognomen or a filiation and cannot be resolved."
+   },
+   "flagged": [
+    {
+     "path": "persons[0].gender",
+     "judged_value": "\"unknown\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 2,
+     "consensus_verdict": "incorrect",
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The surviving name ending '[3]lius' is a masculine nominative gentilicium ending, so the deceased can be taken as male rather than unknown.",
+       "suggested_value": "male",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "The surviving name form `[3]lius` is masculine nominative; the loss of its opening letters prevents identification of the full name, not recognition of its gender.",
+       "suggested_value": "male",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "The masculine nominative ending '-lius' of the nomen indicates the deceased is male.",
+       "suggested_value": "male",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].gender_evidence",
+     "judged_value": "\"\"",
+     "judged_value_known": true,
+     "n_flag": 2,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "omission",
+       "severity": "minor",
+       "reason": "The masculine ending is preserved in `[3]lius`, which can be quoted without restoring the name.",
+       "suggested_value": "[3]lius",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "omission",
+       "severity": "minor",
+       "reason": "The masculine ending in '[3]lius' is direct textual evidence for male gender.",
+       "suggested_value": "[3]lius",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].life_events[0].place_evidence",
+     "judged_value": "\"inferred from findspot\"",
+     "judged_value_known": true,
+     "n_flag": 2,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "`D(is) M(anibus)` and `vix[it]` establish the funerary context but give no place of death. The phrase `inferred from findspot` is not a quotation from the inscription; the inference is already recorded in `place_source`.",
+       "suggested_value": "",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "Evidence fields must contain only a direct quote from the inscription text or an empty string, not an explanatory phrase like 'inferred from findspot'.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].nomen",
+     "judged_value": "\"\"",
+     "judged_value_known": true,
+     "n_flag": 2,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "omission",
+       "severity": "minor",
+       "reason": "'[3]lius' is clearly a fragmentary nomen (e.g. Iulius or Aelius), followed by a cognomen beginning 'V[3]'. A partial nomen could be recorded.",
+       "suggested_value": "[...]lius",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "omission",
+       "severity": "minor",
+       "reason": "The fragmentary nomen gentilicium '[3]lius' (e.g., Iulius, Aurelius) is identifiable in the text.",
+       "suggested_value": "[3]lius",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].cognomen",
+     "judged_value": "\"\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gemini": {
+       "verdict": "omission",
+       "severity": "minor",
+       "reason": "The fragmentary cognomen 'V[3][3]R' (likely Victor) is identifiable in the text.",
+       "suggested_value": "V[3][3]R",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].person_name",
+     "judged_value": "\"[3]lius V[3]\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The cognomen likely continues onto the next line before 'vix[it]', ending in '[3]R' (e.g., Victor), so '[3]R' should be included in the name.",
+       "suggested_value": "[3]lius V[3] / [3]R",
+       "path_valid": true
+      }
+     }
+    }
+   ],
+   "rank": 9
+  },
+  {
+   "key": "Numidia/Bouhadjar_Bou_Hadjar_Sigus/Bouhadjar_Bou_Hadjar_Sigus_career.json#385",
+   "edcs_id": "EDCS-25900450",
+   "tier": "agree_all",
+   "consensus_verdict": "mixed",
+   "audit": false,
+   "score": [
+    2,
+    6,
+    7
+   ],
+   "metadata": "EDCS-ID: EDCS-25900450\nprovince: Numidia\nplace (findspot): Bouhadjar / Bou Hadjar / Sigus\nlanguage: la\nmaterial: lapis",
+   "inscription": "Iulius Ic/ustu(s) / Atrimae [3] / v(i)",
+   "extraction": [
+    "persons[0].person_id = 0   (context)",
+    "persons[0].person_name = \"Iulius Ic/ustu(s)\"",
+    "persons[0].person_name_readable = \"Iulius Icustus\"",
+    "persons[0].praenomen = \"\"",
+    "persons[0].nomen = \"Iulius\"",
+    "persons[0].cognomen = \"Icustus\"",
+    "persons[0].person_name_normalized = \"\"",
+    "persons[0].person_name_link = \"\"",
+    "persons[0].social_status = \"\"",
+    "persons[0].social_status_evidence = \"\"",
+    "persons[0].gender = \"male\"",
+    "persons[0].gender_evidence = \"Iulius (masculine nomen)\"",
+    "persons[0].ethnicity = \"Roman with local name\"",
+    "persons[0].ethnicity_evidence = \"Roman nomen Iulius with local-sounding cognomen Icustus\"",
+    "persons[0].age_at_death = \"\"",
+    "persons[0].age_at_death_evidence = \"\"",
+    "persons[0].has_career = false",
+    "persons[0].career_path = []",
+    "persons[0].benefactions = []",
+    "persons[0].divinity = false",
+    "persons[0].divinity_type = null",
+    "persons[0].divinity_classification_reasoning = \"Iulius Icustus is a personal name with the gentilicium 'Iulius' and cognomen 'Icustus', typical of a Roman human. The inscription appears to be a dedication by this person to Atrima (a deity), indicated by 'v(otum)' formula.\"   (context)",
+    "persons[0].life_events = []",
+    "persons[0].vital_events_reasoning = \"The inscription 'Iulius Ic/ustu(s) / Atrimae [3] / v(i)' lacks clear funerary markers such as D.M., hic situs est, vixit annis, or posuit. The abbreviation 'v(i)' is ambiguous and could represent various formulae (e.g., v(otum) i(nvit), v(ivus) i(pse), or other possibilities). Without explicit funerary indicators, this appears to be a votive or dedicatory inscription rather than funerary, so death place cannot be inferred from the findspot. No birth place information is present in the text.\"   (context)",
+    "communities[0].community_id = 0   (context)",
+    "communities[0].community_name = \"Atrimae\"",
+    "communities[0].community_name_normalized = \"Atrimae\"",
+    "communities[0].community_type = \"city\"",
+    "communities[0].community_description = \"City or settlement named Atrimae\"",
+    "communities[0].evidence = \"Atrimae\"",
+    "communities[0].benefactions = []",
+    "person_relationships[0].source_person_id = 0",
+    "person_relationships[0].target_person_id = null",
+    "person_relationships[0].target_community_id = 0",
+    "person_relationships[0].type = \"affiliation\"",
+    "person_relationships[0].property = \"resident\"",
+    "person_relationships[0].property_text = \"Atrimae\"",
+    "person_relationships[0].notes = \"Iulius Icustus appears to be associated with or from Atrimae\"   (context)",
+    "person_relationships[0].generated_by_activity = \"extract_career_graph-extract-claude-sonnet-4-5-20250929-20260210T161637Z\""
+   ],
+   "format_errors": [],
+   "format_warnings": [],
+   "judge_status": {
+    "claude": "ok",
+    "gpt": "ok",
+    "gemini": "ok"
+   },
+   "judge_overall": {
+    "claude": "has_errors",
+    "gpt": "has_errors",
+    "gemini": "has_errors"
+   },
+   "judge_notes": {
+    "claude": "The text is probably a short funerary stele from Sigus: Iulius Icustus, son of Atrima, v(ixit)... The extraction misreads the genitive personal name as a community."
+   },
+   "flagged": [
+    {
+     "path": "communities[0]",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 3,
+     "consensus_verdict": "mixed",
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "'Atrimae' is followed by a lacuna and stands where a filiation would go (Name + genitive + [f(ilius)]). It is best read as the genitive of a personal name, probably the female name Atrima (his mother). Nothing in the text supports a city called Atrimae.",
+       "suggested_value": "",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "Nothing in `Atrimae [3] / v(i)` identifies `Atrimae` as a city or settlement. The form is more naturally read here as the dative of the recipient's name, Atrima.",
+       "suggested_value": "",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "uncertain",
+       "severity": "major",
+       "reason": "'Atrimae' is an otherwise unattested form in this fragmentary inscription (possibly a personal name, deity name, or garbled reading before 'v(ixit)'), not an established city or community.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].ethnicity_evidence",
+     "judged_value": "\"Roman nomen Iulius with local-sounding cognomen Icustus\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The field is a paraphrase or reasoning, not a verbatim quote from the inscription.",
+       "suggested_value": "Iulius Ic/ustu(s)",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The field gives an interpretation rather than quoting the name as inscribed: `Iulius Ic/ustu(s)`.",
+       "suggested_value": "Iulius Ic/ustu(s)",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "Evidence fields must contain only a direct verbatim quote from the inscription text, not an explanatory sentence.",
+       "suggested_value": "Iulius Ic/ustu(s)",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].gender_evidence",
+     "judged_value": "\"Iulius (masculine nomen)\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The evidence field adds interpretation ('masculine nomen') instead of quoting the text verbatim.",
+       "suggested_value": "Iulius Ic/ustu(s)",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The text has `Iulius`; `(masculine nomen)` is commentary, not part of the inscription.",
+       "suggested_value": "Iulius",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "Evidence fields must contain only a direct quote copied verbatim from the inscription text, without explanatory parentheticals like '(masculine nomen)'.",
+       "suggested_value": "Iulius Ic/ustu(s)",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 2,
+     "n_major": 2,
+     "consensus_verdict": "omission",
+     "judges": {
+      "claude": {
+       "verdict": "omission",
+       "severity": "major",
+       "reason": "'Atrimae [3]' most plausibly gives a parent's name in the genitive (Atrima, probably the mother). That person should be extracted.",
+       "suggested_value": "Atrima, female, mother of Iulius Icustus",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "omission",
+       "severity": "major",
+       "reason": "`Atrimae`, following the nominative `Iulius Ic/ustu(s)`, is best read as naming the recipient Atrima. Atrima is probably a deity on the dedicatory reading, although the surviving text does not explicitly identify the recipient as divine.",
+       "suggested_value": "Add person_id 1: person_name = Atrimae; person_name_readable = Atrima; probable deity (divinity = true, divinity_type = Atrima).",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "person_relationships",
+     "judged_value": "[]",
+     "judged_value_known": true,
+     "n_flag": 2,
+     "n_major": 1,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "omission",
+       "severity": "minor",
+       "reason": "If 'Atrimae [f(ilius)]' is the filiation, there is a family relationship: Iulius Icustus is the son of Atrima. The restoration is uncertain because of the lacuna.",
+       "suggested_value": "source=0, target=Atrima, type=family, property=son",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "omission",
+       "severity": "major",
+       "reason": "On the likely dedicatory reading of `Iulius Ic/ustu(s) / Atrimae`, Iulius Icustus is the dedicator and Atrima is the recipient; the closing formula is too fragmentary to restore with confidence.",
+       "suggested_value": "source_person_id = 0; target_person_id = 1; target_community_id = null; type = dedication; property = dedicator; property_text = Iulius Ic/ustu(s) / Atrimae",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].ethnicity",
+     "judged_value": "\"Roman with local name\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "uncertain",
+       "severity": "minor",
+       "reason": "`Iulius Ic/ustu(s)` has a Roman gentilicium, but the text does not establish whether `Ic/ustu(s)` is a local name or a variant of the Latin cognomen Iustus.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].life_events",
+     "judged_value": "[]",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "uncertain",
+       "severity": "minor",
+       "reason": "The final 'v(i)' may be the start of v(ixit), which is typical of Sigus funerary stelae. If so, the text is funerary and a findspot-inferred death place would apply.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    }
+   ],
    "rank": 10
+  },
+  {
+   "key": "Numidia/Sellaoua_Announa_Salaoua_Announa_El_Announa_Thibilis/Sellaoua_Announa_Salaoua_Announa_El_Announa_Thibilis_career.json#1336",
+   "edcs_id": "EDCS-25600206",
+   "tier": "agree_all",
+   "consensus_verdict": "mixed",
+   "audit": false,
+   "score": [
+    1,
+    7,
+    22
+   ],
+   "metadata": "EDCS-ID: EDCS-25600206\nprovince: Numidia\nplace (findspot): Sellaoua Announa / Salaoua Announa / El Announa / Thibilis\nlanguage: la\nmaterial: lapis",
+   "inscription": "Victoriae / Aug(ustae) sacr(um) / pro salute / Antistior(um) Ad/venti et Bur/ri et liberoru(m) / eorum Agatho/pus lib(ertus) d(e)d(icavit)",
+   "extraction": [
+    "persons[0].person_id = 0   (context)",
+    "persons[0].person_name = \"Adventus\"",
+    "persons[0].person_name_readable = \"Adventus\"",
+    "persons[0].praenomen = \"\"",
+    "persons[0].nomen = \"\"",
+    "persons[0].cognomen = \"Adventus\"",
+    "persons[0].person_name_normalized = \"\"",
+    "persons[0].person_name_link = \"\"",
+    "persons[0].social_status = \"\"",
+    "persons[0].social_status_evidence = \"\"",
+    "persons[0].gender = \"male\"",
+    "persons[0].gender_evidence = \"Antistior(um) Adventi\"",
+    "persons[0].ethnicity = \"Roman\"",
+    "persons[0].ethnicity_evidence = \"Roman cognomen Adventus\"",
+    "persons[0].age_at_death = \"\"",
+    "persons[0].age_at_death_evidence = \"\"",
+    "persons[0].has_career = false",
+    "persons[0].career_path = []",
+    "persons[0].benefactions = []",
+    "persons[0].divinity = false",
+    "persons[0].divinity_type = null",
+    "persons[0].divinity_classification_reasoning = \"Adventus is a human name in this inscription, referring to one of the Antistii for whose health (pro salute) the dedication is made. The dedication is to Victoria Augusta (the divinity), while Adventus and Burrus are the human beneficiaries.\"   (context)",
+    "persons[0].life_events = []",
+    "persons[0].vital_events_reasoning = \"This is a votive inscription dedicated to Victoria Augusta for the health/well-being ('pro salute') of the Antistii Adventus and Burrus and their children, set up by their freedman Agathopus. It contains no funerary markers (no D.M., hic situs est, vixit annis, etc.) and is clearly dedicatory/votive in nature. Therefore, no death place should be inferred from the findspot. No birth place information is provided in the text.\"   (context)",
+    "persons[1].person_id = 1   (context)",
+    "persons[1].person_name = \"Burrus\"",
+    "persons[1].person_name_readable = \"Burrus\"",
+    "persons[1].praenomen = \"\"",
+    "persons[1].nomen = \"\"",
+    "persons[1].cognomen = \"Burrus\"",
+    "persons[1].person_name_normalized = \"\"",
+    "persons[1].person_name_link = \"\"",
+    "persons[1].social_status = \"\"",
+    "persons[1].social_status_evidence = \"\"",
+    "persons[1].gender = \"male\"",
+    "persons[1].gender_evidence = \"Antistior(um) Burri\"",
+    "persons[1].ethnicity = \"Roman\"",
+    "persons[1].ethnicity_evidence = \"Roman cognomen Burrus\"",
+    "persons[1].age_at_death = \"\"",
+    "persons[1].age_at_death_evidence = \"\"",
+    "persons[1].has_career = false",
+    "persons[1].career_path = []",
+    "persons[1].benefactions = []",
+    "persons[1].divinity = false",
+    "persons[1].divinity_type = null",
+    "persons[1].divinity_classification_reasoning = \"Burrus is one of the Antistii mentioned in the inscription, along with Adventus, for whose health (pro salute) the dedication is made. He is a human beneficiary of the dedication, not a deity.\"   (context)",
+    "persons[1].life_events = []",
+    "persons[1].vital_events_reasoning = \"This is a votive inscription dedicated to Victoria Augusta for the health/safety ('pro salute') of the Antistii Adventus and Burrus and their children, set up by their freedman Agathopus. It contains no funerary markers (no D.M., hic situs est, vixit annis, etc.) and is clearly dedicatory/votive in nature. Therefore, no death place should be inferred from the findspot. No birth place information is provided in the text.\"   (context)",
+    "persons[2].person_id = 2   (context)",
+    "persons[2].person_name = \"Agathopus\"",
+    "persons[2].person_name_readable = \"Agathopus\"",
+    "persons[2].praenomen = \"\"",
+    "persons[2].nomen = \"\"",
+    "persons[2].cognomen = \"Agathopus\"",
+    "persons[2].person_name_normalized = \"\"",
+    "persons[2].person_name_link = \"\"",
+    "persons[2].social_status = \"freedman\"",
+    "persons[2].social_status_evidence = \"Agathopus lib(ertus)\"",
+    "persons[2].gender = \"male\"",
+    "persons[2].gender_evidence = \"Agathopus lib(ertus)\"",
+    "persons[2].ethnicity = \"Roman with local name\"",
+    "persons[2].ethnicity_evidence = \"Greek cognomen Agathopus with libertus status\"",
+    "persons[2].age_at_death = \"\"",
+    "persons[2].age_at_death_evidence = \"\"",
+    "persons[2].has_career = false",
+    "persons[2].career_path = []",
+    "persons[2].benefactions[0].benefaction_type = \"other\"",
+    "persons[2].benefactions[0].object = \"dedication to Victoria Augusta\"",
+    "persons[2].benefactions[0].object_type = \"other\"",
+    "persons[2].benefactions[0].object_description = \"Sacred dedication to Victoria Augusta for the health of the Antistiores\"",
+    "persons[2].benefactions[0].benefaction_text = \"Victoriae Aug(ustae) sacr(um) pro salute Antistior(um) Adventi et Burri et liberoru(m) eorum Agathopus lib(ertus) d(e)d(icavit)\"",
+    "persons[2].benefactions[0].cost = \"\"",
+    "persons[2].benefactions[0].notes = \"Dedication made by freedman Agathopus for the health/safety of his former owners and their children\"   (context)",
+    "persons[2].benefactions[0].objects[0].object = \"dedication to Victoria Augusta\"",
+    "persons[2].benefactions[0].objects[0].object_type = \"altar\"",
+    "persons[2].benefactions[0].objects[0].object_category = \"monument\"",
+    "persons[2].benefactions[0].objects[0].object_subtype = \"monument.unspecified\"",
+    "persons[2].benefactions[0].objects[0].object_category_source = \"surface:monument.unspecified\"   (context)",
+    "persons[2].benefactions[0].recipient_communities = []",
+    "persons[2].divinity = false",
+    "persons[2].divinity_type = null",
+    "persons[2].divinity_classification_reasoning = \"Agathopus is identified as 'lib(ertus)' (freedman) who dedicated the inscription, making him a human dedicator, not a divinity\"   (context)",
+    "persons[2].life_events = []",
+    "persons[2].vital_events_reasoning = \"This is a votive/dedicatory inscription, not a funerary one. Agathopus, a freedman (libertus), dedicated this to Victoria Augusta for the health (pro salute) of the Antistii Adventus and Burrus and their children. The inscription contains no funerary markers (no D.M., hic situs est, vixit annis, etc.) and no birth or death information. As a non-funerary inscription, the findspot cannot be used to infer death place.\"   (context)",
+    "persons[2].social_statuses[0].category = \"legal\"",
+    "persons[2].social_statuses[0].subtype = \"legal.freedman\"",
+    "persons[2].social_statuses[0].evidence = \"Agathopus lib(ertus)\"",
+    "persons[2].social_statuses[0].certainty = \"explicit\"",
+    "persons[2].social_statuses[0].source = \"direct\"   (context)",
+    "persons[2].social_status_source = \"rulebased\"   (context)",
+    "communities = []",
+    "person_relationships[0].source_person_id = 2",
+    "person_relationships[0].target_person_id = 0",
+    "person_relationships[0].target_community_id = null",
+    "person_relationships[0].type = \"patronage\"",
+    "person_relationships[0].property = \"freedman\"",
+    "person_relationships[0].property_text = \"lib(ertus)\"",
+    "person_relationships[0].notes = \"Agathopus is identified as a freedman of the Antistii (Adventus and Burrus)\"   (context)",
+    "person_relationships[1].source_person_id = 2",
+    "person_relationships[1].target_person_id = 1",
+    "person_relationships[1].target_community_id = null",
+    "person_relationships[1].type = \"patronage\"",
+    "person_relationships[1].property = \"freedman\"",
+    "person_relationships[1].property_text = \"lib(ertus)\"",
+    "person_relationships[1].notes = \"Agathopus is identified as a freedman of the Antistii (Adventus and Burrus)\"   (context)",
+    "person_relationships[2].source_person_id = 2",
+    "person_relationships[2].target_person_id = 0",
+    "person_relationships[2].target_community_id = null",
+    "person_relationships[2].type = \"dedication\"",
+    "person_relationships[2].property = \"dedicator\"",
+    "person_relationships[2].property_text = \"d(e)d(icavit)\"",
+    "person_relationships[2].notes = \"Agathopus dedicated this inscription for the welfare of Adventus and Burrus and their children\"   (context)",
+    "person_relationships[3].source_person_id = 2",
+    "person_relationships[3].target_person_id = 1",
+    "person_relationships[3].target_community_id = null",
+    "person_relationships[3].type = \"dedication\"",
+    "person_relationships[3].property = \"dedicator\"",
+    "person_relationships[3].property_text = \"d(e)d(icavit)\"",
+    "person_relationships[3].notes = \"Agathopus dedicated this inscription for the welfare of Adventus and Burrus and their children\"   (context)",
+    "person_relationships[4].source_person_id = 0",
+    "person_relationships[4].target_person_id = 1",
+    "person_relationships[4].target_community_id = null",
+    "person_relationships[4].type = \"family\"",
+    "person_relationships[4].property = \"brother\"",
+    "person_relationships[4].property_text = \"Antistior(um) Adventi et Burri et liberoru(m) eorum\"",
+    "person_relationships[4].notes = \"Adventus and Burrus appear to be brothers (or at least relatives) sharing the same nomen Antistius and sharing children, though the exact relationship is uncertain; they may be brothers with shared children or co-patrons\"   (context)"
+   ],
+   "format_errors": [],
+   "format_warnings": [],
+   "judge_status": {
+    "claude": "ok",
+    "gpt": "ok",
+    "gemini": "ok"
+   },
+   "judge_overall": {
+    "claude": "has_errors",
+    "gpt": "has_errors",
+    "gemini": "has_errors"
+   },
+   "judge_notes": {
+    "claude": "The unnamed 'liberi eorum' are reasonably not extracted as individuals."
+   },
+   "flagged": [
+    {
+     "path": "person_relationships[4]",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 2,
+     "consensus_verdict": "mixed",
+     "judges": {
+      "claude": {
+       "verdict": "uncertain",
+       "severity": "major",
+       "reason": "'Antistior(um) Adventi et Burri et liberoru(m) eorum' shows only a shared nomen and joint co-patronage. Brotherhood is not stated: they could be father and son, cousins, or co-freedmen.",
+       "suggested_value": "",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "«Antistior(um) Ad/venti et Bur/ri» supplies a shared gentilicium, not a statement that the two men are brothers. «Liberoru(m) / eorum» identifies their children collectively without specifying how the men are related to each other.",
+       "suggested_value": "",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "uncertain",
+       "severity": "minor",
+       "reason": "While 'Antistior(um) Adventi et Burri' sharing the nomen Antistius could be brothers, they are famous historical figures (Q. Antistius Adventus Postumius Aquilinus and L. Antistius Burrus, who were father and son, or Adventus and his relative). The text itself does not specify 'brother'.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].ethnicity_evidence",
+     "judged_value": "\"Roman cognomen Adventus\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "This is a paraphrase, not a verbatim quote from the inscription.",
+       "suggested_value": "Antistior(um) Adventi",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "“Roman cognomen Adventus” is an interpretation, not a quotation. The inscription supplies the Roman name in «Antistior(um) Ad/venti».",
+       "suggested_value": "Antistior(um) Ad/venti",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "Evidence fields must contain only a verbatim quote from the inscription, not commentary.",
+       "suggested_value": "Antistior(um) Adventi",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].nomen",
+     "judged_value": "\"\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "omission",
+       "severity": "minor",
+       "reason": "The genitive plural 'Antistior(um)' gives both men the nomen Antistius, so Adventus's nomen is identifiable.",
+       "suggested_value": "Antistius",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "«Antistior(um)» supplies the gentilicium Antistius for Adventus.",
+       "suggested_value": "Antistius",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "omission",
+       "severity": "minor",
+       "reason": "The text explicitly provides the plural gentilicium 'Antistior(um)' for both Adventus and Burrus.",
+       "suggested_value": "Antistius",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].person_name",
+     "judged_value": "\"Adventus\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The full name, with the shared nomen from 'Antistior(um) Adventi', is Antistius Adventus.",
+       "suggested_value": "Antistius Adventus",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "In «Antistior(um) Ad/venti et Bur/ri», the shared gentilicium applies to Adventus as well as Burrus.",
+       "suggested_value": "Antistius Adventus",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The shared gentilicium 'Antistior(um)' applies to both Adventus and Burrus, so his full name in the text is Antistius Adventus.",
+       "suggested_value": "Antistius Adventus",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[1].ethnicity_evidence",
+     "judged_value": "\"Roman cognomen Burrus\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "This is a paraphrase, not a verbatim quote from the inscription.",
+       "suggested_value": "Antistior(um) ... Burri",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "“Roman cognomen Burrus” is not in the inscription. Quote the name with its shared gentilicium instead.",
+       "suggested_value": "Antistior(um) Ad/venti et Bur/ri",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "Evidence fields must contain only a verbatim quote from the inscription, not commentary.",
+       "suggested_value": "Antistior(um) ... Burri",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[1].nomen",
+     "judged_value": "\"\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "omission",
+       "severity": "minor",
+       "reason": "'Antistior(um) ... Burri' gives Burrus the nomen Antistius.",
+       "suggested_value": "Antistius",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "«Antistior(um)» supplies the gentilicium Antistius for Burrus.",
+       "suggested_value": "Antistius",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "omission",
+       "severity": "minor",
+       "reason": "The text explicitly provides the plural gentilicium 'Antistior(um)' for both Adventus and Burrus.",
+       "suggested_value": "Antistius",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[1].person_name",
+     "judged_value": "\"Burrus\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The full name, with the shared nomen, is Antistius Burrus.",
+       "suggested_value": "Antistius Burrus",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "In «Antistior(um) Ad/venti et Bur/ri», the shared gentilicium applies to Burrus as well as Adventus.",
+       "suggested_value": "Antistius Burrus",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The shared gentilicium 'Antistior(um)' applies to both Adventus and Burrus, so his full name in the text is Antistius Burrus.",
+       "suggested_value": "Antistius Burrus",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[2].ethnicity_evidence",
+     "judged_value": "\"Greek cognomen Agathopus with libertus status\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "This is interpretation, not a verbatim quote.",
+       "suggested_value": "Agathopus",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "“Greek cognomen Agathopus with libertus status” is explanatory prose, not a quotation. «Agatho/pus lib(ertus)» does not explicitly state ethnicity.",
+       "suggested_value": "",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "Evidence fields must contain only a verbatim quote from the inscription, not commentary.",
+       "suggested_value": "Agathopus lib(ertus)",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 2,
+     "n_major": 1,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "omission",
+       "severity": "minor",
+       "reason": "The deity 'Victoriae Aug(ustae)', the dedicatee, is not extracted as an entity with divinity=true (divinity_type Victoria).",
+       "suggested_value": "Victoria Augusta",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "omission",
+       "severity": "major",
+       "reason": "«Victoriae / Aug(ustae) sacr(um)» names the goddess who receives the dedication. Augusta is her epithet here, not a reference to an empress.",
+       "suggested_value": "{\"person_id\":3,\"person_name\":\"Victoria Augusta\",\"person_name_readable\":\"Victoria Augusta\",\"gender\":\"female\",\"gender_evidence\":\"Victoriae / Aug(ustae)\",\"divinity\":true,\"divinity_type\":\"Victoria\"}",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[1].gender_evidence",
+     "judged_value": "\"Antistior(um) Burri\"",
+     "judged_value_known": true,
+     "n_flag": 2,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "«Antistior(um) Burri» is not a continuous quotation: «Ad/venti et» intervenes.",
+       "suggested_value": "Antistior(um) Ad/venti et Bur/ri",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The quote omits 'Adventi et' which lies between 'Antistior(um)' and 'Burri' in the text.",
+       "suggested_value": "Burri",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[2].ethnicity",
+     "judged_value": "\"Roman with local name\"",
+     "judged_value_known": true,
+     "n_flag": 2,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "Agathopus is a Greek name typical of freedmen, not a local (African) name; 'Roman with local name' is misleading.",
+       "suggested_value": "",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "uncertain",
+       "severity": "minor",
+       "reason": "«Agatho/pus lib(ertus)» gives a Greek-derived name and freedman status, but does not establish a local origin or make the classification “Roman with local name” secure.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "person_relationships",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 1,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "omission",
+       "severity": "major",
+       "reason": "«Liberoru(m) / eorum» links the children to Adventus and Burrus collectively. Record the paternal links without assigning any individual child to either man.",
+       "suggested_value": "[{\"source_person_id\":0,\"target_person_id\":4,\"target_community_id\":null,\"type\":\"family\",\"property\":\"father\",\"property_text\":\"Antistior(um) Ad/venti et Bur/ri et liberoru(m) / eorum\",\"notes\":\"Children are named collectively; individual parentage is not stated.\"},{\"source_person_id\":1,\"target_person_id\":4,\"target_community_id\":null,\"type\":\"family\",\"property\":\"father\",\"property_text\":\"Antistior(um) Ad/venti et Bur/ri et liberoru(m) / eorum\",\"notes\":\"Children are named collectively; individual parentage is not stated.\"}]",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "person_relationships[2].target_person_id",
+     "judged_value": "0",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 1,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "The dative «Victoriae / Aug(ustae)» identifies the recipient of Agathopus's dedication. Adventus is named under «pro salute» as a beneficiary, not as the dedicatee.",
+       "suggested_value": "3",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "person_relationships[3]",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 1,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "Burrus is named under «pro salute», while «Victoriae / Aug(ustae) sacr(um)» identifies the dedicatee. The text does not support a separate dedicator–dedicatee relationship with Burrus.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[2].benefactions[0]",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 1,
+     "consensus_verdict": null,
+     "judges": {
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "A standard votive dedication ('Victoriae Aug(ustae) sacr(um) ... d(e)d(icavit)') without mention of a public building, statue, or monetary gift is not a public benefaction (evergetism). Moreover, the object field was filled with an English paraphrase rather than a Latin word from the text.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].person_name_readable",
+     "judged_value": "\"Adventus\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The readable name should include Antistius, supplied by «Antistior(um) Ad/venti et Bur/ri».",
+       "suggested_value": "Antistius Adventus",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[1].person_name_readable",
+     "judged_value": "\"Burrus\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The readable name should include Antistius, supplied by «Antistior(um) Ad/venti et Bur/ri».",
+       "suggested_value": "Antistius Burrus",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[2].benefactions[0].object",
+     "judged_value": "\"dedication to Victoria Augusta\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The object field requires Latin. «Victoriae / Aug(ustae) sacr(um)» identifies the dedication as sacred to Victoria Augusta but does not name a more specific object.",
+       "suggested_value": "sacrum",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[2].benefactions[0].object_description",
+     "judged_value": "\"Sacred dedication to Victoria Augusta for the health of the Antistiores\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "«Antistior(um)» is the genitive plural of Antistius, not “Antistiores”; «et liberoru(m) / eorum» also includes the children among the beneficiaries.",
+       "suggested_value": "Sacred dedication to Victoria Augusta for the welfare of Antistius Adventus, Antistius Burrus, and their children",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[2].benefactions[0].objects[0]",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "«Victoriae / Aug(ustae) sacr(um)» identifies a votive offering but does not specify an altar or another monument. The single object entry should match the parent object's label and type.",
+       "suggested_value": "{\"object\":\"sacrum\",\"object_type\":\"other\",\"object_category\":\"offering\",\"object_subtype\":\"offering.unspecified\"}",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[2].benefactions[0].objects[0].object_type",
+     "judged_value": "\"altar\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The text does not mention an altar ('sacrum ... d(e)d(icavit)'). The value is also inconsistent with the parent object_type 'other'.",
+       "suggested_value": "other",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[2].cognomen",
+     "judged_value": "\"Agathopus\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "«Agatho/pus lib(ertus)» gives only a single name. Under the specification, the name-component fields stay empty when the name structure cannot be established.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    }
+   ],
+   "rank": 11
   },
   {
    "key": "Africa_proconsularis/Rass_Dimess_Rass_Dimasse_Ras_Dimas_Dimass_Thapsus/Rass_Dimess_Rass_Dimasse_Ras_Dimas_Dimass_Thapsus_career.json#3",
    "edcs_id": "EDCS-78300636",
    "tier": "agree_all",
+   "consensus_verdict": "mixed",
    "audit": false,
    "score": [
     1,
@@ -5115,6 +5514,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
+     "consensus_verdict": "mixed",
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -5145,6 +5545,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -5175,6 +5576,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -5198,6 +5600,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -5209,206 +5612,13 @@
      }
     }
    ],
-   "rank": 11
-  },
-  {
-   "key": "Africa_proconsularis/Zama_Jama_Djama_AlJamah_elChar_Hr_echChar_Hr_EchChar_Soualem_Hr_ElLehs_Nafidat_elZawamil_Nafidat_azZawamil_Zama_Regia/Zama_Jama_Djama_AlJamah_elChar_Hr_echChar_Hr_EchChar_Soualem_Hr_ElLehs_Nafidat_elZawamil_Nafidat_azZawamil_Zama_Regia_career.json#29",
-   "edcs_id": "EDCS-26900651",
-   "tier": "agree_all",
-   "audit": false,
-   "score": [
-    1,
-    2,
-    6
-   ],
-   "metadata": "EDCS-ID: EDCS-26900651\nprovince: Africa proconsularis\nplace (findspot): Zama / Jama / Djama / Al-Jamah / el-Char, Hr. / ech-Char, Hr. / Ech-Char / Soualem, Hr. / El-Lehs / Nafidat el-Zawamil / Nafidat az-Zawamil / Zama Regia\nlanguage: la\nmaterial: lapis",
-   "inscription": "D(is) M(anibus) / [3]lius V[3] / [3]R vix[it] / [ann]is [",
-   "extraction": [
-    "persons[0].person_id = 0   (context)",
-    "persons[0].person_name = \"[3]lius V[3]\"",
-    "persons[0].person_name_readable = \"[...]lius V[...]\"",
-    "persons[0].praenomen = \"\"",
-    "persons[0].nomen = \"\"",
-    "persons[0].cognomen = \"\"",
-    "persons[0].person_name_normalized = \"\"",
-    "persons[0].person_name_link = \"\"",
-    "persons[0].social_status = \"\"",
-    "persons[0].social_status_evidence = \"\"",
-    "persons[0].gender = \"unknown\"",
-    "persons[0].gender_evidence = \"\"",
-    "persons[0].ethnicity = \"\"",
-    "persons[0].ethnicity_evidence = \"\"",
-    "persons[0].age_at_death = \"\"",
-    "persons[0].age_at_death_evidence = \"vix[it] / [ann]is [\"",
-    "persons[0].has_career = false",
-    "persons[0].career_path = []",
-    "persons[0].benefactions = []",
-    "persons[0].divinity = false",
-    "persons[0].divinity_type = null",
-    "persons[0].divinity_classification_reasoning = \"This is a funerary inscription (D(is) M(anibus)) for a deceased human. The fragmentary name '[3]lius V[3]' appears to be a regular Roman personal name (likely ending in -lius), and the text mentions the person lived a certain number of years (vix[it] [ann]is), which is typical of human epitaphs, not dedications to divinities.\"   (context)",
-    "persons[0].life_events[0].event_type = \"death\"",
-    "persons[0].life_events[0].place = \"Zama / Jama / Djama / Al-Jamah / el-Char, Hr. / ech-Char, Hr. / Ech-Char / Soualem, Hr. / El-Lehs / Nafidat el-Zawamil / Nafidat az-Zawamil / Zama Regia\"",
-    "persons[0].life_events[0].place_normalized = null",
-    "persons[0].life_events[0].place_source = \"findspot_inferred\"",
-    "persons[0].life_events[0].place_evidence = \"inferred from findspot\"",
-    "persons[0].vital_events_reasoning = \"This is a funerary inscription as indicated by 'D(is) M(anibus)' (to the spirits of the dead) and 'vix[it]' (lived) followed by '[ann]is' (years). No birth place is mentioned in the text. No explicit death place is stated in the inscription text itself, but given the funerary nature of the inscription, the findspot serves as a proxy for the burial/death place.\"   (context)",
-    "communities = []",
-    "person_relationships = []"
-   ],
-   "format_errors": [],
-   "format_warnings": [],
-   "judge_status": {
-    "claude": "ok",
-    "gpt": "ok",
-    "gemini": "ok"
-   },
-   "judge_overall": {
-    "claude": "acceptable",
-    "gpt": "has_errors",
-    "gemini": "has_errors"
-   },
-   "judge_notes": {
-    "claude": "The text is very fragmentary. Line 3 '[3]R' may belong to the cognomen or a filiation and cannot be resolved."
-   },
-   "flagged": [
-    {
-     "path": "persons[0].gender",
-     "judged_value": "\"unknown\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 2,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The surviving name ending '[3]lius' is a masculine nominative gentilicium ending, so the deceased can be taken as male rather than unknown.",
-       "suggested_value": "male",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "The surviving name form `[3]lius` is masculine nominative; the loss of its opening letters prevents identification of the full name, not recognition of its gender.",
-       "suggested_value": "male",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "The masculine nominative ending '-lius' of the nomen indicates the deceased is male.",
-       "suggested_value": "male",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].gender_evidence",
-     "judged_value": "\"\"",
-     "judged_value_known": true,
-     "n_flag": 2,
-     "n_major": 0,
-     "judges": {
-      "gpt": {
-       "verdict": "omission",
-       "severity": "minor",
-       "reason": "The masculine ending is preserved in `[3]lius`, which can be quoted without restoring the name.",
-       "suggested_value": "[3]lius",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "omission",
-       "severity": "minor",
-       "reason": "The masculine ending in '[3]lius' is direct textual evidence for male gender.",
-       "suggested_value": "[3]lius",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].life_events[0].place_evidence",
-     "judged_value": "\"inferred from findspot\"",
-     "judged_value_known": true,
-     "n_flag": 2,
-     "n_major": 0,
-     "judges": {
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "`D(is) M(anibus)` and `vix[it]` establish the funerary context but give no place of death. The phrase `inferred from findspot` is not a quotation from the inscription; the inference is already recorded in `place_source`.",
-       "suggested_value": "",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "Evidence fields must contain only a direct quote from the inscription text or an empty string, not an explanatory phrase like 'inferred from findspot'.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].nomen",
-     "judged_value": "\"\"",
-     "judged_value_known": true,
-     "n_flag": 2,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "omission",
-       "severity": "minor",
-       "reason": "'[3]lius' is clearly a fragmentary nomen (e.g. Iulius or Aelius), followed by a cognomen beginning 'V[3]'. A partial nomen could be recorded.",
-       "suggested_value": "[...]lius",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "omission",
-       "severity": "minor",
-       "reason": "The fragmentary nomen gentilicium '[3]lius' (e.g., Iulius, Aurelius) is identifiable in the text.",
-       "suggested_value": "[3]lius",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].cognomen",
-     "judged_value": "\"\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gemini": {
-       "verdict": "omission",
-       "severity": "minor",
-       "reason": "The fragmentary cognomen 'V[3][3]R' (likely Victor) is identifiable in the text.",
-       "suggested_value": "V[3][3]R",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].person_name",
-     "judged_value": "\"[3]lius V[3]\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The cognomen likely continues onto the next line before 'vix[it]', ending in '[3]R' (e.g., Victor), so '[3]R' should be included in the name.",
-       "suggested_value": "[3]lius V[3] / [3]R",
-       "path_valid": true
-      }
-     }
-    }
-   ],
    "rank": 12
   },
   {
    "key": "Numidia/Oued_Smendou/Oued_Smendou_career.json#0",
    "edcs_id": "EDCS-13003434",
    "tier": "agree_2",
+   "consensus_verdict": "incorrect",
    "audit": false,
    "score": [
     1,
@@ -5648,7 +5858,15 @@
     "person_relationships[3].type = \"dedication\"",
     "person_relationships[3].property = \"dedicator\"",
     "person_relationships[3].property_text = \"I(ovi) Aug(usto) sacrum\"",
-    "person_relationships[3].notes = \"Euelpistus dedicates the temple to Iuppiter Augustus\"   (context)"
+    "person_relationships[3].notes = \"Euelpistus dedicates the temple to Iuppiter Augustus\"   (context)",
+    "person_relationships[4].source_person_id = 1",
+    "person_relationships[4].target_person_id = null",
+    "person_relationships[4].target_community_id = 0",
+    "person_relationships[4].type = \"affiliation\"",
+    "person_relationships[4].property = \"member\"",
+    "person_relationships[4].property_text = \"Augustalis co[loniae]\"",
+    "person_relationships[4].notes = \"Euelpistus is an Augustalis of the colony\"   (context)",
+    "person_relationships[4].generated_by_activity = \"extract_career_graph-extract-claude-sonnet-4-6-20260503T092548Z\""
    ],
    "format_errors": [],
    "format_warnings": [],
@@ -5673,6 +5891,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -5703,6 +5922,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -5733,6 +5953,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -5763,6 +5984,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -5793,6 +6015,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -5816,6 +6039,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -5839,6 +6063,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -5862,6 +6087,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -5885,6 +6111,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -5908,6 +6135,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -5931,6 +6159,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -5954,6 +6183,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -5977,6 +6207,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6000,6 +6231,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -6023,6 +6255,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6046,6 +6279,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6069,6 +6303,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6092,6 +6327,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6115,6 +6351,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6138,6 +6375,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6161,6 +6399,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6184,6 +6423,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -6200,6 +6440,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -6216,6 +6457,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6232,6 +6474,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -6248,6 +6491,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -6264,6 +6508,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6280,6 +6525,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "incorrect",
@@ -6296,6 +6542,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -6312,6 +6559,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6328,6 +6576,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -6344,6 +6593,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6360,6 +6610,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6376,6 +6627,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -6392,6 +6644,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6408,6 +6661,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -6424,6 +6678,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -6440,6 +6695,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6456,6 +6712,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "incorrect",
@@ -6472,6 +6729,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6488,6 +6746,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6504,6 +6763,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6521,6 +6781,7 @@
    "key": "Africa_proconsularis/AlKhums_Khoms_Homs_Lebdah_Lebida_Labdah_Wadi_Zennad_Wadi_az_Zannad_Leptis_Magna_Lepcis_Magna_Neapolis/AlKhums_Khoms_Homs_Lebdah_Lebida_Labdah_Wadi_Zennad_Wadi_az_Zannad_Leptis_Magna_Lepcis_Magna_Neapolis_career.json#777",
    "edcs_id": "EDCS-39000149",
    "tier": "agree_2",
+   "consensus_verdict": "uncertain",
    "audit": false,
    "score": [
     1,
@@ -6580,6 +6841,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
+     "consensus_verdict": "uncertain",
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -6603,6 +6865,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -6620,6 +6883,7 @@
    "key": "Numidia/Boumalek_Bou_Malek/Boumalek_Bou_Malek_career.json#5",
    "edcs_id": "EDCS-23701875",
    "tier": "single",
+   "consensus_verdict": null,
    "audit": false,
    "score": [
     0,
@@ -6716,6 +6980,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -6746,6 +7011,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -6776,6 +7042,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -6806,6 +7073,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -6836,6 +7104,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -6866,6 +7135,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6889,6 +7159,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6912,6 +7183,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6935,6 +7207,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6951,6 +7224,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6967,6 +7241,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6984,6 +7259,7 @@
    "key": "Africa_proconsularis/Douemis_Hr_Dawamis_Hr_ad_Duemis_Duamis_edDuamis_Hr_Gebel_elDouemis_Jabal_alDuwaymis_Uchi_Maius/Douemis_Hr_Dawamis_Hr_ad_Duemis_Duamis_edDuamis_Hr_Gebel_elDouemis_Jabal_alDuwaymis_Uchi_Maius_career.json#419",
    "edcs_id": "EDCS-34600205",
    "tier": "single",
+   "consensus_verdict": null,
    "audit": false,
    "score": [
     0,
@@ -7043,6 +7319,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -7073,6 +7350,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -7103,6 +7381,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -7126,6 +7405,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -7149,6 +7429,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -7166,6 +7447,7 @@
    "key": "Numidia/El_Ma_Labiodh_El_Ma_Abiod_El_Ma_el_Abiod_Kherbet_el_Ma_el_Abiod_El_Abiod/El_Ma_Labiodh_El_Ma_Abiod_El_Ma_el_Abiod_Kherbet_el_Ma_el_Abiod_El_Abiod_career.json#5",
    "edcs_id": "EDCS-04001700",
    "tier": "single",
+   "consensus_verdict": null,
    "audit": false,
    "score": [
     0,
@@ -7257,6 +7539,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -7287,6 +7570,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -7317,6 +7601,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -7347,6 +7632,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -7377,6 +7663,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7400,6 +7687,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7423,6 +7711,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -7439,6 +7728,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7455,6 +7745,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -7471,6 +7762,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7487,6 +7779,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7503,6 +7796,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7519,6 +7813,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "uncertain",
@@ -7536,6 +7831,7 @@
    "key": "Africa_proconsularis/Carthago/Carthago_career.json#4646",
    "edcs_id": "EDCS-25100233",
    "tier": "single",
+   "consensus_verdict": null,
    "audit": false,
    "score": [
     0,
@@ -7598,6 +7894,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -7628,6 +7925,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -7658,6 +7956,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -7688,6 +7987,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -7718,6 +8018,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -7741,6 +8042,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7765,6 +8067,7 @@
    "key": "Africa_proconsularis/Carthago/Carthago_career.json#8533",
    "edcs_id": "EDCS-53200482",
    "tier": "single",
+   "consensus_verdict": null,
    "audit": false,
    "score": [
     0,
@@ -7824,6 +8127,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -7854,6 +8158,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -7877,6 +8182,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -7900,6 +8206,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "uncertain",
@@ -7916,6 +8223,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7933,6 +8241,7 @@
    "key": "Numidia/Khemissa_Khamissa_Hr_Thubursicu_Numidarum/Khemissa_Khamissa_Hr_Thubursicu_Numidarum_career.json#585",
    "edcs_id": "EDCS-13001243",
    "tier": "single",
+   "consensus_verdict": null,
    "audit": false,
    "score": [
     0,
@@ -7993,6 +8302,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -8023,6 +8333,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -8053,6 +8364,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -8076,6 +8388,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -8092,6 +8405,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -8108,6 +8422,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -8125,6 +8440,7 @@
    "key": "Africa_proconsularis/AlKhums_Khoms_Homs_Lebdah_Lebida_Labdah_Wadi_Zennad_Wadi_az_Zannad_Leptis_Magna_Lepcis_Magna_Neapolis/AlKhums_Khoms_Homs_Lebdah_Lebida_Labdah_Wadi_Zennad_Wadi_az_Zannad_Leptis_Magna_Lepcis_Magna_Neapolis_career.json#647",
    "edcs_id": "EDCS-30100061",
    "tier": "single",
+   "consensus_verdict": null,
    "audit": false,
    "score": [
     0,
@@ -8183,6 +8499,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -8213,6 +8530,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -8243,6 +8561,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -8260,6 +8579,7 @@
    "key": "Africa_proconsularis/Carthago/Carthago_career.json#1199",
    "edcs_id": "EDCS-00300133",
    "tier": "single",
+   "consensus_verdict": null,
    "audit": false,
    "score": [
     0,
@@ -8319,6 +8639,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -8342,6 +8663,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -8359,6 +8681,7 @@
    "key": "Africa_proconsularis/Carthago/Carthago_career.json#2798",
    "edcs_id": "EDCS-24800803",
    "tier": "audit",
+   "consensus_verdict": null,
    "audit": true,
    "score": [
     0,

@@ -150,6 +150,44 @@ def value_map(rec):
     return out
 
 
+# ── Classifying findings ──────────────────────────────────────────────────────
+#
+# Judges report problems only; a field nobody flags is "no finding", not
+# "correct". A major-consensus field (major for >= 2 judges) can still mean
+# different things: the judges agree it is wrong, agree they cannot tell, or
+# agree something is missing. These are kept apart (docs/ASSESSMENT_STATUS_SPEC.md).
+
+# Major-consensus verdict classes, most actionable first.
+CONSENSUS_VERDICTS = ["incorrect", "mixed", "omission", "uncertain"]
+
+# Per-field outcome of one judge run, worst first.
+FIELD_OUTCOMES = ["major_incorrect", "major_mixed", "major_omission", "major_uncertain",
+                  "major_single", "minor", "no_finding"]
+
+
+def consensus_verdict(findings):
+    """Verdict class of a field from {judge: {verdict, severity}}; None unless >= 2 call it major.
+
+    incorrect / omission / uncertain when every judge calling it major gives
+    that verdict, otherwise mixed.
+    """
+    major = [f["verdict"] for f in findings.values() if f.get("severity") == "major"]
+    if len(major) < 2:
+        return None
+    kinds = set(major)
+    return kinds.pop() if len(kinds) == 1 else "mixed"
+
+
+def field_outcome(findings):
+    """One of FIELD_OUTCOMES for a field, from {judge: {verdict, severity}} ({} = not flagged)."""
+    cv = consensus_verdict(findings)
+    if cv:
+        return f"major_{cv}"
+    if any(f.get("severity") == "major" for f in findings.values()):
+        return "major_single"
+    return "minor" if findings else "no_finding"
+
+
 def value_shas(rec):
     """{judged leaf path: fingerprint} for the values the judge is shown.
 

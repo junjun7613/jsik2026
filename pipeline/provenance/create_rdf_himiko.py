@@ -1467,6 +1467,34 @@ def _group_status(fields: dict, prefixes: list, exclude: tuple = ()) -> 'tuple |
     return _ASSESS_STATES[lo], (_ASSESS_STATES[stale] if stale is not None and stale > lo else None)
 
 
+# Worst first; mirrors judge_common.FIELD_OUTCOMES.
+_JUDGE_OUTCOMES = ['major_incorrect', 'major_mixed', 'major_omission', 'major_uncertain',
+                   'major_single', 'minor', 'no_finding']
+
+
+def _group_outcome(items: dict, prefixes: list, exclude: tuple = ()) -> 'str | None':
+    """Worst judge outcome over the fields / list paths under `prefixes`.
+
+    `exclude` keys are statement sub-lists: their elements belong to the
+    statements, but a finding on the list itself (an omission) stays here.
+    """
+    worst = None
+    for path, f in items.items():
+        if 'outcome' not in f:
+            continue
+        if not any(path == p or path.startswith(p + '.') or path.startswith(p + '[') for p in prefixes):
+            continue
+        if exclude and any(path.startswith(f'{p}.{k}[') for p in prefixes for k in exclude):
+            continue
+        r = _JUDGE_OUTCOMES.index(f['outcome'])
+        worst = r if worst is None else min(worst, r)
+    return None if worst is None else _JUDGE_OUTCOMES[worst]
+
+
+def _outcome_triple(uri: str, outcome: 'str | None') -> list:
+    return [f'  {uri} hmkia:judgeOutcome hmkia:outcome_{outcome} .'] if outcome else []
+
+
 def _status_triples(uri: str, state: str, stale: 'str | None') -> list:
     out = [f'  {uri} hmkia:assessmentStatus {_status_uri(state)} .']
     if stale:
@@ -1483,19 +1511,27 @@ def build_assessment_status_lines(record: dict) -> list:
         return [f'  {insc} hmkia:assessmentStatus {_status_uri("unassessed")} .']
 
     fields = st.get('fields', {})
+    judged = {**fields, **st.get('containers', {})}    # leaf fields + list/object findings
     lines = _status_triples(insc, st['status'], st.get('stale_from'))
+    lines += _outcome_triple(insc, st.get('worst_outcome'))
     for pi, person in enumerate(record.get('persons', [])):
+        uri = _eref_person(edcs_id, person.get('person_id', pi))
         g = _group_status(fields, [f'persons[{pi}]'], _STATEMENT_KEYS)
         if g:
-            lines += _status_triples(_eref_person(edcs_id, person.get('person_id', pi)), *g)
+            lines += _status_triples(uri, *g)
+        lines += _outcome_triple(uri, _group_outcome(judged, [f'persons[{pi}]'], _STATEMENT_KEYS))
     for ci, comm in enumerate(record.get('communities', [])):
+        uri = _eref_community(edcs_id, comm.get('community_id', ci))
         g = _group_status(fields, [f'communities[{ci}]'], _STATEMENT_KEYS)
         if g:
-            lines += _status_triples(_eref_community(edcs_id, comm.get('community_id', ci)), *g)
+            lines += _status_triples(uri, *g)
+        lines += _outcome_triple(uri, _group_outcome(judged, [f'communities[{ci}]'], _STATEMENT_KEYS))
     for uri, paths in _STMT_PATHS.items():
         g = _group_status(fields, paths) if paths else None
         if g:
             lines += _status_triples(uri, *g)
+        if paths:
+            lines += _outcome_triple(uri, _group_outcome(judged, paths))
 
     # One AssessmentAct per judge run / human review that counted.
     for ev in st.get('evidence', []):
@@ -1508,6 +1544,8 @@ def build_assessment_status_lines(record: dict) -> list:
                 lines.append(f'    hmkia:associatedWith {_agent_uri(model)} ;')
             if ev.get('tier'):
                 lines.append(f'    hmkia:assessmentOutcome {_lit(ev["tier"])} ;')
+            if ev.get('worst_outcome'):
+                lines.append(f'    hmkia:judgeOutcome hmkia:outcome_{ev["worst_outcome"]} ;')
             if ev.get('prompt_hash'):
                 lines.append(f'    hmkia:hasCriterion {_lit("judge prompt " + ev["prompt_hash"])} ;')
             fresh = ev.get('fresh', ev.get('fresh_fields', 0) > 0)

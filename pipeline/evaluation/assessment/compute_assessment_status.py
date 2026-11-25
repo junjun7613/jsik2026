@@ -39,7 +39,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent / "llm_judge"))
 from judge_common import (  # noqa: E402
-    RUNS_DIR, build_user_message, flatten, input_sha, iter_records, value_map, value_shas,
+    FIELD_OUTCOMES, RUNS_DIR, build_user_message, field_outcome, flatten, input_sha, iter_records,
+    value_map, value_shas,
 )
 
 STATES = ["unassessed", "llm_judged", "human_reviewed", "human_corrected"]
@@ -119,7 +120,10 @@ def assess_record(rec, judge_runs, reviews, warnings):
 
     fresh = collections.defaultdict(int)       # path -> highest fresh rank
     stale = collections.defaultdict(int)       # path -> highest stale rank
-    judge_info = {}                            # path -> {flagged_by, severity}
+    # path -> (run timestamp, run_id, {judge: {verdict, severity}}) from the
+    # latest counted run whose judgement still applies to the current value.
+    judge_latest = {}
+    container_latest = {}                      # same, for list/object paths
     evidence = []
     # Whole-record assessments, for records with no judged field at all
     # (nothing was extracted): their status comes from these alone.
@@ -144,6 +148,7 @@ def assess_record(rec, judge_runs, reviews, warnings):
             ev["counted"] = False
             evidence.append(ev)
             continue
+        ok_paths = []
         if all("value_shas" in r for r in rows):
             ok_paths = [p for p in universe
                         if all(r["value_shas"].get(p) == cur_fp.get(p) for r in rows)]
@@ -157,6 +162,7 @@ def assess_record(rec, judge_runs, reviews, warnings):
         elif all(r.get("input_sha") for r in rows):
             ok = all(r["input_sha"] == cur_sha for r in rows)
             mark(universe, 1, ok, whole_record=True)
+            ok_paths = list(universe) if ok else []
             ev["match"] = "record"
             ev["fresh"] = ok
         else:
@@ -165,17 +171,36 @@ def assess_record(rec, judge_runs, reviews, warnings):
             ev["match"] = "none"
             ev["fresh"] = False
         ev["counted"] = True
-        evidence.append(ev)
+        # Findings of this run, one per judge per path (the more severe kept),
+        # recorded only for the fields whose judged value is still current.
+        findings = collections.defaultdict(dict)
         for r in rows:
             for iss in (r.get("result") or {}).get("issues", []):
                 if not iss.get("path_valid"):
                     continue
-                j = judge_info.setdefault(iss["path"], {"flagged_by": [], "severity": None})
-                if r["judge"] not in j["flagged_by"]:
-                    j["flagged_by"].append(r["judge"])
-                sev = iss.get("severity")
-                if SEVERITY.get(sev, 0) > SEVERITY.get(j["severity"], 0):
-                    j["severity"] = sev
+                prev = findings[iss["path"]].get(r["judge"])
+                if prev is None or SEVERITY.get(iss.get("severity"), 0) > SEVERITY.get(prev["severity"], 0):
+                    findings[iss["path"]][r["judge"]] = {"verdict": iss.get("verdict"),
+                                                         "severity": iss.get("severity")}
+        for p in ok_paths:
+            if p not in judge_latest or run["timestamp"] > judge_latest[p][0]:
+                judge_latest[p] = (run["timestamp"], run["run_id"], dict(findings.get(p, {})))
+        # Findings on a list or object (mostly omissions: "an office is missing
+        # from career_path") have no leaf of their own. They count while every
+        # field under them is still as judged.
+        ok_set = set(ok_paths)
+        for p, fj in findings.items():
+            if p in universe:
+                continue
+            under = [u for u in universe if u.startswith(p + ".") or u.startswith(p + "[")]
+            if (all(u in ok_set for u in under) if under else len(ok_set) == len(universe)):
+                if p not in container_latest or run["timestamp"] > container_latest[p][0]:
+                    container_latest[p] = (run["timestamp"], run["run_id"], dict(fj))
+        outcomes = ([field_outcome(judge_latest[p][2]) for p in ok_paths if judge_latest[p][1] == run["run_id"]]
+                    + [field_outcome(v[2]) for v in container_latest.values() if v[1] == run["run_id"]])
+        if outcomes:
+            ev["worst_outcome"] = min(outcomes, key=FIELD_OUTCOMES.index)
+        evidence.append(ev)
 
     # 2. Human review of the judge's findings
     for rv in reviews.get(eid, []):
@@ -217,8 +242,14 @@ def assess_record(rec, judge_runs, reviews, warnings):
         f = {"state": STATES[fresh[p]]}
         if stale[p] > fresh[p]:
             f["stale_from"] = STATES[stale[p]]
-        if p in judge_info:
-            f["judge"] = judge_info[p]
+        if p in judge_latest:
+            _, run_id, fj = judge_latest[p]
+            f["outcome"] = field_outcome(fj)
+            if fj:
+                f["judge"] = {"run_id": run_id, "flagged_by": sorted(fj),
+                              "severity": max((x["severity"] for x in fj.values()),
+                                              key=lambda s: SEVERITY.get(s, 0)),
+                              "verdicts": {j: x["verdict"] for j, x in sorted(fj.items())}}
         fields[p] = f
     counts = collections.Counter(f["state"] for f in fields.values())
     if fields:
@@ -229,9 +260,19 @@ def assess_record(rec, judge_runs, reviews, warnings):
     else:
         lowest = highest = record_rank["fresh"]
         stale_from = record_rank["stale"] if record_rank["stale"] > lowest else None
+    containers = {}
+    for p, (_, run_id, fj) in sorted(container_latest.items()):
+        containers[p] = {"outcome": field_outcome(fj), "judge": {
+            "run_id": run_id, "flagged_by": sorted(fj),
+            "severity": max((x["severity"] for x in fj.values()), key=lambda s: SEVERITY.get(s, 0)),
+            "verdicts": {j: x["verdict"] for j, x in sorted(fj.items())}}}
+    outcome_counts = collections.Counter(f["outcome"] for f in list(fields.values()) + list(containers.values())
+                                         if "outcome" in f)
     return {
         "edcs_id": eid,
         "input_sha": cur_sha,
+        **({"worst_outcome": min(outcome_counts, key=FIELD_OUTCOMES.index)} if outcome_counts else {}),
+        "outcome_counts": {o: outcome_counts[o] for o in FIELD_OUTCOMES if outcome_counts[o]},
         "status": STATES[lowest],
         "highest": STATES[highest],
         **({"stale_from": STATES[stale_from]} if stale_from is not None else {}),
@@ -239,6 +280,7 @@ def assess_record(rec, judge_runs, reviews, warnings):
         "stale_fields": sum(1 for f in fields.values() if "stale_from" in f),
         "evidence": evidence,
         "fields": fields,
+        "containers": containers,
     }
 
 
@@ -254,6 +296,8 @@ def main():
     records, n_total = {}, 0
     status_counts = collections.Counter()
     field_counts = collections.Counter()
+    outcome_totals = collections.Counter()
+    container_totals = collections.Counter()
     for _, rec in iter_records():
         n_total += 1
         res = assess_record(rec, judge_runs, reviews, warnings)
@@ -265,6 +309,8 @@ def main():
         if res.get("stale_from") and res["status"] == "unassessed":
             status_counts["unassessed (stale)"] += 1
         field_counts.update(f["state"] for f in res["fields"].values())
+        outcome_totals.update(f["outcome"] for f in res["fields"].values() if "outcome" in f)
+        container_totals.update(f["outcome"] for f in res["containers"].values())
 
     summary = {
         "generated_at": now(),
@@ -273,6 +319,11 @@ def main():
         "unassessed_stale": status_counts.get("unassessed (stale)", 0),
         "assessed_records_listed": len(records),
         "field_states_in_listed_records": {s: field_counts.get(s, 0) for s in STATES},
+        "judge_outcomes_of_current_fields": {o: outcome_totals.get(o, 0) for o in FIELD_OUTCOMES},
+        "judge_outcomes_of_lists_and_objects": {o: container_totals.get(o, 0) for o in FIELD_OUTCOMES
+                                                if o != "no_finding"},
+        "inscriptions_by_worst_outcome": dict(collections.Counter(
+            r.get("worst_outcome", "none") for r in records.values())),
         "judge_runs": sorted({e["run_id"] for v in judge_runs.values() for e in v}),
         "human_review_files": sum(len(v) for v in reviews.values()),
         "warnings": dict(warnings),

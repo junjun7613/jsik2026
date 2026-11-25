@@ -1,6 +1,6 @@
-# 評価状態の仕様 v1.0
+# 評価状態の仕様 v1.1
 
-策定日: 2026-11-25
+策定日: 2026-11-25（v1.1: 判定結果 `outcome` と確認キューの `consensus_verdict` を追加、同日）
 対象: Claude の抽出結果（`pipeline/provenance/validated_career_graphs/claude`）の各項目が、
 どこまで評価されているかを表す状態。計算は `pipeline/evaluation/assessment/compute_assessment_status.py`、
 RDF への出力は `pipeline/provenance/create_rdf_himiko.py`。
@@ -54,9 +54,37 @@ context-only のキーを除く）。例: `persons[0].career_path[2].position_ti
 
 ### 2.3 判定の中身は状態と分ける
 
-judge の区分（`agree_all` / `minor_only` / `clean` など）や、どの judge が指摘したか、重大度は、
-状態とは別の属性（項目の `judge`、記録の `evidence[].tier`）として持つ。
 状態は「どこまで確かめたか」、判定の中身は「何と言われたか」で、意味が違う。
+judge の判定の中身は、状態とは別の属性として持つ。
+
+judge は問題だけを報告し、「正しい」とは言わない。どの judge も指摘しなかった項目は
+「指摘なし」であって、「正しいと確認した」ではない。
+
+**項目の判定結果（`outcome`）** は、その項目の現在の値に対してなお有効な、最新の judge の run から決める。
+失効した run の指摘は使わない（2026-11-25 v1.1 で修正。それ以前は失効した run の指摘も混ぜていた）。
+
+| 判定結果 | 意味 |
+|---|---|
+| `major_incorrect` | 2 つ以上の judge が重大（major）とし、それらがすべて「誤り」 |
+| `major_mixed` | 2 つ以上が重大としたが、判定の種類（誤り・判断不能・抜け）が分かれた |
+| `major_omission` | 2 つ以上が重大とし、すべて「抜けている」 |
+| `major_uncertain` | 2 つ以上が重大とし、すべて「判断できない」（誤りとは限らない） |
+| `major_single` | 重大とした judge が 1 つだけ |
+| `minor` | 軽微な指摘のみ |
+| `no_finding` | どの judge も指摘しなかった |
+
+上が重い。分類の規則は `judge_common.consensus_verdict` / `field_outcome` の一か所にあり、
+確認キュー（`build_review_queue.py`）と状態の計算が共有する。
+
+judge は抜け（omission）を、項目ではなく配列や object（例: `persons[0].career_path`）に付けることが多い。
+これは `containers` として記録単位で持ち、その下の項目がすべて judge の時点のままなら有効とする。
+
+**確認キューの区分**（`agree_all` / `agree_2`）は名前を変えず、`consensus_verdict`
+（`incorrect` / `mixed` / `omission` / `uncertain`）を併せて持つ。区分の中では
+`incorrect` を先に、`uncertain` を最後に並べる。「全 judge 一致」は「全員が誤りと判定」を意味しない
+（2026-11-25 時点で pilot02・uthina01・restale_20261125 を合わせると、`agree_all` 82 件のうち
+`incorrect` が 57、`mixed` が 21、`uncertain` が 3、`omission` が 1。restale_20261125 の 25 碑文は
+uthina01 にも含まれるので、件数は run ごとの合計である）。
 
 ### 2.4 碑文・statement の状態
 
@@ -137,6 +165,9 @@ python pipeline/evaluation/assessment/compute_assessment_status.py --check   # �
 | `hmkia:staleAssessmentStatus` | 目的語プロパティ | リソース → 失効した最も高い状態（現在より上のときだけ） |
 | `hmkia:assessmentOutcome` | データ型プロパティ | judge の区分など |
 | `hmkia:assessmentCurrent` | データ型プロパティ（boolean） | 評価行為が現在の値になお有効か |
+| `hmkia:JudgeOutcome` | クラス | judge の判定結果の区分（§2.3） |
+| `hmkia:outcome_major_incorrect` ほか 7 個体 | 個体 | `major_incorrect` … `no_finding` |
+| `hmkia:judgeOutcome` | 目的語プロパティ | リソース → 最も重い判定結果。AssessmentAct では、その判定全体で最も重い区分 |
 
 評価行為の主体は既存の仕組みで表す。judge は `hmkia:associatedWith` → モデルの `SoftwareAgent`、
 人の確認は `hmkia:associatedWith` → `HumanAgent`。人手校訂は値を変える行為なので
@@ -156,6 +187,10 @@ python pipeline/evaluation/assessment/compute_assessment_status.py --check   # �
 | 評価のある碑文の人物・共同体の EntityReference | その下の項目（`career_path` / `benefactions` を除く）の最低状態 |
 | 評価のある碑文の最新版の statement（経歴・恵与・関係） | その statement を作った JSON 要素の下の項目の最低状態 |
 | 評価のある碑文 | judge の run・人の確認ごとに一つの `hmkia:AssessmentAct` |
+| 評価のある碑文・EntityReference・statement | `hmkia:judgeOutcome`（その下の項目と配列の指摘のうち最も重い判定結果） |
+
+配列への指摘は、最も近いリソースに付ける。`persons[0].career_path`（経歴が抜けている）は人物に、
+`persons[0].career_path[2]` は、その経歴の statement に付ける。
 
 statement の URI と JSON パスの対応は、`_build_*_statements` が最新版の URI を作るときに
 `_STMT_PATHS` に記録する。同一の恵与を複数の人物から一つに統合した statement は、統合した
@@ -201,14 +236,26 @@ SELECT ?stmt ?was WHERE {
 
 | 状態 | 碑文数 |
 |---|---|
-| `unassessed` | 51,708（うち `stale_from=llm_judged` が 25） |
-| `llm_judged` | 233 |
+| `unassessed` | 51,683 |
+| `llm_judged` | 258（uthina01 228、pilot02 30） |
 | `human_reviewed` | 0 |
 | `human_corrected` | 0 |
 
-- 失効した 25 碑文は、2026-11-25 の関係の移植（`reextract_relationships` の結果）と
-  共同体関係の復元で値が変わったもの。uthina01 / pilot02 は `input_sha` のみなので、記録全体が失効している。
+- 関係の移植と共同体関係の復元で失効した 25 碑文は、restale_20261125 で判定し直した。
+  `value_shas` を残す最初の run である。
 - pilot01 は Gemini が 2 件とも API エラーで、条件を満たさない。対象の 2 碑文は pilot02 で判定済み。
+
+判定結果（現在の値に対して有効なもの）:
+
+| 判定結果 | 項目 | 配列・object への指摘 | 碑文（最も重いもの） |
+|---|---|---|---|
+| `major_incorrect` | 52 | 57 | 61 |
+| `major_mixed` | 17 | 19 | 16 |
+| `major_omission` | 1 | 11 | 1 |
+| `major_uncertain` | 7 | 8 | 7 |
+| `major_single` | 217 | 146 | 74 |
+| `minor` | 873 | 34 | 28 |
+| `no_finding` | 7,279 | — | 71 |
 
 ## 7. 本仕様で扱わないもの・今後
 

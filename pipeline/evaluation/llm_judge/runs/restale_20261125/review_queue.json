@@ -17,6 +17,15 @@
    "minor_only": 0,
    "clean": 0
   },
+  "consensus_verdicts": {
+   "agree_all": {
+    "incorrect": 12,
+    "mixed": 2
+   },
+   "agree_2": {
+    "incorrect": 3
+   }
+  },
   "queue_length": 25,
   "audit_seed": 42
  },
@@ -25,6 +34,7 @@
    "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#20",
    "edcs_id": "EDCS-21000593",
    "tier": "format",
+   "consensus_verdict": null,
    "audit": false,
    "score": [
     1,
@@ -99,6 +109,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -129,6 +140,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
+     "consensus_verdict": "uncertain",
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -152,6 +164,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -168,6 +181,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "incorrect",
@@ -185,6 +199,7 @@
    "key": "Africa_proconsularis/Carthago/Carthago_career.json#2219",
    "edcs_id": "EDCS-17700850",
    "tier": "agree_all",
+   "consensus_verdict": "incorrect",
    "audit": false,
    "score": [
     6,
@@ -428,6 +443,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -458,6 +474,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -488,6 +505,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -518,6 +536,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
+     "consensus_verdict": "omission",
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -548,6 +567,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -578,6 +598,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
+     "consensus_verdict": "omission",
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -608,6 +629,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -638,6 +660,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -668,6 +691,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -698,6 +722,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -728,6 +753,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -758,6 +784,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -788,6 +815,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -818,6 +846,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -848,6 +877,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -871,6 +901,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -887,6 +918,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -903,6 +935,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -919,6 +952,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -935,6 +969,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -951,6 +986,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -967,6 +1003,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -983,6 +1020,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1000,6 +1038,7 @@
    "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#7",
    "edcs_id": "EDCS-21000580",
    "tier": "agree_all",
+   "consensus_verdict": "incorrect",
    "audit": false,
    "score": [
     5,
@@ -1124,6 +1163,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1154,6 +1194,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1184,6 +1225,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
+     "consensus_verdict": "omission",
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -1214,6 +1256,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -1244,6 +1287,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1274,6 +1318,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1304,6 +1349,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1334,6 +1380,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1364,6 +1411,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1387,6 +1435,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -1410,6 +1459,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -1426,6 +1476,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1442,6 +1493,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1458,6 +1510,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1474,6 +1527,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "omission",
@@ -1490,6 +1544,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1506,6 +1561,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1523,6 +1579,7 @@
    "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#36",
    "edcs_id": "EDCS-24501147",
    "tier": "agree_all",
+   "consensus_verdict": "incorrect",
    "audit": false,
    "score": [
     4,
@@ -1622,6 +1679,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1652,6 +1710,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1682,6 +1741,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
+     "consensus_verdict": "mixed",
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -1712,6 +1772,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1742,6 +1803,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1772,6 +1834,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1795,6 +1858,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1818,6 +1882,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -1841,6 +1906,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1857,6 +1923,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -1873,6 +1940,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1889,6 +1957,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1905,6 +1974,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -1921,6 +1991,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -1938,6 +2009,7 @@
    "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#35",
    "edcs_id": "EDCS-24501146",
    "tier": "agree_all",
+   "consensus_verdict": "incorrect",
    "audit": false,
    "score": [
     4,
@@ -2026,6 +2098,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2056,6 +2129,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2086,6 +2160,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2116,6 +2191,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2146,6 +2222,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2176,6 +2253,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2199,6 +2277,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2222,6 +2301,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -2238,6 +2318,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -2254,6 +2335,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "incorrect",
@@ -2270,6 +2352,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -2286,6 +2369,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -2303,6 +2387,7 @@
    "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#37",
    "edcs_id": "EDCS-24501148",
    "tier": "agree_all",
+   "consensus_verdict": "incorrect",
    "audit": false,
    "score": [
     3,
@@ -2575,6 +2660,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2605,6 +2691,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2635,6 +2722,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2665,6 +2753,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2695,6 +2784,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2725,6 +2815,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -2755,6 +2846,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2785,6 +2877,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2815,6 +2908,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
+     "consensus_verdict": "omission",
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -2838,6 +2932,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2861,6 +2956,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2884,6 +2980,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -2907,6 +3004,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -2930,6 +3028,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2953,6 +3052,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -2976,6 +3076,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -2999,6 +3100,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -3022,6 +3124,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -3038,6 +3141,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3054,6 +3158,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -3070,6 +3175,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -3086,6 +3192,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -3102,6 +3209,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3118,6 +3226,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3134,6 +3243,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3150,6 +3260,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -3166,6 +3277,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3182,6 +3294,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3198,6 +3311,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "incorrect",
@@ -3214,6 +3328,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -3230,6 +3345,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -3246,6 +3362,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3262,6 +3379,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3278,6 +3396,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3294,6 +3413,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3310,6 +3430,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "incorrect",
@@ -3326,6 +3447,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3343,6 +3465,7 @@
    "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#80",
    "edcs_id": "EDCS-26500906",
    "tier": "agree_all",
+   "consensus_verdict": "incorrect",
    "audit": false,
    "score": [
     3,
@@ -3522,6 +3645,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -3552,6 +3676,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -3582,6 +3707,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -3612,6 +3738,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -3642,6 +3769,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -3672,6 +3800,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3695,6 +3824,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -3718,6 +3848,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -3741,6 +3872,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -3764,6 +3896,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -3780,6 +3913,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "incorrect",
@@ -3796,6 +3930,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -3812,6 +3947,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "uncertain",
@@ -3828,6 +3964,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3844,6 +3981,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -3860,6 +3998,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3876,6 +4015,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3892,6 +4032,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "incorrect",
@@ -3908,6 +4049,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3924,6 +4066,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -3940,6 +4083,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -3954,9 +4098,1632 @@
    "rank": 7
   },
   {
+   "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#81",
+   "edcs_id": "EDCS-26500907",
+   "tier": "agree_all",
+   "consensus_verdict": "incorrect",
+   "audit": false,
+   "score": [
+    1,
+    7,
+    8
+   ],
+   "metadata": "EDCS-ID: EDCS-26500907\nprovince: Africa proconsularis\nplace (findspot): Oudna, Hr. / Udhnah / Uthina\nmaterial: lapis",
+   "inscription": "] / coh[ortis 3] / cur[ator",
+   "extraction": [
+    "persons[0].person_id = 0   (context)",
+    "persons[0].person_name = \"Unknown\"",
+    "persons[0].person_name_readable = \"Unknown\"",
+    "persons[0].praenomen = \"\"",
+    "persons[0].nomen = \"\"",
+    "persons[0].cognomen = \"\"",
+    "persons[0].person_name_normalized = \"\"",
+    "persons[0].person_name_link = \"\"",
+    "persons[0].social_status = \"soldier\"",
+    "persons[0].social_status_evidence = \"coh[ortis 3]\"",
+    "persons[0].gender = \"unknown\"",
+    "persons[0].gender_evidence = \"\"",
+    "persons[0].ethnicity = \"\"",
+    "persons[0].ethnicity_evidence = \"\"",
+    "persons[0].age_at_death = \"\"",
+    "persons[0].age_at_death_evidence = \"\"",
+    "persons[0].has_career = true",
+    "persons[0].career_path[0].position = \"cur[ator\"",
+    "persons[0].career_path[0].position_normalized = \"curator\"",
+    "persons[0].career_path[0].position_abstract = \"curator\"",
+    "persons[0].career_path[0].position_type = \"other\"",
+    "persons[0].career_path[0].position_description = \"Curator (administrator or overseer)\"",
+    "persons[0].career_path[0].order = 1",
+    "persons[0].career_path[0].location = null",
+    "persons[0].career_path[0].location_normalized = null",
+    "persons[0].career_path[0].location_evidence = null",
+    "persons[0].career_path[0].position_canonical = \"curator\"",
+    "persons[0].career_path[0].position_tier = \"municipal\"",
+    "persons[0].career_path[0].position_canonical_source = \"direct\"   (context)",
+    "persons[0].benefactions = []",
+    "persons[0].divinity = false",
+    "persons[0].divinity_type = null",
+    "persons[0].divinity_classification_reasoning = \"The inscription mentions 'coh[ortis]' (cohort) and 'cur[ator]' (curator), indicating a military or administrative human official, not a divinity\"   (context)",
+    "persons[0].life_events = []",
+    "persons[0].vital_events_reasoning = \"The inscription fragment mentions 'coh[ortis 3]' (cohort 3) and 'cur[ator' (curator), indicating an official or military administrative role. There are no funerary markers (such as D.M., hic situs est, vixit annis, etc.) present in the text, making this a non-funerary inscription, likely honorific or administrative. Therefore, death place cannot be inferred from the findspot. No birth place information is present in the text.\"   (context)",
+    "persons[0].social_statuses[0].category = \"military\"",
+    "persons[0].social_statuses[0].subtype = \"military.soldier\"",
+    "persons[0].social_statuses[0].evidence = \"coh[ortis 3]\"",
+    "persons[0].social_statuses[0].certainty = \"explicit\"",
+    "persons[0].social_statuses[0].source = \"direct\"   (context)",
+    "persons[0].social_status_source = \"rulebased\"   (context)",
+    "communities[0].community_id = 0   (context)",
+    "communities[0].community_name = \"coh[ortis 3]\"",
+    "communities[0].community_name_normalized = \"cohors III\"",
+    "communities[0].community_type = \"cohort\"",
+    "communities[0].community_description = \"Third cohort (military unit)\"",
+    "communities[0].evidence = \"coh[ortis 3]\"",
+    "communities[0].benefactions = []",
+    "person_relationships[0].source_person_id = 0",
+    "person_relationships[0].target_person_id = null",
+    "person_relationships[0].target_community_id = 0",
+    "person_relationships[0].type = \"affiliation\"",
+    "person_relationships[0].property = \"soldier\"",
+    "person_relationships[0].property_text = \"coh[ortis 3]\"",
+    "person_relationships[0].notes = \"Person affiliated with cohort III, possibly as curator\"   (context)",
+    "person_relationships[0].generated_by_activity = \"extract_career_graph-extract-claude-sonnet-4-5-20250929-20260210T081243Z\""
+   ],
+   "format_errors": [],
+   "format_warnings": [],
+   "judge_status": {
+    "claude": "ok",
+    "gpt": "ok",
+    "gemini": "ok"
+   },
+   "judge_overall": {
+    "claude": "has_errors",
+    "gpt": "has_errors",
+    "gemini": "has_errors"
+   },
+   "judge_notes": {
+    "claude": "The text is very fragmentary. The bracketed '3' is an EDCS lacuna marker and has been mistaken for a cohort number. The career probably also included a lost cohort post that preceded 'coh[ortis', but that post cannot be reconstructed.",
+    "gemini": "The inscription is extremely fragmentary (only '] / coh[ortis 3] / cur[ator' survives). Note that '[... 3]' in EDCS transcription indicates a lacuna of 3 letters, which the extractor misread as the cohort number III. Moreover, a person holding a command over a cohort and serving as curator was more likely an equestrian officer (e.g., praefectus or tribunus cohortis) than a common soldier, though the fragment is too brief to determine his exact rank."
+   },
+   "flagged": [
+    {
+     "path": "communities[0].community_name_normalized",
+     "judged_value": "\"cohors III\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 3,
+     "consensus_verdict": "incorrect",
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "In 'coh[ortis 3]' the '3' is the EDCS marker for a lacuna of unknown length, not a numeral. The cohort's number and name are lost, so 'cohors III' invents a unit identification.",
+       "suggested_value": "cohors",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "The «3» in «coh[ortis 3]» is an editorial lacuna marker, not the cohort numeral III. The unit's number is not preserved.",
+       "suggested_value": "cohors",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "In EDCS notation, 'coh[ortis 3]' means a lacuna of 3 characters after 'coh[ortis', not the numeral III (third cohort).",
+       "suggested_value": "cohors",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "communities[0].community_description",
+     "judged_value": "\"Third cohort (military unit)\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The description 'Third cohort' rests on the same misreading of the lacuna marker '3' as a unit number.",
+       "suggested_value": "Cohort (number and name lost)",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "«coh[ortis 3]» supports the description of a cohort, but not the ordinal 'Third'.",
+       "suggested_value": "Military cohort of unspecified number",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The number '3' inside brackets '[ortis 3]' denotes 3 missing characters, not the third cohort.",
+       "suggested_value": "Cohort (military unit)",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].career_path[0].position_tier",
+     "judged_value": "\"municipal\"",
+     "judged_value_known": true,
+     "n_flag": 2,
+     "n_major": 1,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "uncertain",
+       "severity": "minor",
+       "reason": "'cur[ator' is incomplete, so we cannot tell whether it is a municipal post or an imperial curator such as curator rei publicae.",
+       "suggested_value": "other",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "«cur[ator» supports the title curator, but the surviving text does not specify a municipal office.",
+       "suggested_value": "other",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].social_status",
+     "judged_value": "\"soldier\"",
+     "judged_value_known": true,
+     "n_flag": 2,
+     "n_major": 1,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "uncertain",
+       "severity": "minor",
+       "reason": "'coh[ortis ...]' is a genitive dependent on a lost title, which could be praefectus, tribunus, centurio or miles. Pairing it with 'cur[ator' may point to an equestrian officer's career rather than a common soldier.",
+       "suggested_value": "",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "The genitive «coh[ortis 3]» mentions a cohort, but neither it nor «cur[ator» establishes that the unnamed person was a soldier.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "person_relationships[0]",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 1,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "uncertain",
+       "severity": "major",
+       "reason": "The fragment «coh[ortis 3] / cur[ator» does not preserve enough syntax to securely link the curator to the cohort. Even if the two are linked, the text does not establish the role 'soldier'.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].social_statuses[0]",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 1,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "«coh[ortis 3]» names a cohort without stating the person's role in it, so it does not support an explicit military.soldier classification.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "person_relationships[0].property",
+     "judged_value": "\"soldier\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "uncertain",
+       "severity": "minor",
+       "reason": "The person's role in the cohort is lost in the lacuna before 'coh[ortis'. 'soldier' is only one possibility; the person may have been an officer.",
+       "suggested_value": "member",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].social_status_evidence",
+     "judged_value": "\"coh[ortis 3]\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "«coh[ortis 3]» is quoted verbatim, but it names a unit rather than stating the person's social status.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    }
+   ],
+   "rank": 8
+  },
+  {
+   "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#15",
+   "edcs_id": "EDCS-21000588",
+   "tier": "agree_all",
+   "consensus_verdict": "incorrect",
+   "audit": false,
+   "score": [
+    1,
+    6,
+    14
+   ],
+   "metadata": "EDCS-ID: EDCS-21000588\nprovince: Africa proconsularis\nplace (findspot): Oudna, Hr. / Udhnah / Uthina\nmaterial: lapis",
+   "inscription": "Gen(io) c[ol(oniae) 3] / ex tes[tamento 3] / Cn(aeus) [3] / A[",
+   "extraction": [
+    "persons[0].person_id = 0   (context)",
+    "persons[0].person_name = \"Cn(aeus) [---]\"",
+    "persons[0].person_name_readable = \"Gnaeus [---]\"",
+    "persons[0].praenomen = \"Cnaeus\"",
+    "persons[0].nomen = \"\"",
+    "persons[0].cognomen = \"\"",
+    "persons[0].person_name_normalized = \"\"",
+    "persons[0].person_name_link = \"\"",
+    "persons[0].social_status = \"\"",
+    "persons[0].social_status_evidence = \"\"",
+    "persons[0].gender = \"male\"",
+    "persons[0].gender_evidence = \"Cn(aeus) - male praenomen\"",
+    "persons[0].ethnicity = \"Roman\"",
+    "persons[0].ethnicity_evidence = \"Roman praenomen Cnaeus\"",
+    "persons[0].age_at_death = \"\"",
+    "persons[0].age_at_death_evidence = \"\"",
+    "persons[0].has_career = false",
+    "persons[0].career_path = []",
+    "persons[0].benefactions[0].benefaction_type = \"other\"",
+    "persons[0].benefactions[0].object = \"testamentum\"",
+    "persons[0].benefactions[0].object_type = \"other\"",
+    "persons[0].benefactions[0].object_description = \"Testamentary bequest\"",
+    "persons[0].benefactions[0].benefaction_text = \"ex tes[tamento ---]\"",
+    "persons[0].benefactions[0].cost = \"\"",
+    "persons[0].benefactions[0].notes = \"Benefaction made through a will/testament\"   (context)",
+    "persons[0].benefactions[0].objects[0].object = \"testamentum\"",
+    "persons[0].benefactions[0].objects[0].object_type = \"other\"",
+    "persons[0].benefactions[0].objects[0].object_category_source = \"pending_llm\"   (context)",
+    "persons[0].benefactions[0].recipient_communities = []",
+    "persons[0].divinity = false",
+    "persons[0].divinity_type = null",
+    "persons[0].divinity_classification_reasoning = \"Cn(aeus) is a human praenomen (personal name). The inscription dedicates something to the Genius of the colony according to a testament, with Cn(aeus) being the testator (human dedicant), not the deity being honored.\"   (context)",
+    "persons[0].life_events = []",
+    "persons[0].vital_events_reasoning = \"This is a votive/dedicatory inscription to the Genius of the colony (Gen(io) c[ol(oniae)]), set up according to a testament (ex tes[tamento]). It lacks funerary markers such as D.M., hic situs est, vixit annis, or other burial indicators. As a non-funerary inscription, the findspot cannot be used to infer a death place. No birth place information is present in the text.\"   (context)",
+    "communities[0].community_id = 0   (context)",
+    "communities[0].community_name = \"c[ol(onia) ---]\"",
+    "communities[0].community_name_normalized = \"colonia\"",
+    "communities[0].community_type = \"colonia\"",
+    "communities[0].community_description = \"Roman colony (specific name lost in lacuna)\"",
+    "communities[0].evidence = \"c[ol(onia) ---]\"",
+    "communities[0].benefactions = []",
+    "person_relationships[0].source_person_id = 0",
+    "person_relationships[0].target_person_id = null",
+    "person_relationships[0].target_community_id = 0",
+    "person_relationships[0].type = \"dedication\"",
+    "person_relationships[0].property = \"dedicator\"",
+    "person_relationships[0].property_text = \"Gen(io) c[ol(oniae) ---] / ex tes[tamento ---] / Cn(aeus) [---]\"",
+    "person_relationships[0].notes = \"Gnaeus made a dedication to the Genius of the colony through his testament\"   (context)",
+    "person_relationships[0].generated_by_activity = \"extract_career_graph-extract-claude-sonnet-4-5-20250929-20260210T081243Z\""
+   ],
+   "format_errors": [],
+   "format_warnings": [],
+   "judge_status": {
+    "claude": "ok",
+    "gpt": "ok",
+    "gemini": "ok"
+   },
+   "judge_overall": {
+    "claude": "acceptable",
+    "gpt": "has_errors",
+    "gemini": "has_errors"
+   },
+   "judge_notes": {
+    "claude": "The text is highly fragmentary. The Genius coloniae (a deified abstraction) is the dedicatee but is not represented as an entity; whether it should be depends on how the pipeline handles deities.",
+    "gpt": "The fragment does not establish whose will is meant. Cn(aeus) can be associated with the dedication without identifying him as the testator."
+   },
+   "flagged": [
+    {
+     "path": "persons[0].benefactions[0].object",
+     "judged_value": "\"testamentum\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 2,
+     "consensus_verdict": "incorrect",
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "\"ex tes[tamento]\" gives the legal basis of the gift, not the object. The object dedicated to the Genius coloniae (probably a statue or altar) is lost.",
+       "suggested_value": "unknown (dedication to Genius coloniae, object lost)",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "`ex tes[tamento 3]` means that the dedication was made pursuant to a will, not that the will was the object given. No dedicated object is identifiable in the surviving text.",
+       "suggested_value": "",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "The phrase 'ex tes[tamento]' indicates the legal means/funding source ('in accordance with the will'), not the object that was donated or built, which is lost or unstated.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "communities[0].evidence",
+     "judged_value": "\"c[ol(onia) ---]\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The text reads \"c[ol(oniae) 3]\" in the genitive (\"Gen(io) c[ol(oniae)\"), not \"c[ol(onia) ---]\".",
+       "suggested_value": "Gen(io) c[ol(oniae) ---]",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "`c[ol(onia) ---]` changes both the expansion and the lacuna notation of `c[ol(oniae) 3]`.",
+       "suggested_value": "c[ol(oniae) 3]",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The inscription reads 'c[ol(oniae) 3]' in the genitive, not 'c[ol(onia) ---]'.",
+       "suggested_value": "c[ol(oniae) 3]",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].ethnicity_evidence",
+     "judged_value": "\"Roman praenomen Cnaeus\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "\"Roman praenomen Cnaeus\" is an interpretation, not a quote from the inscription.",
+       "suggested_value": "Cn(aeus)",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The inscription gives `Cn(aeus)`, not the explanatory phrase `Roman praenomen Cnaeus`.",
+       "suggested_value": "Cn(aeus)",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "Evidence fields must contain only a direct quote copied verbatim from the inscription text, without commentary.",
+       "suggested_value": "Cn(aeus)",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].gender_evidence",
+     "judged_value": "\"Cn(aeus) - male praenomen\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The evidence field adds the explanation \"- male praenomen\". Evidence must be a verbatim quote, and the text only has \"Cn(aeus) [3]\".",
+       "suggested_value": "Cn(aeus)",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "`Cn(aeus)` is in the text; `- male praenomen` is commentary, not part of the quotation.",
+       "suggested_value": "Cn(aeus)",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "Evidence fields must contain only a direct quote copied verbatim from the inscription text, without explanatory text.",
+       "suggested_value": "Cn(aeus)",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "person_relationships[0]",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 2,
+     "n_major": 1,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "The dedicatee is the Genius, expressed by the dative `Gen(io)`, not the colony, expressed by the dependent genitive `c[ol(oniae) 3]`.",
+       "suggested_value": "Keep source_person_id = 0, type = \"dedication\", and property = \"dedicator\"; set target_person_id = 1 (Genius), target_community_id = null, and property_text = \"Gen(io) c[ol(oniae) 3] / ex tes[tamento 3] / Cn(aeus) [3]\".",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "According to the specification, relationships with a target_community_id are restricted to type 'affiliation', whereas 'dedication' is a person-to-person relationship. Moreover, the dedication is to the Genius of the colony rather than the colony directly.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 1,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "omission",
+       "severity": "major",
+       "reason": "The dative `Gen(io)` names the Genius as the recipient of the dedication. The genitive `c[ol(oniae) 3]` identifies the community whose Genius is honored; it does not replace the deity as a named entity.",
+       "suggested_value": "Add person_id 1: Genius, with divinity = true and divinity_type = \"Genius\".",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].benefactions[0].objects[0]",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 1,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "`tes[tamento 3]` is governed by `ex` and does not name an item given. The surviving text supplies no identifiable object for this entry.",
+       "suggested_value": "Remove this entry; leave the objects array empty.",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].benefactions[0].objects[0].object",
+     "judged_value": "\"testamentum\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 1,
+     "consensus_verdict": null,
+     "judges": {
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "A testamentum (will) in the formula 'ex testamento' is the instrument of the bequest, not the donated object itself.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "communities[0].community_name",
+     "judged_value": "\"c[ol(onia) ---]\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The inscription gives the genitive `c[ol(oniae) 3]` after `Gen(io)`. This field should preserve the form in the text, not substitute the normalized nominative.",
+       "suggested_value": "c[ol(oniae) 3]",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0]",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "uncertain",
+       "severity": "minor",
+       "reason": "After \"ex tes[tamento]\" the name \"Cn(aeus) [3]\" may be the testator (in the genitive) or the heir carrying out the bequest. The fragmentary \"A[\" on line 4 may belong to a further name or to a role such as heres. The text cannot settle which.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].benefactions[0].benefaction_text",
+     "judged_value": "\"ex tes[tamento ---]\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The supplied text reads `ex tes[tamento 3]`, not `ex tes[tamento ---]`.",
+       "suggested_value": "ex tes[tamento 3]",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].benefactions[0].cost_numeric",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "omission",
+       "severity": "minor",
+       "reason": "`ex tes[tamento 3]` refers to a will but preserves no amount; the `3` is a lacuna marker, not a numeral stating a cost.",
+       "suggested_value": "null",
+       "path_valid": false
+      }
+     }
+    },
+    {
+     "path": "persons[0].benefactions[0].cost_unit",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "omission",
+       "severity": "minor",
+       "reason": "`ex tes[tamento 3]` preserves no monetary unit.",
+       "suggested_value": "null",
+       "path_valid": false
+      }
+     }
+    },
+    {
+     "path": "persons[0].benefactions[0].object_description",
+     "judged_value": "\"Testamentary bequest\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "`ex tes[tamento 3]` describes the basis for the dedication, not the object or the terms of a specific bequest.",
+       "suggested_value": "Object of the testamentary dedication not preserved.",
+       "path_valid": true
+      }
+     }
+    }
+   ],
+   "rank": 9
+  },
+  {
+   "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#223",
+   "edcs_id": "EDCS-46700166",
+   "tier": "agree_all",
+   "consensus_verdict": "incorrect",
+   "audit": false,
+   "score": [
+    1,
+    4,
+    13
+   ],
+   "metadata": "EDCS-ID: EDCS-46700166\nprovince: Africa proconsularis\nplace (findspot): Oudna, Hr. / Udhnah / Uthina\nmaterial: lapis",
+   "inscription": "M(arco) Voltio L(uci) f(ilio) Hor(atia) Certo",
+   "extraction": [
+    "persons[0].person_id = 0   (context)",
+    "persons[0].person_name = \"M(arcus) Voltius L(uci) f(ilius) Hor(atia) Certus\"",
+    "persons[0].person_name_readable = \"Marcus Voltius Certus, son of Lucius, of the Horatia tribe\"",
+    "persons[0].praenomen = \"Marcus\"",
+    "persons[0].nomen = \"Voltius\"",
+    "persons[0].cognomen = \"Certus\"",
+    "persons[0].person_name_normalized = \"\"",
+    "persons[0].person_name_link = \"\"",
+    "persons[0].social_status = \"citizen\"",
+    "persons[0].social_status_evidence = \"Hor(atia) - membership in voting tribe indicates Roman citizenship\"",
+    "persons[0].gender = \"male\"",
+    "persons[0].gender_evidence = \"Marcus (masculine praenomen), filius (son)\"",
+    "persons[0].ethnicity = \"Roman\"",
+    "persons[0].ethnicity_evidence = \"Roman tria nomina structure and tribal affiliation\"",
+    "persons[0].age_at_death = \"\"",
+    "persons[0].age_at_death_evidence = \"\"",
+    "persons[0].has_career = false",
+    "persons[0].career_path = []",
+    "persons[0].benefactions = []",
+    "persons[0].divinity = false",
+    "persons[0].divinity_type = null",
+    "persons[0].divinity_classification_reasoning = \"Regular Roman citizen with tria nomina (Marcus Voltius Certus), filiation (son of Lucius), and tribal affiliation (Horatia tribe). Clear human nomenclature with no divine indicators.\"   (context)",
+    "persons[0].life_events = []",
+    "persons[0].vital_events_reasoning = \"The inscription text 'M(arco) Voltio L(uci) f(ilio) Hor(atia) Certo' is a simple dative dedication containing only the person's name, patronymic, and tribe. It lacks any funerary markers (no D.M., hic situs est, vixit annis, posuit, etc.) and contains no birth place indicators (no origo, domo, natione). Without funerary context, the findspot cannot be used to infer death/burial place. This appears to be an honorific or dedicatory inscription rather than a funerary monument.\"   (context)",
+    "persons[0].social_statuses[0].category = \"legal\"",
+    "persons[0].social_statuses[0].subtype = \"legal.citizen\"",
+    "persons[0].social_statuses[0].evidence = \"Hor(atia) - membership in voting tribe indicates Roman citizenship\"",
+    "persons[0].social_statuses[0].certainty = \"inferred\"",
+    "persons[0].social_statuses[0].source = \"direct\"   (context)",
+    "persons[0].social_status_source = \"rulebased\"   (context)",
+    "persons[1].person_id = 1   (context)",
+    "persons[1].person_name = \"Lucius Voltius\"",
+    "persons[1].person_name_readable = \"Lucius Voltius\"",
+    "persons[1].praenomen = \"Lucius\"",
+    "persons[1].nomen = \"Voltius\"",
+    "persons[1].cognomen = \"\"",
+    "persons[1].person_name_normalized = \"\"",
+    "persons[1].person_name_link = \"\"",
+    "persons[1].social_status = \"\"",
+    "persons[1].social_status_evidence = \"\"",
+    "persons[1].gender = \"male\"",
+    "persons[1].gender_evidence = \"Lucius (masculine praenomen), father of Marcus\"",
+    "persons[1].ethnicity = \"Roman\"",
+    "persons[1].ethnicity_evidence = \"Roman naming structure\"",
+    "persons[1].age_at_death = \"\"",
+    "persons[1].age_at_death_evidence = \"\"",
+    "persons[1].has_career = false",
+    "persons[1].career_path = []",
+    "persons[1].benefactions = []",
+    "persons[1].divinity = false",
+    "persons[1].divinity_type = null",
+    "persons[1].divinity_classification_reasoning = \"Marcus Voltius Certus is a regular Roman citizen with standard tria nomina (praenomen Marcus, nomen Voltius, cognomen Certus), son of Lucius, of the Horatia tribe. This is a typical human funerary or honorific inscription with no divine indicators.\"   (context)",
+    "persons[1].life_events[0].event_type = \"death\"",
+    "persons[1].life_events[0].place = \"Oudna, Hr. / Udhnah / Uthina\"",
+    "persons[1].life_events[0].place_normalized = \"Uthina\"",
+    "persons[1].life_events[0].place_source = \"findspot_inferred\"",
+    "persons[1].life_events[0].place_evidence = \"inferred from findspot\"",
+    "persons[1].vital_events_reasoning = \"The inscription is funerary in nature (dedicatory format 'M(arco) Voltio...f(ilio)...Certo' follows typical Roman funerary patterns with dative case indicating dedication to the deceased). While it lacks explicit funerary markers like D.M., the structure is consistent with a funerary monument. The findspot at Uthina serves as proxy for burial place. No birth place indicators are present in the text.\"   (context)",
+    "communities[0].community_id = 0   (context)",
+    "communities[0].community_name = \"Hor(atia)\"",
+    "communities[0].community_name_normalized = \"Horatia\"",
+    "communities[0].community_type = \"tribus\"",
+    "communities[0].community_description = \"Horatia tribe, one of the Roman voting tribes\"",
+    "communities[0].evidence = \"Hor(atia)\"",
+    "communities[0].benefactions = []",
+    "person_relationships[0].source_person_id = 0",
+    "person_relationships[0].target_person_id = 1",
+    "person_relationships[0].target_community_id = null",
+    "person_relationships[0].type = \"family\"",
+    "person_relationships[0].property = \"son\"",
+    "person_relationships[0].property_text = \"L(uci) f(ilio)\"",
+    "person_relationships[0].notes = \"Marcus Voltius Certus is identified as the son of Lucius (Voltius)\"   (context)",
+    "person_relationships[1].source_person_id = 0",
+    "person_relationships[1].target_person_id = null",
+    "person_relationships[1].target_community_id = 0",
+    "person_relationships[1].type = \"affiliation\"",
+    "person_relationships[1].property = \"citizen\"",
+    "person_relationships[1].property_text = \"Hor(atia)\"",
+    "person_relationships[1].notes = \"Marcus Voltius Certus is enrolled in the Horatia tribe\"   (context)",
+    "person_relationships[1].generated_by_activity = \"extract_career_graph-extract-claude-sonnet-4-5-20250929-20260210T081243Z\""
+   ],
+   "format_errors": [],
+   "format_warnings": [],
+   "judge_status": {
+    "claude": "ok",
+    "gpt": "ok",
+    "gemini": "ok"
+   },
+   "judge_overall": {
+    "claude": "has_errors",
+    "gpt": "has_errors",
+    "gemini": "has_errors"
+   },
+   "judge_notes": {
+    "claude": "This is a dative name-only text, probably honorific or the base of a statue. Funerary inference is unsupported."
+   },
+   "flagged": [
+    {
+     "path": "persons[1].life_events[0]",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 3,
+     "consensus_verdict": "incorrect",
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "The text 'M(arco) Voltio L(uci) f(ilio) Hor(atia) Certo' has no funerary markers (no D.M., vixit, h.s.e.). The father Lucius appears only in the filiation 'L(uci) f(ilio)', so no death place can be inferred for him from the findspot.",
+       "suggested_value": "",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "“L(uci) f(ilio)” identifies Lucius only as Marcus's father. The inscription neither records Lucius's death nor provides a funerary basis for assigning him the findspot as a death place.",
+       "suggested_value": "",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "Person 1 (Lucius) is only mentioned in the filiation 'L(uci) f(ilio)' of Person 0, and the inscription contains no funerary markers (D.M., hic situs est, vixit, etc.), so attributing a death event at the findspot to the father is unfounded.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].ethnicity_evidence",
+     "judged_value": "\"Roman tria nomina structure and tribal affiliation\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "This is an explanation rather than a verbatim quote from the inscription.",
+       "suggested_value": "M(arco) Voltio L(uci) f(ilio) Hor(atia) Certo",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The Roman name, filiation, and voting tribe support the classification, but the evidence field must quote the Latin rather than describe it.",
+       "suggested_value": "M(arco) Voltio L(uci) f(ilio) Hor(atia) Certo",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "Evidence fields must contain ONLY a direct quote from the inscription, not an explanation.",
+       "suggested_value": "M(arco) Voltio L(uci) f(ilio) Hor(atia) Certo",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].gender_evidence",
+     "judged_value": "\"Marcus (masculine praenomen), filius (son)\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "This is a paraphrase ('Marcus (masculine praenomen), filius (son)'), not a verbatim quote. The text reads 'M(arco) ... L(uci) f(ilio)'.",
+       "suggested_value": "M(arco) Voltio L(uci) f(ilio)",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The inscription has “M(arco)” and “f(ilio)”, not the nominative forms and explanatory glosses quoted here.",
+       "suggested_value": "f(ilio)",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "Evidence fields must contain ONLY a direct quote from the inscription, not normalized forms or commentary.",
+       "suggested_value": "M(arco) ... f(ilio) ... Certo",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].social_status_evidence",
+     "judged_value": "\"Hor(atia) - membership in voting tribe indicates Roman citizenship\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "Evidence must be a verbatim quote, but the field adds an interpretive explanation after 'Hor(atia)'.",
+       "suggested_value": "Hor(atia)",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The inscription gives “Hor(atia)”; the explanation of what tribal membership implies is not part of the text.",
+       "suggested_value": "Hor(atia)",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "Evidence fields must contain ONLY a verbatim quote from the inscription text without explanation.",
+       "suggested_value": "L(uci) f(ilio) Hor(atia)",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].social_statuses[0].evidence",
+     "judged_value": "\"Hor(atia) - membership in voting tribe indicates Roman citizenship\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "Evidence contains reasoning rather than only the quoted text 'Hor(atia)'.",
+       "suggested_value": "Hor(atia)",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The wording after “Hor(atia)” explains the inference rather than quoting the inscription.",
+       "suggested_value": "Hor(atia)",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "Evidence fields must contain ONLY a verbatim quote from the inscription text.",
+       "suggested_value": "L(uci) f(ilio) Hor(atia)",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[1].ethnicity_evidence",
+     "judged_value": "\"Roman naming structure\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "'Roman naming structure' is not a quote from the inscription.",
+       "suggested_value": "",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "“Roman naming structure” is an interpretation, not a quotation of the filiation that names Lucius.",
+       "suggested_value": "L(uci) f(ilio)",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "Evidence fields must contain ONLY a direct quote from the inscription, not an explanation.",
+       "suggested_value": "L(uci)",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[1].gender_evidence",
+     "judged_value": "\"Lucius (masculine praenomen), father of Marcus\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "This is a paraphrase rather than a verbatim quote; the only text about this person is 'L(uci) f(ilio)'.",
+       "suggested_value": "L(uci) f(ilio)",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The father is identified by “L(uci) f(ilio)”; the supplied English explanation is not an inscription quote.",
+       "suggested_value": "L(uci) f(ilio)",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "Evidence fields must contain ONLY a direct quote from the inscription, without normalized forms or explanation.",
+       "suggested_value": "L(uci)",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[1].nomen",
+     "judged_value": "\"Voltius\"",
+     "judged_value_known": true,
+     "n_flag": 2,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "uncertain",
+       "severity": "minor",
+       "reason": "The father appears only as 'L(uci)'. The nomen Voltius is inferred from the son's name and not stated, though it is a conventional inference.",
+       "suggested_value": "",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "uncertain",
+       "severity": "minor",
+       "reason": "“Voltio” belongs to Marcus's name; the father's nomen is not given in “L(uci) f(ilio)”.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "person_relationships[1].property",
+     "judged_value": "\"citizen\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 1,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "“Hor(atia)” indicates Marcus's enrollment in the voting tribe: he is a member of that tribe, not a citizen of it.",
+       "suggested_value": "member",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].social_status",
+     "judged_value": "\"citizen\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The presence of a filiation 'L(uci) f(ilio)' explicitly indicates freeborn status ('freeborn') rather than just 'citizen'.",
+       "suggested_value": "freeborn",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].social_statuses[0].subtype",
+     "judged_value": "\"legal.citizen\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "Filiation 'L(uci) f(ilio)' indicates freeborn status ('legal.freeborn').",
+       "suggested_value": "legal.freeborn",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[1].person_name",
+     "judged_value": "\"Lucius Voltius\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "uncertain",
+       "severity": "minor",
+       "reason": "The father is named only by his praenomen in “L(uci) f(ilio)”. He may have shared his son's nomen, but the inscription does not establish it.",
+       "suggested_value": "Lucius",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[1].person_name_readable",
+     "judged_value": "\"Lucius Voltius\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gpt": {
+       "verdict": "uncertain",
+       "severity": "minor",
+       "reason": "The readable name presents “Voltius” as certain, although “L(uci) f(ilio)” gives only the father's praenomen.",
+       "suggested_value": "Lucius",
+       "path_valid": true
+      }
+     }
+    }
+   ],
+   "rank": 10
+  },
+  {
+   "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#114",
+   "edcs_id": "EDCS-26500940",
+   "tier": "agree_all",
+   "consensus_verdict": "incorrect",
+   "audit": false,
+   "score": [
+    1,
+    4,
+    6
+   ],
+   "metadata": "EDCS-ID: EDCS-26500940\nprovince: Africa proconsularis\nplace (findspot): Oudna, Hr. / Udhnah / Uthina\nmaterial: lapis",
+   "inscription": "] ex of(f)ic[i]/na Mart/[3] Utinensi/s",
+   "extraction": [
+    "persons[0].person_id = 0   (context)",
+    "persons[0].person_name = \"Mart[---]\"",
+    "persons[0].person_name_readable = \"Mart[---]\"",
+    "persons[0].praenomen = \"\"",
+    "persons[0].nomen = \"\"",
+    "persons[0].cognomen = \"\"",
+    "persons[0].person_name_normalized = \"\"",
+    "persons[0].person_name_link = \"\"",
+    "persons[0].social_status = \"\"",
+    "persons[0].social_status_evidence = \"\"",
+    "persons[0].gender = \"unknown\"",
+    "persons[0].gender_evidence = \"\"",
+    "persons[0].ethnicity = \"\"",
+    "persons[0].ethnicity_evidence = \"\"",
+    "persons[0].age_at_death = \"\"",
+    "persons[0].age_at_death_evidence = \"\"",
+    "persons[0].has_career = false",
+    "persons[0].career_path = []",
+    "persons[0].benefactions = []",
+    "persons[0].divinity = false",
+    "persons[0].divinity_type = null",
+    "persons[0].divinity_classification_reasoning = \"Mart[---] appears in context 'ex of(f)ic[i]/na Mart/[3] Utinensi/s' indicating a workshop (officina) belonging to a person from Utinum. This is a human craftsman or workshop owner, not a deity.\"   (context)",
+    "persons[0].life_events = []",
+    "persons[0].vital_events_reasoning = \"This is a non-funerary inscription. It appears to be a maker's mark or workshop stamp ('ex officina' = 'from the workshop of') identifying Mart[---] from Uthina ('Utinensi/s' = 'from Uthina'). The text contains no funerary markers (no D.M., hic situs est, vixit annis, etc.). The 'Utinensi/s' indicates geographic origin or association with the workshop location, not birth or death. Since this is not a funerary inscription, death place cannot be inferred from findspot.\"   (context)",
+    "communities[0].community_id = 0   (context)",
+    "communities[0].community_name = \"Utinensi[s]\"",
+    "communities[0].community_name_normalized = \"Utinensis\"",
+    "communities[0].community_type = \"other\"",
+    "communities[0].community_description = \"Community or workshop from Utinum (modern Udine)\"",
+    "communities[0].evidence = \"Utinensi/s\"",
+    "communities[0].benefactions = []",
+    "person_relationships[0].source_person_id = 0",
+    "person_relationships[0].target_person_id = null",
+    "person_relationships[0].target_community_id = 0",
+    "person_relationships[0].type = \"affiliation\"",
+    "person_relationships[0].property = \"member\"",
+    "person_relationships[0].property_text = \"Utinensi/s\"",
+    "person_relationships[0].notes = \"Person associated with Utinum or a workshop from Utinum\"   (context)",
+    "person_relationships[0].generated_by_activity = \"extract_career_graph-extract-claude-sonnet-4-5-20250929-20260210T081243Z\""
+   ],
+   "format_errors": [],
+   "format_warnings": [],
+   "judge_status": {
+    "claude": "ok",
+    "gpt": "ok",
+    "gemini": "ok"
+   },
+   "judge_overall": {
+    "claude": "has_errors",
+    "gpt": "has_errors",
+    "gemini": "acceptable"
+   },
+   "judge_notes": {
+    "claude": "This is a workshop stamp from Uthina. The extractor misidentified the town as Utinum/Udine."
+   },
+   "flagged": [
+    {
+     "path": "communities[0].community_description",
+     "judged_value": "\"Community or workshop from Utinum (modern Udine)\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 2,
+     "consensus_verdict": "incorrect",
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "'Utinensis' is the ethnic of Uthina (Oudna) in Africa proconsularis, which is also the findspot. It does not refer to Utinum/Udine in Italy.",
+       "suggested_value": "The town of Uthina (Colonia Iulia Tertiadecimanorum Uthina, mod. Oudna), Africa proconsularis",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "`Utinensi/s` refers to Uthina at modern Oudna in Tunisia, not to Udine in Italy.",
+       "suggested_value": "Roman city of Uthina, at modern Oudna in Tunisia",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "'Utinensis' refers to Uthina (modern Oudna in Tunisia, the findspot of the inscription), not Utinum (modern Udine in Italy).",
+       "suggested_value": "City of Uthina in Africa Proconsularis",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "communities[0].community_type",
+     "judged_value": "\"other\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 1,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "'Utinensis' names the town of Uthina, a Roman colonia, not an unclassifiable group.",
+       "suggested_value": "colonia",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "`Utinensi/s` refers to the city of Uthina; the workshop is separately denoted by `of(f)ic[i]/na`.",
+       "suggested_value": "city",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "Uthina is a city/colony in Africa Proconsularis, so the type should be 'city' (or 'colonia') rather than 'other'.",
+       "suggested_value": "city",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "person_relationships[0].property",
+     "judged_value": "\"member\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 1,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "'Utinensis' marks origin from the town, so 'citizen' (or 'resident') fits better than 'member'.",
+       "suggested_value": "citizen",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "`Mart/[3] Utinensi/s` can indicate a geographic association with Uthina, but does not describe Mart[---] as a member of an organization or establish a specific civic status.",
+       "suggested_value": "",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "As a civic ethnic adjective ('Utinensis'), the relationship to the city of Uthina is better classified as 'citizen' or 'resident' rather than 'member'.",
+       "suggested_value": "citizen",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "communities[0].community_name",
+     "judged_value": "\"Utinensi[s]\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The text reads 'Utinensi/s'. The final s is a line break, not a restoration, so it should not be in square brackets.",
+       "suggested_value": "Utinensis",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "In `Utinensi/s`, the slash marks a line break; the final `s` is preserved, not restored.",
+       "suggested_value": "Utinensis",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The word 'Utinensi/s' in the inscription has a line break ('/'), not a restoration in square brackets ('[s]').",
+       "suggested_value": "Utinensis",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "communities[0].community_name_normalized",
+     "judged_value": "\"Utinensis\"",
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The normalised community name should be the town, not the adjectival ethnic.",
+       "suggested_value": "Uthina",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "`Utinensi/s` is an adjective referring to Uthina, not the normalized name of the city itself.",
+       "suggested_value": "Uthina",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "'Utinensis' is the ethnic adjective for the city of Uthina (the findspot of this inscription in Africa Proconsularis), so the normalized name of the community should be 'Uthina'.",
+       "suggested_value": "Uthina",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "persons[0].social_status",
+     "judged_value": "\"\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "omission",
+       "severity": "minor",
+       "reason": "'ex officina Mart[...]' identifies Mart[---] as the owner of a production workshop, i.e. an artisan or producer.",
+       "suggested_value": "artisan",
+       "path_valid": true
+      }
+     }
+    }
+   ],
+   "rank": 11
+  },
+  {
+   "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#84",
+   "edcs_id": "EDCS-26500910",
+   "tier": "agree_all",
+   "consensus_verdict": "incorrect",
+   "audit": false,
+   "score": [
+    1,
+    3,
+    4
+   ],
+   "metadata": "EDCS-ID: EDCS-26500910\nprovince: Africa proconsularis\nplace (findspot): Oudna, Hr. / Udhnah / Uthina\nmaterial: lapis",
+   "inscription": "]dim[3] / [3 Uthi]na d(ecreto) d(ecurionum) p(ecunia) [p(ublica)",
+   "extraction": [
+    "persons[0].person_id = 0   (context)",
+    "persons[0].person_name = \"Unknown\"",
+    "persons[0].person_name_readable = \"Unknown\"",
+    "persons[0].praenomen = \"\"",
+    "persons[0].nomen = \"\"",
+    "persons[0].cognomen = \"\"",
+    "persons[0].person_name_normalized = \"\"",
+    "persons[0].person_name_link = \"\"",
+    "persons[0].social_status = \"\"",
+    "persons[0].social_status_evidence = \"\"",
+    "persons[0].gender = \"unknown\"",
+    "persons[0].gender_evidence = \"\"",
+    "persons[0].ethnicity = \"\"",
+    "persons[0].ethnicity_evidence = \"\"",
+    "persons[0].age_at_death = \"\"",
+    "persons[0].age_at_death_evidence = \"\"",
+    "persons[0].has_career = false",
+    "persons[0].career_path = []",
+    "persons[0].benefactions = []",
+    "persons[0].divinity = false",
+    "persons[0].divinity_type = null",
+    "persons[0].divinity_classification_reasoning = \"The inscription is fragmentary and mentions Uthina (a city in Africa Proconsularis) with a decree of the decurions and public money. No divine name is preserved in the visible text. The person is unknown and there are no indicators of divinity.\"   (context)",
+    "persons[0].life_events = []",
+    "persons[0].vital_events_reasoning = \"This is a public honorific inscription, not a funerary text. The abbreviation 'd(ecreto) d(ecurionum) p(ecunia) [p(ublica)' indicates a decree by the town council of Uthina with public funds, which is characteristic of honorific dedications. There are no funerary markers (D.M., hic situs est, vixit annis, etc.). Therefore, the findspot cannot be used to infer a death/burial place. No birth or death information is present in the text.\"   (context)",
+    "communities[0].community_id = 0   (context)",
+    "communities[0].community_name = \"Uthina\"",
+    "communities[0].community_name_normalized = \"Uthina\"",
+    "communities[0].community_type = \"city\"",
+    "communities[0].community_description = \"Ancient city in North Africa (modern Tunisia)\"",
+    "communities[0].evidence = \"[Uthi]na\"",
+    "communities[0].benefactions = []",
+    "person_relationships[0].source_person_id = 0",
+    "person_relationships[0].target_person_id = null",
+    "person_relationships[0].target_community_id = 0",
+    "person_relationships[0].type = \"affiliation\"",
+    "person_relationships[0].property = \"citizen\"",
+    "person_relationships[0].property_text = \"[Uthi]na d(ecreto) d(ecurionum) p(ecunia) [p(ublica)\"",
+    "person_relationships[0].notes = \"The inscription was authorized by decree of the decurions of Uthina with public funds\"   (context)",
+    "person_relationships[0].generated_by_activity = \"extract_career_graph-extract-claude-sonnet-4-5-20250929-20260210T081243Z\""
+   ],
+   "format_errors": [],
+   "format_warnings": [],
+   "judge_status": {
+    "claude": "ok",
+    "gpt": "ok",
+    "gemini": "ok"
+   },
+   "judge_overall": {
+    "claude": "acceptable",
+    "gpt": "has_errors",
+    "gemini": "has_errors"
+   },
+   "judge_notes": {
+    "claude": "The text is very fragmentary. Recording an 'Unknown' person and the city of Uthina is reasonable."
+   },
+   "flagged": [
+    {
+     "path": "person_relationships[0]",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 2,
+     "consensus_verdict": "incorrect",
+     "judges": {
+      "claude": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The fragment only says '[Uthi]na d(ecreto) d(ecurionum) p(ecunia) [p(ublica)', meaning Uthina's council authorised the monument with public money. Nothing shows that the unknown person was a citizen of Uthina, so this affiliation is unsupported.",
+       "suggested_value": "",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "«d(ecreto) d(ecurionum) p(ecunia) [p(ublica)» records a council decree and public funding; it does not establish that any person was a citizen of Uthina.",
+       "suggested_value": "",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "No person is preserved in this fragmentary text (only the placeholder 'Unknown'), and the formula '[Uthi]na d(ecreto) d(ecurionum) p(ecunia) [p(ublica)' does not state that an unnamed individual was a citizen of Uthina.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "communities",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 2,
+     "n_major": 1,
+     "consensus_verdict": null,
+     "judges": {
+      "claude": {
+       "verdict": "omission",
+       "severity": "minor",
+       "reason": "'d(ecreto) d(ecurionum)' implies the ordo decurionum of Uthina as an acting body, and the specification lists 'ordo' as a community type.",
+       "suggested_value": "ordo decurionum (community_type: ordo)",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "omission",
+       "severity": "major",
+       "reason": "The formula «d(ecreto) d(ecurionum)» explicitly mentions the council of decurions, a corporate body distinct from the city of Uthina.",
+       "suggested_value": "Add d(ecurionum), normalized as ordo decurionum, with community_type set to ordo.",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "communities[0].evidence",
+     "judged_value": "\"[Uthi]na\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The exact text in the inscription is '[3 Uthi]na'.",
+       "suggested_value": "[3 Uthi]na",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "person_relationships[0].property_text",
+     "judged_value": "\"[Uthi]na d(ecreto) d(ecurionum) p(ecunia) [p(ublica)\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The exact text in the inscription includes the lacuna marker: '[3 Uthi]na d(ecreto) d(ecurionum) p(ecunia) [p(ublica)'.",
+       "suggested_value": "[3 Uthi]na d(ecreto) d(ecurionum) p(ecunia) [p(ublica)",
+       "path_valid": true
+      }
+     }
+    }
+   ],
+   "rank": 12
+  },
+  {
+   "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#5",
+   "edcs_id": "EDCS-21000578",
+   "tier": "agree_all",
+   "consensus_verdict": "incorrect",
+   "audit": false,
+   "score": [
+    1,
+    2,
+    2
+   ],
+   "metadata": "EDCS-ID: EDCS-21000578\nprovince: Africa proconsularis\nplace (findspot): Oudna, Hr. / Udhnah / Uthina\ndating: 51.0 – 250.0\nmaterial: lapis",
+   "inscription": "]A[3] / [3 Ut]hina [",
+   "extraction": [
+    "persons[0].person_id = 0   (context)",
+    "persons[0].person_name = \"Unknown\"",
+    "persons[0].person_name_readable = \"Unknown\"",
+    "persons[0].praenomen = \"\"",
+    "persons[0].nomen = \"\"",
+    "persons[0].cognomen = \"\"",
+    "persons[0].person_name_normalized = \"\"",
+    "persons[0].person_name_link = \"\"",
+    "persons[0].social_status = \"\"",
+    "persons[0].social_status_evidence = \"\"",
+    "persons[0].gender = \"unknown\"",
+    "persons[0].gender_evidence = \"\"",
+    "persons[0].ethnicity = \"\"",
+    "persons[0].ethnicity_evidence = \"\"",
+    "persons[0].age_at_death = \"\"",
+    "persons[0].age_at_death_evidence = \"\"",
+    "persons[0].has_career = false",
+    "persons[0].career_path = []",
+    "persons[0].benefactions = []",
+    "persons[0].divinity = false",
+    "persons[0].divinity_type = null",
+    "persons[0].divinity_classification_reasoning = \"Uthina is a place name (ancient city in Africa Proconsularis, modern Tunisia), not a divinity. The fragmentary inscription appears to reference the location rather than a deity.\"   (context)",
+    "persons[0].life_events = []",
+    "persons[0].vital_events_reasoning = \"The inscription is too fragmentary to determine its nature. Only '[Ut]hina' is partially visible in the text, which matches the findspot name but provides no context. Without clear funerary markers (D.M., hic situs est, vixit annis, etc.) or other identifying features, it is impossible to classify this as funerary, honorific, or otherwise. Therefore, no birth or death place can be determined.\"   (context)",
+    "communities[0].community_id = 0   (context)",
+    "communities[0].community_name = \"Uthina\"",
+    "communities[0].community_name_normalized = \"Uthina\"",
+    "communities[0].community_type = \"city\"",
+    "communities[0].community_description = \"Ancient city in Africa Proconsularis (modern Tunisia)\"",
+    "communities[0].evidence = \"[3 Ut]hina\"",
+    "communities[0].benefactions = []",
+    "person_relationships[0].source_person_id = 0",
+    "person_relationships[0].target_person_id = null",
+    "person_relationships[0].target_community_id = 0",
+    "person_relationships[0].type = \"affiliation\"",
+    "person_relationships[0].property = \"resident\"",
+    "person_relationships[0].property_text = \"[3 Ut]hina\"",
+    "person_relationships[0].notes = \"The fragmentary inscription mentions Uthina, suggesting a connection between the person and this city\"   (context)",
+    "person_relationships[0].generated_by_activity = \"extract_career_graph-extract-claude-sonnet-4-5-20250929-20260210T081243Z\""
+   ],
+   "format_errors": [],
+   "format_warnings": [],
+   "judge_status": {
+    "claude": "ok",
+    "gpt": "ok",
+    "gemini": "ok"
+   },
+   "judge_overall": {
+    "claude": "acceptable",
+    "gpt": "has_errors",
+    "gemini": "has_errors"
+   },
+   "judge_notes": {
+    "claude": "The text is extremely fragmentary. The placeholder 'Unknown' person follows the specification, and identifying Uthina as a community is sound (historically it was a colonia, but 'city' is acceptable)."
+   },
+   "flagged": [
+    {
+     "path": "person_relationships[0]",
+     "judged_value": null,
+     "judged_value_known": true,
+     "n_flag": 3,
+     "n_major": 2,
+     "consensus_verdict": "incorrect",
+     "judges": {
+      "claude": {
+       "verdict": "uncertain",
+       "severity": "minor",
+       "reason": "The surviving text is only ']A[' and '[Ut]hina'. Nothing links an unnamed person to Uthina, so a 'resident' affiliation is speculation rather than something the text states.",
+       "suggested_value": "",
+       "path_valid": true
+      },
+      "gpt": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "The fragment « ]A[3] / [3 Ut]hina [ » preserves the place name Uthina but does not identify a person or state that anyone resided there. The required Unknown placeholder does not establish an affiliation.",
+       "suggested_value": "",
+       "path_valid": true
+      },
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "major",
+       "reason": "No person is mentioned in the fragment (only a placeholder 'Unknown' was created per specification), and the single restored place name '[3 Ut]hina' provides no evidence of a person's affiliation or residency.",
+       "suggested_value": "",
+       "path_valid": true
+      }
+     }
+    },
+    {
+     "path": "communities[0].community_name",
+     "judged_value": "\"Uthina\"",
+     "judged_value_known": true,
+     "n_flag": 1,
+     "n_major": 0,
+     "consensus_verdict": null,
+     "judges": {
+      "gemini": {
+       "verdict": "incorrect",
+       "severity": "minor",
+       "reason": "The community_name field should preserve the form as it appears in the inscription ('[Ut]hina').",
+       "suggested_value": "[Ut]hina",
+       "path_valid": true
+      }
+     }
+    }
+   ],
+   "rank": 13
+  },
+  {
    "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#79",
    "edcs_id": "EDCS-26500905",
    "tier": "agree_all",
+   "consensus_verdict": "mixed",
    "audit": false,
    "score": [
     3,
@@ -4081,6 +5848,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "mixed",
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -4111,6 +5879,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4141,6 +5910,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4171,6 +5941,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -4194,6 +5965,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
+     "consensus_verdict": "mixed",
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -4217,6 +5989,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -4240,6 +6013,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -4263,6 +6037,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -4279,6 +6054,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -4295,6 +6071,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -4311,6 +6088,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -4327,6 +6105,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4343,6 +6122,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -4359,6 +6139,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4370,12 +6151,13 @@
      }
     }
    ],
-   "rank": 8
+   "rank": 14
   },
   {
    "key": "Numidia/Bouhadjar_Bou_Hadjar_Sigus/Bouhadjar_Bou_Hadjar_Sigus_career.json#385",
    "edcs_id": "EDCS-25900450",
    "tier": "agree_all",
+   "consensus_verdict": "mixed",
    "audit": false,
    "score": [
     3,
@@ -4448,6 +6230,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "mixed",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4478,6 +6261,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 3,
+     "consensus_verdict": "mixed",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4508,6 +6292,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4538,6 +6323,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -4568,6 +6354,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
+     "consensus_verdict": "omission",
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -4591,6 +6378,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -4607,6 +6395,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -4623,6 +6412,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -4634,1581 +6424,13 @@
      }
     }
    ],
-   "rank": 9
-  },
-  {
-   "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#81",
-   "edcs_id": "EDCS-26500907",
-   "tier": "agree_all",
-   "audit": false,
-   "score": [
-    1,
-    7,
-    8
-   ],
-   "metadata": "EDCS-ID: EDCS-26500907\nprovince: Africa proconsularis\nplace (findspot): Oudna, Hr. / Udhnah / Uthina\nmaterial: lapis",
-   "inscription": "] / coh[ortis 3] / cur[ator",
-   "extraction": [
-    "persons[0].person_id = 0   (context)",
-    "persons[0].person_name = \"Unknown\"",
-    "persons[0].person_name_readable = \"Unknown\"",
-    "persons[0].praenomen = \"\"",
-    "persons[0].nomen = \"\"",
-    "persons[0].cognomen = \"\"",
-    "persons[0].person_name_normalized = \"\"",
-    "persons[0].person_name_link = \"\"",
-    "persons[0].social_status = \"soldier\"",
-    "persons[0].social_status_evidence = \"coh[ortis 3]\"",
-    "persons[0].gender = \"unknown\"",
-    "persons[0].gender_evidence = \"\"",
-    "persons[0].ethnicity = \"\"",
-    "persons[0].ethnicity_evidence = \"\"",
-    "persons[0].age_at_death = \"\"",
-    "persons[0].age_at_death_evidence = \"\"",
-    "persons[0].has_career = true",
-    "persons[0].career_path[0].position = \"cur[ator\"",
-    "persons[0].career_path[0].position_normalized = \"curator\"",
-    "persons[0].career_path[0].position_abstract = \"curator\"",
-    "persons[0].career_path[0].position_type = \"other\"",
-    "persons[0].career_path[0].position_description = \"Curator (administrator or overseer)\"",
-    "persons[0].career_path[0].order = 1",
-    "persons[0].career_path[0].location = null",
-    "persons[0].career_path[0].location_normalized = null",
-    "persons[0].career_path[0].location_evidence = null",
-    "persons[0].career_path[0].position_canonical = \"curator\"",
-    "persons[0].career_path[0].position_tier = \"municipal\"",
-    "persons[0].career_path[0].position_canonical_source = \"direct\"   (context)",
-    "persons[0].benefactions = []",
-    "persons[0].divinity = false",
-    "persons[0].divinity_type = null",
-    "persons[0].divinity_classification_reasoning = \"The inscription mentions 'coh[ortis]' (cohort) and 'cur[ator]' (curator), indicating a military or administrative human official, not a divinity\"   (context)",
-    "persons[0].life_events = []",
-    "persons[0].vital_events_reasoning = \"The inscription fragment mentions 'coh[ortis 3]' (cohort 3) and 'cur[ator' (curator), indicating an official or military administrative role. There are no funerary markers (such as D.M., hic situs est, vixit annis, etc.) present in the text, making this a non-funerary inscription, likely honorific or administrative. Therefore, death place cannot be inferred from the findspot. No birth place information is present in the text.\"   (context)",
-    "persons[0].social_statuses[0].category = \"military\"",
-    "persons[0].social_statuses[0].subtype = \"military.soldier\"",
-    "persons[0].social_statuses[0].evidence = \"coh[ortis 3]\"",
-    "persons[0].social_statuses[0].certainty = \"explicit\"",
-    "persons[0].social_statuses[0].source = \"direct\"   (context)",
-    "persons[0].social_status_source = \"rulebased\"   (context)",
-    "communities[0].community_id = 0   (context)",
-    "communities[0].community_name = \"coh[ortis 3]\"",
-    "communities[0].community_name_normalized = \"cohors III\"",
-    "communities[0].community_type = \"cohort\"",
-    "communities[0].community_description = \"Third cohort (military unit)\"",
-    "communities[0].evidence = \"coh[ortis 3]\"",
-    "communities[0].benefactions = []",
-    "person_relationships[0].source_person_id = 0",
-    "person_relationships[0].target_person_id = null",
-    "person_relationships[0].target_community_id = 0",
-    "person_relationships[0].type = \"affiliation\"",
-    "person_relationships[0].property = \"soldier\"",
-    "person_relationships[0].property_text = \"coh[ortis 3]\"",
-    "person_relationships[0].notes = \"Person affiliated with cohort III, possibly as curator\"   (context)",
-    "person_relationships[0].generated_by_activity = \"extract_career_graph-extract-claude-sonnet-4-5-20250929-20260210T081243Z\""
-   ],
-   "format_errors": [],
-   "format_warnings": [],
-   "judge_status": {
-    "claude": "ok",
-    "gpt": "ok",
-    "gemini": "ok"
-   },
-   "judge_overall": {
-    "claude": "has_errors",
-    "gpt": "has_errors",
-    "gemini": "has_errors"
-   },
-   "judge_notes": {
-    "claude": "The text is very fragmentary. The bracketed '3' is an EDCS lacuna marker and has been mistaken for a cohort number. The career probably also included a lost cohort post that preceded 'coh[ortis', but that post cannot be reconstructed.",
-    "gemini": "The inscription is extremely fragmentary (only '] / coh[ortis 3] / cur[ator' survives). Note that '[... 3]' in EDCS transcription indicates a lacuna of 3 letters, which the extractor misread as the cohort number III. Moreover, a person holding a command over a cohort and serving as curator was more likely an equestrian officer (e.g., praefectus or tribunus cohortis) than a common soldier, though the fragment is too brief to determine his exact rank."
-   },
-   "flagged": [
-    {
-     "path": "communities[0].community_name_normalized",
-     "judged_value": "\"cohors III\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 3,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "In 'coh[ortis 3]' the '3' is the EDCS marker for a lacuna of unknown length, not a numeral. The cohort's number and name are lost, so 'cohors III' invents a unit identification.",
-       "suggested_value": "cohors",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "The «3» in «coh[ortis 3]» is an editorial lacuna marker, not the cohort numeral III. The unit's number is not preserved.",
-       "suggested_value": "cohors",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "In EDCS notation, 'coh[ortis 3]' means a lacuna of 3 characters after 'coh[ortis', not the numeral III (third cohort).",
-       "suggested_value": "cohors",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "communities[0].community_description",
-     "judged_value": "\"Third cohort (military unit)\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The description 'Third cohort' rests on the same misreading of the lacuna marker '3' as a unit number.",
-       "suggested_value": "Cohort (number and name lost)",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "«coh[ortis 3]» supports the description of a cohort, but not the ordinal 'Third'.",
-       "suggested_value": "Military cohort of unspecified number",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The number '3' inside brackets '[ortis 3]' denotes 3 missing characters, not the third cohort.",
-       "suggested_value": "Cohort (military unit)",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].career_path[0].position_tier",
-     "judged_value": "\"municipal\"",
-     "judged_value_known": true,
-     "n_flag": 2,
-     "n_major": 1,
-     "judges": {
-      "claude": {
-       "verdict": "uncertain",
-       "severity": "minor",
-       "reason": "'cur[ator' is incomplete, so we cannot tell whether it is a municipal post or an imperial curator such as curator rei publicae.",
-       "suggested_value": "other",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "«cur[ator» supports the title curator, but the surviving text does not specify a municipal office.",
-       "suggested_value": "other",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].social_status",
-     "judged_value": "\"soldier\"",
-     "judged_value_known": true,
-     "n_flag": 2,
-     "n_major": 1,
-     "judges": {
-      "claude": {
-       "verdict": "uncertain",
-       "severity": "minor",
-       "reason": "'coh[ortis ...]' is a genitive dependent on a lost title, which could be praefectus, tribunus, centurio or miles. Pairing it with 'cur[ator' may point to an equestrian officer's career rather than a common soldier.",
-       "suggested_value": "",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "The genitive «coh[ortis 3]» mentions a cohort, but neither it nor «cur[ator» establishes that the unnamed person was a soldier.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "person_relationships[0]",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 1,
-     "judges": {
-      "gpt": {
-       "verdict": "uncertain",
-       "severity": "major",
-       "reason": "The fragment «coh[ortis 3] / cur[ator» does not preserve enough syntax to securely link the curator to the cohort. Even if the two are linked, the text does not establish the role 'soldier'.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].social_statuses[0]",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 1,
-     "judges": {
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "«coh[ortis 3]» names a cohort without stating the person's role in it, so it does not support an explicit military.soldier classification.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "person_relationships[0].property",
-     "judged_value": "\"soldier\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "uncertain",
-       "severity": "minor",
-       "reason": "The person's role in the cohort is lost in the lacuna before 'coh[ortis'. 'soldier' is only one possibility; the person may have been an officer.",
-       "suggested_value": "member",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].social_status_evidence",
-     "judged_value": "\"coh[ortis 3]\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "«coh[ortis 3]» is quoted verbatim, but it names a unit rather than stating the person's social status.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    }
-   ],
-   "rank": 10
-  },
-  {
-   "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#15",
-   "edcs_id": "EDCS-21000588",
-   "tier": "agree_all",
-   "audit": false,
-   "score": [
-    1,
-    6,
-    14
-   ],
-   "metadata": "EDCS-ID: EDCS-21000588\nprovince: Africa proconsularis\nplace (findspot): Oudna, Hr. / Udhnah / Uthina\nmaterial: lapis",
-   "inscription": "Gen(io) c[ol(oniae) 3] / ex tes[tamento 3] / Cn(aeus) [3] / A[",
-   "extraction": [
-    "persons[0].person_id = 0   (context)",
-    "persons[0].person_name = \"Cn(aeus) [---]\"",
-    "persons[0].person_name_readable = \"Gnaeus [---]\"",
-    "persons[0].praenomen = \"Cnaeus\"",
-    "persons[0].nomen = \"\"",
-    "persons[0].cognomen = \"\"",
-    "persons[0].person_name_normalized = \"\"",
-    "persons[0].person_name_link = \"\"",
-    "persons[0].social_status = \"\"",
-    "persons[0].social_status_evidence = \"\"",
-    "persons[0].gender = \"male\"",
-    "persons[0].gender_evidence = \"Cn(aeus) - male praenomen\"",
-    "persons[0].ethnicity = \"Roman\"",
-    "persons[0].ethnicity_evidence = \"Roman praenomen Cnaeus\"",
-    "persons[0].age_at_death = \"\"",
-    "persons[0].age_at_death_evidence = \"\"",
-    "persons[0].has_career = false",
-    "persons[0].career_path = []",
-    "persons[0].benefactions[0].benefaction_type = \"other\"",
-    "persons[0].benefactions[0].object = \"testamentum\"",
-    "persons[0].benefactions[0].object_type = \"other\"",
-    "persons[0].benefactions[0].object_description = \"Testamentary bequest\"",
-    "persons[0].benefactions[0].benefaction_text = \"ex tes[tamento ---]\"",
-    "persons[0].benefactions[0].cost = \"\"",
-    "persons[0].benefactions[0].notes = \"Benefaction made through a will/testament\"   (context)",
-    "persons[0].benefactions[0].objects[0].object = \"testamentum\"",
-    "persons[0].benefactions[0].objects[0].object_type = \"other\"",
-    "persons[0].benefactions[0].objects[0].object_category_source = \"pending_llm\"   (context)",
-    "persons[0].benefactions[0].recipient_communities = []",
-    "persons[0].divinity = false",
-    "persons[0].divinity_type = null",
-    "persons[0].divinity_classification_reasoning = \"Cn(aeus) is a human praenomen (personal name). The inscription dedicates something to the Genius of the colony according to a testament, with Cn(aeus) being the testator (human dedicant), not the deity being honored.\"   (context)",
-    "persons[0].life_events = []",
-    "persons[0].vital_events_reasoning = \"This is a votive/dedicatory inscription to the Genius of the colony (Gen(io) c[ol(oniae)]), set up according to a testament (ex tes[tamento]). It lacks funerary markers such as D.M., hic situs est, vixit annis, or other burial indicators. As a non-funerary inscription, the findspot cannot be used to infer a death place. No birth place information is present in the text.\"   (context)",
-    "communities[0].community_id = 0   (context)",
-    "communities[0].community_name = \"c[ol(onia) ---]\"",
-    "communities[0].community_name_normalized = \"colonia\"",
-    "communities[0].community_type = \"colonia\"",
-    "communities[0].community_description = \"Roman colony (specific name lost in lacuna)\"",
-    "communities[0].evidence = \"c[ol(onia) ---]\"",
-    "communities[0].benefactions = []",
-    "person_relationships[0].source_person_id = 0",
-    "person_relationships[0].target_person_id = null",
-    "person_relationships[0].target_community_id = 0",
-    "person_relationships[0].type = \"dedication\"",
-    "person_relationships[0].property = \"dedicator\"",
-    "person_relationships[0].property_text = \"Gen(io) c[ol(oniae) ---] / ex tes[tamento ---] / Cn(aeus) [---]\"",
-    "person_relationships[0].notes = \"Gnaeus made a dedication to the Genius of the colony through his testament\"   (context)",
-    "person_relationships[0].generated_by_activity = \"extract_career_graph-extract-claude-sonnet-4-5-20250929-20260210T081243Z\""
-   ],
-   "format_errors": [],
-   "format_warnings": [],
-   "judge_status": {
-    "claude": "ok",
-    "gpt": "ok",
-    "gemini": "ok"
-   },
-   "judge_overall": {
-    "claude": "acceptable",
-    "gpt": "has_errors",
-    "gemini": "has_errors"
-   },
-   "judge_notes": {
-    "claude": "The text is highly fragmentary. The Genius coloniae (a deified abstraction) is the dedicatee but is not represented as an entity; whether it should be depends on how the pipeline handles deities.",
-    "gpt": "The fragment does not establish whose will is meant. Cn(aeus) can be associated with the dedication without identifying him as the testator."
-   },
-   "flagged": [
-    {
-     "path": "persons[0].benefactions[0].object",
-     "judged_value": "\"testamentum\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 2,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "\"ex tes[tamento]\" gives the legal basis of the gift, not the object. The object dedicated to the Genius coloniae (probably a statue or altar) is lost.",
-       "suggested_value": "unknown (dedication to Genius coloniae, object lost)",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "`ex tes[tamento 3]` means that the dedication was made pursuant to a will, not that the will was the object given. No dedicated object is identifiable in the surviving text.",
-       "suggested_value": "",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "The phrase 'ex tes[tamento]' indicates the legal means/funding source ('in accordance with the will'), not the object that was donated or built, which is lost or unstated.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "communities[0].evidence",
-     "judged_value": "\"c[ol(onia) ---]\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The text reads \"c[ol(oniae) 3]\" in the genitive (\"Gen(io) c[ol(oniae)\"), not \"c[ol(onia) ---]\".",
-       "suggested_value": "Gen(io) c[ol(oniae) ---]",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "`c[ol(onia) ---]` changes both the expansion and the lacuna notation of `c[ol(oniae) 3]`.",
-       "suggested_value": "c[ol(oniae) 3]",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The inscription reads 'c[ol(oniae) 3]' in the genitive, not 'c[ol(onia) ---]'.",
-       "suggested_value": "c[ol(oniae) 3]",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].ethnicity_evidence",
-     "judged_value": "\"Roman praenomen Cnaeus\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "\"Roman praenomen Cnaeus\" is an interpretation, not a quote from the inscription.",
-       "suggested_value": "Cn(aeus)",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The inscription gives `Cn(aeus)`, not the explanatory phrase `Roman praenomen Cnaeus`.",
-       "suggested_value": "Cn(aeus)",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "Evidence fields must contain only a direct quote copied verbatim from the inscription text, without commentary.",
-       "suggested_value": "Cn(aeus)",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].gender_evidence",
-     "judged_value": "\"Cn(aeus) - male praenomen\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The evidence field adds the explanation \"- male praenomen\". Evidence must be a verbatim quote, and the text only has \"Cn(aeus) [3]\".",
-       "suggested_value": "Cn(aeus)",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "`Cn(aeus)` is in the text; `- male praenomen` is commentary, not part of the quotation.",
-       "suggested_value": "Cn(aeus)",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "Evidence fields must contain only a direct quote copied verbatim from the inscription text, without explanatory text.",
-       "suggested_value": "Cn(aeus)",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "person_relationships[0]",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 2,
-     "n_major": 1,
-     "judges": {
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "The dedicatee is the Genius, expressed by the dative `Gen(io)`, not the colony, expressed by the dependent genitive `c[ol(oniae) 3]`.",
-       "suggested_value": "Keep source_person_id = 0, type = \"dedication\", and property = \"dedicator\"; set target_person_id = 1 (Genius), target_community_id = null, and property_text = \"Gen(io) c[ol(oniae) 3] / ex tes[tamento 3] / Cn(aeus) [3]\".",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "According to the specification, relationships with a target_community_id are restricted to type 'affiliation', whereas 'dedication' is a person-to-person relationship. Moreover, the dedication is to the Genius of the colony rather than the colony directly.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 1,
-     "judges": {
-      "gpt": {
-       "verdict": "omission",
-       "severity": "major",
-       "reason": "The dative `Gen(io)` names the Genius as the recipient of the dedication. The genitive `c[ol(oniae) 3]` identifies the community whose Genius is honored; it does not replace the deity as a named entity.",
-       "suggested_value": "Add person_id 1: Genius, with divinity = true and divinity_type = \"Genius\".",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].benefactions[0].objects[0]",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 1,
-     "judges": {
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "`tes[tamento 3]` is governed by `ex` and does not name an item given. The surviving text supplies no identifiable object for this entry.",
-       "suggested_value": "Remove this entry; leave the objects array empty.",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].benefactions[0].objects[0].object",
-     "judged_value": "\"testamentum\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 1,
-     "judges": {
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "A testamentum (will) in the formula 'ex testamento' is the instrument of the bequest, not the donated object itself.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "communities[0].community_name",
-     "judged_value": "\"c[ol(onia) ---]\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The inscription gives the genitive `c[ol(oniae) 3]` after `Gen(io)`. This field should preserve the form in the text, not substitute the normalized nominative.",
-       "suggested_value": "c[ol(oniae) 3]",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0]",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "uncertain",
-       "severity": "minor",
-       "reason": "After \"ex tes[tamento]\" the name \"Cn(aeus) [3]\" may be the testator (in the genitive) or the heir carrying out the bequest. The fragmentary \"A[\" on line 4 may belong to a further name or to a role such as heres. The text cannot settle which.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].benefactions[0].benefaction_text",
-     "judged_value": "\"ex tes[tamento ---]\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The supplied text reads `ex tes[tamento 3]`, not `ex tes[tamento ---]`.",
-       "suggested_value": "ex tes[tamento 3]",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].benefactions[0].cost_numeric",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gpt": {
-       "verdict": "omission",
-       "severity": "minor",
-       "reason": "`ex tes[tamento 3]` refers to a will but preserves no amount; the `3` is a lacuna marker, not a numeral stating a cost.",
-       "suggested_value": "null",
-       "path_valid": false
-      }
-     }
-    },
-    {
-     "path": "persons[0].benefactions[0].cost_unit",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gpt": {
-       "verdict": "omission",
-       "severity": "minor",
-       "reason": "`ex tes[tamento 3]` preserves no monetary unit.",
-       "suggested_value": "null",
-       "path_valid": false
-      }
-     }
-    },
-    {
-     "path": "persons[0].benefactions[0].object_description",
-     "judged_value": "\"Testamentary bequest\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "`ex tes[tamento 3]` describes the basis for the dedication, not the object or the terms of a specific bequest.",
-       "suggested_value": "Object of the testamentary dedication not preserved.",
-       "path_valid": true
-      }
-     }
-    }
-   ],
-   "rank": 11
-  },
-  {
-   "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#223",
-   "edcs_id": "EDCS-46700166",
-   "tier": "agree_all",
-   "audit": false,
-   "score": [
-    1,
-    4,
-    13
-   ],
-   "metadata": "EDCS-ID: EDCS-46700166\nprovince: Africa proconsularis\nplace (findspot): Oudna, Hr. / Udhnah / Uthina\nmaterial: lapis",
-   "inscription": "M(arco) Voltio L(uci) f(ilio) Hor(atia) Certo",
-   "extraction": [
-    "persons[0].person_id = 0   (context)",
-    "persons[0].person_name = \"M(arcus) Voltius L(uci) f(ilius) Hor(atia) Certus\"",
-    "persons[0].person_name_readable = \"Marcus Voltius Certus, son of Lucius, of the Horatia tribe\"",
-    "persons[0].praenomen = \"Marcus\"",
-    "persons[0].nomen = \"Voltius\"",
-    "persons[0].cognomen = \"Certus\"",
-    "persons[0].person_name_normalized = \"\"",
-    "persons[0].person_name_link = \"\"",
-    "persons[0].social_status = \"citizen\"",
-    "persons[0].social_status_evidence = \"Hor(atia) - membership in voting tribe indicates Roman citizenship\"",
-    "persons[0].gender = \"male\"",
-    "persons[0].gender_evidence = \"Marcus (masculine praenomen), filius (son)\"",
-    "persons[0].ethnicity = \"Roman\"",
-    "persons[0].ethnicity_evidence = \"Roman tria nomina structure and tribal affiliation\"",
-    "persons[0].age_at_death = \"\"",
-    "persons[0].age_at_death_evidence = \"\"",
-    "persons[0].has_career = false",
-    "persons[0].career_path = []",
-    "persons[0].benefactions = []",
-    "persons[0].divinity = false",
-    "persons[0].divinity_type = null",
-    "persons[0].divinity_classification_reasoning = \"Regular Roman citizen with tria nomina (Marcus Voltius Certus), filiation (son of Lucius), and tribal affiliation (Horatia tribe). Clear human nomenclature with no divine indicators.\"   (context)",
-    "persons[0].life_events = []",
-    "persons[0].vital_events_reasoning = \"The inscription text 'M(arco) Voltio L(uci) f(ilio) Hor(atia) Certo' is a simple dative dedication containing only the person's name, patronymic, and tribe. It lacks any funerary markers (no D.M., hic situs est, vixit annis, posuit, etc.) and contains no birth place indicators (no origo, domo, natione). Without funerary context, the findspot cannot be used to infer death/burial place. This appears to be an honorific or dedicatory inscription rather than a funerary monument.\"   (context)",
-    "persons[0].social_statuses[0].category = \"legal\"",
-    "persons[0].social_statuses[0].subtype = \"legal.citizen\"",
-    "persons[0].social_statuses[0].evidence = \"Hor(atia) - membership in voting tribe indicates Roman citizenship\"",
-    "persons[0].social_statuses[0].certainty = \"inferred\"",
-    "persons[0].social_statuses[0].source = \"direct\"   (context)",
-    "persons[0].social_status_source = \"rulebased\"   (context)",
-    "persons[1].person_id = 1   (context)",
-    "persons[1].person_name = \"Lucius Voltius\"",
-    "persons[1].person_name_readable = \"Lucius Voltius\"",
-    "persons[1].praenomen = \"Lucius\"",
-    "persons[1].nomen = \"Voltius\"",
-    "persons[1].cognomen = \"\"",
-    "persons[1].person_name_normalized = \"\"",
-    "persons[1].person_name_link = \"\"",
-    "persons[1].social_status = \"\"",
-    "persons[1].social_status_evidence = \"\"",
-    "persons[1].gender = \"male\"",
-    "persons[1].gender_evidence = \"Lucius (masculine praenomen), father of Marcus\"",
-    "persons[1].ethnicity = \"Roman\"",
-    "persons[1].ethnicity_evidence = \"Roman naming structure\"",
-    "persons[1].age_at_death = \"\"",
-    "persons[1].age_at_death_evidence = \"\"",
-    "persons[1].has_career = false",
-    "persons[1].career_path = []",
-    "persons[1].benefactions = []",
-    "persons[1].divinity = false",
-    "persons[1].divinity_type = null",
-    "persons[1].divinity_classification_reasoning = \"Marcus Voltius Certus is a regular Roman citizen with standard tria nomina (praenomen Marcus, nomen Voltius, cognomen Certus), son of Lucius, of the Horatia tribe. This is a typical human funerary or honorific inscription with no divine indicators.\"   (context)",
-    "persons[1].life_events[0].event_type = \"death\"",
-    "persons[1].life_events[0].place = \"Oudna, Hr. / Udhnah / Uthina\"",
-    "persons[1].life_events[0].place_normalized = \"Uthina\"",
-    "persons[1].life_events[0].place_source = \"findspot_inferred\"",
-    "persons[1].life_events[0].place_evidence = \"inferred from findspot\"",
-    "persons[1].vital_events_reasoning = \"The inscription is funerary in nature (dedicatory format 'M(arco) Voltio...f(ilio)...Certo' follows typical Roman funerary patterns with dative case indicating dedication to the deceased). While it lacks explicit funerary markers like D.M., the structure is consistent with a funerary monument. The findspot at Uthina serves as proxy for burial place. No birth place indicators are present in the text.\"   (context)",
-    "communities[0].community_id = 0   (context)",
-    "communities[0].community_name = \"Hor(atia)\"",
-    "communities[0].community_name_normalized = \"Horatia\"",
-    "communities[0].community_type = \"tribus\"",
-    "communities[0].community_description = \"Horatia tribe, one of the Roman voting tribes\"",
-    "communities[0].evidence = \"Hor(atia)\"",
-    "communities[0].benefactions = []",
-    "person_relationships[0].source_person_id = 0",
-    "person_relationships[0].target_person_id = 1",
-    "person_relationships[0].target_community_id = null",
-    "person_relationships[0].type = \"family\"",
-    "person_relationships[0].property = \"son\"",
-    "person_relationships[0].property_text = \"L(uci) f(ilio)\"",
-    "person_relationships[0].notes = \"Marcus Voltius Certus is identified as the son of Lucius (Voltius)\"   (context)",
-    "person_relationships[1].source_person_id = 0",
-    "person_relationships[1].target_person_id = null",
-    "person_relationships[1].target_community_id = 0",
-    "person_relationships[1].type = \"affiliation\"",
-    "person_relationships[1].property = \"citizen\"",
-    "person_relationships[1].property_text = \"Hor(atia)\"",
-    "person_relationships[1].notes = \"Marcus Voltius Certus is enrolled in the Horatia tribe\"   (context)",
-    "person_relationships[1].generated_by_activity = \"extract_career_graph-extract-claude-sonnet-4-5-20250929-20260210T081243Z\""
-   ],
-   "format_errors": [],
-   "format_warnings": [],
-   "judge_status": {
-    "claude": "ok",
-    "gpt": "ok",
-    "gemini": "ok"
-   },
-   "judge_overall": {
-    "claude": "has_errors",
-    "gpt": "has_errors",
-    "gemini": "has_errors"
-   },
-   "judge_notes": {
-    "claude": "This is a dative name-only text, probably honorific or the base of a statue. Funerary inference is unsupported."
-   },
-   "flagged": [
-    {
-     "path": "persons[1].life_events[0]",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 3,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "The text 'M(arco) Voltio L(uci) f(ilio) Hor(atia) Certo' has no funerary markers (no D.M., vixit, h.s.e.). The father Lucius appears only in the filiation 'L(uci) f(ilio)', so no death place can be inferred for him from the findspot.",
-       "suggested_value": "",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "“L(uci) f(ilio)” identifies Lucius only as Marcus's father. The inscription neither records Lucius's death nor provides a funerary basis for assigning him the findspot as a death place.",
-       "suggested_value": "",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "Person 1 (Lucius) is only mentioned in the filiation 'L(uci) f(ilio)' of Person 0, and the inscription contains no funerary markers (D.M., hic situs est, vixit, etc.), so attributing a death event at the findspot to the father is unfounded.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].ethnicity_evidence",
-     "judged_value": "\"Roman tria nomina structure and tribal affiliation\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "This is an explanation rather than a verbatim quote from the inscription.",
-       "suggested_value": "M(arco) Voltio L(uci) f(ilio) Hor(atia) Certo",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The Roman name, filiation, and voting tribe support the classification, but the evidence field must quote the Latin rather than describe it.",
-       "suggested_value": "M(arco) Voltio L(uci) f(ilio) Hor(atia) Certo",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "Evidence fields must contain ONLY a direct quote from the inscription, not an explanation.",
-       "suggested_value": "M(arco) Voltio L(uci) f(ilio) Hor(atia) Certo",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].gender_evidence",
-     "judged_value": "\"Marcus (masculine praenomen), filius (son)\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "This is a paraphrase ('Marcus (masculine praenomen), filius (son)'), not a verbatim quote. The text reads 'M(arco) ... L(uci) f(ilio)'.",
-       "suggested_value": "M(arco) Voltio L(uci) f(ilio)",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The inscription has “M(arco)” and “f(ilio)”, not the nominative forms and explanatory glosses quoted here.",
-       "suggested_value": "f(ilio)",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "Evidence fields must contain ONLY a direct quote from the inscription, not normalized forms or commentary.",
-       "suggested_value": "M(arco) ... f(ilio) ... Certo",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].social_status_evidence",
-     "judged_value": "\"Hor(atia) - membership in voting tribe indicates Roman citizenship\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "Evidence must be a verbatim quote, but the field adds an interpretive explanation after 'Hor(atia)'.",
-       "suggested_value": "Hor(atia)",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The inscription gives “Hor(atia)”; the explanation of what tribal membership implies is not part of the text.",
-       "suggested_value": "Hor(atia)",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "Evidence fields must contain ONLY a verbatim quote from the inscription text without explanation.",
-       "suggested_value": "L(uci) f(ilio) Hor(atia)",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].social_statuses[0].evidence",
-     "judged_value": "\"Hor(atia) - membership in voting tribe indicates Roman citizenship\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "Evidence contains reasoning rather than only the quoted text 'Hor(atia)'.",
-       "suggested_value": "Hor(atia)",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The wording after “Hor(atia)” explains the inference rather than quoting the inscription.",
-       "suggested_value": "Hor(atia)",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "Evidence fields must contain ONLY a verbatim quote from the inscription text.",
-       "suggested_value": "L(uci) f(ilio) Hor(atia)",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[1].ethnicity_evidence",
-     "judged_value": "\"Roman naming structure\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "'Roman naming structure' is not a quote from the inscription.",
-       "suggested_value": "",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "“Roman naming structure” is an interpretation, not a quotation of the filiation that names Lucius.",
-       "suggested_value": "L(uci) f(ilio)",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "Evidence fields must contain ONLY a direct quote from the inscription, not an explanation.",
-       "suggested_value": "L(uci)",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[1].gender_evidence",
-     "judged_value": "\"Lucius (masculine praenomen), father of Marcus\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "This is a paraphrase rather than a verbatim quote; the only text about this person is 'L(uci) f(ilio)'.",
-       "suggested_value": "L(uci) f(ilio)",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The father is identified by “L(uci) f(ilio)”; the supplied English explanation is not an inscription quote.",
-       "suggested_value": "L(uci) f(ilio)",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "Evidence fields must contain ONLY a direct quote from the inscription, without normalized forms or explanation.",
-       "suggested_value": "L(uci)",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[1].nomen",
-     "judged_value": "\"Voltius\"",
-     "judged_value_known": true,
-     "n_flag": 2,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "uncertain",
-       "severity": "minor",
-       "reason": "The father appears only as 'L(uci)'. The nomen Voltius is inferred from the son's name and not stated, though it is a conventional inference.",
-       "suggested_value": "",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "uncertain",
-       "severity": "minor",
-       "reason": "“Voltio” belongs to Marcus's name; the father's nomen is not given in “L(uci) f(ilio)”.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "person_relationships[1].property",
-     "judged_value": "\"citizen\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 1,
-     "judges": {
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "“Hor(atia)” indicates Marcus's enrollment in the voting tribe: he is a member of that tribe, not a citizen of it.",
-       "suggested_value": "member",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].social_status",
-     "judged_value": "\"citizen\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The presence of a filiation 'L(uci) f(ilio)' explicitly indicates freeborn status ('freeborn') rather than just 'citizen'.",
-       "suggested_value": "freeborn",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].social_statuses[0].subtype",
-     "judged_value": "\"legal.citizen\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "Filiation 'L(uci) f(ilio)' indicates freeborn status ('legal.freeborn').",
-       "suggested_value": "legal.freeborn",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[1].person_name",
-     "judged_value": "\"Lucius Voltius\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gpt": {
-       "verdict": "uncertain",
-       "severity": "minor",
-       "reason": "The father is named only by his praenomen in “L(uci) f(ilio)”. He may have shared his son's nomen, but the inscription does not establish it.",
-       "suggested_value": "Lucius",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[1].person_name_readable",
-     "judged_value": "\"Lucius Voltius\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gpt": {
-       "verdict": "uncertain",
-       "severity": "minor",
-       "reason": "The readable name presents “Voltius” as certain, although “L(uci) f(ilio)” gives only the father's praenomen.",
-       "suggested_value": "Lucius",
-       "path_valid": true
-      }
-     }
-    }
-   ],
-   "rank": 12
-  },
-  {
-   "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#114",
-   "edcs_id": "EDCS-26500940",
-   "tier": "agree_all",
-   "audit": false,
-   "score": [
-    1,
-    4,
-    6
-   ],
-   "metadata": "EDCS-ID: EDCS-26500940\nprovince: Africa proconsularis\nplace (findspot): Oudna, Hr. / Udhnah / Uthina\nmaterial: lapis",
-   "inscription": "] ex of(f)ic[i]/na Mart/[3] Utinensi/s",
-   "extraction": [
-    "persons[0].person_id = 0   (context)",
-    "persons[0].person_name = \"Mart[---]\"",
-    "persons[0].person_name_readable = \"Mart[---]\"",
-    "persons[0].praenomen = \"\"",
-    "persons[0].nomen = \"\"",
-    "persons[0].cognomen = \"\"",
-    "persons[0].person_name_normalized = \"\"",
-    "persons[0].person_name_link = \"\"",
-    "persons[0].social_status = \"\"",
-    "persons[0].social_status_evidence = \"\"",
-    "persons[0].gender = \"unknown\"",
-    "persons[0].gender_evidence = \"\"",
-    "persons[0].ethnicity = \"\"",
-    "persons[0].ethnicity_evidence = \"\"",
-    "persons[0].age_at_death = \"\"",
-    "persons[0].age_at_death_evidence = \"\"",
-    "persons[0].has_career = false",
-    "persons[0].career_path = []",
-    "persons[0].benefactions = []",
-    "persons[0].divinity = false",
-    "persons[0].divinity_type = null",
-    "persons[0].divinity_classification_reasoning = \"Mart[---] appears in context 'ex of(f)ic[i]/na Mart/[3] Utinensi/s' indicating a workshop (officina) belonging to a person from Utinum. This is a human craftsman or workshop owner, not a deity.\"   (context)",
-    "persons[0].life_events = []",
-    "persons[0].vital_events_reasoning = \"This is a non-funerary inscription. It appears to be a maker's mark or workshop stamp ('ex officina' = 'from the workshop of') identifying Mart[---] from Uthina ('Utinensi/s' = 'from Uthina'). The text contains no funerary markers (no D.M., hic situs est, vixit annis, etc.). The 'Utinensi/s' indicates geographic origin or association with the workshop location, not birth or death. Since this is not a funerary inscription, death place cannot be inferred from findspot.\"   (context)",
-    "communities[0].community_id = 0   (context)",
-    "communities[0].community_name = \"Utinensi[s]\"",
-    "communities[0].community_name_normalized = \"Utinensis\"",
-    "communities[0].community_type = \"other\"",
-    "communities[0].community_description = \"Community or workshop from Utinum (modern Udine)\"",
-    "communities[0].evidence = \"Utinensi/s\"",
-    "communities[0].benefactions = []",
-    "person_relationships[0].source_person_id = 0",
-    "person_relationships[0].target_person_id = null",
-    "person_relationships[0].target_community_id = 0",
-    "person_relationships[0].type = \"affiliation\"",
-    "person_relationships[0].property = \"member\"",
-    "person_relationships[0].property_text = \"Utinensi/s\"",
-    "person_relationships[0].notes = \"Person associated with Utinum or a workshop from Utinum\"   (context)",
-    "person_relationships[0].generated_by_activity = \"extract_career_graph-extract-claude-sonnet-4-5-20250929-20260210T081243Z\""
-   ],
-   "format_errors": [],
-   "format_warnings": [],
-   "judge_status": {
-    "claude": "ok",
-    "gpt": "ok",
-    "gemini": "ok"
-   },
-   "judge_overall": {
-    "claude": "has_errors",
-    "gpt": "has_errors",
-    "gemini": "acceptable"
-   },
-   "judge_notes": {
-    "claude": "This is a workshop stamp from Uthina. The extractor misidentified the town as Utinum/Udine."
-   },
-   "flagged": [
-    {
-     "path": "communities[0].community_description",
-     "judged_value": "\"Community or workshop from Utinum (modern Udine)\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 2,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "'Utinensis' is the ethnic of Uthina (Oudna) in Africa proconsularis, which is also the findspot. It does not refer to Utinum/Udine in Italy.",
-       "suggested_value": "The town of Uthina (Colonia Iulia Tertiadecimanorum Uthina, mod. Oudna), Africa proconsularis",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "`Utinensi/s` refers to Uthina at modern Oudna in Tunisia, not to Udine in Italy.",
-       "suggested_value": "Roman city of Uthina, at modern Oudna in Tunisia",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "'Utinensis' refers to Uthina (modern Oudna in Tunisia, the findspot of the inscription), not Utinum (modern Udine in Italy).",
-       "suggested_value": "City of Uthina in Africa Proconsularis",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "communities[0].community_type",
-     "judged_value": "\"other\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 1,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "'Utinensis' names the town of Uthina, a Roman colonia, not an unclassifiable group.",
-       "suggested_value": "colonia",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "`Utinensi/s` refers to the city of Uthina; the workshop is separately denoted by `of(f)ic[i]/na`.",
-       "suggested_value": "city",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "Uthina is a city/colony in Africa Proconsularis, so the type should be 'city' (or 'colonia') rather than 'other'.",
-       "suggested_value": "city",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "person_relationships[0].property",
-     "judged_value": "\"member\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 1,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "'Utinensis' marks origin from the town, so 'citizen' (or 'resident') fits better than 'member'.",
-       "suggested_value": "citizen",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "`Mart/[3] Utinensi/s` can indicate a geographic association with Uthina, but does not describe Mart[---] as a member of an organization or establish a specific civic status.",
-       "suggested_value": "",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "As a civic ethnic adjective ('Utinensis'), the relationship to the city of Uthina is better classified as 'citizen' or 'resident' rather than 'member'.",
-       "suggested_value": "citizen",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "communities[0].community_name",
-     "judged_value": "\"Utinensi[s]\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The text reads 'Utinensi/s'. The final s is a line break, not a restoration, so it should not be in square brackets.",
-       "suggested_value": "Utinensis",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "In `Utinensi/s`, the slash marks a line break; the final `s` is preserved, not restored.",
-       "suggested_value": "Utinensis",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The word 'Utinensi/s' in the inscription has a line break ('/'), not a restoration in square brackets ('[s]').",
-       "suggested_value": "Utinensis",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "communities[0].community_name_normalized",
-     "judged_value": "\"Utinensis\"",
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The normalised community name should be the town, not the adjectival ethnic.",
-       "suggested_value": "Uthina",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "`Utinensi/s` is an adjective referring to Uthina, not the normalized name of the city itself.",
-       "suggested_value": "Uthina",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "'Utinensis' is the ethnic adjective for the city of Uthina (the findspot of this inscription in Africa Proconsularis), so the normalized name of the community should be 'Uthina'.",
-       "suggested_value": "Uthina",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "persons[0].social_status",
-     "judged_value": "\"\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "claude": {
-       "verdict": "omission",
-       "severity": "minor",
-       "reason": "'ex officina Mart[...]' identifies Mart[---] as the owner of a production workshop, i.e. an artisan or producer.",
-       "suggested_value": "artisan",
-       "path_valid": true
-      }
-     }
-    }
-   ],
-   "rank": 13
-  },
-  {
-   "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#84",
-   "edcs_id": "EDCS-26500910",
-   "tier": "agree_all",
-   "audit": false,
-   "score": [
-    1,
-    3,
-    4
-   ],
-   "metadata": "EDCS-ID: EDCS-26500910\nprovince: Africa proconsularis\nplace (findspot): Oudna, Hr. / Udhnah / Uthina\nmaterial: lapis",
-   "inscription": "]dim[3] / [3 Uthi]na d(ecreto) d(ecurionum) p(ecunia) [p(ublica)",
-   "extraction": [
-    "persons[0].person_id = 0   (context)",
-    "persons[0].person_name = \"Unknown\"",
-    "persons[0].person_name_readable = \"Unknown\"",
-    "persons[0].praenomen = \"\"",
-    "persons[0].nomen = \"\"",
-    "persons[0].cognomen = \"\"",
-    "persons[0].person_name_normalized = \"\"",
-    "persons[0].person_name_link = \"\"",
-    "persons[0].social_status = \"\"",
-    "persons[0].social_status_evidence = \"\"",
-    "persons[0].gender = \"unknown\"",
-    "persons[0].gender_evidence = \"\"",
-    "persons[0].ethnicity = \"\"",
-    "persons[0].ethnicity_evidence = \"\"",
-    "persons[0].age_at_death = \"\"",
-    "persons[0].age_at_death_evidence = \"\"",
-    "persons[0].has_career = false",
-    "persons[0].career_path = []",
-    "persons[0].benefactions = []",
-    "persons[0].divinity = false",
-    "persons[0].divinity_type = null",
-    "persons[0].divinity_classification_reasoning = \"The inscription is fragmentary and mentions Uthina (a city in Africa Proconsularis) with a decree of the decurions and public money. No divine name is preserved in the visible text. The person is unknown and there are no indicators of divinity.\"   (context)",
-    "persons[0].life_events = []",
-    "persons[0].vital_events_reasoning = \"This is a public honorific inscription, not a funerary text. The abbreviation 'd(ecreto) d(ecurionum) p(ecunia) [p(ublica)' indicates a decree by the town council of Uthina with public funds, which is characteristic of honorific dedications. There are no funerary markers (D.M., hic situs est, vixit annis, etc.). Therefore, the findspot cannot be used to infer a death/burial place. No birth or death information is present in the text.\"   (context)",
-    "communities[0].community_id = 0   (context)",
-    "communities[0].community_name = \"Uthina\"",
-    "communities[0].community_name_normalized = \"Uthina\"",
-    "communities[0].community_type = \"city\"",
-    "communities[0].community_description = \"Ancient city in North Africa (modern Tunisia)\"",
-    "communities[0].evidence = \"[Uthi]na\"",
-    "communities[0].benefactions = []",
-    "person_relationships[0].source_person_id = 0",
-    "person_relationships[0].target_person_id = null",
-    "person_relationships[0].target_community_id = 0",
-    "person_relationships[0].type = \"affiliation\"",
-    "person_relationships[0].property = \"citizen\"",
-    "person_relationships[0].property_text = \"[Uthi]na d(ecreto) d(ecurionum) p(ecunia) [p(ublica)\"",
-    "person_relationships[0].notes = \"The inscription was authorized by decree of the decurions of Uthina with public funds\"   (context)",
-    "person_relationships[0].generated_by_activity = \"extract_career_graph-extract-claude-sonnet-4-5-20250929-20260210T081243Z\""
-   ],
-   "format_errors": [],
-   "format_warnings": [],
-   "judge_status": {
-    "claude": "ok",
-    "gpt": "ok",
-    "gemini": "ok"
-   },
-   "judge_overall": {
-    "claude": "acceptable",
-    "gpt": "has_errors",
-    "gemini": "has_errors"
-   },
-   "judge_notes": {
-    "claude": "The text is very fragmentary. Recording an 'Unknown' person and the city of Uthina is reasonable."
-   },
-   "flagged": [
-    {
-     "path": "person_relationships[0]",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 2,
-     "judges": {
-      "claude": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The fragment only says '[Uthi]na d(ecreto) d(ecurionum) p(ecunia) [p(ublica)', meaning Uthina's council authorised the monument with public money. Nothing shows that the unknown person was a citizen of Uthina, so this affiliation is unsupported.",
-       "suggested_value": "",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "«d(ecreto) d(ecurionum) p(ecunia) [p(ublica)» records a council decree and public funding; it does not establish that any person was a citizen of Uthina.",
-       "suggested_value": "",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "No person is preserved in this fragmentary text (only the placeholder 'Unknown'), and the formula '[Uthi]na d(ecreto) d(ecurionum) p(ecunia) [p(ublica)' does not state that an unnamed individual was a citizen of Uthina.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "communities",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 2,
-     "n_major": 1,
-     "judges": {
-      "claude": {
-       "verdict": "omission",
-       "severity": "minor",
-       "reason": "'d(ecreto) d(ecurionum)' implies the ordo decurionum of Uthina as an acting body, and the specification lists 'ordo' as a community type.",
-       "suggested_value": "ordo decurionum (community_type: ordo)",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "omission",
-       "severity": "major",
-       "reason": "The formula «d(ecreto) d(ecurionum)» explicitly mentions the council of decurions, a corporate body distinct from the city of Uthina.",
-       "suggested_value": "Add d(ecurionum), normalized as ordo decurionum, with community_type set to ordo.",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "communities[0].evidence",
-     "judged_value": "\"[Uthi]na\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The exact text in the inscription is '[3 Uthi]na'.",
-       "suggested_value": "[3 Uthi]na",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "person_relationships[0].property_text",
-     "judged_value": "\"[Uthi]na d(ecreto) d(ecurionum) p(ecunia) [p(ublica)\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The exact text in the inscription includes the lacuna marker: '[3 Uthi]na d(ecreto) d(ecurionum) p(ecunia) [p(ublica)'.",
-       "suggested_value": "[3 Uthi]na d(ecreto) d(ecurionum) p(ecunia) [p(ublica)",
-       "path_valid": true
-      }
-     }
-    }
-   ],
-   "rank": 14
-  },
-  {
-   "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#5",
-   "edcs_id": "EDCS-21000578",
-   "tier": "agree_all",
-   "audit": false,
-   "score": [
-    1,
-    2,
-    2
-   ],
-   "metadata": "EDCS-ID: EDCS-21000578\nprovince: Africa proconsularis\nplace (findspot): Oudna, Hr. / Udhnah / Uthina\ndating: 51.0 – 250.0\nmaterial: lapis",
-   "inscription": "]A[3] / [3 Ut]hina [",
-   "extraction": [
-    "persons[0].person_id = 0   (context)",
-    "persons[0].person_name = \"Unknown\"",
-    "persons[0].person_name_readable = \"Unknown\"",
-    "persons[0].praenomen = \"\"",
-    "persons[0].nomen = \"\"",
-    "persons[0].cognomen = \"\"",
-    "persons[0].person_name_normalized = \"\"",
-    "persons[0].person_name_link = \"\"",
-    "persons[0].social_status = \"\"",
-    "persons[0].social_status_evidence = \"\"",
-    "persons[0].gender = \"unknown\"",
-    "persons[0].gender_evidence = \"\"",
-    "persons[0].ethnicity = \"\"",
-    "persons[0].ethnicity_evidence = \"\"",
-    "persons[0].age_at_death = \"\"",
-    "persons[0].age_at_death_evidence = \"\"",
-    "persons[0].has_career = false",
-    "persons[0].career_path = []",
-    "persons[0].benefactions = []",
-    "persons[0].divinity = false",
-    "persons[0].divinity_type = null",
-    "persons[0].divinity_classification_reasoning = \"Uthina is a place name (ancient city in Africa Proconsularis, modern Tunisia), not a divinity. The fragmentary inscription appears to reference the location rather than a deity.\"   (context)",
-    "persons[0].life_events = []",
-    "persons[0].vital_events_reasoning = \"The inscription is too fragmentary to determine its nature. Only '[Ut]hina' is partially visible in the text, which matches the findspot name but provides no context. Without clear funerary markers (D.M., hic situs est, vixit annis, etc.) or other identifying features, it is impossible to classify this as funerary, honorific, or otherwise. Therefore, no birth or death place can be determined.\"   (context)",
-    "communities[0].community_id = 0   (context)",
-    "communities[0].community_name = \"Uthina\"",
-    "communities[0].community_name_normalized = \"Uthina\"",
-    "communities[0].community_type = \"city\"",
-    "communities[0].community_description = \"Ancient city in Africa Proconsularis (modern Tunisia)\"",
-    "communities[0].evidence = \"[3 Ut]hina\"",
-    "communities[0].benefactions = []",
-    "person_relationships[0].source_person_id = 0",
-    "person_relationships[0].target_person_id = null",
-    "person_relationships[0].target_community_id = 0",
-    "person_relationships[0].type = \"affiliation\"",
-    "person_relationships[0].property = \"resident\"",
-    "person_relationships[0].property_text = \"[3 Ut]hina\"",
-    "person_relationships[0].notes = \"The fragmentary inscription mentions Uthina, suggesting a connection between the person and this city\"   (context)",
-    "person_relationships[0].generated_by_activity = \"extract_career_graph-extract-claude-sonnet-4-5-20250929-20260210T081243Z\""
-   ],
-   "format_errors": [],
-   "format_warnings": [],
-   "judge_status": {
-    "claude": "ok",
-    "gpt": "ok",
-    "gemini": "ok"
-   },
-   "judge_overall": {
-    "claude": "acceptable",
-    "gpt": "has_errors",
-    "gemini": "has_errors"
-   },
-   "judge_notes": {
-    "claude": "The text is extremely fragmentary. The placeholder 'Unknown' person follows the specification, and identifying Uthina as a community is sound (historically it was a colonia, but 'city' is acceptable)."
-   },
-   "flagged": [
-    {
-     "path": "person_relationships[0]",
-     "judged_value": null,
-     "judged_value_known": true,
-     "n_flag": 3,
-     "n_major": 2,
-     "judges": {
-      "claude": {
-       "verdict": "uncertain",
-       "severity": "minor",
-       "reason": "The surviving text is only ']A[' and '[Ut]hina'. Nothing links an unnamed person to Uthina, so a 'resident' affiliation is speculation rather than something the text states.",
-       "suggested_value": "",
-       "path_valid": true
-      },
-      "gpt": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "The fragment « ]A[3] / [3 Ut]hina [ » preserves the place name Uthina but does not identify a person or state that anyone resided there. The required Unknown placeholder does not establish an affiliation.",
-       "suggested_value": "",
-       "path_valid": true
-      },
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "major",
-       "reason": "No person is mentioned in the fragment (only a placeholder 'Unknown' was created per specification), and the single restored place name '[3 Ut]hina' provides no evidence of a person's affiliation or residency.",
-       "suggested_value": "",
-       "path_valid": true
-      }
-     }
-    },
-    {
-     "path": "communities[0].community_name",
-     "judged_value": "\"Uthina\"",
-     "judged_value_known": true,
-     "n_flag": 1,
-     "n_major": 0,
-     "judges": {
-      "gemini": {
-       "verdict": "incorrect",
-       "severity": "minor",
-       "reason": "The community_name field should preserve the form as it appears in the inscription ('[Ut]hina').",
-       "suggested_value": "[Ut]hina",
-       "path_valid": true
-      }
-     }
-    }
-   ],
    "rank": 15
   },
   {
    "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#88",
    "edcs_id": "EDCS-26500914",
    "tier": "agree_2",
+   "consensus_verdict": "incorrect",
    "audit": false,
    "score": [
     2,
@@ -6291,6 +6513,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6314,6 +6537,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6337,6 +6561,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -6353,6 +6578,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -6369,6 +6595,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6385,6 +6612,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -6401,6 +6629,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -6418,6 +6647,7 @@
    "key": "Numidia/Oued_Smendou/Oued_Smendou_career.json#0",
    "edcs_id": "EDCS-13003434",
    "tier": "agree_2",
+   "consensus_verdict": "incorrect",
    "audit": false,
    "score": [
     1,
@@ -6691,6 +6921,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -6721,6 +6952,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -6751,6 +6983,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -6774,6 +7007,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -6797,6 +7031,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -6820,6 +7055,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -6843,6 +7079,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -6866,6 +7103,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -6889,6 +7127,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -6912,6 +7151,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6935,6 +7175,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -6958,6 +7199,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -6981,6 +7223,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7004,6 +7247,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7027,6 +7271,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7050,6 +7295,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7073,6 +7319,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7096,6 +7343,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7119,6 +7367,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7142,6 +7391,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7165,6 +7415,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7188,6 +7439,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -7204,6 +7456,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -7220,6 +7473,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7236,6 +7490,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7252,6 +7507,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -7268,6 +7524,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7284,6 +7541,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "incorrect",
@@ -7300,6 +7558,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -7316,6 +7575,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7332,6 +7592,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -7348,6 +7609,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7364,6 +7626,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7380,6 +7643,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7396,6 +7660,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7412,6 +7677,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7428,6 +7694,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -7444,6 +7711,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -7460,6 +7728,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7477,6 +7746,7 @@
    "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#51",
    "edcs_id": "EDCS-26201122",
    "tier": "agree_2",
+   "consensus_verdict": "incorrect",
    "audit": false,
    "score": [
     1,
@@ -7576,6 +7846,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -7606,6 +7877,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -7636,6 +7908,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -7666,6 +7939,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -7696,6 +7970,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 2,
+     "consensus_verdict": "incorrect",
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7719,6 +7994,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "incorrect",
@@ -7735,6 +8011,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -7751,6 +8028,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -7767,6 +8045,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7783,6 +8062,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -7799,6 +8079,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -7816,6 +8097,7 @@
    "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#0",
    "edcs_id": "EDCS-00000223",
    "tier": "single",
+   "consensus_verdict": null,
    "audit": false,
    "score": [
     0,
@@ -7960,6 +8242,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "omission",
@@ -7990,6 +8273,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -8020,6 +8304,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -8050,6 +8335,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -8080,6 +8366,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -8110,6 +8397,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -8133,6 +8421,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -8149,6 +8438,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -8165,6 +8455,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -8181,6 +8472,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -8197,6 +8489,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "incorrect",
@@ -8213,6 +8506,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -8229,6 +8523,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -8245,6 +8540,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -8261,6 +8557,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -8277,6 +8574,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -8293,6 +8591,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -8309,6 +8608,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -8325,6 +8625,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -8341,6 +8642,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -8358,6 +8660,7 @@
    "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#82",
    "edcs_id": "EDCS-26500908",
    "tier": "single",
+   "consensus_verdict": null,
    "audit": false,
    "score": [
     0,
@@ -8575,6 +8878,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -8605,6 +8909,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -8635,6 +8940,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -8665,6 +8971,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -8695,6 +9002,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -8711,6 +9019,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -8727,6 +9036,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -8743,6 +9053,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -8759,6 +9070,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -8775,6 +9087,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -8791,6 +9104,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -8807,6 +9121,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -8823,6 +9138,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -8839,6 +9155,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -8856,6 +9173,7 @@
    "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#56",
    "edcs_id": "EDCS-26500882",
    "tier": "single",
+   "consensus_verdict": null,
    "audit": false,
    "score": [
     0,
@@ -8986,6 +9304,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -9016,6 +9335,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -9046,6 +9366,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -9076,6 +9397,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -9099,6 +9421,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -9122,6 +9445,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -9145,6 +9469,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -9161,6 +9486,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -9177,6 +9503,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -9193,6 +9520,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -9209,6 +9537,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -9225,6 +9554,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -9241,6 +9571,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -9257,6 +9588,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "uncertain",
@@ -9273,6 +9605,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -9289,6 +9622,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -9306,6 +9640,7 @@
    "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#30",
    "edcs_id": "EDCS-21000603",
    "tier": "single",
+   "consensus_verdict": null,
    "audit": false,
    "score": [
     0,
@@ -9401,6 +9736,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -9431,6 +9767,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -9454,6 +9791,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -9470,6 +9808,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -9486,6 +9825,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -9502,6 +9842,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "incorrect",
@@ -9518,6 +9859,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -9534,6 +9876,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -9551,6 +9894,7 @@
    "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#225",
    "edcs_id": "EDCS-64100012",
    "tier": "single",
+   "consensus_verdict": null,
    "audit": false,
    "score": [
     0,
@@ -9702,6 +10046,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -9732,6 +10077,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -9762,6 +10108,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -9792,6 +10139,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -9815,6 +10163,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -9838,6 +10187,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -9861,6 +10211,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -9877,6 +10228,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -9893,6 +10245,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -9909,6 +10262,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -9925,6 +10279,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -9941,6 +10296,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -9957,6 +10313,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -9973,6 +10330,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -9990,6 +10348,7 @@
    "key": "Africa_proconsularis/Oudna_Hr_Udhnah_Uthina/Oudna_Hr_Udhnah_Uthina_career.json#38",
    "edcs_id": "EDCS-24501149",
    "tier": "single",
+   "consensus_verdict": null,
    "audit": false,
    "score": [
     0,
@@ -10150,6 +10509,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -10180,6 +10540,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -10210,6 +10571,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -10240,6 +10602,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -10270,6 +10633,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -10300,6 +10664,7 @@
      "judged_value_known": true,
      "n_flag": 3,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -10330,6 +10695,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "uncertain",
@@ -10353,6 +10719,7 @@
      "judged_value_known": true,
      "n_flag": 2,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "claude": {
        "verdict": "incorrect",
@@ -10376,6 +10743,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 1,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "omission",
@@ -10392,6 +10760,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -10408,6 +10777,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gemini": {
        "verdict": "incorrect",
@@ -10424,6 +10794,7 @@
      "judged_value_known": true,
      "n_flag": 1,
      "n_major": 0,
+     "consensus_verdict": null,
      "judges": {
       "gpt": {
        "verdict": "incorrect",
@@ -10441,6 +10812,7 @@
    "key": "Africa_proconsularis/AlKhums_Khoms_Homs_Lebdah_Lebida_Labdah_Wadi_Zennad_Wadi_az_Zannad_Leptis_Magna_Lepcis_Magna_Neapolis/AlKhums_Khoms_Homs_Lebdah_Lebida_Labdah_Wadi_Zennad_Wadi_az_Zannad_Leptis_Magna_Lepcis_Magna_Neapolis_career.json#334",
    "edcs_id": "EDCS-06000622",
    "tier": "audit",
+   "consensus_verdict": null,
    "audit": true,
    "score": [
     0,

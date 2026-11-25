@@ -42,7 +42,7 @@ from judge_common import RUNS_DIR, LLM_JUDGE_DIR  # noqa: E402
 
 OUT_DIR = LLM_JUDGE_DIR / "editor_export"
 
-KEEP = ("tier", "audit", "audit_origin", "rank", "score", "judge_status", "judge_overall",
+KEEP = ("tier", "consensus_verdict", "audit", "audit_origin", "rank", "score", "judge_status", "judge_overall",
         "judge_notes", "format_errors", "format_warnings", "flagged", "blind")
 
 
