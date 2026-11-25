@@ -319,3 +319,41 @@ def record_superseded_value(record: dict, path: str, field_label: str,
 
     history.append(entry)
     return True
+
+
+# ── Value fingerprints (assessment status) ────────────────────────────────────
+#
+# An assessment (LLM judge, human review, manual edit) is tied to the value it
+# looked at, not to an RDF URI: statement URIs are positional and can point to
+# different content after a rebuild. The writers record these fingerprints and
+# compute_assessment_status.py compares them with the current values.
+# See docs/ASSESSMENT_STATUS_SPEC.md.
+
+def field_fingerprint(value) -> str:
+    """12-hex fingerprint of one JSON value (canonical JSON, keys sorted)."""
+    import hashlib
+    import json
+    text = json.dumps(value, ensure_ascii=False, sort_keys=True)
+    return hashlib.sha256(text.encode('utf-8')).hexdigest()[:12]
+
+
+def leaf_fingerprints(value, path: str) -> dict:
+    """{leaf path: fingerprint} for every scalar under `value` at `path`.
+
+    Paths use the judge/edit notation: persons[0].career_path[2].position_tier.
+    An empty list or object is recorded as a leaf of its own.
+    """
+    out = {}
+
+    def walk(v, p):
+        if isinstance(v, dict) and v:
+            for k, sub in v.items():
+                walk(sub, f'{p}.{k}')
+        elif isinstance(v, list) and v:
+            for i, sub in enumerate(v):
+                walk(sub, f'{p}[{i}]')
+        else:
+            out[p] = field_fingerprint(v)
+
+    walk(value, path)
+    return out

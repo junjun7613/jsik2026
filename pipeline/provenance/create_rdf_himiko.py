@@ -176,6 +176,18 @@ def _agent_uri(model_id: str) -> str:
     return f'<{AGENT_NS}{_safe_id(model_id)}>'
 
 
+# Latest-version statement URI -> JSON paths it was built from, filled by the
+# _build_*_statements functions and read by build_assessment_status_lines.
+# Statement URIs are positional, so the assessment status (which is tied to
+# JSON paths) can only be attached while both are known.
+_STMT_PATHS: dict = {}
+
+
+def _index_of(items: list, obj) -> int:
+    """Index of `obj` in `items` by identity (dicts may compare equal)."""
+    return next((k for k, x in enumerate(items) if x is obj), -1)
+
+
 def _close(lines: list) -> None:
     """Replace trailing ' ;' with ' .' on the last substantive line."""
     if lines and lines[-1].endswith(' ;'):
@@ -708,7 +720,7 @@ def _build_career_statements(record: dict, extract_act_uri: str | None,
 
     location_act_uri = _career_update_act_uri(activities)
 
-    for person in record.get('persons', []):
+    for pi, person in enumerate(record.get('persons', [])):
         if person.get('person_name', '') in ('Parse Error', 'Error', 'No Text'):
             continue
         if not person.get('has_career'):
@@ -802,6 +814,8 @@ def _build_career_statements(record: dict, extract_act_uri: str | None,
                 latest = v1_uri
 
             latest_uris.append(latest)
+            j = _index_of(career_path, cp)
+            _STMT_PATHS[latest] = [f'persons[{pi}].career_path[{j if j >= 0 else cp.get("order", 0)}]']
             i += 1
 
     return lines, latest_uris
@@ -1002,19 +1016,22 @@ def _build_benefaction_statements(record: dict, extract_act_uri: str | None,
     # all agents listed.  We use (benefaction_type, object, benefaction_text[:60])
     # as the identity key; the first occurrence wins as the canonical benef dict.
     raw_person_benefactions = []
-    for person in record.get('persons', []):
+    benef_paths: dict = {}     # id(benef) -> JSON path, for _STMT_PATHS
+    for pi, person in enumerate(record.get('persons', [])):
         if person.get('person_name', '') in ('Parse Error', 'Error', 'No Text'):
             continue
         p_id  = person.get('person_id', 0)
         p_uri = _eref_person(edcs_id, p_id)
-        for benef in person.get('benefactions', []):
+        for bj, benef in enumerate(person.get('benefactions', [])):
             raw_person_benefactions.append((benef, p_uri))
+            benef_paths[id(benef)] = f'persons[{pi}].benefactions[{bj}]'
 
     # Group by identity key → (canonical_benef, [agent_uris])
     # Key: (benefaction_type, object) — benefaction_text often varies per agent,
     # so we exclude it from the key to catch cross-agent duplicates of the same act.
     from collections import OrderedDict
     merged: 'OrderedDict[tuple, tuple]' = OrderedDict()
+    merged_paths: dict = {}    # id(canonical benef) -> JSON paths of the merged acts
     for benef, p_uri in raw_person_benefactions:
         key = (
             benef.get('benefaction_type', ''),
@@ -1022,8 +1039,10 @@ def _build_benefaction_statements(record: dict, extract_act_uri: str | None,
         )
         if key not in merged:
             merged[key] = (benef, [])
+            merged_paths[id(benef)] = []
         if p_uri not in merged[key][1]:
             merged[key][1].append(p_uri)
+        merged_paths[id(merged[key][0])].append(benef_paths[id(benef)])
 
     person_benefactions = [(benef, agents) for benef, agents in merged.values()]
 
@@ -1109,6 +1128,7 @@ def _build_benefaction_statements(record: dict, extract_act_uri: str | None,
                 prev_uri = vn_uri
 
             latest_uris.append(prev_uri)
+            _STMT_PATHS[prev_uri] = merged_paths.get(id(benef), [])
             i += 1
 
     if use_top:
@@ -1131,6 +1151,7 @@ def _build_benefaction_statements(record: dict, extract_act_uri: str | None,
             _close(lines)
             lines.append('')
             latest_uris.append(v0_uri)
+            _STMT_PATHS[v0_uri] = [f'benefactions[{_index_of(top_benefactions, benef)}]']
             i += 1
 
     return lines + obj_lines, latest_uris
@@ -1261,6 +1282,8 @@ def _build_relationship_statements(record: dict) -> tuple[list[str], list[str]]:
             lines.append('')
             latest_uris.append(v0_uri)
 
+        rel_key = 'person_relationships' if 'person_relationships' in record else 'relationships'
+        _STMT_PATHS[latest_uris[-1]] = [f'{rel_key}[{_index_of(rels, rel)}]']
         i += 1
 
     return lines, latest_uris
@@ -1402,6 +1425,110 @@ def build_history_graph(record: dict) -> list[str]:
     return lines
 
 
+# ── Assessment status (docs/ASSESSMENT_STATUS_SPEC.md) ────────────────────────
+#
+# The status is computed outside the corpus by
+# pipeline/evaluation/assessment/compute_assessment_status.py and attached here,
+# where the JSON paths and the positional statement URIs are both known. It is
+# written to its own graph and file (assessment_status.trig), not to all.trig,
+# so it can be refreshed with DROP GRAPH + POST without a full reload.
+
+ASSESSMENT_STATUS_PATH = (Path(__file__).resolve().parent.parent
+                          / 'evaluation' / 'assessment' / 'assessment_status.json')
+ASSESSMENT_GRAPH = f'<{GRAPH_NS}assessment-status>'
+_ASSESSMENT: 'dict | None' = None          # edcs_id -> record status, or None if not loaded
+_ASSESSMENT_LINES: list = []
+_ASSESS_STATES = ['unassessed', 'llm_judged', 'human_reviewed', 'human_corrected']
+# Sub-lists of a person/community that are separate statements, not attributes
+# of the EntityReference itself.
+_STATEMENT_KEYS = ('career_path', 'benefactions')
+
+
+def _status_uri(state: str) -> str:
+    return f'hmkia:status_{state}'
+
+
+def _group_status(fields: dict, prefixes: list, exclude: tuple = ()) -> 'tuple | None':
+    """(lowest state, highest stale_from or None) over the fields under `prefixes`."""
+    lo, stale = None, None
+    for path, f in fields.items():
+        if not any(path == p or path.startswith(p + '.') or path.startswith(p + '[')
+                   for p in prefixes):
+            continue
+        if exclude and any(path.startswith(p + '.' + k) for p in prefixes for k in exclude):
+            continue
+        r = _ASSESS_STATES.index(f['state'])
+        lo = r if lo is None else min(lo, r)
+        if 'stale_from' in f:
+            s = _ASSESS_STATES.index(f['stale_from'])
+            stale = s if stale is None else max(stale, s)
+    if lo is None:
+        return None
+    return _ASSESS_STATES[lo], (_ASSESS_STATES[stale] if stale is not None and stale > lo else None)
+
+
+def _status_triples(uri: str, state: str, stale: 'str | None') -> list:
+    out = [f'  {uri} hmkia:assessmentStatus {_status_uri(state)} .']
+    if stale:
+        out.append(f'  {uri} hmkia:staleAssessmentStatus {_status_uri(stale)} .')
+    return out
+
+
+def build_assessment_status_lines(record: dict) -> list:
+    """Status triples for one record; statement URIs come from _STMT_PATHS."""
+    edcs_id = record.get('edcs_id', 'Unknown')
+    insc = _insc(edcs_id)
+    st = _ASSESSMENT.get(edcs_id)
+    if st is None:
+        return [f'  {insc} hmkia:assessmentStatus {_status_uri("unassessed")} .']
+
+    fields = st.get('fields', {})
+    lines = _status_triples(insc, st['status'], st.get('stale_from'))
+    for pi, person in enumerate(record.get('persons', [])):
+        g = _group_status(fields, [f'persons[{pi}]'], _STATEMENT_KEYS)
+        if g:
+            lines += _status_triples(_eref_person(edcs_id, person.get('person_id', pi)), *g)
+    for ci, comm in enumerate(record.get('communities', [])):
+        g = _group_status(fields, [f'communities[{ci}]'], _STATEMENT_KEYS)
+        if g:
+            lines += _status_triples(_eref_community(edcs_id, comm.get('community_id', ci)), *g)
+    for uri, paths in _STMT_PATHS.items():
+        g = _group_status(fields, paths) if paths else None
+        if g:
+            lines += _status_triples(uri, *g)
+
+    # One AssessmentAct per judge run / human review that counted.
+    for ev in st.get('evidence', []):
+        if ev['kind'] == 'llm_judge' and ev.get('counted'):
+            act = f'<{ACTIVITY_NS}assessment/llm_judge-{_safe_id(ev["run_id"])}-{_safe_id(edcs_id)}>'
+            lines += [f'  {act}', '    a hmkia:AssessmentAct ;',
+                      '    hmkia:hasType "llm_judge" ;',
+                      f'    hmkia:assesses {insc} ;']
+            for model in sorted(m for m in (ev.get('models') or {}).values() if m):
+                lines.append(f'    hmkia:associatedWith {_agent_uri(model)} ;')
+            if ev.get('tier'):
+                lines.append(f'    hmkia:assessmentOutcome {_lit(ev["tier"])} ;')
+            if ev.get('prompt_hash'):
+                lines.append(f'    hmkia:hasCriterion {_lit("judge prompt " + ev["prompt_hash"])} ;')
+            fresh = ev.get('fresh', ev.get('fresh_fields', 0) > 0)
+            lines.append(f'    hmkia:assessmentCurrent "{"true" if fresh else "false"}"^^xsd:boolean ;')
+            lines.append(f'    hmkia:hasDate {_dt_lit(ev["timestamp"])} .')
+        elif ev['kind'] == 'human_review':
+            act = (f'<{ACTIVITY_NS}assessment/human_review-{_safe_id(ev.get("run_id") or "")}'
+                   f'-{_safe_id(edcs_id)}-{_safe_id(ev.get("editor") or "")}>')
+            agent = f'<{AGENT_NS}person/{_safe_id(ev.get("editor") or "unknown")}>'
+            lines += [f'  {act}', '    a hmkia:AssessmentAct ;',
+                      '    hmkia:hasType "human_review" ;',
+                      f'    hmkia:assesses {insc} ;',
+                      f'    hmkia:associatedWith {agent} ;']
+            if 'fresh' in ev:
+                lines.append(f'    hmkia:assessmentCurrent "{"true" if ev["fresh"] else "false"}"^^xsd:boolean ;')
+            lines.append(f'    hmkia:hasDate {_dt_lit(ev["timestamp"])} .')
+            lines += [f'  {agent} a hmkia:HumanAgent , prov:Person ;',
+                      f'    hmkia:agentName {_lit(ev.get("editor") or "unknown")} .']
+    return lines
+
+
 def build_intrinsic_graph(record: dict, llm_date: str,
                           extract_act_uri: str | None
                           ) -> tuple[list[str], list[str], list[str], list[str], list[str]]:
@@ -1482,8 +1609,11 @@ def process_json_file(json_path: Path, output_path: Path, scrape_date: str,
         if edcs_id == 'Unknown':
             continue
 
+        _STMT_PATHS.clear()
         intrinsic_lines, career_latest, benef_latest, rel_latest, community_uris = \
             build_intrinsic_graph(record, llm_date, extract_act_uri)
+        if _ASSESSMENT is not None:
+            _ASSESSMENT_LINES.extend(build_assessment_status_lines(record))
 
         source_lines = build_source_graph(
             record, scrape_date, career_latest, benef_latest, rel_latest, community_uris)
@@ -1544,7 +1674,18 @@ def main() -> int:
             'Repeat for multiple researchers.'
         ),
     )
+    parser.add_argument('--assessment-status', default=str(ASSESSMENT_STATUS_PATH),
+                        help='assessment_status.json from compute_assessment_status.py; '
+                             'written to <output>/<model>/assessment_status.trig '
+                             '(skipped if the file does not exist)')
     args = parser.parse_args()
+
+    global _ASSESSMENT
+    status_path = Path(args.assessment_status)
+    if status_path.exists():
+        _ASSESSMENT = json.loads(status_path.read_text(encoding='utf-8'))['records']
+    else:
+        print(f'Assessment status not found ({status_path}); assessment_status.trig is not written.')
 
     # Parse --researcher arguments into dicts
     parsed_researchers: list[dict] = []
@@ -1618,6 +1759,14 @@ def main() -> int:
                 print(f'  FAIL {place_name}: {e}')
                 import traceback
                 traceback.print_exc()
+
+    if _ASSESSMENT is not None and _ASSESSMENT_LINES:
+        status_out = output_base / args.model / 'assessment_status.trig'
+        status_out.parent.mkdir(parents=True, exist_ok=True)
+        with open(status_out, 'w', encoding='utf-8') as f:
+            f.write('\n'.join([PREFIXES, '', f'{ASSESSMENT_GRAPH} {{', '']
+                               + _ASSESSMENT_LINES + ['}', '']))
+        print(f'Assessment status: {status_out}  ({len(_ASSESSMENT)} assessed records)')
 
     if args.merge and merge_parts:
         merge_path = output_base / args.model / 'all.trig'

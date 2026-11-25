@@ -172,3 +172,7 @@ pilot02 と uthina01 は、この記録を始める前に実行した。値は `
 ### 単独のエディタ
 
 `build_judge_review_editor.py` は、judge の結果だけを見る単独の HTML を作る（`docs/evaluation/judge_review_<run_id>.html`）。校訂を伴わない確認や、ai_epigraphy_editor を起動できない環境向け。人の判定はブラウザに保存され、JSON でダウンロードする。
+
+## 評価状態との関係
+
+judge の結果と人の判定は、項目ごとの評価状態（未評価 / LLM判定済み / 人手確認済み / 人手校訂済み）の根拠になる。状態は保存せず、`pipeline/evaluation/assessment/compute_assessment_status.py` が judge の各行の `value_shas`（判定した全項目の値の fingerprint。2026-11-25 以降の run）または `input_sha`、`human/` の判定、JSON の `manual_edit` から毎回計算する。judge の後に値が変わった項目は、判定済みとは数えない。定義と RDF への出力は `docs/ASSESSMENT_STATUS_SPEC.md` を参照。

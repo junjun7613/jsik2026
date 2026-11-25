@@ -167,3 +167,6 @@ config_local.py
 
 # ネットワーク分析の生成物（build_*.py で再生成できる）
 network_analysis/chen_method/output/
+
+# compute_assessment_status.py の出力（評価の記録から毎回計算する派生物）
+pipeline/evaluation/assessment/assessment_status.json

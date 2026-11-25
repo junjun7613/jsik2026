@@ -44,7 +44,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from judge_common import (  # noqa: E402
     JUDGE_SCHEMA, MAX_LINES, PROJECT_DIR, PROMPT_VERSION, RUNS_DIR,
     build_system_prompt, build_user_message, check_paths, flatten, input_sha,
-    load_config, load_record, prompt_hash, sample_keys, value_map,
+    load_config, load_record, prompt_hash, sample_keys, value_map, value_shas,
 )
 
 
@@ -272,6 +272,10 @@ def cmd_run(args):
                     vals = value_map(rec)
                     row["flagged_values"] = {i["path"]: vals.get(i["path"])
                                              for i in parsed.get("issues", [])}
+                    # Fingerprint of every judged value, so the assessment
+                    # status can tell field by field whether this judgement
+                    # still applies (docs/ASSESSMENT_STATUS_SPEC.md).
+                    row["value_shas"] = value_shas(rec)
                 if status != "ok":
                     row["raw_text"] = raw[:4000]
             with lock:

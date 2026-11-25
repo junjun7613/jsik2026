@@ -419,6 +419,15 @@ def main():
         activity = make_activity(payload, [e["path"] for e in payload["edits"]], ts)
         applied = apply_edits(record, payload["edits"], activity, ts)
         activity["generated_fields"] = sorted({field_label(p) for p in applied})
+        # 人手で入れた値の fingerprint（パスは差分の表記のまま）。
+        # compute_assessment_status.py が現在値と照合し、一致する項目を
+        # human_corrected とする。一致しなければ後で値が変わったとみなす
+        # （docs/ASSESSMENT_STATUS_SPEC.md）。
+        from _provenance_utils import leaf_fingerprints
+        activity["corrected_values"] = {}
+        for e in payload["edits"]:
+            if e["op"] in ("replace", "add"):
+                activity["corrected_values"].update(leaf_fingerprints(e["new_value"], e["path"]))
         record.setdefault("_provenance", {}).setdefault("activities", []).append(activity)
 
         print(f"[適用] {path.name}  ({len(applied)} 件)")

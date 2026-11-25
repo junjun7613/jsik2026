@@ -150,6 +150,23 @@ def value_map(rec):
     return out
 
 
+def value_shas(rec):
+    """{judged leaf path: fingerprint} for the values the judge is shown.
+
+    Stored with each judge row so compute_assessment_status.py can tell, field
+    by field, whether a judgement still applies to the current value
+    (docs/ASSESSMENT_STATUS_SPEC.md). Context-only fields are not judged and
+    are left out.
+    """
+    sys.path.insert(0, str(PIPELINE_DIR / "provenance"))
+    from _provenance_utils import leaf_fingerprints
+    _, judged, _ = flatten(rec)
+    fps = {}
+    for top in JUDGED_TOP_KEYS:
+        fps.update(leaf_fingerprints(rec.get(top, []), top))
+    return {p: fps[p] for p in sorted(judged) if p in fps}
+
+
 def input_sha(user_message):
     return hashlib.sha256(user_message.encode("utf-8")).hexdigest()[:16]
 
